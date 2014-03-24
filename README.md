@@ -5,7 +5,7 @@ Demonstrates how the forthcoming WorldCat Discovery API works.
 ## Installation
 
 ```bash
-$ git clone https://github.com/OCLC-Developer-Network/oclc-auth-ruby.git
+$ git clone https://github.com/OCLC-Developer-Network/worldcat-discovery-api-demo-ruby.git
 $ bundle install
 ```
 
