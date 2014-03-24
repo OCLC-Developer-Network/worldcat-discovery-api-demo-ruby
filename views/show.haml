@@ -1,0 +1,92 @@
+%div#bibliographic-resource{ :resource => @bib_resource.primary_topic, :typeof => typeof(@bib_resource) }
+
+  / Title
+  %h1#bibliographic-resource-name{ :property => 'schema:name' }= @bib_resource.properties['schema:name']
+  
+  / Author
+  - author = @bib_resource.properties['schema:author']
+  - if author
+    %div#author{ :property => 'schema:author', :resource => author['@id'], :typeof => author['@type'] }
+      %h2#author-name{ :property => 'schema:name' }= display_name(author)
+  
+  / Contributors
+  - contributors = contributors(@bib_resource)
+  - if contributors.size > 0
+    %h3 Contributors
+    %ul#contributors
+      - contributors.each do |contributor| 
+        %li{ :property => 'schema:contributor', :resource => contributor['@id'], :typeof => contributor['@type'] }
+          %span.contributor-name{ :property => 'schema:name' }= display_name(contributor)
+  
+  / Subjects
+  - subjects = displayable_subjects(@bib_resource)
+  - if subjects.size > 0
+    %h2 Subjects
+    %ul#subjects
+      - subjects.each do |subject| 
+        %li.subject{ :property => 'schema:about', :resource => subject['@id'], :typeof => subject['@type'] }
+          %span.subject-name{ :property => 'schema:name' }= display_name(subject) 
+
+  / Publication Info
+  %h2 Publication Info
+  %p
+    %span.label Format:
+    %span.value= format(@bib_resource.properties)
+    %br
+    
+    - if @bib_resource.properties['schema:bookEdition']
+      %span.label Edition:
+      %span.value= @bib_resource.properties['schema:bookEdition']
+      %br
+
+    - if @bib_resource.properties['schema:inLanguage']
+      %span.label Language:
+      %span.value= language_display_name(@bib_resource.properties['schema:inLanguage'])
+      %br
+
+    %span.label Published:
+    - places_of_publication(@bib_resource).each do |place| 
+      %span.value{ :property => 'http://purl.org/library/placeOfPublication' }= "#{place} : "
+    - if @bib_resource.properties['schema:publisher']
+      - publisher = @bib_resource.properties['schema:publisher'].is_a?(Array) ? @bib_resource.properties['schema:publisher'].first : @bib_resource.properties['schema:publisher']
+      %span.value
+        %span{ :property => 'schema:publisher', :typeof => publisher['@type'] }
+          %span{ :property => 'schema:name' }= publisher['schema:name']
+    %span.value{ :property => 'schema:datePublished' }= @bib_resource.properties['schema:datePublished']
+    %br
+
+    %span.label Physical Details:
+    %span.value
+      %span{ :property => 'schema:numberOfPages' }= @bib_resource.properties['schema:numberOfPages']
+      pages
+    %br
+    
+    - isbns = isbns(@bib_resource)
+    - if isbns.size > 0
+      %span.label ISBNs:
+      %span.value{ :property => 'schema:isbn' }= isbns.join(', ')
+      %br
+    
+    %span.label OCLC Number:
+    %span.value{ :property => 'http://purl.org/library/oclcnum' }= @bib_resource.properties['http://purl.org/library/oclcnum']
+    %br
+  
+  / Description
+  - descriptions = descriptions(@bib_resource)
+  - if descriptions.size > 0
+    %h3 Description
+    - descriptions.each do |description| 
+      %p{ :property => 'schema:description' }= description
+      
+  / Reviews
+  - if @bib_resource.properties['schema:reviews']
+    %div{ :property => 'schema:reviews' }
+      %h3 Reviews
+      %div{ :resource => @bib_resource.properties['schema:reviews']['@id'], :typeof => 'schema:Review' }
+        %p{ :property => 'schema:reviewBody' }=@bib_resource.properties['schema:reviews']['schema:reviewBody']
+      
+      
+      
+      
+  
+    

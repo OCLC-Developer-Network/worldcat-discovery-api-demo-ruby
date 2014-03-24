@@ -1,0 +1,25 @@
+!!! 5
+%html
+  %head
+    %title
+      = "#{@title} - " if @title
+      WorldCat Discovery
+    %link{ :rel => 'stylesheet', :href => '/css/blueprint/screen.css', :type => "text/css", :media => "screen, projection" }
+    %link{ :rel => 'stylesheet', :href => '/css/discovery.css', :type => "text/css", :media => "screen, projection" }
+  %body{ :prefix => "schema: http://schema.org/ oclc: http://www.worldcat.org/oclc/ rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# wcr: https://worldcat.org/wcr/ dc: http://purl.org/dc/terms/ library: http://purl.org/library/"}
+    %div.container
+      %div.span-24#header
+        %div{ :style => 'margin: 10px 10px; font-size: 2em;' } My Library
+        
+      %div#search-wrapper.span-24
+        %form#search-form{:action => url('/catalog')}
+          %p 
+            %span{ :style => 'font-size: 2em; margin-right:1em;' } Catalog 
+            %input{:type => "text", :name => "q", :value => params[:q], :size => 40}
+            %button{:type => "submit"} Search
+
+      = yield 
+      
+      %div.span-24#footer
+        %p &nbsp;
+      
