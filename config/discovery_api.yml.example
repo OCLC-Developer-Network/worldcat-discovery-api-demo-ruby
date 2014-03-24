@@ -1,0 +1,4 @@
+production: 
+  base_url: 'https://beta.worldcat.org'
+  key: ''
+  secret: ''
