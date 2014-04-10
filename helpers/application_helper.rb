@@ -92,14 +92,10 @@ helpers do
   end
   
   def isbns(bib_resource)
-    if bib_resource.properties['http://www.w3.org/2000/01/rdf-schema#seeAlso']
-      isbns = bib_resource.properties['http://www.w3.org/2000/01/rdf-schema#seeAlso'].map do |further_info| 
-        further_info['@type'].include?('schema:ProductModel') ? further_info['schema:isbn'] : nil
-      end
-      isbns.compact
-    else
-      []
+    isbns = bib_resource.properties['schema:workExample'].map do |manifestation| 
+      manifestation['schema:isbn'] if manifestation['schema:isbn']
     end
+    isbns
   end
   
   # Escapes HTML
