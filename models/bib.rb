@@ -3,7 +3,7 @@ module WorldCat
     
     def initialize(options = {})
       if options[:id]
-        url = "#{ENV['base_url']}/discovery/bib/search?q=no:#{options[:id]}"
+        url = "#{ENV['base_url']}/discovery/bib/data/#{options[:id]}"
         auth = API_KEY.hmac_signature('GET', url)
         resource = RestClient::Resource.new url
         response = resource.get(:authorization => auth, :accept => 'application/json')
