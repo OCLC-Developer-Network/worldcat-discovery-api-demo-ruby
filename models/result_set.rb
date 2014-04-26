@@ -1,8 +1,6 @@
 module WorldCat
   class ResultSet < WorldCat::Resource
     
-    attr_accessor :context, :items
-    
     def initialize(data, item_class)
       @data = data
       process_data()
