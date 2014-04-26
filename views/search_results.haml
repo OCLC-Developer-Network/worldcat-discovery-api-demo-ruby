@@ -2,13 +2,14 @@
 
   %h2 Results
   
-  - @result_set.properties['schema:significantLink'].each do |bib_resource| 
+  - @result_set.properties['schema:significantLink'].each do |generic_resource| 
+    - bib_resource = generic_resource['schema:about']
     %div.search-result
       %h3.title 
-        %a{ :href => url("/catalog/#{bib_resource['http://purl.org/library/oclcnum']['@value']}")}= bib_resource['schema:name']
+        %a{ :href => url("/catalog/#{bib_resource['http://purl.org/library/oclcnum']}")}= bib_resource['schema:name']
         %span.date-published= bib_resource['schema:datePublished']
       - if bib_resource['schema:author'] 
         %p.author= display_name(bib_resource['schema:author'])
       %p.format
         %span.label Format:
-        %span.value= format(bib_resource)
+        %span.value= FORMATS[bib_resource['@type']]

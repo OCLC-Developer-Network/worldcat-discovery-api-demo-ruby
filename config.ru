@@ -21,6 +21,8 @@ set :raise_errors, true
 
 ENV['base_url'] = CONFIG[settings.environment.to_s]['base_url']
 API_KEY = create_key
-LANGUAGES = YAML::load(File.read("#{File.expand_path(File.dirname(__FILE__))}/config/languages.yml"))
+app_home = File.expand_path(File.dirname(__FILE__))
+LANGUAGES = YAML::load(File.read("#{app_home}/config/languages.yml"))
+FORMATS = YAML::load(File.read("#{app_home}/config/formats.yml"))
 
 run Sinatra::Application

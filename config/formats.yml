@@ -1,0 +1,7 @@
+"schema:Book": "Book"
+"http://schema.org/Book": "Book"
+"library:Serial": "Serial"
+"http://purl.org/library/Serial": "Serial"
+"schema:CreativeWork": "Creative Work"
+"http://schema.org/CreativeWork": "Creative Work"
+"schema:Article": "Article"

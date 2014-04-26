@@ -31,7 +31,7 @@
   %h2 Publication Info
   %p
     %span.label Format:
-    %span.value= format(@bib_resource.properties)
+    %span.value= format(@bib_resource)
     %br
     
     - if @bib_resource.properties['schema:bookEdition']
@@ -44,22 +44,24 @@
       %span.value= language_display_name(@bib_resource.properties['schema:inLanguage'])
       %br
 
-    %span.label Published:
-    - places_of_publication(@bib_resource).each do |place| 
-      %span.value{ :property => 'http://purl.org/library/placeOfPublication' }= "#{place} : "
-    - if @bib_resource.properties['schema:publisher']
-      - publisher = @bib_resource.properties['schema:publisher'].is_a?(Array) ? @bib_resource.properties['schema:publisher'].first : @bib_resource.properties['schema:publisher']
-      %span.value
-        %span{ :property => 'schema:publisher', :typeof => publisher['@type'] }
-          %span{ :property => 'schema:name' }= publisher['schema:name']
-    %span.value{ :property => 'schema:datePublished' }= @bib_resource.properties['schema:datePublished']
-    %br
+    - if is_published_material?(@bib_resource)
+      %span.label Published:
+      - places_of_publication(@bib_resource).each do |place| 
+        %span.value{ :property => 'http://purl.org/library/placeOfPublication' }= "#{place} : "
+      - if @bib_resource.properties['schema:publisher']
+        - publisher = @bib_resource.properties['schema:publisher'].is_a?(Array) ? @bib_resource.properties['schema:publisher'].first : @bib_resource.properties['schema:publisher']
+        %span.value
+          %span{ :property => 'schema:publisher', :typeof => publisher['@type'] }
+            %span{ :property => 'schema:name' }= publisher['schema:name']
+      %span.value{ :property => 'schema:datePublished' }= @bib_resource.properties['schema:datePublished']
+      %br
 
-    %span.label Physical Details:
-    %span.value
-      %span{ :property => 'schema:numberOfPages' }= @bib_resource.properties['schema:numberOfPages']
-      pages
-    %br
+    - if @bib_resource.properties['schema:numberOfPages']
+      %span.label Physical Details:
+      %span.value
+        %span{ :property => 'schema:numberOfPages' }= @bib_resource.properties['schema:numberOfPages']
+        pages
+      %br
     
     - isbns = isbns(@bib_resource)
     - if isbns.size > 0

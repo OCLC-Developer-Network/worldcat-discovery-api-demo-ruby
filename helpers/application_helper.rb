@@ -2,6 +2,20 @@
 
 helpers do
   
+  def is_published_material?(bib_resource)
+    places = places_of_publication(@bib_resource)
+    has_place = false
+    has_place = true if places.nil? == true or places.size > 0
+
+    has_publisher = false
+    has_publisher = true if @bib_resource.properties['schema:publisher']
+    
+    has_pub_date = false
+    has_pub_date = true if @bib_resource.properties['schema:datePublished']
+    
+    has_place or has_publisher or has_pub_date
+  end
+  
   def language_display_name(code)
     LANGUAGES[code]
   end
@@ -15,11 +29,11 @@ helpers do
   end
   
   def format(bib_resource)
-    primary_type = bib_resource['@type']
+    primary_type = bib_resource.properties['@type']
     if primary_type.is_a?(Array)
-      primary_type.first.gsub('schema:', '')
+      FORMATS[primary_type.first]
     elsif primary_type.is_a?(String)
-      primary_type.gsub('schema:', '')
+      FORMATS[primary_type]
     end
   end
   
@@ -85,15 +99,24 @@ helpers do
   end
   
   def places_of_publication(bib_resource)
-    places = bib_resource.properties['http://purl.org/library/placeOfPublication'].map do |place| 
-      place['schema:name'].nil? ? nil : place['schema:name']
+    if bib_resource.properties['http://purl.org/library/placeOfPublication'].is_a?(Array)
+      places = bib_resource.properties['http://purl.org/library/placeOfPublication'].map do |place| 
+        place['schema:name'].nil? ? nil : place['schema:name']
+      end
+      places.compact
+    else
+      place = bib_resource.properties['http://purl.org/library/placeOfPublication']
+      place['schema:name'].nil? ? [] : [place['schema:name']]
     end
-    places.compact
   end
   
   def isbns(bib_resource)
-    isbns = bib_resource.properties['schema:workExample'].map do |manifestation| 
-      manifestation['schema:isbn'] if manifestation['schema:isbn']
+    if bib_resource.properties['schema:workExample']
+      isbns = bib_resource.properties['schema:workExample'].map do |manifestation| 
+        manifestation['schema:isbn'] if manifestation['schema:isbn']
+      end
+    else
+      isbns = Array.new
     end
     isbns
   end
