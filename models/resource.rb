@@ -32,13 +32,15 @@ module WorldCat
     
     def process_data
       @context = @data['@context']
-      if @data['@graph'].first['schema:significantLink'].is_a?(Hash)
-        # I am creating an Resource from a single result
-        @properties = @data['@graph'].first['schema:significantLink']
-      else
-        # I am creating a single entity from a search result set
+      
+      if @data['@graph'].first['@type'].include?('http://www.w3.org/2006/gen/ont#ContentTypeGenericResource')
+        # I am working with a single resource
+        @properties = @data['@graph'].first['schema:about']
+      elsif @data['@graph'].first['@type'].include?('schema:SearchResultsPage')
+        # I am working with a search result set
         @properties = @data['@graph'].first
       end
+
       @primary_topic = RDF::URI.new(@properties['@id'])
       @graph = RDF::Graph.new
       @graph << JSON::LD::API.toRdf(@data)
