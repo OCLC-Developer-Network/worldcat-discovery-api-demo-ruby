@@ -22,6 +22,4 @@ BCP_47_LANGUAGES = YAML::load(File.read("#{app_home}/config/languages.yml"))
 MARC_LANGUAGES = YAML::load(File.read("#{app_home}/config/marc_languages.yml"))
 FORMATS = YAML::load(File.read("#{app_home}/config/formats.yml"))
 
-# Dir[File.join(app_home, "lib", "core_ext", "*.rb")].each {|l| require l }
-
 run Sinatra::Application
