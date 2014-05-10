@@ -1,15 +1,46 @@
-%div#search-results
-
-  %h2 Results
+- if @results
+  %div#search-results.span-24.last
   
-  - @result_set.properties['schema:significantLink'].each do |generic_resource| 
-    - bib_resource = generic_resource['schema:about']
-    %div.search-result
-      %h3.title 
-        %a{ :href => url("/catalog/#{bib_resource['http://purl.org/library/oclcnum']}")}= bib_resource['schema:name']
-        %span.date-published= bib_resource['schema:datePublished']
-      - if bib_resource['schema:author'] 
-        %p.author= display_name(bib_resource['schema:author'])
-      %p.format
-        %span.label Format:
-        %span.value= FORMATS[bib_resource['@type']]
+    %div#facets.span-6
+      %h2 Facets
+      - @results.facets.each do |facet| 
+        %h3= facet.index
+        %ul.facet-items
+          - facet.values.each do |value| 
+            %li
+              %a{ :href => facet_refine_url(facet, value, params) }= facet_display_name(facet, value)
+              = "(#{value.count})"
+  
+    %div#search-results.span-18.last
+      %h2 Results
+    
+      %div.search-page-navigation.span-18.last
+        - _pagination = pagination(params, @results)
+        %div.previous.span-6.first
+          - if _pagination[:previous_page_start] 
+            %a{:href => url("/catalog?q=#{params[:q]}&startNum=#{_pagination[:previous_page_start]}")} &laquo; Previous
+          - else
+            %span.inactive-link &laquo; Previous
+
+        %div.numbering.span-6
+          = "#{_pagination[:first]} - #{_pagination[:last]} of #{_pagination[:total]}"
+
+        %div.next.span-6.last
+          - if _pagination[:next_page_start] 
+            %a{:href => url("/catalog?q=#{params[:q]}&startNum=#{_pagination[:next_page_start]}")} Next &raquo;
+          - else
+            %span.inactive-link Next &raquo;
+
+      %ol#results-items{ :start => @results.start_index + 1 }
+        - @results.bibs.each do |bib| 
+          %li.search-result
+            %h3.title
+              %a{ :href => url("/catalog/#{bib.oclc_number}")}= bib.name
+              %span.date-published= bib.date_published
+            - if bib.author
+              %p.author= bib.author.name
+            - elsif bib.contributors and bib.contributors.size > 0
+              %p.author= bib.contributors.map {|contributor| contributor.name}.join('; ')
+            %p.format
+              %span.label Format:
+              %span.value= FORMATS[bib.type.to_s]

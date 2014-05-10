@@ -128,16 +128,29 @@ span.label {
 }
 
 #search-results h3.title {
-	font-size: 1.25em;
+	font-size: 1.35em;
+	margin-bottom: .5em;
+}
+
+#search-results h3.title a {
+	text-decoration: none;
 }
 
 #search-results h3.title span.date-published {
 	font-weight: normal;
 }
 
+.search-result p.author {
+	margin-bottom: .5em;
+}
 
+#facets ul {
+	padding: 0;
+}
 
-
+#facets ul li {
+	font-size: 1.1em;
+}
 
 
 

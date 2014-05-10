@@ -2,11 +2,10 @@
 source 'https://rubygems.org'
  
 gem "sinatra", "1.4.1"
-gem "haml"
-gem "equivalent-xml"
-gem "rdf-rdfxml"
-gem "json-ld"
-gem "oclc-auth", '0.1.0', :path => "vendor/gems/oclc-auth-0.1.0"
+gem "haml", "4.0.5"
+gem "activesupport", "4.1.1"
+gem "oclc-auth", '0.1.1', :path => "vendor/gems/oclc-auth-0.1.1"
+gem "worldcat-discovery", '0.0.1', :path => "vendor/gems/worldcat-discovery-0.0.1"
 
 group :development, :test do
   # gem 'rspec', '2.13.0'
