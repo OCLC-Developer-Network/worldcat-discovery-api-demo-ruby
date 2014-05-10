@@ -1,19 +1,11 @@
-# require "rubygems"
 require "yaml"
-# require "bundler/setup"
 require "sinatra"
 require "haml"
 require "oclc/auth"
 require "worldcat/discovery"
-# require "active_support"
-# require "active_support/core_ext/hash" # used for the to_params
 
 require "./discover"
 require "./helpers/application_helper"
-require "./models/resource"
-require "./models/bib"
-require "./models/result_set"
-require "./models/offer"
 
 set :environment, :development
 set :run, true

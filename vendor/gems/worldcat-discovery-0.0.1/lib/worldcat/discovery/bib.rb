@@ -50,13 +50,7 @@ module WorldCat
         uri.query_values = params
         auth = wskey.hmac_signature('GET', uri.to_s)
         resource = RestClient::Resource.new uri.to_s
-        response = resource.get(:authorization => auth, :accept => 'application/rdf+xml') do |response, request, result|
-          puts ; puts request.inspect ; puts
-          puts ; puts response ; puts
-          puts ; puts result.inspect ; puts
-          puts ; puts response.headers.inspect ; puts
-          response
-        end
+        response = resource.get(:authorization => auth, :accept => 'application/rdf+xml')
         
         # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
         Spira.repository = RDF::Repository.new.from_rdfxml(response)
