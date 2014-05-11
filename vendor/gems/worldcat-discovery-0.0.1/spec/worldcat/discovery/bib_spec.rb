@@ -1,3 +1,17 @@
+# Copyright 2014 OCLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 require_relative '../../spec_helper'
 
 describe WorldCat::Discovery::Bib do
@@ -8,13 +22,17 @@ describe WorldCat::Discovery::Bib do
     it "should raise an error when calling the find() method on the Bib class" do
       url = 'https://beta.worldcat.org/discovery/bib/data/30780581'
       stub_request(:get, url).to_return(:body => body_content("30780581.rdf"), :status => 200)
-      lambda { bib = WorldCat::Discovery::Bib.find(30780581) }.should raise_error
+      lambda { bib = WorldCat::Discovery::Bib.find(30780581) }.should raise_error(WorldCat::Discovery::ConfigurationException, 
+          'Cannot find/search Bib resources unless an API key is configured. Call WorldCat::Discovery.configure(wskey) with an OCLC::Auth::WSKey'
+        )
     end
     
     it "should raise an error when calling the find() method on the Bib class" do
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader'
       stub_request(:get, url).to_return(:body => body_content("bib_search.rdf"), :status => 200)
-      lambda { WorldCat::Discovery::Bib.search(:q => 'wittgenstein reader') }.should raise_error
+      lambda { WorldCat::Discovery::Bib.search(:q => 'wittgenstein reader') }.should raise_error(WorldCat::Discovery::ConfigurationException, 
+          'Cannot find/search Bib resources unless an API key is configured. Call WorldCat::Discovery.configure(wskey) with an OCLC::Auth::WSKey'
+        )
     end
   end
   
@@ -170,7 +188,7 @@ describe WorldCat::Discovery::Bib do
       end
     end
 
-    context "when parsing data for oddities" do
+    context "when parsing data for bib resources that don't have personal authors" do
       it "should handle books with no author" do
         url = 'https://beta.worldcat.org/discovery/bib/data/45621749'
         stub_request(:get, url).to_return(:body => body_content("45621749.rdf"), :status => 200)
@@ -178,6 +196,16 @@ describe WorldCat::Discovery::Bib do
         bib = WorldCat::Discovery::Bib.find(45621749)
 
         bib.author.should == nil
+      end
+      
+      it "should handle authors that are organizations" do
+        url = 'https://beta.worldcat.org/discovery/bib/data/233192257'
+        stub_request(:get, url).to_return(:body => body_content("233192257.rdf"), :status => 200)
+        wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret')
+        bib = WorldCat::Discovery::Bib.find(233192257)
+
+        bib.author.class.should == WorldCat::Discovery::Organization
+        bib.author.name.should == "United States. National Park Service."
       end
     end
 

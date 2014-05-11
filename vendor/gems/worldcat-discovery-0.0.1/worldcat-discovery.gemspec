@@ -5,7 +5,7 @@ require 'worldcat/discovery/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "worldcat-discovery"
-  spec.version       = Worldcat::Discovery::VERSION
+  spec.version       = WorldCat::Discovery::VERSION
   spec.authors       = ["OCLC Developer Network"]
   spec.email         = ["devnet@oclc.org"]
   spec.description   = %q{A Ruby wrapper for accessing the WorldCat Discovery API}

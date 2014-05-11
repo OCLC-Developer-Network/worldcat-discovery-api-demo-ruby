@@ -1,3 +1,17 @@
+# Copyright 2014 OCLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 module WorldCat
   module Discovery
     
@@ -8,6 +22,7 @@ module WorldCat
     SCHEMA_NAME            = RDF::URI.new('http://schema.org/name')
     SCHEMA_BOOK            = RDF::URI.new('http://schema.org/Book')
     SCHEMA_PERSON          = RDF::URI.new('http://schema.org/Person')
+    SCHEMA_ORGANIZATION    = RDF::URI.new('http://schema.org/Organization')
     SCHEMA_INTANGIBLE      = RDF::URI.new('http://schema.org/Intangible')
     SCHEMA_PRODUCT_MODEL   = RDF::URI.new('http://schema.org/ProductModel')
     SCHEMA_WORK_EXAMPLE    = RDF::URI.new('http://schema.org/workExample')

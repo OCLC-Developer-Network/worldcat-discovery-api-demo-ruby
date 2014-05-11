@@ -1,3 +1,17 @@
+# Copyright 2014 OCLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 module WorldCat
   module Discovery
     class Bib < Spira::Base
@@ -30,6 +44,7 @@ module WorldCat
           author_type = Spira.repository.query(:subject => author_stmt.object, :predicate => RDF.type).first
           case author_type.object
           when SCHEMA_PERSON then author_stmt.object.as(Person)
+          when SCHEMA_ORGANIZATION then author_stmt.object.as(Organization)
           else nil
           end
         else
@@ -42,15 +57,9 @@ module WorldCat
       end
       
       def self.search(params)
-        # Retrieve the key from the singleton configuration object
-        wskey = WorldCat::Discovery.api_key
-        
-        # Make the HTTP request for the data
         uri = Addressable::URI.parse("#{Bib.production_url}/search")
         uri.query_values = params
-        auth = wskey.hmac_signature('GET', uri.to_s)
-        resource = RestClient::Resource.new uri.to_s
-        response = resource.get(:authorization => auth, :accept => 'application/rdf+xml')
+        response = get_data(uri.to_s)
         
         # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
         Spira.repository = RDF::Repository.new.from_rdfxml(response)
@@ -61,15 +70,8 @@ module WorldCat
       end
             
       def self.find(oclc_number)
-        # Retrieve the key from the singleton configuration object
-        wskey = WorldCat::Discovery.api_key
-        raise ConfigurationException.new if wskey.nil?
-        
-        # Make the HTTP Request for the data
         url = "#{Bib.production_url}/data/#{oclc_number}"
-        auth = wskey.hmac_signature('GET', url)
-        resource = RestClient::Resource.new url
-        response = resource.get(:authorization => auth, :accept => 'application/rdf+xml')
+        response = get_data(url)
 
         # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
         Spira.repository = RDF::Repository.new.from_rdfxml(response)
@@ -81,6 +83,21 @@ module WorldCat
 
       def self.production_url
         "https://beta.worldcat.org/discovery/bib"
+      end
+      
+      protected
+      
+      def self.get_data(url)
+        # Retrieve the key from the singleton configuration object
+        raise ConfigurationException.new unless WorldCat::Discovery.configured?()
+        wskey = WorldCat::Discovery.api_key
+        
+        # Make the HTTP request for the data
+        auth = wskey.hmac_signature('GET', url)
+        resource = RestClient::Resource.new url
+        resource.get(:authorization => auth, 
+            :user_agent => "WorldCat::Discovery Ruby gem / #{WorldCat::Discovery::VERSION}",
+            :accept => 'application/rdf+xml') 
       end
       
     end
