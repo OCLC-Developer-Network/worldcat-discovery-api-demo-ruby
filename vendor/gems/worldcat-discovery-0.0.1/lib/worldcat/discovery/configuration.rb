@@ -16,6 +16,11 @@ require "singleton"
 
 module WorldCat
   module Discovery
+    
+    # == Configuring for WorldCat::Discovery
+    #
+    # A singleton used to store the OCLC::Auth::WSKey (API key).
+    
     class Configuration
       
       include Singleton

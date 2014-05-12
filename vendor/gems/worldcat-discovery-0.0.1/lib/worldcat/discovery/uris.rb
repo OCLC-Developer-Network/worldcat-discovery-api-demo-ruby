@@ -15,6 +15,7 @@
 module WorldCat
   module Discovery
     
+    RDF_TYPE               = RDF::URI.new('http://www.w3.org/1999/02/22-rdf-syntax-ns#type')
     GENERIC_RESOURCE       = RDF::URI.new('http://www.w3.org/2006/gen/ont#ContentTypeGenericResource')
     SCHEMA_ABOUT           = RDF::URI.new('http://schema.org/about')
     SCHEMA_AUTHOR          = RDF::URI.new('http://schema.org/author')

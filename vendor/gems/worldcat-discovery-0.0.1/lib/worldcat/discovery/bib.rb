@@ -14,6 +14,33 @@
 
 module WorldCat
   module Discovery
+    
+    # == Properties mapped from RDF data
+    #
+    # RDF properties are mapped via an ORM style mapping.
+    # 
+    #   bib = WorldCat::Discovery::Bib.find(255034622)
+    #   bib.name        # => "Programming Ruby."
+    #   bib.oclc_number # => 255034622
+    #
+    # [type] RDF predicate: http://www.w3.org/1999/02/22-rdf-syntax-ns#type; returns: RDF::URI
+    # [name] RDF predicate: http://schema.org/name; returns: String
+    # [oclc_number] RDF predicate: http://purl.org/library/oclcnum; returns: Integer
+    # [work_uri] RDF predicate: http://schema.org/exampleOfWork; returns: RDF::URI
+    # [num_pages] RDF predicate: http://schema.org/numberOfPages; returns: String
+    # [date_published] RDF predicate: http://schema.org/datePublished; returns: String
+    # [same_as] RDF predicate: http://www.w3.org/2002/07/owl#sameAs; returns: RDF::URI
+    # [language] RDF predicate: http://schema.org/inLanguage; returns: String
+    # [publisher] RDF predicate: http://schema.org/publisher; returns: WorldCat::Discovery::Organization
+    # [display_position] RDF predicate: http://purl.org/goodrelations/v1#displayPosition; returns: Integer
+    # [book_edition] RDF predicate: http://schema.org/bookEdition; returns: String
+    # [subjects] RDF predicate: http://schema.org/about; returns: Enumerable of WorldCat::Discovery::Subject objects
+    # [work_examples] RDF predicate: http://schema.org/workExample; returns: Enumerable of WorldCat::Discovery::ProductModel objects
+    # [places_of_publication] RDF predicate: http://purl.org/library/placeOfPublication; returns: Enumerable of WorldCat::Discovery::Place objects
+    # [descriptions] RDF predicate: http://schema.org/description; returns: Enumerable of String objects
+    # [reviews] RDF predicate: http://schema.org/reviews; returns: Enumerable of WorldCat::Discovery::Review objects
+    # [contributors] RDF predicate: http://schema.org/contributor; returns: Enumerable of WorldCat::Discovery::Person objects
+    
     class Bib < Spira::Base
       
       property :name, :predicate => SCHEMA_NAME, :type => XSD.string
@@ -34,10 +61,18 @@ module WorldCat
       has_many :reviews, :predicate => SCHEMA_REVIEW, :type => 'Review'
       has_many :contributors, :predicate => SCHEMA_CONTRIBUTOR, :type => 'Person'
       
+      # call-seq:
+      #   id() => RDF::URI
+      # 
+      # Will return the RDF::URI object that serves as the RDF subject of the current Bib
       def id
         self.subject
       end
       
+      # call-seq:
+      #   author() => WorldCat::Discovery::Person or WorldCat::Discovery::Organization
+      # 
+      # Returns Bib author from RDF predicate: http://schema.org/author
       def author
         author_stmt = Spira.repository.query(:subject => self.id, :predicate => SCHEMA_AUTHOR).first
         if author_stmt
@@ -52,10 +87,28 @@ module WorldCat
         end
       end
       
+      # call-seq:
+      #   isbns() => Array of String objects
+      # 
+      # Returns a Bib resource for the given OCLC number
+      #
+      # Convenience method for an Array of ISBN strings from the associated WorldCat::Discovery::ProductModel objects
       def isbns
         self.work_examples.map {|product_model| product_model.isbn}.sort
       end
       
+      # call-seq:
+      #   search(params) => WorldCat::Discovery::SearchResults
+      # 
+      # Returns a search result set containing Bib resources for the given input parameters
+      #
+      # [params] a Hash of query parameters
+      # 
+      # Parameters
+      # 
+      # [:q] the primary query required to conduct a search of WorldCat
+      # [:facets] an array of facets to be returned. Facets should be specified as +facet_name:num_facets+
+      # [:startNum] the integer offset from the begining of the search result set. defaults to 0
       def self.search(params)
         uri = Addressable::URI.parse("#{Bib.production_url}/search")
         uri.query_values = params
@@ -69,6 +122,12 @@ module WorldCat
         search_results
       end
             
+      # call-seq:
+      #   find(oclc_number) => WorldCat::Discovery::Bib
+      # 
+      # Returns a Bib resource for the given OCLC number
+      #
+      # [oclc_number] the WorldCat OCLC number for a bibliographic resource
       def self.find(oclc_number)
         url = "#{Bib.production_url}/data/#{oclc_number}"
         response = get_data(url)
@@ -81,11 +140,11 @@ module WorldCat
         bib
       end
 
+      protected
+      
       def self.production_url
         "https://beta.worldcat.org/discovery/bib"
       end
-      
-      protected
       
       def self.get_data(url)
         # Retrieve the key from the singleton configuration object

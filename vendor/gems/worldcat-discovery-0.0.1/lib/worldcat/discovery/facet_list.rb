@@ -14,6 +14,9 @@
 
 module WorldCat
   module Discovery
+    
+    # Should not be used by clients. Corresponding RDF predicates may be removed from the data model.
+    
     class FacetList < Spira::Base
       
       property :type, :predicate => RDF.type, :type => RDF::URI

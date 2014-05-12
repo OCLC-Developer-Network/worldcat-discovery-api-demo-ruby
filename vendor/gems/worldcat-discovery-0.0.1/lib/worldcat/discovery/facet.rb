@@ -14,12 +14,30 @@
 
 module WorldCat
   module Discovery
+    
+    # == Properties mapped from RDF data
+    #
+    # RDF properties are mapped via an ORM style mapping.
+    # 
+    # [type] RDF predicate: http://www.w3.org/1999/02/22-rdf-syntax-ns#type; returns: RDF::URI
+    # [index] RDF predicate: http://worldcat.org/searcho/facetIndex (index corresponding to current facet); returns: String
+    
     class Facet < Spira::Base
       
       property :type, :predicate => RDF.type, :type => RDF::URI
       property :index, :predicate => DISCOVERY_FACET_INDEX, :type => XSD.string
       has_many :_values, :predicate => DISCOVERY_FACET_VALUE, :type => 'FacetValue'
       
+      # call-seq:
+      #   values() => Array of WorldCat::Discovery::FacetValue objects
+      #
+      # Example
+      #
+      #   results = WorldCat::Discovery::Bib.search(params)
+      #   results.facets.first.values.map {|fv| "#{fv.name} (#{fv.count})"}
+      #   # => ["thomas, david (18)", "ruby, ralph (9)", "tate, bruce (8)", ... ]
+      #
+      # Values will be sorted with the most commonly occuring facets first
       def values
         # Create a Hash in which the keys are the facet value count and the values are an Array of FacetValue objects
         indexed_values = self._values.reduce(Hash.new) do |sorted_values, facet_value| 
@@ -40,6 +58,10 @@ module WorldCat
         sorted_values
       end
       
+      # call-seq:
+      #   id() => RDF::URI
+      # 
+      # Will return the RDF::URI object that serves as the RDF subject of the current Facet
       def id
         self.subject
       end

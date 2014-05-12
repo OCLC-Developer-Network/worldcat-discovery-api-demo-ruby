@@ -14,10 +14,26 @@
 
 module WorldCat
   module Discovery
+    
+    # == Properties mapped from RDF data
+    #
+    # RDF properties are mapped via an ORM style mapping.
+    # 
+    # [type] RDF predicate: http://www.w3.org/1999/02/22-rdf-syntax-ns#type; returns: RDF::URI
+    # [name] RDF predicate: http://schema.org/name; returns: String
+    
     class Organization < Spira::Base
       
       property :name, :predicate => SCHEMA_NAME, :type => XSD.string
+      property :type, :predicate => RDF_TYPE, :type => RDF::URI
       
+      # call-seq:
+      #   id() => RDF::URI
+      # 
+      # Will return the RDF::URI object that serves as the RDF subject of the current Organization
+      def id
+        self.subject
+      end
     end
   end
 end

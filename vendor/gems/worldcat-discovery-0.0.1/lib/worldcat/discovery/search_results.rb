@@ -14,6 +14,15 @@
 
 module WorldCat
   module Discovery
+    
+    # == Properties mapped from RDF data
+    #
+    # RDF properties are mapped via an ORM style mapping.
+    # 
+    # [total_results] RDF predicate: http://worldcat.org/searcho/totalResults; returns: Integer
+    # [start_index] RDF predicate: http://worldcat.org/searcho/startIndex; returns: Integer
+    # [items_per_page] RDF predicate: http://worldcat.org/searcho/itemsPerPage; returns: Integer
+
     class SearchResults < Spira::Base
       
       property :total_results, :predicate => DISCOVERY_TOTAL_RESULTS, :type => XSD.integer
@@ -22,10 +31,19 @@ module WorldCat
       property :facet_list, :predicate => DISCOVERY_FACET_LIST, :type => 'FacetList'
       has_many :items, :predicate => SCHEMA_SIGNIFICANT_LINK, :type => 'GenericResource'
       
+      # call-seq:
+      #   id() => RDF::URI
+      # 
+      # Will return the RDF::URI object that serves as the RDF subject of the current SearchResults
       def id
         self.subject
       end
       
+      # call-seq:
+      #   bibs() => Array of WorldCat::Discovery::Bib objects
+      # 
+      # Returns Bib objects contained in the SearchResults. 
+      # Results will be sorted by display position.
       def bibs
         bibs = self.items.map {|item| item.about}
         
@@ -38,6 +56,10 @@ module WorldCat
         sorted_bibs
       end
       
+      # call-seq:
+      #   facets() => Array of WorldCat::Discovery::Facet objects
+      # 
+      # Retuns the facets for the current search results if they were requested on the corresponding request.
       def facets
         if self.facet_list
           self.facet_list.facets
