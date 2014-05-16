@@ -15,3 +15,13 @@ get '/catalog/:oclc_number' do
   @bib = WorldCat::Discovery::Bib.find(params[:oclc_number])
   haml :show, :layout => :template
 end
+
+get '/explore' do
+  # { predicate => source }
+  followed_predicates = Hash.new
+  followed_predicates['http://www.w3.org/2002/07/owl#sameAs'] = { :source => 'http://dbpedia.org', :follow => 'object' }
+  followed_predicates['http://dbpedia.org/ontology/author'] = { :source => 'http://dbpedia.org', :follow => 'subject' }
+  
+  @graph = load_graph(params[:uri], followed_predicates)
+  haml :explore
+end

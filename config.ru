@@ -3,6 +3,7 @@ require "sinatra"
 require "haml"
 require "oclc/auth"
 require "worldcat/discovery"
+require "rdf/turtle"
 
 require "./discover"
 require "./helpers/application_helper"

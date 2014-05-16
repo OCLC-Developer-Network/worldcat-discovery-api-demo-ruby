@@ -1,0 +1,31 @@
+- AUTHOR          = RDF::URI.new(params[:uri])
+- SAME_AS         = RDF::URI.new('http://www.w3.org/2002/07/owl#sameAs')
+- SCHEMA_AUTHOR   = RDF::URI.new('http://schema.org/author')
+- DBPEDIA_AUTHOR  = RDF::URI.new('http://dbpedia.org/ontology/author')
+- DBPEDIA_WEBSITE = RDF::URI.new('http://dbpedia.org/property/website')
+- RDFS_LABEL      = RDF::URI.new('http://www.w3.org/2000/01/rdf-schema#label')
+- RDFS_COMMENT    = RDF::URI.new('http://www.w3.org/2000/01/rdf-schema#comment')
+- FOAF_TOPIC      = RDF::URI.new('http://xmlns.com/foaf/0.1/isPrimaryTopicOf')
+
+%div.span-24
+  
+  - author_same_as_stmts = @graph.query(:subject => AUTHOR, :predicate => SAME_AS)
+  - dbpedia_author_uri = author_same_as_stmts.select {|stmt| stmt if stmt.object.to_s.match('http://dbpedia.org/resource/')}.first.object
+  - creative_works = @graph.query(:predicate => DBPEDIA_AUTHOR, :object => dbpedia_author_uri)
+  - if creative_works.size > 0
+    %h3 More by this author
+    - creative_works.each do |work| 
+      - labels = @graph.query(:subject => work.subject, :predicate => RDFS_LABEL)
+      %h4= labels.select {|l| l if l.object.language == :en}.first.object
+      - wikipedia_url = @graph.query(:subject => work.subject, :predicate => FOAF_TOPIC, :language => 'en').first.object
+      %p
+        %a{ :href => wikipedia_url }= wikipedia_url
+      - comments = @graph.query(:subject => work.subject, :predicate => RDFS_COMMENT)
+      %p= comments.select {|c| c if c.object.language == :en}.first.object
+      - websites = @graph.query(:subject => work.subject, :predicate => DBPEDIA_WEBSITE, :language => 'en')
+      - if websites.size > 0
+        %p
+          %a{ :href => websites.first.object.to_s }= websites.first.object.to_s
+
+%div.span-24{ :style => 'visibility: hidden;' }
+  %pre= # h @graph.dump(:ttl) # Uncomment to see the entire graph that is loaded

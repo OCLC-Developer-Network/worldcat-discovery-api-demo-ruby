@@ -1,6 +1,54 @@
 # Helpers to deal with the vast variations in bibliographic data
 
 helpers do
+
+  # Load an RDF graph.
+  # Requires at least a URI to go and fetch an RDF document
+  # Optionally pass in an array of predicates to follow and it will "crawl" 
+  # those links when encountered.
+  # Optionally pass in an existing graph to add the info to. This is how crawled 
+  # content are added to the current graph. 
+  def load_graph(url, followed_predicates = nil, graph = nil)
+    
+    graph = RDF::Graph.new if graph.nil?
+    
+    # Using RestClient because RDF::RDFXML::Reader.open(url) doesn't do well w/ redirects
+    data = RestClient.get( url, :accept => 'application/rdf+xml' ) 
+    RDF::Reader.for(:rdfxml).new(data) do |reader|
+      reader.each_statement do |statement| 
+        # Add the statement to the graph
+        graph << statement 
+
+        # If the statement contains a predicate we are interested in, recursively follow it
+        # @TO-DO: add in a check that we are not going to get caught in a loop - see if 
+        # subject already exists in the graph
+        if followed_predicates and followed_predicates.has_key?(statement.predicate.to_s)
+          uri = find_followable_uri(url, statement, followed_predicates)
+          load_graph(uri, followed_predicates, graph) if uri
+        end
+      end
+    end
+    graph
+  end
+  
+  def find_followable_uri(subject, statement, followed_predicates)
+    source = followed_predicates[statement.predicate.to_s][:source]
+    follow = followed_predicates[statement.predicate.to_s][:follow]
+    
+    if follow == 'subject'
+      uri = statement.subject.to_s
+      statement.object == subject and uri.match(source) and !is_tautology?(statement) ? uri : nil
+    elsif follow == 'object'
+      uri = statement.object.to_s
+      statement.subject == subject and uri.match(source) and !is_tautology?(statement) ? uri : nil
+    else
+      nil
+    end
+  end
+  
+  def is_tautology?(statement)
+    statement.subject == statement.object
+  end
   
   def facet_display_name(facet, facet_value)
     case facet.index
