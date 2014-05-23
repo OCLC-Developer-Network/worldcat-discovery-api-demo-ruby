@@ -9,26 +9,30 @@ helpers do
   # Optionally pass in an existing graph to add the info to. This is how crawled 
   # content are added to the current graph. 
   def load_graph(url, followed_predicates = nil, graph = nil)
-    
-    graph = RDF::Graph.new if graph.nil?
-    
-    # Using RestClient because RDF::RDFXML::Reader.open(url) doesn't do well w/ redirects
-    data = RestClient.get( url, :accept => 'application/rdf+xml' ) 
-    RDF::Reader.for(:rdfxml).new(data) do |reader|
-      reader.each_statement do |statement| 
-        # Add the statement to the graph
-        graph << statement 
+    begin
+      graph = RDF::Graph.new if graph.nil?
+      
+      # Using RestClient because RDF::RDFXML::Reader.open(url) doesn't do well w/ redirects
+      data = RestClient.get( url, :accept => 'application/rdf+xml' ) 
+      RDF::Reader.for(:rdfxml).new(data) do |reader|
+        reader.each_statement do |statement| 
+          # Add the statement to the graph
+          graph << statement 
 
-        # If the statement contains a predicate we are interested in, recursively follow it
-        # @TO-DO: add in a check that we are not going to get caught in a loop - see if 
-        # subject already exists in the graph
-        if followed_predicates and followed_predicates.has_key?(statement.predicate.to_s)
-          uri = find_followable_uri(url, statement, followed_predicates)
-          load_graph(uri, followed_predicates, graph) if uri
+          # If the statement contains a predicate we are interested in, recursively follow it
+          # @TO-DO: add in a check that we are not going to get caught in a loop - see if 
+          # subject already exists in the graph
+          if followed_predicates and followed_predicates.has_key?(statement.predicate.to_s)
+            uri = find_followable_uri(url, statement, followed_predicates)
+            load_graph(uri, followed_predicates, graph) if uri
+          end
         end
       end
+      graph
+    rescue RestClient::BadGateway => e
+      puts "Warning: received response #{e.message} from #{url}"
+      graph
     end
-    graph
   end
   
   def find_followable_uri(subject, statement, followed_predicates)
@@ -52,8 +56,8 @@ helpers do
   
   def facet_display_name(facet, facet_value)
     case facet.index
-    when 'srw.ln' then MARC_LANGUAGES[facet_value.name]
-    when 'srw.ap' then facet_value.name.titleize 
+    when 'inLanguage' then MARC_LANGUAGES[facet_value.name]
+    when 'author' then facet_value.name.titleize 
     else facet_value.name
     end
   end

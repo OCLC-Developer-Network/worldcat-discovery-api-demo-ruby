@@ -1,137 +1,143 @@
-<?xml version="1.0"?>
-<rdf:RDF 
-    xmlns:x-searcho="http://worldcat.org/searcho/" 
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-    xmlns:library="http://purl.org/library/" 
-    xmlns:j.1="http://www.w3.org/2006/gen/ont#" 
-    xmlns:gr="http://purl.org/goodrelations/v1#" 
-    xmlns:owl="http://www.w3.org/2002/07/owl#" 
-    xmlns:void="http://rdfs.org/ns/void#" 
-    xmlns:schema="http://schema.org/" 
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    
-    <rdf:Description rdf:about="http://www.worldcat.org/isbn/0631193618">
-        <schema:isbn>0631193618</schema:isbn>
-        <schema:description>acid-free paper</schema:description>
-        <rdf:type rdf:resource="http://schema.org/ProductModel"/>
-        <schema:sameAs rdf:resource="urn:isbn:0631193618"/>
-        <schema:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.worldcat.org/isbn/9780631193623">
-        <schema:isbn>9780631193623</schema:isbn>
-        <schema:description>pbk. : acid-free paper</schema:description>
-        <rdf:type rdf:resource="http://purl.org/library/Volume"/>
-        <schema:bookFormat rdf:resource="http://schema.org/Paperback"/>
-        <rdf:type rdf:resource="http://schema.org/ProductModel"/>
-        <schema:sameAs rdf:resource="urn:isbn:9780631193623"/>
-        <schema:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="A0">
-        <schema:name>Wissenschaftstheorie.</schema:name>
-        <rdf:type rdf:resource="http://schema.org/Intangible"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.worldcat.org/isbn/9780631193616">
-        <schema:isbn>9780631193616</schema:isbn>
-        <schema:description>acid-free paper</schema:description>
-        <rdf:type rdf:resource="http://schema.org/ProductModel"/>
-        <schema:sameAs rdf:resource="urn:isbn:9780631193616"/>
-        <schema:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="A1">
-        <schema:name>Filosofia contempor&#xE2;nea--Alemanha.</schema:name>
-        <rdf:type rdf:resource="http://schema.org/Intangible"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://dewey.info/class/192/e20/">
-        <rdf:type rdf:resource="http://schema.org/Intangible"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="A2">
-        <schema:name>Oxford, UK</schema:name>
-        <rdf:type rdf:resource="http://schema.org/Place"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://id.worldcat.org/fast/1060777">
-        <schema:name>Philosophy.</schema:name>
-        <rdf:type rdf:resource="http://schema.org/Intangible"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.worldcat.org/oclc/30780581">
-        <schema:about rdf:resource="http://dewey.info/class/192/e20/"/>
-        <schema:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
-        <schema:workExample rdf:resource="http://www.worldcat.org/isbn/9780631193623"/>
-        <library:placeOfPublication rdf:nodeID="A2"/>
-        <library:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30780581</library:oclcnum>
-        <schema:numberOfPages>312</schema:numberOfPages>
-        <library:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
-        <schema:datePublished>1994</schema:datePublished>
-        <schema:description>Introduction ---- 1. Tractatus logico-philosophicus --- 2. The rejection of logical atomism --- 3. Meaning and understanding --- 4. Intentionality --- 5. Following a rule --- 6. Thinking --- 7. The will --- 8. Private language and private experience --- 9. Aspect and image --- 10. The first person --- 11. The inner and the outer --- 12. Necessity --- 13. Scepticism and certainty --- 14. The nature of philosophy --- 15. Ethics, life and faith.</schema:description>
-        <schema:workExample rdf:resource="http://www.worldcat.org/isbn/9780631193616"/>
-        <schema:about rdf:nodeID="A1"/>
-        <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</gr:displayPosition>
-        <rdfs:seeAlso rdf:resource="http://www.worldcat.org/title/-/oclc/30780581"/>
-        <rdf:type rdf:resource="http://schema.org/Book"/>
-        <schema:publisher rdf:nodeID="A3"/>
-        <owl:sameAs rdf:resource="info:oclcnum/30780581"/>
-        <schema:workExample rdf:resource="http://www.worldcat.org/isbn/0631193626"/>
-        <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/45185752"/>
-        <schema:inLanguage>en</schema:inLanguage>
-        <schema:about rdf:nodeID="A0"/>
-        <schema:author rdf:resource="http://viaf.org/viaf/24609378"/>
-        <schema:about rdf:resource="http://id.worldcat.org/fast/1060777"/>
-        <schema:about rdf:nodeID="A4"/>
-        <schema:about rdf:nodeID="A5"/>
-        <schema:description>From the Tractatus Logico-Philosophicus to the later work on ethics and religion, this volume is the only selection of the key works of Wittgenstein -- arguably the emblematic philosopher of the twentieth century. Thematically and chronologically arranged, The Wittgenstein Reader represents the breadth, complexity, and evolution of his thought, from logical atomism to the later work on ethics, life and faith. Taken together, the selections are designed to add up to an overview of Wittgenstein&#x2B9;s philosophical position, and are ideal as a single text for course use. -- Back cover.</schema:description>
-        <schema:contributor rdf:resource="http://viaf.org/viaf/39391468"/>
-        <schema:workExample rdf:resource="http://www.worldcat.org/isbn/0631193618"/>
-        <library:placeOfPublication rdf:nodeID="A6"/>
-        <schema:name>The Wittgenstein reader</schema:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="A3">
-        <schema:name>B. Blackwell</schema:name>
-        <rdf:type rdf:resource="http://schema.org/Organization"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://oclc.org/searchRetrieveResponse#facets">
-        <rdf:type rdf:resource="http://worldcat.org/searcho/FacetList"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://viaf.org/viaf/24609378">
-        <schema:name>Wittgenstein, Ludwig, 1889-1951.</schema:name>
-        <schema:sameAs rdf:resource="http://id.loc.gov/authorities/names/n79032058"/>
-        <rdf:type rdf:resource="http://schema.org/Person"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://viaf.org/viaf/39391468">
-        <schema:name>Kenny, Anthony, 1931-</schema:name>
-        <schema:sameAs rdf:resource="http://id.loc.gov/authorities/names/n79021578"/>
-        <rdf:type rdf:resource="http://schema.org/Person"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="A4">
-        <schema:name>Analytische Philosophie.</schema:name>
-        <rdf:type rdf:resource="http://schema.org/Intangible"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="A6">
-        <schema:name>Cambridge, Mass., USA</schema:name>
-        <rdf:type rdf:resource="http://schema.org/Place"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/B3376">
-        <rdf:type rdf:resource="http://schema.org/Intangible"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/enk">
-        <rdf:type rdf:resource="http://schema.org/Country"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.worldcat.org/isbn/0631193626">
-        <schema:isbn>0631193626</schema:isbn>
-        <schema:description>pbk. : acid-free paper</schema:description>
-        <rdf:type rdf:resource="http://purl.org/library/Volume"/>
-        <schema:bookFormat rdf:resource="http://schema.org/Paperback"/>
-        <rdf:type rdf:resource="http://schema.org/ProductModel"/>
-        <schema:sameAs rdf:resource="urn:isbn:0631193626"/>
-        <schema:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="A5">
-        <schema:name>Philosophy.</schema:name>
-        <schema:sameAs rdf:resource="http://id.loc.gov/authorities/subjects/sh85100849"/>
-        <rdf:type rdf:resource="http://schema.org/Intangible"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/30780581">
-        <void:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
-        <schema:about rdf:resource="http://www.worldcat.org/oclc/30780581"/>
-        <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
-        <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
-    </rdf:Description>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://purl.org/library/"
+    xmlns:j.1="http://www.w3.org/2006/gen/ont#"
+    xmlns:j.2="http://purl.org/goodrelations/v1#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.3="http://purl.org/dc/terms/"
+    xmlns:j.4="http://rdfs.org/ns/void#"
+    xmlns:j.5="http://schema.org/" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.5:name>B. Blackwell</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:sameAs rdf:resource="http://id.loc.gov/authorities/subjects/sh85100849"/>
+    <j.5:name>Philosophy.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/isbn/0631193618">
+    <j.5:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
+    <j.5:sameAs rdf:resource="urn:isbn:0631193618"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.5:description>acid-free paper</j.5:description>
+    <j.5:isbn>0631193618</j.5:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/isbn/9780631193623">
+    <j.5:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
+    <j.5:sameAs rdf:resource="urn:isbn:9780631193623"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.5:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <rdf:type rdf:resource="http://purl.org/library/Volume"/>
+    <j.5:description>pbk. : acid-free paper</j.5:description>
+    <j.5:isbn>9780631193623</j.5:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name>Filosofia contemporânea--Alemanha.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/isbn/9780631193616">
+    <j.5:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
+    <j.5:sameAs rdf:resource="urn:isbn:9780631193616"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.5:description>acid-free paper</j.5:description>
+    <j.5:isbn>9780631193616</j.5:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/e20/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name>Wissenschaftstheorie.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name>Analytische Philosophie.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name>Wissenschaftstheorie.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name>Analytische Philosophie.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1060777">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name>Philosophy.</j.5:name>
+    <j.5:name>Philosophy</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/30780581">
+    <j.5:about rdf:resource="http://dewey.info/class/192/e20/"/>
+    <j.5:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <j.5:workExample rdf:resource="http://www.worldcat.org/isbn/9780631193623"/>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30780581</j.0:oclcnum>
+    <j.5:numberOfPages>312</j.5:numberOfPages>
+    <j.0:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <j.5:datePublished>1994</j.5:datePublished>
+    <j.5:description>Introduction ---- 1. Tractatus logico-philosophicus --- 2. The rejection of logical atomism --- 3. Meaning and understanding --- 4. Intentionality --- 5. Following a rule --- 6. Thinking --- 7. The will --- 8. Private language and private experience --- 9. Aspect and image --- 10. The first person --- 11. The inner and the outer --- 12. Necessity --- 13. Scepticism and certainty --- 14. The nature of philosophy --- 15. Ethics, life and faith.</j.5:description>
+    <j.5:workExample rdf:resource="http://www.worldcat.org/isbn/9780631193616"/>
+    <j.5:publisher rdf:nodeID="A0"/>
+    <j.5:about rdf:nodeID="A1"/>
+    <j.5:about rdf:nodeID="A3"/>
+    <j.0:placeOfPublication rdf:nodeID="A7"/>
+    <j.2:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</j.2:displayPosition>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <owl:sameAs rdf:resource="info:oclcnum/30780581"/>
+    <j.5:workExample rdf:resource="http://www.worldcat.org/isbn/0631193626"/>
+    <j.5:about rdf:nodeID="A2"/>
+    <j.5:about rdf:nodeID="A6"/>
+    <j.5:about rdf:nodeID="A5"/>
+    <j.5:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/45185752"/>
+    <j.5:inLanguage>en</j.5:inLanguage>
+    <j.5:url rdf:resource="http://www.worldcat.org/title/-/oclc/30780581"/>
+    <j.5:author rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.5:contributor rdf:resource="http://viaf.org/viaf/39391468"/>
+    <j.0:placeOfPublication rdf:nodeID="A8"/>
+    <j.5:description>From the Tractatus Logico-Philosophicus to the later work on ethics and religion, this volume is the only selection of the key works of Wittgenstein -- arguably the emblematic philosopher of the twentieth century. Thematically and chronologically arranged, The Wittgenstein Reader represents the breadth, complexity, and evolution of his thought, from logical atomism to the later work on ethics, life and faith. Taken together, the selections are designed to add up to an overview of Wittgensteinʹs philosophical position, and are ideal as a single text for course use. -- Back cover.</j.5:description>
+    <j.5:about rdf:resource="http://id.worldcat.org/fast/1060777"/>
+    <j.5:workExample rdf:resource="http://www.worldcat.org/isbn/0631193618"/>
+    <j.5:about rdf:nodeID="A4"/>
+    <j.5:name>The Wittgenstein reader</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.5:name>Cambridge, Mass., USA</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.5:name>Oxford, UK</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/24609378">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.5:sameAs rdf:resource="http://id.loc.gov/authorities/names/n79032058"/>
+    <j.5:name>Wittgenstein, Ludwig, 1889-1951.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/39391468">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.5:sameAs rdf:resource="http://id.loc.gov/authorities/names/n79021578"/>
+    <j.5:name>Kenny, Anthony, 1931-</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/B3376">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/enk">
+    <rdf:type rdf:resource="http://schema.org/Country"/>
+    <j.3:identifier>enk</j.3:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/isbn/0631193626">
+    <j.5:exampleOfWork rdf:resource="http://www.worldcat.org/oclc/30780581"/>
+    <j.5:sameAs rdf:resource="urn:isbn:0631193626"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.5:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <rdf:type rdf:resource="http://purl.org/library/Volume"/>
+    <j.5:description>pbk. : acid-free paper</j.5:description>
+    <j.5:isbn>0631193626</j.5:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/30780581">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.5:about rdf:resource="http://www.worldcat.org/oclc/30780581"/>
+    <j.4:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
 </rdf:RDF>

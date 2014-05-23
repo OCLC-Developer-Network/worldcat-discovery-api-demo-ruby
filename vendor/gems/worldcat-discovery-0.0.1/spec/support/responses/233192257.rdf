@@ -1,72 +1,69 @@
 <rdf:RDF
-    xmlns:x-searcho="http://worldcat.org/searcho/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:j.0="http://purl.org/library/"
     xmlns:j.1="http://www.w3.org/2006/gen/ont#"
     xmlns:j.2="http://purl.org/goodrelations/v1#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.3="http://rdfs.org/ns/void#"
-    xmlns:j.4="http://schema.org/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+    xmlns:j.3="http://purl.org/dc/terms/"
+    xmlns:j.4="http://rdfs.org/ns/void#"
+    xmlns:j.5="http://schema.org/" > 
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/233192257">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.5:about rdf:resource="http://www.worldcat.org/oclc/233192257"/>
+    <j.4:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
   <rdf:Description rdf:nodeID="A0">
-    <j.4:sameAs rdf:resource="http://id.worldcat.org/fast/1204155"/>
-    <j.4:name>United States.</j.4:name>
     <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.5:name>United States.</j.5:name>
+    <j.5:sameAs rdf:resource="http://id.worldcat.org/fast/1204155"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A1">
-    <j.4:name>United States</j.4:name>
     <rdf:type rdf:resource="http://schema.org/Place"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/233192257">
-    <j.3:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
-    <j.4:about rdf:resource="http://www.worldcat.org/oclc/233192257"/>
-    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
-    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://oclc.org/searchRetrieveResponse#facets">
-    <rdf:type rdf:resource="http://worldcat.org/searcho/FacetList"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <j.4:name>U.S. Dept. of the Interior, National Park Service</j.4:name>
-    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.5:name>Washington, D.C.</j.5:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/dcu">
     <rdf:type rdf:resource="http://schema.org/Country"/>
+    <j.3:identifier>dcu</j.3:identifier>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <j.4:name>Washington, D.C.</j.4:name>
-    <rdf:type rdf:resource="http://schema.org/Place"/>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.5:name>U.S. Dept. of the Interior, National Park Service</j.5:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://viaf.org/viaf/142729626">
-    <j.4:name>United States. National Park Service.</j.4:name>
-    <j.4:sameAs rdf:resource="http://id.loc.gov/authorities/names/n79022809"/>
     <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.5:sameAs rdf:resource="http://id.loc.gov/authorities/names/n79022809"/>
+    <j.5:name>United States. National Park Service.</j.5:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.worldcat.org/oclc/233192257">
     <rdf:type rdf:resource="http://schema.org/MediaObject"/>
-    <rdfs:seeAlso rdf:resource="http://www.worldcat.org/title/-/oclc/233192257"/>
-    <j.0:placeOfPublication rdf:nodeID="A3"/>
+    <j.5:about rdf:nodeID="A3"/>
+    <j.5:about rdf:nodeID="A4"/>
     <rdf:type rdf:resource="http://schema.org/Map"/>
     <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">233192257</j.0:oclcnum>
-    <j.4:about rdf:nodeID="A1"/>
-    <j.4:publisher rdf:nodeID="A2"/>
-    <j.4:inLanguage>en</j.4:inLanguage>
-    <j.4:about rdf:nodeID="A0"/>
-    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/139405313"/>
-    <j.4:genre>Maps.</j.4:genre>
+    <j.5:about rdf:nodeID="A0"/>
+    <j.5:inLanguage>en</j.5:inLanguage>
+    <j.5:genre>Maps.</j.5:genre>
+    <j.5:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/139405313"/>
+    <j.0:placeOfPublication rdf:nodeID="A1"/>
     <j.2:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</j.2:displayPosition>
+    <j.5:publisher rdf:nodeID="A2"/>
     <owl:sameAs rdf:resource="info:oclcnum/233192257"/>
-    <j.4:datePublished>2005</j.4:datePublished>
-    <j.4:author rdf:resource="http://viaf.org/viaf/142729626"/>
-    <j.4:url rdf:resource="http://purl.access.gpo.gov/GPO/LPS96251"/>
-    <j.4:about rdf:nodeID="A4"/>
-    <j.4:name>The United States</j.4:name>
+    <j.5:datePublished>2005</j.5:datePublished>
+    <j.5:author rdf:resource="http://viaf.org/viaf/142729626"/>
+    <j.5:url rdf:resource="http://purl.access.gpo.gov/GPO/LPS96251"/>
+    <j.5:name>The United States</j.5:name>
     <j.0:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/dcu"/>
-    <j.4:genre>Maps</j.4:genre>
+    <j.5:genre>Maps</j.5:genre>
+    <j.5:url rdf:resource="http://www.worldcat.org/title/-/oclc/233192257"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.5:name>United States</j.5:name>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A4">
-    <j.4:sameAs rdf:resource="http://id.worldcat.org/fast/1204155"/>
-    <j.4:name>United States</j.4:name>
     <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.5:name>United States</j.5:name>
+    <j.5:sameAs rdf:resource="http://id.worldcat.org/fast/1204155"/>
   </rdf:Description>
 </rdf:RDF>

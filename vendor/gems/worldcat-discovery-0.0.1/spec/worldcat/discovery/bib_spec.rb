@@ -110,10 +110,12 @@ describe WorldCat::Discovery::Bib do
         subject_ids.should include(RDF::URI('http://dewey.info/class/192/e20/'))
         subject_ids.should include(RDF::URI('http://id.loc.gov/authorities/classification/B3376'))
         subject_ids.should include(RDF::URI('http://id.worldcat.org/fast/1060777'))
-        subject_ids.should include(RDF::Node('A0'))
         subject_ids.should include(RDF::Node('A1'))
+        subject_ids.should include(RDF::Node('A2'))
+        subject_ids.should include(RDF::Node('A3'))
         subject_ids.should include(RDF::Node('A4'))
         subject_ids.should include(RDF::Node('A5'))
+        subject_ids.should include(RDF::Node('A6'))
 
         subject_names = subjects.map {|subject| subject.name}
         subject_names.should include("Filosofia contemporânea--Alemanha.")
@@ -137,12 +139,12 @@ describe WorldCat::Discovery::Bib do
         places_of_publication = @bib.places_of_publication
         places_of_publication.size.should == 3
 
-        oxford = places_of_publication.reduce(nil) {|p, place| p = place if place.id == RDF::Node('A2'); p}
+        oxford = places_of_publication.reduce(nil) {|p, place| p = place if place.id == RDF::Node('A8'); p}
         oxford.class.should == WorldCat::Discovery::Place
         oxford.type.should == 'http://schema.org/Place'
         oxford.name.should == 'Oxford, UK'
 
-        oxford = places_of_publication.reduce(nil) {|p, place| p = place if place.id == RDF::Node('A6'); p}
+        oxford = places_of_publication.reduce(nil) {|p, place| p = place if place.id == RDF::Node('A7'); p}
         oxford.class.should == WorldCat::Discovery::Place
         oxford.type.should == 'http://schema.org/Place'
         oxford.name.should == 'Cambridge, Mass., USA'
@@ -227,7 +229,7 @@ describe WorldCat::Discovery::Bib do
         end
 
         it "should have the right number for total results" do
-          @results.total_results.should == 1120
+          @results.total_results.should == 1130
         end
 
         it "should have the right start index" do
@@ -271,14 +273,14 @@ describe WorldCat::Discovery::Bib do
 
           it "should have the correct facet indices" do
             facet_indices = @results.facets.map{|facet| facet.index}
-            facet_indices.should include('srw.ap')
-            facet_indices.should include('srw.ln')
+            facet_indices.should include('author')
+            facet_indices.should include('inLanguage')
           end
 
           it "should have facets with the correct IDs" do
             ids = @results.facets.map{|facet| facet.id.to_s}
-            ids.should include("#{@base_url}#facet:srw.ln")
-            ids.should include("#{@base_url}#facet:srw.ap")
+            ids.should include("#{@base_url}#facet:inLanguage")
+            ids.should include("#{@base_url}#facet:author")
           end
 
           it "should have facet values with the correct IDs" do
@@ -302,7 +304,7 @@ describe WorldCat::Discovery::Bib do
           end
 
           it "should have the correct facet value name" do
-            author_facet = @results.facets.find {|facet| facet if facet.index == 'srw.ap'}
+            author_facet = @results.facets.find {|facet| facet if facet.index == 'author'}
             author_facet.values.first.name.should.should == 'thomas gary'
           end
         end        
