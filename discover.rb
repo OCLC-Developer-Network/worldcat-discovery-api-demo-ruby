@@ -6,7 +6,7 @@ get "/" do
 end
 
 get "/catalog" do
-  params[:facets] = ['author:10', 'inLanguage:10']
+  params[:facetFields] = ['author:10', 'inLanguage:10']
   @results = WorldCat::Discovery::Bib.search(params)
   haml :search_results, :layout => :template
 end

@@ -5,9 +5,9 @@ gem "sinatra", "1.4.1"
 gem "haml", "4.0.5"
 gem "activesupport", "4.1.1"
 gem "rdf-turtle", "1.1.2"
-gem "nokogiri", "1.6.1"
+gem "nokogiri", "1.6.2.1"
 gem "oclc-auth", '0.1.1', :path => "vendor/gems/oclc-auth-0.1.1"
-gem "worldcat-discovery", '0.0.1', :path => "vendor/gems/worldcat-discovery-0.0.1"
+gem "worldcat-discovery", '0.1.0', :path => "vendor/gems/worldcat-discovery-0.1.0"
 
 group :development, :test do
   # gem 'rspec', '2.13.0'
