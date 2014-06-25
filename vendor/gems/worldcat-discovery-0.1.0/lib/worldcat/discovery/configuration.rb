@@ -24,7 +24,8 @@ module WorldCat
     class Configuration
       
       include Singleton
-      attr_accessor :api_key
+      attr_accessor :api_key, :access_token, :authenticating_institution_id, 
+          :context_institution_id
       
     end
   end

@@ -43,14 +43,27 @@ module WorldCat
     
     class << self
       
-      def configure(api_key)
+      def configure(api_key, authenticating_institution_id, context_institution_id)
         @config = WorldCat::Discovery::Configuration.instance
         @config.api_key = api_key
+        @config.authenticating_institution_id = authenticating_institution_id
+        @config.context_institution_id = context_institution_id
       end
       
       def api_key
         @config.api_key
-      end 
+      end
+      
+      def access_token
+        token = @config.access_token
+        if token.nil? or token.expired?
+          authenticating_institution_id = @config.authenticating_institution_id
+          context_institution_id = @config.context_institution_id
+          token = @config.api_key.client_credentials_token(authenticating_institution_id, context_institution_id)
+          @config.access_token = token
+        end
+        token
+      end
       
       def configured?
         WorldCat::Discovery::Configuration.instance.api_key.nil? ? false : true
