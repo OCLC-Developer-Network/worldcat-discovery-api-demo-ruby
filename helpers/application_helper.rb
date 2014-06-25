@@ -73,9 +73,21 @@ helpers do
   end
     
   def facet_refine_url(facet, facet_value, params)
-    q  = params[:q]
-    q += " AND #{facet.index}:#{facet_value.name}"
-    url("/catalog?q=#{q}")
+    uri = Addressable::URI.parse("#{request.url}")
+    params = uri.query_values
+    if params["facetQueries"].nil?
+      params["facetQueries"] = Array.new
+    elsif params["facetQueries"].is_a?(String)
+      str = params["facetQueries"]
+      params["facetQueries"] = Array.new
+      params["facetQueries"] << str
+    else
+      params["facetQueries"] = params["facetQueries"]
+    end
+    params["facetQueries"] << "#{facet.index}:#{facet_value.name}"
+    # puts ; puts ; puts params.inspect ; puts ; puts
+    uri.query_values = params
+    url(uri.to_s)
   end
   
   def is_published?(bib)

@@ -6,7 +6,9 @@ get "/" do
 end
 
 get "/catalog" do
-  params[:facetFields] = ['author:10', 'inLanguage:10']
+  uri = URI.parse(request.url)
+  params = CGI.parse(uri.query)
+  params["facetFields"] = ['inLanguage:10', 'itemType:10']
   @results = WorldCat::Discovery::Bib.search(params)
   haml :search_results, :layout => :template
 end
