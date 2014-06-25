@@ -19,7 +19,3 @@ And then point your web browser at the unauthenticated URL:
 
 [http://localhost:9292](http://localhost:9292)
 
-## Known Issues
-
-* Facets display, but cannot yet refine the queries
-
