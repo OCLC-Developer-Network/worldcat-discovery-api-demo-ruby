@@ -100,8 +100,8 @@ helpers do
   end
     
   def facet_refine_url(facet, facet_value, params)
-    uri = Addressable::URI.parse("#{request.url}")
-    params = uri.query_values
+    uri = URI.parse(request.url)
+    params = CGI.parse(uri.query)
     if params["facetQueries"].nil?
       params["facetQueries"] = Array.new
     elsif params["facetQueries"].is_a?(String)
@@ -109,12 +109,12 @@ helpers do
       params["facetQueries"] = Array.new
       params["facetQueries"] << str
     else
-      params["facetQueries"] = params["facetQueries"]
+      params["facetQueries"] = params["facetQueries"].dup
     end
     params["facetQueries"] << "#{facet.index}:#{facet_value.name}"
-    # puts ; puts ; puts params.inspect ; puts ; puts
-    uri.query_values = params
-    url(uri.to_s)
+    params.delete("startNum")
+    query_string = to_query_string(params)
+    url("#{request.path_info}?#{query_string}")
   end
   
   def is_published?(bib)
