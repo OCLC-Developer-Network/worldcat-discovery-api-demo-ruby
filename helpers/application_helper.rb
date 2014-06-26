@@ -71,6 +71,33 @@ helpers do
     pagination[:previous_page_start] = (pagination[:first] - 11) < 0 ? nil : pagination[:first] - 11
     pagination
   end
+  
+  def previous_page_url(pagination)
+    uri = URI.parse(request.url)
+    params = CGI.parse(uri.query)
+    params["startNum"] = [pagination[:previous_page_start]]
+    query_string = to_query_string(params)
+    url("#{request.path_info}?#{query_string}")
+  end
+  
+  def next_page_url(pagination)
+    uri = URI.parse(request.url)
+    params = CGI.parse(uri.query)
+    params["startNum"] = [pagination[:next_page_start]]
+    query_string = to_query_string(params)
+    url("#{request.path_info}?#{query_string}")
+  end
+  
+  def to_query_string(params)
+    escaped_params = Array.new
+    params.each do |key,values|
+      values.each do |value|
+        value = CGI.unescape(value.to_s)
+        escaped_params << key + "=" + CGI.escape(value).gsub('+', '%20')
+      end
+    end
+    escaped_params.join('&')
+  end
     
   def facet_refine_url(facet, facet_value, params)
     uri = Addressable::URI.parse("#{request.url}")

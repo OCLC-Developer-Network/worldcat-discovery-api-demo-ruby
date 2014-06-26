@@ -18,7 +18,7 @@
         - _pagination = pagination(params, @results)
         %div.previous.span-6.first
           - if _pagination[:previous_page_start] 
-            %a{:href => url("/catalog?q=#{params[:q]}&startNum=#{_pagination[:previous_page_start]}")} &laquo; Previous
+            %a{:href => previous_page_url(_pagination)} &laquo; Previous
           - else
             %span.inactive-link &laquo; Previous
 
@@ -27,7 +27,7 @@
 
         %div.next.span-6.last
           - if _pagination[:next_page_start] 
-            %a{:href => url("/catalog?q=#{params[:q]}&startNum=#{_pagination[:next_page_start]}")} Next &raquo;
+            %a{:href => next_page_url(_pagination)} Next &raquo;
           - else
             %span.inactive-link Next &raquo;
 
