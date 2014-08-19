@@ -7,7 +7,7 @@ require "rdf/turtle"
 
 require "./discover"
 require "./helpers/application_helper"
-require "./uris"
+require "./lib/uris"
 
 set :environment, :development
 set :run, true

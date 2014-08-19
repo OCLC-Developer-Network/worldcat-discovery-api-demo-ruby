@@ -29,8 +29,3 @@ get '/explore' do
   haml :explore
 end
 
-get '/get_name' do
-  followed_predicates = Hash.new
-  @graph = load_graph(params[:uri], followed_predicates)
-  haml :influenced_by
-end
