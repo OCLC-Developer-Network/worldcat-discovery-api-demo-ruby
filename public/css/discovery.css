@@ -152,12 +152,27 @@ span.label {
 	font-size: 1.1em;
 }
 
+.ui-widget-content {
+    background: #fff;
+    border: 0px;
+    color: #333;
+}
 
+.ui-accordion-header {
+    background: #fff;
+    border: 0px;
+    border-bottom: 1px solid #eee;
+    color: #06c;
+}
 
+.more-section-heading {
+    font-size: 1.2em; 
+    margin-bottom: 1px;
+}
 
-
-
-
+.more-section-description {
+    margin-top: 1px;
+}
 
 
 

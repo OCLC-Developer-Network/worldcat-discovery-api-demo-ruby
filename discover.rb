@@ -23,7 +23,14 @@ get '/explore' do
   followed_predicates = Hash.new
   followed_predicates['http://www.w3.org/2002/07/owl#sameAs'] = { :source => 'http://dbpedia.org', :follow => 'object' }
   followed_predicates['http://dbpedia.org/ontology/author'] = { :source => 'http://dbpedia.org', :follow => 'subject' }
+  followed_predicates['http://dbpedia.org/ontology/starring'] = { :source => 'http://dbpedia.org', :follow => 'subject' }
   
   @graph = load_graph(params[:uri], followed_predicates)
   haml :explore
+end
+
+get '/get_name' do
+  followed_predicates = Hash.new
+  @graph = load_graph(params[:uri], followed_predicates)
+  haml :influenced_by
 end

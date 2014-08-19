@@ -15,7 +15,7 @@ $ bundle install
 $ bundle exec rackup
 ```
 
-And then point your web browser at the unauthenticated URL:
+And then point your web browser at the URL:
 
 [http://localhost:9292](http://localhost:9292)
 

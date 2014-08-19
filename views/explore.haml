@@ -1,31 +1,62 @@
-- AUTHOR          = RDF::URI.new(params[:uri])
-- SAME_AS         = RDF::URI.new('http://www.w3.org/2002/07/owl#sameAs')
-- SCHEMA_AUTHOR   = RDF::URI.new('http://schema.org/author')
-- DBPEDIA_AUTHOR  = RDF::URI.new('http://dbpedia.org/ontology/author')
-- DBPEDIA_WEBSITE = RDF::URI.new('http://dbpedia.org/property/website')
-- RDFS_LABEL      = RDF::URI.new('http://www.w3.org/2000/01/rdf-schema#label')
-- RDFS_COMMENT    = RDF::URI.new('http://www.w3.org/2000/01/rdf-schema#comment')
-- FOAF_TOPIC      = RDF::URI.new('http://xmlns.com/foaf/0.1/isPrimaryTopicOf')
+- author = RDF::URI.new(params[:uri])
+- title = params[:title].nil? ? '' : params[:title].strip 
 
-%div.span-24
+%div.span-8
+  %h3 More about this author
+
+  %div#more-about-author.span-8
   
-  - author_same_as_stmts = @graph.query(:subject => AUTHOR, :predicate => SAME_AS)
-  - dbpedia_author_uri = author_same_as_stmts.select {|stmt| stmt if stmt.object.to_s.match('http://dbpedia.org/resource/')}.first.object
-  - creative_works = @graph.query(:predicate => DBPEDIA_AUTHOR, :object => dbpedia_author_uri)
-  - if creative_works.size > 0
-    %h3 More by this author
-    - creative_works.each do |work| 
-      - labels = @graph.query(:subject => work.subject, :predicate => RDFS_LABEL)
-      %h4= labels.select {|l| l if l.object.language == :en}.first.object
-      - wikipedia_url = @graph.query(:subject => work.subject, :predicate => FOAF_TOPIC, :language => 'en').first.object
-      %p
-        %a{ :href => wikipedia_url }= wikipedia_url
-      - comments = @graph.query(:subject => work.subject, :predicate => RDFS_COMMENT)
-      %p= comments.select {|c| c if c.object.language == :en}.first.object
-      - websites = @graph.query(:subject => work.subject, :predicate => DBPEDIA_WEBSITE, :language => 'en')
-      - if websites.size > 0
-        %p
-          %a{ :href => websites.first.object.to_s }= websites.first.object.to_s
+    - author_same_as_stmts = @graph.query(:subject => author, :predicate => SAME_AS)
+    - dbpedia_author_uri = author_same_as_stmts.select {|stmt| stmt if stmt.object.to_s.match('http://dbpedia.org/resource/')}.first.object
+    - more_works = other_works(@graph, dbpedia_author_uri, title)
+    - if more_works.size > 0
+      %h4 Other Work
+      %div
+        - more_works.each do |work| 
+          - labels = @graph.query(:subject => work.subject, :predicate => RDFS_LABEL)
+          %h5.more-section-heading= labels.select {|l| l if l.object.language == :en}.first.object
+          - wikipedia_url = @graph.query(:subject => work.subject, :predicate => FOAF_TOPIC, :language => 'en').first.object
+          %p.more-section-description
+            %a{ :href => wikipedia_url }= wikipedia_url
+          - comments = @graph.query(:subject => work.subject, :predicate => RDFS_COMMENT)
+          %p= comments.select {|c| c if c.object.language == :en}.first.object
+          - websites = @graph.query(:subject => work.subject, :predicate => DBPEDIA_WEBSITE, :language => 'en')
+          - if websites.size > 0
+            %p
+              %a{ :href => websites.first.object.to_s }= websites.first.object.to_s
+  
+    - influencers = @graph.query(:subject => dbpedia_author_uri, :predicate => DBPEDIA_INFL_BY)
+    - influenced = @graph.query(:subject => dbpedia_author_uri, :predicate => DBPEDIA_INFL_OF)
+    - if influencers.size > 0 or influenced.size > 0
+      %h4 Intellectual Network
+      %div
+        - if influencers.size > 0
+          %h5 Influenced by
+          %ul
+            - influencers.each do |influence| 
+              %li= URI.decode( influence.object.to_s.gsub('http://dbpedia.org/resource/', '').gsub('_', ' ') )
 
-%div.span-24{ :style => 'visibility: hidden;' }
-  %pre= # h @graph.dump(:ttl) # Uncomment to see the entire graph that is loaded
+        - if influenced.size > 0
+          %h5 Influenced
+          %ul
+            - influenced.each do |influencee| 
+              %li= URI.decode( influencee.object.to_s.gsub('http://dbpedia.org/resource/', '').gsub('_', ' ') )
+
+    - starring_stmts = @graph.query(:predicate => DBPEDIA_STARRING, :object => dbpedia_author_uri)
+    - if starring_stmts.size > 0
+      %h4 Film Appearances
+      %div
+        - starring_stmts.each do |stmt| 
+          - film_uri = stmt.subject
+          - film_name = @graph.query(:subject => film_uri, :predicate => DBPEDIA_NAME, :language => 'en').first.object
+          - abstracts = @graph.query(:subject => film_uri, :predicate => DBPEDIA_ABSTRACT)
+          - abstract = abstracts.select{|a| a if a.object.language == :en}.first.object
+          %h5.more-section-heading= film_name
+          %p.more-section-description= abstract 
+
+%script{ :type => 'text/javascript' }
+  $( "#more-about-author" ).accordion({ active: 0, heightStyle: "content" });
+  
+%div.span-8{ :style => 'visibility: hidden;' }
+  %pre= # h @graph.dump(:ttl) # Uncomment to see the entire @graph that is loaded
+

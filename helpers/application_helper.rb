@@ -1,6 +1,17 @@
 # Helpers to deal with the vast variations in bibliographic data
 
 helpers do
+  
+  def other_works(graph, dbpedia_author_uri, title)
+    other_works = Array.new
+    works = graph.query(:predicate => DBPEDIA_AUTHOR, :object => dbpedia_author_uri)
+    works.each do |work|
+      labels = @graph.query(:subject => work.subject, :predicate => RDFS_LABEL)
+      en_label = labels.select {|l| l if l.object.language == :en}.first.object
+      other_works << work if en_label.to_s.downcase != title.downcase
+    end
+    other_works
+  end
 
   # Load an RDF graph.
   # Requires at least a URI to go and fetch an RDF document

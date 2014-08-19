@@ -1,92 +1,93 @@
 - @title = @bib.name
 
-%div#bibliographic-resource{ :resource => @bib.id, :typeof => @bib.type }
+%div.span-24{ :style => 'margin-top: 2em;' }
+  %div#bibliographic-resource.span-16.first{ :resource => @bib.id, :typeof => @bib.type }
   
-  / Title
-  %h1#bibliographic-resource-name{ :property => 'schema:name' }= @bib.name
+    / Title
+    %h1#bibliographic-resource-name{ :property => 'schema:name' }= @bib.name
   
-  / Author
-  - author = @bib.author
-  - if author
-    %div#author{ :property => 'schema:author', :resource => author.id, :typeof => author.type }
-      %h2#author-name{ :property => 'schema:name' }= author.name
+    / Author
+    - author = @bib.author
+    - if author
+      %div#author{ :property => 'schema:author', :resource => author.id, :typeof => author.type }
+        %h2#author-name{ :property => 'schema:name' }= author.name
     
-  / Contributors
-  - contributors = @bib.contributors
-  - if contributors.size > 0
-    %h3 Contributors
-    %ul#contributors
-      - contributors.each do |contributor| 
-        %li{ :property => 'schema:contributor', :resource => contributor.id, :typeof => contributor.type }
-          %span.contributor-name{ :property => 'schema:name' }= contributor.name
+    / Contributors
+    - contributors = @bib.contributors
+    - if contributors.size > 0
+      %h3 Contributors
+      %ul#contributors
+        - contributors.each do |contributor| 
+          %li{ :property => 'schema:contributor', :resource => contributor.id, :typeof => contributor.type }
+            %span.contributor-name{ :property => 'schema:name' }= contributor.name
 
-  / Subjects
-  - subjects = display_subjects(@bib)
-  - if subjects.size > 0
-    %h2 Subjects
-    %ul#subjects
-      - subjects.each do |subject| 
-        %li.subject{ :property => 'schema:about', :resource => subject.id, :typeof => subject.type }
-          %span.subject-name{ :property => 'schema:name' }= subject.name
+    / Subjects
+    - subjects = display_subjects(@bib)
+    - if subjects.size > 0
+      %h2 Subjects
+      %ul#subjects
+        - subjects.each do |subject| 
+          %li.subject{ :property => 'schema:about', :resource => subject.id, :typeof => subject.type }
+            %span.subject-name{ :property => 'schema:name' }= subject.name
 
-  / Publication Info
-  %h2 Publication Info
-  %p
-    %span.label Format:
-    %span.value= FORMATS[@bib.type.to_s]
-    %br
+    / Publication Info
+    %h2 Publication Info
+    %p
+      %span.label Format:
+      %span.value= FORMATS[@bib.type.to_s]
+      %br
     
-    - if @bib.book_edition
-      %span.label Edition:
-      %span.value{ :property => 'schema:bookEdition' }= @bib.book_edition
-      %br
+      - if @bib.book_edition
+        %span.label Edition:
+        %span.value{ :property => 'schema:bookEdition' }= @bib.book_edition
+        %br
       
-    - if @bib.language
-      %span.label Language:
-      %span.value= BCP_47_LANGUAGES[@bib.language]
-      %br
+      - if @bib.language
+        %span.label Language:
+        %span.value= BCP_47_LANGUAGES[@bib.language]
+        %br
       
-    - if is_published?(@bib)
-      %span.label Published:
-      - @bib.places_of_publication.each do |place| 
-        %span.value{ :property => 'library:placeOfPublication' }= "#{place.name} : "
-      - if @bib.publisher
+      - if is_published?(@bib)
+        %span.label Published:
+        - @bib.places_of_publication.each do |place| 
+          %span.value{ :property => 'library:placeOfPublication' }= "#{place.name} : "
+        - if @bib.publisher
+          %span.value
+            %span{ :property => 'schema:publisher', :typeof => @bib.publisher.type }
+              %span{ :property => 'schema:name' }= @bib.publisher.name
+        %span.value{ :property => 'schema:datePublished' }= @bib.date_published
+        %br
+
+      - if @bib.num_pages
+        %span.label Physical Details:
         %span.value
-          %span{ :property => 'schema:publisher', :typeof => @bib.publisher.type }
-            %span{ :property => 'schema:name' }= @bib.publisher.name
-      %span.value{ :property => 'schema:datePublished' }= @bib.date_published
+          %span{ :property => 'schema:numberOfPages' }= @bib.num_pages
+          pages
+        %br
+
+      - if @bib.isbns.size > 0
+        %span.label ISBNs:
+        %span.value{ :property => 'schema:isbn' }= @bib.isbns.join(', ')
+        %br
+
+      %span.label OCLC Number:
+      %span.value{ :property => 'library:oclcnum' }= @bib.oclc_number
       %br
 
-    - if @bib.num_pages
-      %span.label Physical Details:
-      %span.value
-        %span{ :property => 'schema:numberOfPages' }= @bib.num_pages
-        pages
-      %br
+    - if @bib.descriptions.size > 0
+      %h3 Description
+      - @bib.descriptions.each do |description| 
+        %p{ :property => 'schema:description' }= description
 
-    - if @bib.isbns.size > 0
-      %span.label ISBNs:
-      %span.value{ :property => 'schema:isbn' }= @bib.isbns.join(', ')
-      %br
+    / Reviews
+    - if @bib.reviews.size > 0
+      %div{ :property => 'schema:reviews' }
+        %h3 Reviews
+        - @bib.reviews.each do |review| 
+          %p{ :property => 'schema:review' }
+            %span{ :property => 'schema:reviewBody' }= review.body
 
-    %span.label OCLC Number:
-    %span.value{ :property => 'library:oclcnum' }= @bib.oclc_number
-    %br
-
-  - if @bib.descriptions.size > 0
-    %h3 Description
-    - @bib.descriptions.each do |description| 
-      %p{ :property => 'schema:description' }= description
-
-  / Reviews
-  - if @bib.reviews.size > 0
-    %div{ :property => 'schema:reviews' }
-      %h3 Reviews
-      - @bib.reviews.each do |review| 
-        %p{ :property => 'schema:review' }
-          %span{ :property => 'schema:reviewBody' }= review.body
-
-%div#more-info
+  %div#more-info.span-8.last
     
   
   
