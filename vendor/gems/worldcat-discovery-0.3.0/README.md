@@ -24,8 +24,8 @@ $ gem install worldcat-discovery-<VERSION-NUMBER>.gem
 ```ruby
 require 'worldcat/discovery'
 
-wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret')
-WorldCat::Discovery.configure(wskey)
+wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :services => ['WorldCatDiscoveryAPI'])
+WorldCat::Discovery.configure(wskey, 128807, 128807)
 
 bib = WorldCat::Discovery::Bib.find(255034622)
 
@@ -44,12 +44,12 @@ bib.contributors.map{|contributor| contributor.name} # => [" Fowler, Chad.", "Hu
 ```ruby
 require 'worldcat/discovery'
 
-wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret')
-WorldCat::Discovery.configure(wskey)
+wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :services => ['WorldCatDiscoveryAPI'])
+WorldCat::Discovery.configure(wskey, 128807, 128807)
 
 params = Hash.new
 params[:q] = 'programming ruby'
-params[:facets] = ['author:10', 'inLanguage:10']
+params[:facetFields] = ['itemType:10', 'inLanguage:10']
 params[:startNum] = 0
 results = WorldCat::Discovery::Bib.search(params)
 

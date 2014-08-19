@@ -113,6 +113,7 @@ module WorldCat
       # [:startNum] the integer offset from the begining of the search result set. defaults to 0
       def self.search(params)
         uri = Addressable::URI.parse("#{Bib.production_url}/search")
+        params[:dbIds] = (params[:dbIds].nil? or params[:dbIds].size == 0) ? 638 : params[:dbIds]
         uri.query_values = params
         response = get_data(uri.to_s)
         

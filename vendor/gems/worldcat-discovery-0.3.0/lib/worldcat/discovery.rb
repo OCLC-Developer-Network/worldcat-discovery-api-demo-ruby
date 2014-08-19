@@ -32,11 +32,16 @@ require "worldcat/discovery/organization"
 require "worldcat/discovery/subject"
 require "worldcat/discovery/search_results"
 require "worldcat/discovery/bib_search_results"
+require "worldcat/discovery/offer_search_results"
 require "worldcat/discovery/product_model"
 require "worldcat/discovery/review"
 require "worldcat/discovery/facet_list"
 require "worldcat/discovery/facet"
 require "worldcat/discovery/facet_value"
+require "worldcat/discovery/offer"
+require "worldcat/discovery/some_products"
+require "worldcat/discovery/collection"
+require "worldcat/discovery/library"
 
 module WorldCat
   module Discovery

@@ -24,7 +24,7 @@ module WorldCat
     class BibSearchResults < SearchResults
       
       has_many :facets, :predicate => DISCOVERY_FACET, :type => 'Facet'
-      has_many :items, :predicate => DC_TERMS_HAS_PART, :type => 'GenericResource'
+      has_many :items, :predicate => DCTERMS_HAS_PART, :type => 'GenericResource'
       
       # call-seq:
       #   bibs() => Array of WorldCat::Discovery::Bib objects
