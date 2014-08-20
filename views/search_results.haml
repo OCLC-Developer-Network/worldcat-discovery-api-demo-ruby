@@ -31,7 +31,7 @@
           - else
             %span.inactive-link Next &raquo;
 
-      %ol#results-items{ :start => @results.start_index + 1 }
+      %ol#results-items.span-18{ :start => @results.start_index + 1 }
         - @results.bibs.each do |bib| 
           %li.search-result
             %h3.title
