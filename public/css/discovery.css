@@ -1,5 +1,5 @@
 body {
-	font-family: ;"Helvetica Neue",Arial,Helvetica,sans-serif;
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 2.5em; }
 h2 { font-size: 1.75em; }
-h3 { font-size: 1.5em; }
+h3 { font-size: 1.5em; margin-top: 1em; }
 
 .text-right {
 	text-align: right;
@@ -161,7 +161,7 @@ span.label {
 .ui-accordion-header {
     background: #fff;
     border: 0px;
-    border-bottom: 1px solid #eee;
+/*    border-bottom: 1px solid #eee;*/
     color: #06c;
 }
 
@@ -174,10 +174,42 @@ span.label {
     margin-top: 1px;
 }
 
+#bibliographic-resource-name {
+    border-bottom: 1px dotted #aaa;
+    margin-bottom: 2px;
+}
 
+#author-name {
+    font-size: 1.5em;
+}
 
+#author-name a {
+    text-decoration: none;
+}
 
+#author-name a:hover {
+    text-decoration: underline;
+}
 
+.ui-widget {
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size: 1em;
+}
 
+#availability h2 {
+    margin-top: 8px;
+}
+
+#more-info h2 {
+    margin-bottom: 0;
+}
+
+#statement-of-responsibility {
+    margin-bottom: .5em;
+}
+
+#statement-of-responsibility h2 {
+    margin-bottom: 0;
+}
 
 

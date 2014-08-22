@@ -9,12 +9,14 @@ get "/catalog" do
   uri = URI.parse(request.url)
   params = CGI.parse(uri.query)
   params["facetFields"] = ['inLanguage:10', 'itemType:10']
+  params["heldBy"] = ['OCPSB', 'OCWMS']
   @results = WorldCat::Discovery::Bib.search(params)
   haml :search_results, :layout => :template
 end
 
 get '/catalog/:oclc_number' do
   @bib = WorldCat::Discovery::Bib.find(params[:oclc_number])
+  @offer_results = WorldCat::Discovery::Offer.find_by_oclc(params[:oclc_number], {"heldBy" => "OCPSB,OCWMS"})
   haml :show, :layout => :template
 end
 
