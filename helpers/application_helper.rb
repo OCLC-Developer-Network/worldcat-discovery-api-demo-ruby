@@ -3,7 +3,7 @@
 helpers do
   
   def translate_symbol_to_name(symbol)
-    LIBRARIES.reduce(nil) {|name, library| name = library[1]['name'] if library[1]['symbol'] == 'OCPSB'; name}
+    LIBRARIES.reduce(nil) {|name, library| name = library[1]['name'] if library[1]['symbol'] == symbol; name}
   end
   
   def library_symbols
