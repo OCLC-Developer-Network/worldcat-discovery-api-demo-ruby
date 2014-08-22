@@ -23,7 +23,7 @@
             %span.inactive-link &laquo; Previous
 
         %div.numbering.span-6
-          = "#{_pagination[:first]} - #{_pagination[:last]} of #{_pagination[:total]}"
+          = "#{separate_comma(_pagination[:first])} - #{separate_comma(_pagination[:last])} of #{separate_comma(_pagination[:total])}"
 
         %div.next.span-6.last
           - if _pagination[:next_page_start] 

@@ -9,7 +9,9 @@ get "/catalog" do
   uri = URI.parse(request.url)
   params = CGI.parse(uri.query)
   params["facetFields"] = ['inLanguage:10', 'itemType:10']
-  params["heldBy"] = ['OCPSB', 'OCWMS']
+  params["heldBy"] = ['OCPSB', 'OCWMS'] if params['scope'].nil? or params['scope'].first != 'worldcat'
+  params.delete('scope')
+  
   @results = WorldCat::Discovery::Bib.search(params)
   haml :search_results, :layout => :template
 end

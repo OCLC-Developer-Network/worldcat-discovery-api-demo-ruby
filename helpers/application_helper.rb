@@ -2,6 +2,10 @@
 
 helpers do
   
+  def separate_comma(number)
+    number.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse
+  end
+  
   def other_works(graph, dbpedia_author_uri, title)
     other_works = Array.new
     works = graph.query(:predicate => DBPEDIA_AUTHOR, :object => dbpedia_author_uri)
