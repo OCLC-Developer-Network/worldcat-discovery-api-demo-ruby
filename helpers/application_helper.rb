@@ -2,6 +2,14 @@
 
 helpers do
   
+  def translate_symbol_to_name(symbol)
+    LIBRARIES.reduce(nil) {|name, library| name = library[1]['name'] if library[1]['symbol'] == 'OCPSB'; name}
+  end
+  
+  def library_symbols
+    LIBRARIES.map { |library| library[1]['symbol'] }
+  end
+  
   def separate_comma(number)
     number.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse
   end

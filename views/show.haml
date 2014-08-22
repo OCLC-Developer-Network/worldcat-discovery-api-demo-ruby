@@ -100,7 +100,7 @@
         - else
           - @offer_results.offers.each do |offer| 
             %p
-              = offer.item_offered.collection.library.name
+              = translate_symbol_to_name(offer.item_offered.collection.oclc_symbol)
               = "(#{offer.item_offered.collection.oclc_symbol})"
       
       %div#more-info.span-10.last

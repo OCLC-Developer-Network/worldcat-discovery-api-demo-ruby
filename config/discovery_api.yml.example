@@ -1,4 +1,11 @@
 production: 
   base_url: 'https://beta.worldcat.org'
-  key: ''
-  secret: ''
+  key: WEB_SERVICE_KEY
+  secret: WEB_SERVICE_KEY_SECRET
+  authenticating_institution_id: WORLDCAT_REGISTRY_ID
+  context_institution_id: WORLDCAT_REGISTRY_ID
+  libraries:
+    WORLDCAT_REGISTRY_ID:
+      name: LIBRARY_NAME
+      symbol: LIBRARY_OCLC_SYMBOL
+  
