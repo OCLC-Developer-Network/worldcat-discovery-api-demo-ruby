@@ -26,6 +26,8 @@ require "worldcat/discovery/version"
 require "worldcat/discovery/uris"
 require "worldcat/discovery/generic_resource"
 require "worldcat/discovery/bib"
+require "worldcat/discovery/database_list"
+require "worldcat/discovery/database"
 require "worldcat/discovery/person"
 require "worldcat/discovery/place"
 require "worldcat/discovery/organization"
@@ -72,6 +74,19 @@ module WorldCat
       
       def configured?
         WorldCat::Discovery::Configuration.instance.api_key.nil? ? false : true
+      end
+      
+      def get_data(url)
+        # Retrieve the key from the singleton configuration object
+        raise ConfigurationException.new unless WorldCat::Discovery.configured?()
+        token = WorldCat::Discovery.access_token
+        auth = "Bearer #{token.value}"
+        
+        # Make the HTTP request for the data
+        resource = RestClient::Resource.new url
+        resource.get(:authorization => auth, 
+            :user_agent => "WorldCat::Discovery Ruby gem / #{WorldCat::Discovery::VERSION}",
+            :accept => 'application/rdf+xml') 
       end
       
     end

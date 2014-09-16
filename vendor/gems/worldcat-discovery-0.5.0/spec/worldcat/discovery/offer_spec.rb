@@ -36,7 +36,7 @@ describe WorldCat::Discovery::Offer do
     end
 
     it "should contain the right id" do
-      uri = RDF::URI("http://discapiciws01dxdu.dev.oclc.org:8080/discovery/offer/oclc/30780581?itemsPerPage=10&startNum=0")
+      uri = RDF::URI("http://beta.worldcat.org/discovery/offer/oclc/30780581?itemsPerPage=10&oclcNumber=30780581&startIndex=0")
       @results.id.should == uri
     end
     
@@ -59,7 +59,7 @@ describe WorldCat::Discovery::Offer do
     end
     
     it "should have the correct total results" do
-      @results.total_results.should == 567
+      @results.total_results.should == 570
     end
     
     it "should have the correct start index" do
@@ -87,7 +87,7 @@ describe WorldCat::Discovery::Offer do
       end
       
       it "should have the correct item offered" do
-        @item_offered.subject.should == RDF::Node.new("A16")
+        @item_offered.subject.should == RDF::Node.new("A19")
         @item_offered.type.should == RDF::URI.new('http://schema.org/SomeProducts')
         @item_offered.bib.subject.should == RDF::URI.new('http://www.worldcat.org/oclc/30780581')
         @item_offered.bib.name.should == 'The Wittgenstein reader'
@@ -95,13 +95,13 @@ describe WorldCat::Discovery::Offer do
 
       it "should belong to the correct collection" do
         @collection.type.should == RDF::URI.new('http://purl.org/dc/terms/Collection')
-        @collection.oclc_symbol.should == 'AIZ'
+        @collection.oclc_symbol.should == 'IAC'
       end
 
       it "should be managed by the correct library" do
-        @library.id.should == 'http://worldcat.org/wcr/organization/resource/72545'
+        @library.id.should == 'http://worldcat.org/wcr/organization/resource/813'
         @library.type.should == RDF::URI.new('http://schema.org/Library')
-        @library.name.should == 'ACADEMIA SINICA INST EUROPEAN AM STUDIES'
+        @library.name.should == 'DePaul University Library'
         @library.collection.should == @collection
       end
       

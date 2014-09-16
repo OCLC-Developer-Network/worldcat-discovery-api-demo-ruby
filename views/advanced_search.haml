@@ -1,0 +1,63 @@
+%h2 Advanced Search
+
+%form#search-form{:action => url('/catalog')}
+  %div.span-24
+    %input{ :type => "hidden", :name => "advanced", :value => "true"}
+  %div.span-24
+    %table#advanced-search
+      %tr 
+        %td.label Match
+        %td.input
+          
+          %p
+            %select{ :name => "operator" }
+              %option{ :value => "AND", :selected => (params[:operator] == 'AND' ? true : false) } All
+              %option{ :value => "OR", :selected => (params[:operator] == 'OR' ? true : false) } Any
+            fields 
+      %tr
+        %td.label Keywords
+        %td.input
+          %p
+            %input{ :type => "text", :name => "kw", :size => 40, :value => params[:kw] }
+      %tr
+        %td.label Name/Title
+        %td.input
+          %p
+            %input{ :type => "text", :name => "name", :size => 40, :value => params[:name] }
+      %tr
+        %td.label Creator/Author
+        %td.input
+          %p
+            %input{ :type => "text", :name => "creator", :size => 40, :value => params[:creator] }
+      %tr
+        %td.label Subject
+        %td.input
+          %p
+            %input{ :type => "text", :name => "about", :size => 40, :value => params[:about] }
+      %tr
+        %td.label Databases
+        %td.input
+          %p
+            - @db_list.databases.each do |database| 
+              %label
+                %input{ :type => "checkbox", :name => "databases", :value => database.database_id, :checked => (params[:databases] and active_database_ids.include?(database.database_id.to_s) ? 'checked' : false) }
+                = database.name
+              %br
+      %tr
+        %td.label Scope
+        %td.input
+          %p
+            %label
+              - my_lib_checked = (params['scope'].nil? or params['scope'] != 'worldcat') ? 'checked' : nil
+              %input{ :type => "radio", :name => "scope", :value => "my_library", :checked => my_lib_checked }
+              Just My Library
+            %br
+            %label
+              - worldcat_checked = (!params['scope'].nil? and params['scope'] == 'worldcat') ? 'checked' : nil
+              %input{ :type => "radio", :name => "scope", :value => "worldcat", :checked => worldcat_checked }
+              All of WorldCat
+      %tr
+        %td.label &nbsp;
+        %td.input
+          %p
+            %button{ :type => "submit" } Search

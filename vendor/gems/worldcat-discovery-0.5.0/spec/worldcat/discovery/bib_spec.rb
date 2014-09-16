@@ -232,9 +232,9 @@ describe WorldCat::Discovery::Bib do
     context "from searching for bib resources" do
       context "when retrieving the first page of results" do
         before(:all) do
-          url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=author:10&facetFields=inLanguage:10&dbIds=638'
+          url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&dbIds=638'
           stub_request(:get, url).to_return(:body => body_content("bib_search.rdf"), :status => 200)
-          @results = WorldCat::Discovery::Bib.search(:q => 'wittgenstein reader', :facetFields => ['author:10', 'inLanguage:10'])
+          @results = WorldCat::Discovery::Bib.search(:q => 'wittgenstein reader', :facetFields => ['creator:10', 'inLanguage:10'])
         end
 
         it "should return a bib results set" do
@@ -242,12 +242,12 @@ describe WorldCat::Discovery::Bib do
         end
 
         it "should contain the right id" do
-          uri = RDF::URI("http://beta.worldcat.org/discovery/bib/search?dbIds=638&facetFields=author:10&facetFields=inLanguage:10&itemsPerPage=10&q=wittgenstein reader&startNum=0")
+          uri = RDF::URI("http://beta.worldcat.org/discovery/bib/search?dbIds=638&facetFields=creator:10&facetFields=inLanguage:10&itemsPerPage=10&q=wittgenstein reader&sortBy=relevance&startIndex=0")
           @results.id.should == uri
         end
 
         it "should have the right number for total results" do
-          @results.total_results.should == 1137
+          @results.total_results.should == 1136
         end
 
         it "should have the right start index" do
@@ -286,22 +286,20 @@ describe WorldCat::Discovery::Bib do
 
           it "should have the correct facet indices" do
             facet_indices = @results.facets.map{|facet| facet.index}
-            facet_indices.should include('author')
+            facet_indices.should include('creator')
             facet_indices.should include('inLanguage')
           end
 
           it "should have facets with the correct IDs" do
             ids = @results.facets.map{|facet| facet.id.to_s}
-            ids.should include("#{@base_url}#facet:inLanguage")
-            ids.should include("#{@base_url}#facet:author")
+            ids.should include("_:A1")
+            ids.should include("_:A2")
           end
 
           it "should have facet values with the correct IDs" do
-            @results.facets.each do |facet|
-              value_ids = facet.values.map{|value| value.id.to_s}
-              0.upto(9) do |i|
-                value_ids.should include("#{@base_url}#facet:#{facet.index}:#{i}")
-              end
+            value_ids = @results.facets.first.values.map{|value| value.id.to_s}
+            ["_:A9", "_:A7", "_:A14", "_:A3", "_:A11", "_:A12", "_:A8", "_:A10", "_:A13", "_:A15"].each do |node_id|
+              value_ids.should include(node_id)
             end
           end      
 
@@ -317,7 +315,7 @@ describe WorldCat::Discovery::Bib do
           end
 
           it "should have the correct facet value name" do
-            author_facet = @results.facets.find {|facet| facet if facet.index == 'author'}
+            author_facet = @results.facets.find {|facet| facet if facet.index == 'creator'}
             author_facet.values.first.name.should.should == 'thomas gary'
           end
         end        

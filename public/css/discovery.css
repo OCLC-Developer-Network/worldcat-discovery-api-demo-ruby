@@ -212,4 +212,69 @@ span.label {
     margin-bottom: 0;
 }
 
+#advanced-search td {
+    vertical-align: top;
+}
+
+#advanced-search td.label {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 1.25em;
+}
+
+#advanced-search td.input input, 
+#advanced-search td.input input, 
+#advanced-search td.input p {
+    margin-top: .25em;
+}
+
+#advanced-search td.input select {
+    margin-top: 1em;
+    width: 100px;
+}
+
+.active-search-item {
+    background: none repeat scroll 0 0 #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0 0.33em 0.66em 0.33em;
+    padding: 3px 3px 3px 1em;
+    position: relative;
+}
+
+.active-search-item .remove-item {
+    background: url("/images/remove.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border-bottom: medium none;
+    border-left: 1px solid #ccc;
+    display: block;
+    height: 100%;
+    outline: medium none;
+    position: absolute;
+    right: 0;
+    text-indent: -99999px;
+    top: 0;
+    width: 32px;
+    z-index: 5;
+}
+
+.active-search-item .key {
+    padding-left: 0;
+    font-weight: bold;
+}
+
+.active-search-item .value {
+    padding-right: 38px;
+}
+
+.active-search-item .operator {
+    
+}
+
+
+
+
+
+
 

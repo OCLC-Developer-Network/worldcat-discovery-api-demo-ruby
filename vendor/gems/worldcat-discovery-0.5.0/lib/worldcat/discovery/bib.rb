@@ -159,7 +159,7 @@ module WorldCat
         resource = RestClient::Resource.new url
         resource.get(:authorization => auth, 
             :user_agent => "WorldCat::Discovery Ruby gem / #{WorldCat::Discovery::VERSION}",
-            :accept => 'application/rdf+xml') 
+            :accept => 'application/rdf+xml')
       end
       
     end

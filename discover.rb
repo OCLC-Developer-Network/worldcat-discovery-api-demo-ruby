@@ -5,14 +5,17 @@ get "/" do
   haml :search_results, :layout => :template
 end
 
+get "/advanced" do
+  @db_list = WorldCat::Discovery::Database.list
+  haml :advanced_search, :layout => :template
+end
+
 get "/catalog" do
   uri = URI.parse(request.url)
-  params = CGI.parse(uri.query)
-  params["facetFields"] = ['inLanguage:10', 'itemType:10']
-  params["heldBy"] = library_symbols if params['scope'].nil? or params['scope'].first != 'worldcat'
-  params.delete('scope')
+  app_params = CGI.parse(uri.query)
+  api_params = discovery_api_params(app_params)
   
-  @results = WorldCat::Discovery::Bib.search(params)
+  @results = WorldCat::Discovery::Bib.search(api_params)
   haml :search_results, :layout => :template
 end
 

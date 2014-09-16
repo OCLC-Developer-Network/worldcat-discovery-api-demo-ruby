@@ -2,6 +2,79 @@
 
 helpers do
   
+  def active_advanced_search_fields(params)
+    displayable = ['kw', 'name', 'creator', 'about']
+    params.select {|key,value| displayable.include? key and value.strip != ''}
+  end
+  
+  def advanced_search_field_display_names
+    {
+      'kw' => 'Keywords', 
+      'name' => 'Name/Title',
+      'creator' => 'Author/Creator',
+      'about' => 'Subject'
+    }
+  end
+  
+  def active_database_ids
+    CGI.parse(URI.parse(request.url).query)['databases']
+  end
+  
+  def advanced_page_url
+    query = URI.parse(request.url).query
+    if query
+      params = CGI::parse(query)
+      escaped_params = params.reduce(Array.new) do |escaped_params,parameter|
+        key = parameter[0]
+        values = parameter[1]
+        values.each do |value|
+          unescaped_value = CGI.unescape(value)
+          escaped_params << key + "=" + CGI.escape(unescaped_value)
+        end
+        escaped_params
+      end
+      query_string = escaped_params.join("&")
+      url("/advanced?#{query_string}")
+    else
+      url('/advanced')
+    end
+  end
+  
+  # Translate the query string of this app into query params for the 
+  # WorldCat Discovery API
+  def discovery_api_params(app_params)
+    if app_params['advanced'].include? 'true'
+      api_params = generate_advanced_query(app_params)
+    else
+      api_params = app_params
+    end
+    api_params["facetFields"] = ['inLanguage:10', 'itemType:10', 'creator:10']
+    api_params["heldBy"] = library_symbols if app_params['scope'].nil? or app_params['scope'].first != 'worldcat'
+    api_params
+  end
+  
+  def generate_advanced_query(app_params)
+    api_params = Hash.new
+    api_params['q'] = build_query(app_params)
+    api_params[:dbIds] = app_params['databases']
+    api_params['startNum'] = app_params['startNum'] if app_params['startNum']
+    api_params
+  end
+  
+  def build_query(app_params)
+    clauses = ['name', 'creator', 'about', 'kw'].reduce([]) do |clauses, field| 
+      unless app_params[field].nil? or app_params[field].first.strip == ''
+        clauses << generate_clause(field, app_params)
+      end
+      clauses 
+    end
+    clauses.join(" #{app_params['operator'].first} ")
+  end
+  
+  def generate_clause(field, app_params)
+    "(#{field}: #{app_params[field].first})"
+  end
+  
   def translate_symbol_to_name(symbol)
     LIBRARIES.reduce(nil) {|name, library| name = library[1]['name'] if library[1]['symbol'] == symbol; name}
   end

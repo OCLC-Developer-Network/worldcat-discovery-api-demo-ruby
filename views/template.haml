@@ -15,23 +15,29 @@
   %body{ :prefix => "schema: http://schema.org/ oclc: http://www.worldcat.org/oclc/ rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# wcr: https://worldcat.org/wcr/ dc: http://purl.org/dc/terms/ library: http://purl.org/library/" }
     %div.container
       %div.span-24#header
-        %div{ :style => 'margin: 10px 10px; font-size: 2em;' } Search the Library
-        
-      %div#search-wrapper.span-24
-        %form#search-form{:action => url('/catalog')}
-          %p 
-            %input{ :type => "text", :name => "q", :value => params[:q], :size => 40 }
-            %button{ :type => "submit" } Search
-          %p
-            %label
-              - my_lib_checked = (params['scope'].nil? or params['scope'] != 'worldcat') ? 'checked' : nil
-              %input{ :type => "radio", :name => "scope", :value => "my_library", :checked => my_lib_checked }
-              Just My Library
-            %label
-              - worldcat_checked = (!params['scope'].nil? and params['scope'] == 'worldcat') ? 'checked' : nil
-              %input{ :type => "radio", :name => "scope", :value => "worldcat", :checked => worldcat_checked }
-              All of WorldCat
-
+        %div{ :style => 'margin: 10px 10px;' } 
+          %h1{ :style => 'font-weight:normal;' } OCLC Sandbox Library
+      
+      - unless request.path_info == '/advanced'
+        %div#search-wrapper.span-24
+          %form#search-form{:action => url('/catalog')}
+            %p 
+              %input{ :type => "text", :name => "q", :value => params[:q], :size => 40 }
+              %button{ :type => "submit" } Search
+            %p
+              %label
+                - my_lib_checked = (params['scope'].nil? or params['scope'] != 'worldcat') ? 'checked' : nil
+                %input{ :type => "radio", :name => "scope", :value => "my_library", :checked => my_lib_checked }
+                Just My Library
+              %label
+                - worldcat_checked = (!params['scope'].nil? and params['scope'] == 'worldcat') ? 'checked' : nil
+                %input{ :type => "radio", :name => "scope", :value => "worldcat", :checked => worldcat_checked }
+                All of WorldCat
+              - unless params['advanced'] and params['advanced'] == 'true'
+                %span{ :style => 'margin-left: 10em;' } 
+                  %a{ :href => advanced_page_url } Advanced Search
+            
+              
       = yield 
       
       %div.span-24#footer
