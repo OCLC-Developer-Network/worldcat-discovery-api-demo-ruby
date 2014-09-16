@@ -57,7 +57,7 @@ helpers do
     api_params = Hash.new
     api_params['q'] = build_query(app_params)
     api_params[:dbIds] = app_params['databases']
-    api_params['startNum'] = app_params['startNum'] if app_params['startNum']
+    api_params['startIndex'] = app_params['startIndex'] if app_params['startIndex']
     api_params
   end
   
@@ -161,7 +161,7 @@ helpers do
   def pagination(params, results)
     pagination = Hash.new
     pagination[:first] = results.start_index + 1 # params[:start].nil? ? 1 : params[:start].to_i\
-    pagination[:last] = pagination[:first] + results.items_per_page - 1
+    pagination[:last] = (results.total_results.to_i < pagination[:first] + results.items_per_page - 1) ? results.total_results.to_i : pagination[:first] + results.items_per_page - 1
     pagination[:total] = results.total_results.to_i
     pagination[:next_page_start] = (pagination[:first] + results.items_per_page - 1) > results.total_results.to_i ? nil : pagination[:first] + results.items_per_page - 1
     pagination[:previous_page_start] = (pagination[:first] - 11) < 0 ? nil : pagination[:first] - 11
@@ -171,7 +171,7 @@ helpers do
   def previous_page_url(pagination)
     uri = URI.parse(request.url)
     params = CGI.parse(uri.query)
-    params["startNum"] = [pagination[:previous_page_start]]
+    params["startIndex"] = [pagination[:previous_page_start]]
     query_string = to_query_string(params)
     url("#{request.path_info}?#{query_string}")
   end
@@ -179,7 +179,7 @@ helpers do
   def next_page_url(pagination)
     uri = URI.parse(request.url)
     params = CGI.parse(uri.query)
-    params["startNum"] = [pagination[:next_page_start]]
+    params["startIndex"] = [pagination[:next_page_start]]
     query_string = to_query_string(params)
     url("#{request.path_info}?#{query_string}")
   end
@@ -208,7 +208,7 @@ helpers do
       params["facetQueries"] = params["facetQueries"].dup
     end
     params["facetQueries"] << "#{facet.index}:#{facet_value.name}"
-    params.delete("startNum")
+    params.delete("startIndex")
     query_string = to_query_string(params)
     url("#{request.path_info}?#{query_string}")
   end
