@@ -11,7 +11,7 @@
             %span.active-search-item
               %span.key= "#{advanced_search_field_display_names[param[0]]}:"
               %span.value= param[1]
-              %a.remove-item{ :href => '#' } Remove constraint
+              %a.remove-item{ :href => remove_advanced_search_term(param[0]) } Remove constraint
             -  if (position + 1) < active_advanced_search_fields(params).size
               %span.operator= params['operator'] 
       

@@ -2,6 +2,14 @@
 
 helpers do
   
+  def remove_advanced_search_term(index_key)
+    query = URI.parse(request.url).query
+    params = CGI.parse(query)
+    params[index_key] = ['']
+    query_string = translate_query_string(params)
+    url("/catalog?#{query_string}")
+  end
+  
   def active_advanced_search_fields(params)
     displayable = ['kw', 'name', 'creator', 'about']
     params.select {|key,value| displayable.include? key and value.strip != ''}
@@ -24,20 +32,24 @@ helpers do
     query = URI.parse(request.url).query
     if query
       params = CGI::parse(query)
-      escaped_params = params.reduce(Array.new) do |escaped_params,parameter|
-        key = parameter[0]
-        values = parameter[1]
-        values.each do |value|
-          unescaped_value = CGI.unescape(value)
-          escaped_params << key + "=" + CGI.escape(unescaped_value)
-        end
-        escaped_params
-      end
-      query_string = escaped_params.join("&")
+      query_string = translate_query_string(params)
       url("/advanced?#{query_string}")
     else
       url('/advanced')
     end
+  end
+  
+  def translate_query_string(params)
+    escaped_params = params.reduce(Array.new) do |escaped_params,parameter|
+      key = parameter[0]
+      values = parameter[1]
+      values.each do |value|
+        unescaped_value = CGI.unescape(value)
+        escaped_params << key + "=" + CGI.escape(unescaped_value)
+      end
+      escaped_params
+    end
+    escaped_params.join("&")
   end
   
   # Translate the query string of this app into query params for the 
