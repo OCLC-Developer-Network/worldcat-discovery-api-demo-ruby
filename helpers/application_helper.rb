@@ -71,6 +71,7 @@ helpers do
     api_params['q'] = build_query(app_params)
     api_params[:dbIds] = app_params['databases']
     api_params['startIndex'] = app_params['startIndex'] if app_params['startIndex']
+    api_params['facetQueries'] = app_params['facetQueries'] if app_params['facetQueries']
     api_params
   end
   
@@ -257,21 +258,6 @@ helpers do
     is_viaf = subject.id.to_s.match("http://viaf.org/viaf/")
     has_name and (is_fast or is_viaf)
   end
-  
-  # Sometimes a contributor has a rdf:label, sometimes a schema:name
-  # def display_name(object)
-  #   if object['schema:name']
-  #     object['schema:name'].is_a?(Array) ? object['schema:name'].first : object['schema:name']
-  #   elsif object['http://www.w3.org/2000/01/rdf-schema#label']
-  #     if object['http://www.w3.org/2000/01/rdf-schema#label'].is_a?(Array) 
-  #       object['http://www.w3.org/2000/01/rdf-schema#label'].first 
-  #     else
-  #       object['http://www.w3.org/2000/01/rdf-schema#label']
-  #     end
-  #   else
-  #     ""
-  #   end
-  # end
   
   # Escapes HTML
   def h(text)
