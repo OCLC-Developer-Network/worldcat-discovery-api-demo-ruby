@@ -1,34 +1,34 @@
-%div#your-search.span-24
-  %div.span-6
-    %div.span-6
-      %h2.right{ :style => 'padding-right: 1em;' } Your Search
-    - if params[:advanced]
-      %div.span-6
-        %p.right.modify{ :style => 'padding-right: 1em;' }
-          %a{ :href => advanced_page_url } Advanced Search
-  %div.span-18.last
-    %p.active-items
-      - if params[:q]
-        %span.active-search-item
-          %span.key Query:
-          %span.value{ :style => 'padding-right: 1em;' }= params[:q]
-      - active_advanced_search_fields(params).each_with_index do |param, position| 
-        - unless param[1].strip == '' or param[0] == 'advanced' or param[0] == 'operator'
-          %span.active-search-item
-            %span.key= "#{advanced_search_field_display_names[param[0]]}:"
-            %span.value= param[1]
-            %a.remove-item{ :href => remove_advanced_search_term_url(param[0]) } Remove search term
-      - facets = ['itemType', 'inLanguage', 'creator']
-      - facet_queries = CGI.parse(URI.parse(request.url).query)['facetQueries']
-      - facet_queries.each_with_index do |facet_query, position| 
-        %span.active-search-item
-          - facet_index = facet_query.split(':')[0]
-          - facet_value = facet_query.split(':')[1]
-          %span.key= "#{facet_field_display_names[facet_index]}:"
-          %span.value= facet_display_name(facet_index, facet_value)
-          %a.remove-item{ :href => remove_facet_term_url(facet_query) } Remove facet
-
 - if @results
+  %div#your-search.span-24
+    %div.span-6
+      %div.span-6
+        %h2.right{ :style => 'padding-right: 1em;' } Your Search
+      - if params[:advanced]
+        %div.span-6
+          %p.right.modify{ :style => 'padding-right: 1em;' }
+            %a{ :href => advanced_page_url } Advanced Search
+    %div.span-18.last
+      %p.active-items
+        - if params[:q]
+          %span.active-search-item
+            %span.key Query:
+            %span.value{ :style => 'padding-right: 1em;' }= params[:q]
+        - active_advanced_search_fields(params).each_with_index do |param, position| 
+          - unless param[1].strip == '' or param[0] == 'advanced' or param[0] == 'operator'
+            %span.active-search-item
+              %span.key= "#{advanced_search_field_display_names[param[0]]}:"
+              %span.value= param[1]
+              %a.remove-item{ :href => remove_advanced_search_term_url(param[0]) } Remove search term
+        - facets = ['itemType', 'inLanguage', 'creator']
+        - facet_queries = CGI.parse(URI.parse(request.url).query)['facetQueries']
+        - facet_queries.each_with_index do |facet_query, position| 
+          %span.active-search-item
+            - facet_index = facet_query.split(':')[0]
+            - facet_value = facet_query.split(':')[1]
+            %span.key= "#{facet_field_display_names[facet_index]}:"
+            %span.value= facet_display_name(facet_index, facet_value)
+            %a.remove-item{ :href => remove_facet_term_url(facet_query) } Remove facet
+
   %div#search-results.span-24.last
   
     %div#facets.span-6
