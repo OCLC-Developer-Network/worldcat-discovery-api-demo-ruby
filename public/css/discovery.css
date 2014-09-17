@@ -234,6 +234,10 @@ span.label {
     width: 100px;
 }
 
+#advanced-description {
+    margin: 2em 0;
+}
+
 .active-search-item {
     background: none repeat scroll 0 0 #f2f2f2;
     border: 1px solid #ccc;
