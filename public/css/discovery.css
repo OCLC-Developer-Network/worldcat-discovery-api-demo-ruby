@@ -234,8 +234,20 @@ span.label {
     width: 100px;
 }
 
-#advanced-description {
-    margin: 2em 0;
+#your-search {
+    margin: 1em 0 1.5em;
+}
+
+#your-search h2 {
+    margin: 0;
+}
+
+#your-search p.modify {
+    margin: 0 .5em
+}
+
+#your-search p.active-items, #facet-refine p.active-items {
+    margin: .25em 0 0 0;
 }
 
 .active-search-item {

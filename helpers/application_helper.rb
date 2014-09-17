@@ -2,7 +2,16 @@
 
 helpers do
   
-  def remove_advanced_search_term(index_key)
+  def remove_facet_term_url(facet_query_value)
+    query = URI.parse(request.url).query
+    params = CGI.parse(query)
+    params['facetQueries'] = params['facetQueries'].select {|fq| fq != facet_query_value}
+    params.delete('startIndex') if params['startIndex']
+    query_string = translate_query_string(params)
+    url("/catalog?#{query_string}")
+  end
+  
+  def remove_advanced_search_term_url(index_key)
     query = URI.parse(request.url).query
     params = CGI.parse(query)
     params[index_key] = ['']
@@ -11,9 +20,48 @@ helpers do
     url("/catalog?#{query_string}")
   end
   
+  def active_facets(params)
+    facets = ['itemType', 'inLanguage', 'creator']
+    params.select {|key,value| facets.include? key and value.strip != ''}
+  end
+  
   def active_advanced_search_fields(params)
-    displayable = ['kw', 'name', 'creator', 'about']
+    displayable = advanced_search_field_display_names.keys
     params.select {|key,value| displayable.include? key and value.strip != ''}
+  end
+  
+  def item_type_display_names
+    {
+      'artchap' => 'Article/Chapter', 
+      'book' => 'Book', 
+      'music' => 'Music', 
+      'archv' => 'Archival Material', 
+      'video' => 'Video', 
+      'image' => 'Image', 
+      'vis' => 'Visual Materials', 
+      'audiobook' => 'Audiobook', 
+      'msscr' => 'Musical Score', 
+      'compfile' => 'Computer File', 
+      'snd' => 'Sound Recording', 
+      'encyc' => 'Encyclopedia Article', 
+      'jrnl' => 'Journal, Magazine', 
+      'kit' => 'Kit', 
+      'map' => 'Map', 
+      'object' => 'Object', 
+      'game' => 'Game', 
+      'toy' => 'Toy', 
+      'web' => 'Web Resource', 
+      'intmm' => 'Interactive Multimedia', 
+      'news' => 'Newspaper', 
+    }
+  end
+  
+  def facet_field_display_names
+    {
+      'inLanguage' => 'Language',
+      'creator' => 'Creator',
+      'itemType' => 'Format'
+    }
   end
   
   def advanced_search_field_display_names
@@ -164,11 +212,12 @@ helpers do
     statement.subject == statement.object
   end
   
-  def facet_display_name(facet, facet_value)
-    case facet.index
-    when 'inLanguage' then MARC_LANGUAGES[facet_value.name]
-    when 'author' then facet_value.name.titleize 
-    else facet_value.name
+  def facet_display_name(facet_index, facet_value)
+    case facet_index
+    when 'inLanguage' then MARC_LANGUAGES[facet_value]
+    when 'creator' then facet_value.titleize 
+    when 'itemType' then item_type_display_names[facet_value]
+    else facet_value
     end
   end
 
