@@ -6,6 +6,7 @@ helpers do
     query = URI.parse(request.url).query
     params = CGI.parse(query)
     params[index_key] = ['']
+    params.delete('startIndex') if params['startIndex']
     query_string = translate_query_string(params)
     url("/catalog?#{query_string}")
   end
