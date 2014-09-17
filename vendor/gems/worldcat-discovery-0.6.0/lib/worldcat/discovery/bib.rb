@@ -43,6 +43,8 @@ module WorldCat
     
     class Bib < Spira::Base
       
+      attr_accessor :response_body, :response_code, :result
+      
       property :name, :predicate => SCHEMA_NAME, :type => XSD.string
       property :oclc_number, :predicate => LIB_OCLC_NUMBER, :type => XSD.integer
       property :work_uri, :predicate => SCHEMA_EXAMPLE_OF_WORK, :type => RDF::URI
@@ -115,14 +117,24 @@ module WorldCat
         uri = Addressable::URI.parse("#{Bib.production_url}/search")
         params[:dbIds] = (params[:dbIds].nil? or params[:dbIds].size == 0) ? 638 : params[:dbIds]
         uri.query_values = params
-        response = get_data(uri.to_s)
+        response, result = WorldCat::Discovery.get_data(uri.to_s)
         
-        # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
-        Spira.repository = RDF::Repository.new.from_rdfxml(response)
-        search_results = Spira.repository.query(:predicate => RDF.type, :object => DISCOVERY_SEARCH_RESULTS).first.subject.as(BibSearchResults)
-        
-        # WorldCat::Discovery::SearchResults.new
-        search_results
+        if result.class == Net::HTTPOK
+          # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          search_results = Spira.repository.query(:predicate => RDF.type, :object => DISCOVERY_SEARCH_RESULTS).first.subject.as(BibSearchResults)
+          search_results.response_body = response
+          search_results.response_code = response.code
+          search_results.result = result
+          search_results
+        else
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          client_request_error.response_body = response
+          client_request_error.response_code = response.code
+          client_request_error.result = result
+          client_request_error
+        end
       end
             
       # call-seq:
@@ -133,14 +145,25 @@ module WorldCat
       # [oclc_number] the WorldCat OCLC number for a bibliographic resource
       def self.find(oclc_number)
         url = "#{Bib.production_url}/data/#{oclc_number}"
-        response = get_data(url)
-
-        # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
-        Spira.repository = RDF::Repository.new.from_rdfxml(response)
-        generic_resource = Spira.repository.query(:predicate => RDF.type, :object => GENERIC_RESOURCE).first
-        bib = generic_resource.subject.as(GenericResource).about
+        response, result = WorldCat::Discovery.get_data(url)
         
-        bib
+        if result.class == Net::HTTPOK
+          # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          generic_resource = Spira.repository.query(:predicate => RDF.type, :object => GENERIC_RESOURCE).first
+          bib = generic_resource.subject.as(GenericResource).about
+          bib.response_body = response
+          bib.response_code = response.code
+          bib.result = result
+          bib
+        else
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          client_request_error.response_body = response
+          client_request_error.response_code = response.code
+          client_request_error.result = result
+          client_request_error
+        end
       end
 
       protected
@@ -148,20 +171,7 @@ module WorldCat
       def self.production_url
         "https://beta.worldcat.org/discovery/bib"
       end
-      
-      def self.get_data(url)
-        # Retrieve the key from the singleton configuration object
-        raise ConfigurationException.new unless WorldCat::Discovery.configured?()
-        token = WorldCat::Discovery.access_token
-        auth = "Bearer #{token.value}"
-        
-        # Make the HTTP request for the data
-        resource = RestClient::Resource.new url
-        resource.get(:authorization => auth, 
-            :user_agent => "WorldCat::Discovery Ruby gem / #{WorldCat::Discovery::VERSION}",
-            :accept => 'application/rdf+xml')
-      end
-      
+
     end
   end
 end

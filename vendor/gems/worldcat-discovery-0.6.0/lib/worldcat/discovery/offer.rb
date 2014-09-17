@@ -33,7 +33,7 @@ module WorldCat
       def self.find_by_oclc(oclc_number, params = nil)
         uri = Addressable::URI.parse("#{Offer.production_url}/oclc/#{oclc_number}")
         uri.query_values = params
-        response = get_data(uri.to_s)
+        response, result = WorldCat::Discovery.get_data(uri.to_s)
         
         # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
         Spira.repository = RDF::Repository.new.from_rdfxml(response)
@@ -43,54 +43,10 @@ module WorldCat
         search_results
       end
       
-      # # call-seq:
-      # #   find(oclc_number) => WorldCat::Discovery::Bib
-      # # 
-      # # Returns a Bib resource for the given OCLC number
-      # #
-      # # [oclc_number] the WorldCat OCLC number for a bibliographic resource
-      # def self.find_by_oclc(oclc_number)
-      #   url = "#{Bib.production_url}/oclc/#{oclc_number}"
-      #   response = get_data(url)
-      # 
-      #   # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
-      #   Spira.repository = RDF::Repository.new.from_rdfxml(response)
-      #   generic_resource = Spira.repository.query(:predicate => RDF.type, :object => GENERIC_RESOURCE).first
-      #   bib = generic_resource.subject.as(GenericResource).about
-      #   
-      #   bib
-      # end
-      
       protected
       
       def self.production_url
         "https://beta.worldcat.org/discovery/offer"
-      end
-      
-      # def self.get_data(url)
-      #   # Retrieve the key from the singleton configuration object
-      #   raise ConfigurationException.new unless WorldCat::Discovery.configured?()
-      #   wskey = WorldCat::Discovery.api_key
-      #
-      #   # Make the HTTP request for the data
-      #   auth = wskey.hmac_signature('GET', url)
-      #   resource = RestClient::Resource.new url
-      #   resource.get(:authorization => auth,
-      #       :user_agent => "WorldCat::Discovery Ruby gem / #{WorldCat::Discovery::VERSION}",
-      #       :accept => 'application/rdf+xml')
-      # end
-      
-      def self.get_data(url)
-        # Retrieve the key from the singleton configuration object
-        raise ConfigurationException.new unless WorldCat::Discovery.configured?()
-        token = WorldCat::Discovery.access_token
-        auth = "Bearer #{token.value}"
-        
-        # Make the HTTP request for the data
-        resource = RestClient::Resource.new url
-        resource.get(:authorization => auth, 
-            :user_agent => "WorldCat::Discovery Ruby gem / #{WorldCat::Discovery::VERSION}",
-            :accept => 'application/rdf+xml') 
       end
       
     end

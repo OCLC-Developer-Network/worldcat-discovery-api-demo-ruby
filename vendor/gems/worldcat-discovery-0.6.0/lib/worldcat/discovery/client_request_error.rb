@@ -14,6 +14,14 @@
 
 module WorldCat
   module Discovery
-    VERSION = "0.5.0"
+    class ClientRequestError  < Spira::Base
+      
+      attr_accessor :response_body, :response_code, :result
+      
+      property :error_code, :predicate => DISCOVERY_ERROR_CODE, :type => XSD.integer
+      property :error_message, :predicate => DISCOVERY_ERROR_MESSAGE, :type => XSD.string
+      property :error_type, :predicate => DISCOVERY_ERROR_TYPE, :type => XSD.string
+      
+    end
   end
 end

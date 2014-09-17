@@ -51,7 +51,7 @@ module WorldCat
         list = WorldCat::Discovery::DatabaseList.new
         
         url = "#{Database.production_url}/list"
-        response = WorldCat::Discovery.get_data(url)
+        response, result = WorldCat::Discovery.get_data(url)
 
         Spira.repository = RDF::Repository.new.from_rdfxml(response)
         Spira.repository.query(:predicate => RDF.type, :object => DCMITYPE_DATASET).each do |database|

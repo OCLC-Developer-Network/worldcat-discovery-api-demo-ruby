@@ -14,9 +14,12 @@ get "/catalog" do
   uri = URI.parse(request.url)
   app_params = CGI.parse(uri.query)
   api_params = discovery_api_params(app_params)
-  
   @results = WorldCat::Discovery::Bib.search(api_params)
-  haml :search_results, :layout => :template
+  if @results.response_code == 200
+    haml :search_results, :layout => :template
+  else
+    haml :error, :layout => :template
+  end
 end
 
 get '/catalog/:oclc_number' do

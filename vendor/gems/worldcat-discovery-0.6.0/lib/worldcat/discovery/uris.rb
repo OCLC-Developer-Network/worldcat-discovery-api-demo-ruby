@@ -45,7 +45,6 @@ module WorldCat
     SCHEMA_MODEL           = RDF::URI.new('http://schema.org/model')
     SCHEMA_IS_PART_OF      = RDF::URI.new('http://schema.org/isPartOf')
     OWL_SAME_AS            = RDF::URI.new('http://www.w3.org/2002/07/owl#sameAs')
-    # DCTERMS_HAS_PART       = RDF::URI.new('http://purl.org/dc/terms/hasPart')
     DCTERMS_COLLECTION     = RDF::URI.new('http://purl.org/dc/terms/Collection')
     LIB_OCLC_NUMBER        = RDF::URI.new('http://purl.org/library/oclcnum')
     LIB_OCLC_SYMBOL        = RDF::URI.new('http://purl.org/library/oclcSymbol')
@@ -64,6 +63,10 @@ module WorldCat
     DISCOVERY_OPEN           = RDF::URI.new('http://worldcat.org/vocab/discovery/openAccess')
     DISCOVERY_REQUIRES_AUTHN = RDF::URI.new('http://worldcat.org/vocab/discovery/requiresAuthentication')
     DISCOVERY_HAS_PART       = RDF::URI.new('http://worldcat.org/vocab/discovery/hasPart')
+    DISCOVERY_ERROR_CODE     = RDF::URI.new('http://worldcat.org/vocab/discovery/errorCode')
+    DISCOVERY_ERROR_MESSAGE  = RDF::URI.new('http://worldcat.org/vocab/discovery/errorMessage')
+    DISCOVERY_ERROR_TYPE     = RDF::URI.new('http://worldcat.org/vocab/discovery/errorType')
+    CLIENT_REQUEST_ERROR     = RDF::URI.new('http://worldcat.org/xmlschemas/response/ClientRequestError')
     GOOD_RELATIONS_POSITION  = RDF::URI.new('http://purl.org/goodrelations/v1#displayPosition')
     DCMITYPE_DATASET         = RDF::URI.new('http://purl.org/dc/dcmitype/Dataset')
     

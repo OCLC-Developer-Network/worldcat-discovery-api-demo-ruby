@@ -25,6 +25,8 @@ module WorldCat
 
     class SearchResults < Spira::Base
       
+      attr_accessor :response_body, :response_code, :result
+      
       property :total_results, :predicate => DISCOVERY_TOTAL_RESULTS, :type => XSD.integer
       property :start_index, :predicate => DISCOVERY_START_INDEX, :type => XSD.integer
       property :items_per_page, :predicate => DISCOVERY_ITEMS_PER_PAGE, :type => XSD.integer
