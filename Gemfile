@@ -2,6 +2,7 @@
 source 'https://rubygems.org'
  
 gem "sinatra", "1.4.1"
+gem "sinatra-partial", "0.4.0"
 gem "haml", "4.0.5"
 gem "activesupport", "4.1.1"
 gem "rdf-turtle", "1.1.2"

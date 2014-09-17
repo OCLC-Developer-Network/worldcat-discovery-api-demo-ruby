@@ -1,5 +1,6 @@
 require "yaml"
 require "sinatra"
+require "sinatra/partial"
 require "haml"
 require "oclc/auth"
 require "worldcat/discovery"

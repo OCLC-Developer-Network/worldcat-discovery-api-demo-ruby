@@ -20,14 +20,19 @@
   
     %div#facets.span-6
       %h2 Facets
-      - @results.facets.each do |facet| 
-        %h3= facet.index
-        %ul.facet-items
-          - facet.values.each do |value| 
-            %li
-              %a{ :href => facet_refine_url(facet, value, params) }= facet_display_name(facet, value)
-              = "(#{value.count})"
-  
+      
+      %h3 Format
+      - item_type_facet = @results.facets.select {|f| f.index == 'itemType'}.first
+      = partial :facet, :locals => { :facet => item_type_facet }
+      
+      %h3 Author/Creator
+      - creator_facet = @results.facets.select {|f| f.index == 'creator'}.first
+      = partial :facet, :locals => { :facet => creator_facet }
+      
+      %h3 Language
+      - language_facet = @results.facets.select {|f| f.index == 'inLanguage'}.first
+      = partial :facet, :locals => { :facet => language_facet }
+      
     %div#search-results.span-18.last
       %h2 Results
       
