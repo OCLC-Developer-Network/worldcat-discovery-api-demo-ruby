@@ -11,7 +11,7 @@
       - if author
         %div#author{ :property => 'schema:author', :resource => author.id, :typeof => author.type }
           %h2#author-name{ :property => 'schema:name' }
-            %a{ :href => url("/catalog?q=author:#{author.name}") }= author.name
+            %a{ :href => url("/catalog?creator=#{author.name}&name=&kw=&about=&advanced=true&scope=worldcat") }= author.name
     
   
     %div.span-13.append-1.first
@@ -23,7 +23,7 @@
           - contributors.each do |contributor| 
             %li{ :property => 'schema:contributor', :resource => contributor.id, :typeof => contributor.type }
               %span.contributor-name{ :property => 'schema:name' }
-                %a{ :href => url("/catalog?q=author:#{contributor.name}") }= contributor.name
+                %a{ :href => url("/catalog?creator=#{contributor.name}&name=&kw=&about=&advanced=true&scope=worldcat") }= contributor.name
 
       / Subjects
       - subjects = display_subjects(@bib)
@@ -33,7 +33,7 @@
           - subjects.each do |subject| 
             %li.subject{ :property => 'schema:about', :resource => subject.id, :typeof => subject.type }
               %span.subject-name{ :property => 'schema:name' }
-                %a{ :href => url("/catalog?q=about:#{subject.name}") }= subject.name
+                %a{ :href => url("/catalog?q=about:#{subject.name}&creator=&name=&kw=&advanced=true&scope=worldcat") }= subject.name
 
       / Publication Info
       %h2 Publication Info
