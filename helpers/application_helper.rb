@@ -59,7 +59,7 @@ helpers do
   def facet_field_display_names
     {
       'inLanguage' => 'Language',
-      'creator' => 'Creator',
+      'creator' => 'Author/Creator',
       'itemType' => 'Format'
     }
   end
