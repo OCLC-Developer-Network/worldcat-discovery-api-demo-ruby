@@ -36,15 +36,18 @@
       
       %h3 Format
       - item_type_facet = @results.facets.select {|f| f.index == 'itemType'}.first
-      = partial :facet, :locals => { :facet => item_type_facet }
+      - if item_type_facet
+        = partial :facet, :locals => { :facet => item_type_facet }
       
       %h3 Author/Creator
       - creator_facet = @results.facets.select {|f| f.index == 'creator'}.first
-      = partial :facet, :locals => { :facet => creator_facet }
+      - if creator_facet
+        = partial :facet, :locals => { :facet => creator_facet }
       
       %h3 Language
       - language_facet = @results.facets.select {|f| f.index == 'inLanguage'}.first
-      = partial :facet, :locals => { :facet => language_facet }
+      - if language_facet
+        = partial :facet, :locals => { :facet => language_facet }
       
     %div#search-results.span-18.last
       %h2 Results
