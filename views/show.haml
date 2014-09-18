@@ -33,7 +33,7 @@
           - subjects.each do |subject| 
             %li.subject{ :property => 'schema:about', :resource => subject.id, :typeof => subject.type }
               %span.subject-name{ :property => 'schema:name' }
-                %a{ :href => url("/catalog?q=about:#{subject.name}&creator=&name=&kw=&advanced=true&scope=worldcat") }= subject.name
+                %a{ :href => url("/catalog?about=#{subject.name}&creator=&name=&kw=&advanced=true&scope=worldcat") }= subject.name
 
       / Publication Info
       %h2 Publication Info
