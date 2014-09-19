@@ -41,3 +41,5 @@
 "http://www.productontology.org/id/Sheet_music": "Sheet Music"
 "http://schema.org/AudioObject": "Sound Recording"
 "http://www.productontology.org/id/LP_record": "LP Record"
+"http://www.productontology.org/id/Computer_file": "Computer File"
+"http://purl.org/library/VisualMaterial": "Visual Material"
