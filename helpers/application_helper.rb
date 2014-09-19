@@ -2,6 +2,24 @@
 
 helpers do
   
+  def author_date_str(author)
+    date_str  = ""
+    date_str += author.birth_date.gsub('(','') if author.birth_date
+    date_str += "-"
+    date_str += author.death_date.gsub(')','') if author.death_date
+    date_str
+  end
+  
+  def author_display_name(author)
+    if author.is_a?(WorldCat::Discovery::Person) and (author.given_name or author.family_name)
+      name = [author.given_name, author.family_name].compact.join(" ")
+      name += ", #{author_date_str(author)}" if author_date_str(author).strip != '-'
+      name
+    else
+      author.name
+    end
+  end
+  
   def remove_facet_term_url(facet_query_value)
     query = URI.parse(request.url).query
     params = CGI.parse(query)
@@ -20,9 +38,8 @@ helpers do
     url("/catalog?#{query_string}")
   end
   
-  def active_facets(params)
-    facets = ['itemType', 'inLanguage', 'creator']
-    params.select {|key,value| facets.include? key and value.strip != ''}
+  def active_facet_queries
+    CGI.parse(URI.parse(request.url).query)['facetQueries']
   end
   
   def active_advanced_search_fields(params)

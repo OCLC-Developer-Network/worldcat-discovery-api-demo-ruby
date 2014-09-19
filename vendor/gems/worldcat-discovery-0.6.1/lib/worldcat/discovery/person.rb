@@ -26,6 +26,10 @@ module WorldCat
       
       property :name, :predicate => SCHEMA_NAME, :type => XSD.string
       property :type, :predicate => RDF.type, :type => RDF::URI
+      property :given_name, :predicate => SCHEMA_GIVEN_NAME, :type => XSD.string
+      property :family_name, :predicate => SCHEMA_FAMILY_NAME, :type => XSD.string
+      property :birth_date, :predicate => SCHEMA_BIRTH_DATE, :type => XSD.string
+      property :death_date, :predicate => SCHEMA_DEATH_DATE, :type => XSD.string
       
       # call-seq:
       #   id() => RDF::URI

@@ -12,16 +12,17 @@
         - if params[:q]
           %span.active-search-item
             %span.key Query:
-            %span.value{ :style => 'padding-right: 1em;' }= params[:q]
-        - active_advanced_search_fields(params).each_with_index do |param, position| 
+            %span.value.not-removable= params[:q]
+        - active_advanced_search_fields(params).each do |param| 
           - unless param[1].strip == '' or param[0] == 'advanced' or param[0] == 'operator'
             %span.active-search-item
               %span.key= "#{advanced_search_field_display_names[param[0]]}:"
-              %span.value= param[1]
-              %a.remove-item{ :href => remove_advanced_search_term_url(param[0]) } Remove search term
-        - facets = ['itemType', 'inLanguage', 'creator']
-        - facet_queries = CGI.parse(URI.parse(request.url).query)['facetQueries']
-        - facet_queries.each_with_index do |facet_query, position| 
+              - if active_advanced_search_fields(params).size > 1
+                %span.value= param[1]
+                %a.remove-item{ :href => remove_advanced_search_term_url(param[0]) } Remove search term
+              - else
+                %span.value.not-removable= param[1]
+        - active_facet_queries.each do |facet_query| 
           %span.active-search-item
             - facet_index = facet_query.split(':')[0]
             - facet_value = facet_query.split(':')[1]
@@ -73,12 +74,16 @@
         - @results.bibs.each do |bib| 
           %li.search-result
             %h3.title
-              %a{ :href => url("/catalog/#{bib.oclc_number}")}= bib.name
+              - if bib.name and bib.name.strip != ''
+                %a{ :href => url("/catalog/#{bib.oclc_number}")}= bib.name
+              - else
+                %a{ :href => url("/catalog/#{bib.oclc_number}")} [Unnamed material]
               %span.date-published= bib.date_published
             - if bib.author
-              %p.author= bib.author.name
+              %p.author
+                = author_display_name(bib.author)
             - elsif bib.contributors and bib.contributors.size > 0
-              %p.author= bib.contributors.map {|contributor| contributor.name}.join('; ')
+              %p.author= bib.contributors.map {|contributor| author_display_name(contributor)}.join('; ')
             %p.format
               %span.label Format:
               %span.value= FORMATS[bib.type.to_s]

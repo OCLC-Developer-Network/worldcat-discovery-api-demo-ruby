@@ -41,5 +41,21 @@ describe WorldCat::Discovery::Person do
     it "should have the right type" do
       @person.type.should == 'http://schema.org/Person'
     end
+    
+    it "should have the right given name" do
+      @person.given_name.should == 'Ludwig'
+    end
+    
+    it "should have the right family name" do
+      @person.family_name.should == 'Wittgenstein'
+    end
+    
+    it "should have the right birth date" do
+      @person.birth_date.should == '1889'
+    end
+    
+    it "should have the right death date" do
+      @person.death_date.should == '1951'
+    end
   end
 end

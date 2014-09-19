@@ -5,15 +5,19 @@
   
     %div#statement-of-responsibility.span-24
       / Title
-      %h1#bibliographic-resource-name{ :property => 'schema:name' }= @bib.name
+      - if @bib.name and @bib.name.strip != ''
+        %h1#bibliographic-resource-name{ :property => 'schema:name' }= @bib.name
+      - else
+        %h1#bibliographic-resource-name [Unnamed material]
+      
       / Author
       - author = @bib.author
       - if author
         %div#author{ :property => 'schema:author', :resource => author.id, :typeof => author.type }
           %h2#author-name{ :property => 'schema:name' }
-            %a{ :href => url("/catalog?creator=#{author.name}&name=&kw=&about=&advanced=true&scope=worldcat") }= author.name
-    
-  
+            %a{ :href => url("/catalog?creator=#{author_display_name(author)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+              = author_display_name(author)
+
     %div.span-13.append-1.first
       / Contributors
       - contributors = @bib.contributors
@@ -21,9 +25,11 @@
         %h3 Contributors
         %ul#contributors
           - contributors.each do |contributor| 
-            %li{ :property => 'schema:contributor', :resource => contributor.id, :typeof => contributor.type }
-              %span.contributor-name{ :property => 'schema:name' }
-                %a{ :href => url("/catalog?creator=#{contributor.name}&name=&kw=&about=&advanced=true&scope=worldcat") }= contributor.name
+            - if contributor.name and contributor.name.strip != ''
+              %li{ :property => 'schema:contributor', :resource => contributor.id, :typeof => contributor.type }
+                %span.contributor-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?creator=#{author_display_name(contributor)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = author_display_name(contributor)
 
       / Subjects
       - subjects = display_subjects(@bib)

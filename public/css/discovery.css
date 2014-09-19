@@ -284,11 +284,13 @@ span.label {
     padding-right: 38px;
 }
 
-.active-search-item .operator {
-    
+.active-search-item .not-removable {
+    padding-right: 1em;
 }
 
-
+.facet-items .count {
+    color: #444;
+}
 
 
 

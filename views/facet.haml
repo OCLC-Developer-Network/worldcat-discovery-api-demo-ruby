@@ -2,4 +2,4 @@
   - facet.values.each do |value| 
     %li
       %a{ :href => facet_refine_url(facet, value, params) }= facet_display_name(facet.index, value.name)
-      = "(#{value.count})"
+      %span.count= "(#{separate_comma(value.count)})"
