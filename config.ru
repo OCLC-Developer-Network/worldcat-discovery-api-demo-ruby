@@ -10,7 +10,7 @@ require "./discover"
 require "./helpers/application_helper"
 require "./lib/uris"
 
-set :environment, :development
+set :environment, :production
 set :run, true
 set :raise_errors, true
 
