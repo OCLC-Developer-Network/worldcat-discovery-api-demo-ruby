@@ -1,0 +1,1148 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://umbel.org/umbel#"
+    xmlns:j.1="http://purl.org/dc/terms/"
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:j.2="http://purl.org/library/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.3="http://worldcat.org/vocab/discovery/"
+    xmlns:j.4="http://schema.org/"
+    xmlns:j.5="http://dbpedia.org/resource/"
+    xmlns:j.6="http://www.w3.org/2006/gen/ont#"
+    xmlns:j.7="http://xmlns.com/foaf/0.1/"
+    xmlns:j.8="http://rdfs.org/ns/void#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>4</j.3:count>
+    <j.4:name>floridi luciano</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://beta.worldcat.org/discovery/bib/search?dbIds=638&amp;facetFields=creator:10&amp;facetFields=inLanguage:10&amp;itemsPerPage=10&amp;q=wittgenstein reader&amp;sortBy=relevance&amp;startIndex=0">
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/132692289"/>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/39706835"/>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/745866054"/>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/31661741"/>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/36746484"/>
+    <j.3:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.3:itemsPerPage>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/45621749"/>
+    <j.3:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.3:startIndex>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/36484803"/>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/55102019"/>
+    <j.3:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1136</j.3:totalResults>
+    <j.3:facet rdf:nodeID="A1"/>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/57422379"/>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
+    <j.3:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/30780581"/>
+    <j.3:facet rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/logik">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Logik.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>6</j.3:count>
+    <j.4:name>ger</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85077521">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Literature--History and criticism--Theory, etc.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/41537030#Person/walker_hamza">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Walker, Hamza.</j.4:name>
+    <j.4:familyName>Walker</j.4:familyName>
+    <j.4:givenName>Hamza</j.4:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/language_arts_&amp;_disciplines_grammar_&amp;_punctuation">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">LANGUAGE ARTS &amp; DISCIPLINES--Grammar &amp; Punctuation.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/745866054">
+    <j.4:creator rdf:resource="http://viaf.org/viaf/20574701"/>
+    <j.4:name xml:lang="en">Wittgenstein</j.4:name>
+    <j.4:url rdf:resource="http://www.myilibrary.com?id=320624"/>
+    <j.2:placeOfPublication rdf:resource="http://dbpedia.org/resource/London"/>
+    <j.4:genre xml:lang="en">Electronic books.</j.4:genre>
+    <j.4:description xml:lang="en">Continuum's Guides for the Perplexed are clear, concise and accessible introductions to thinkers, writers and subjects that students and readers can find especially challenging.€ Concentrating specifically on what it is that makes the subject difficult to fathom, these books explain and explore key themes and ideas, guiding the reader towards a thorough understanding of demanding material. Ludwig Wittgenstein is one of the most influential twentieth century philosophers with his ideas occupying a central place in the history and study of modern philosophy. Students will inevitably encount.</j.4:description>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/899852950#Topic/philosophy"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">745866054</j.2:oclcnum>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/899852950#Agent/continuum_international_pub_group"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/899852950"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9781441151575"/>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/745866054"/>
+    <j.4:url rdf:resource="http://alltitles.ebrary.com/Doc?id=10867409"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/EBook"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:about rdf:resource="http://dewey.info/class/192/"/>
+    <j.4:url rdf:resource="http://public.eblib.com/EBLPublic/PublicView.do?ptiID=742478"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</gr:displayPosition>
+    <j.4:datePublished>2006</j.4:datePublished>
+    <owl:sameAs rdf:resource="info:oclcnum/745866054"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631195856">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631195856"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0631195858"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Acid-free_paper"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <j.4:isbn>9780631195856</j.4:isbn>
+    <j.4:isbn>0631195858</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/803875260#Place/malden_ma">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Malden, MA</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Topic/christendom">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Christendom.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781118346334">
+    <j.4:sameAs rdf:resource="urn:isbn:9781118346334"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <j.4:isbn>9781118346334</j.4:isbn>
+    <j.4:sameAs rdf:resource="urn:isbn:1118346335"/>
+    <j.4:isbn>1118346335</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/809/e21/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/803875260#Agent/blackwell_publishers">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Blackwell Publishers</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/45621749">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/45621749"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/741.092/e21/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781405106993">
+    <j.4:sameAs rdf:resource="urn:isbn:9781405106993"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Acid-free_paper"/>
+    <j.4:description>hardcover : alk. paper</j.4:description>
+    <j.4:isbn>9781405106993</j.4:isbn>
+    <j.4:sameAs rdf:resource="urn:isbn:1405106999"/>
+    <j.4:isbn>1405106999</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631202493">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631202493"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0631202498"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <j.4:isbn>9780631202493</j.4:isbn>
+    <j.4:isbn>0631202498</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780203219065">
+    <j.4:sameAs rdf:resource="urn:isbn:9780203219065"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0203219066"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:description>Taylor &amp; Francis</j.4:description>
+    <j.4:isbn>9780203219065</j.4:isbn>
+    <j.4:isbn>0203219066</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/745866054">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/745866054"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1154415960#Place/stuttgart">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Stuttgart</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1012213">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Mathematics--Philosophy.</j.4:name>
+    <j.4:name xml:lang="en">Mathematics--Philosophy</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/26923">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>McGrath, Alister E., 1953-</j.4:name>
+    <j.4:familyName>McGrath</j.4:familyName>
+    <j.4:givenName>Alister E.</j.4:givenName>
+    <j.4:birthDate>1953</j.4:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1353577">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Literature--Theory, etc.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Place/oxford_uk">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Oxford, UK</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/49294848">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Glock, Hans-Johann, 1960-</j.4:name>
+    <j.4:familyName>Glock</j.4:familyName>
+    <j.4:givenName>Hans-Johann</j.4:givenName>
+    <j.4:birthDate>1960</j.4:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/299182489">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Temkin, Ann.</j.4:name>
+    <j.4:familyName>Temkin</j.4:familyName>
+    <j.4:givenName>Ann</j.4:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>4</j.3:count>
+    <j.4:name>kenny, anthony</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Person/aue_maximilian">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Aue, Maximilian.</j.4:name>
+    <j.4:familyName>Aue</j.4:familyName>
+    <j.4:givenName>Maximilian</j.4:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/BT77">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Topic/critique">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="fr">Critique.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/31661741">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/31661741"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/132692289">
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Place/oxford"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/language_arts_&amp;_disciplines_linguistics_syntax"/>
+    <j.4:about rdf:resource="http://dewey.info/class/415.018/e22/"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85056260"/>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Agent/oxford_university_press"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85112488"/>
+    <j.4:url rdf:resource="http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=191274"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/EBook"/>
+    <owl:sameAs rdf:resource="info:oclcnum/132692289"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/relational_grammar"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/grammaire_comparee_et_generale"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">132692289</j.2:oclcnum>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <j.4:genre xml:lang="en">Electronic books.</j.4:genre>
+    <j.4:numberOfPages>526</j.4:numberOfPages>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/132692289"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/electronic_books"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/946126"/>
+    <j.4:name xml:lang="en">Fuzzy grammar a reader</j.4:name>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/taalfilosofie"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/grammaticale_categorieen"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1053748140"/>
+    <j.4:datePublished>2004</j.4:datePublished>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1093580"/>
+    <j.4:description xml:lang="en">Introduction : the nature of grammatical categories and their representation -- Philosophical background. Categories / Aristotle ; Concepts / Gottlob Frege ; Vagueness / Bertrand Russell ; Family resemblances / Ludwig Wittgenstein ; The phenomena of vagueness / Rosanna Keefe -- Categories in cognition. The boundaries of words and their meanings / William Labov ; Principles of categorization / Eleanor Rosch ; Categorization, fuzziness, and family resemblances / Ray Jackendoff ; Discreteness / Ronald W. Langacker ; The importance of categorization / George Lakoff -- Categories in grammar. Parts of speech / Otto Jespersen ; English word classes / David Crystal ; A notional approach to the parts of speech / John Lyons ; Syntactic categories and notional features / John M. Anderson ; Bounded regions / Ronald W. Langacker ; The discourse basis for lexical categories in universal grammar / Paul J. Hopper and Sandra A. Thompson ; Grammatical categories / John Taylor -- Gradience in grammar. Gradience / Dwight Bolinger ; Degrees of grammaticalness / Noam Chomsky ; Descriptive statement and serial relationship / Randolph Quirk ; On the analysis of linguistic vagueness / Jir̆í V. Neustupný ; Nouniness / John Robert Ross ; The coordination-subordination gradient / Randolph Quirk ... [et al.] ; The nature of graded judgments / Carson T. Schütze -- Criticisms and responses. Description of language design / Martin Joos ; 'Prototypes save' / Anna Wierzbicka ; Fuzziness and categorization / Denis Bouchard ; The discrete nature of syntactic categories : against a prototype-based account / Frederick J. Newmeyer.</j.4:description>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/grammaire_relationnelle"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/language_arts_&amp;_disciplines_grammar_&amp;_punctuation"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9781429468657"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/vaagheid"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</gr:displayPosition>
+    <j.4:url rdf:resource="http://site.ebrary.com/id/10266607"/>
+    <j.2:placeOfPublication rdf:resource="http://dbpedia.org/resource/New_York_City"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/66568116"/>
+    <j.4:url rdf:resource="http://www.myilibrary.com?id=83830"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85034149">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Criticism.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/39706835">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/39706835"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/45185752#Topic/wissenschaftstheorie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Wissenschaftstheorie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Place/oxford_uk">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Oxford, UK</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Topic/litterature_anglaise_histoire_et_critique">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="fr">Littérature anglaise--Histoire et critique.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1154415960#Topic/quelle">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name>Quelle.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1149617">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Theology, Doctrinal.</j.4:name>
+    <j.4:name xml:lang="en">Theology, Doctrinal</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>5</j.3:count>
+    <j.4:name>anghel n rugina</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9783150094709">
+    <j.4:sameAs rdf:resource="urn:isbn:9783150094709"/>
+    <j.4:sameAs rdf:resource="urn:isbn:3150094704"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:isbn>9783150094709</j.4:isbn>
+    <j.4:isbn>3150094704</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/540790#Agent/routledge_&amp;_kegan_paul">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Routledge &amp; Kegan Paul</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/899852950#Agent/continuum_international_pub_group">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Continuum International Pub. Group</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>3</j.3:count>
+    <j.4:name>geisler eliezer</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631193616">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631193616"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0631193618"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:description>acid-free paper</j.4:description>
+    <j.4:isbn>9780631193616</j.4:isbn>
+    <j.4:isbn>0631193618</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/enk">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>enk</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/109045451">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Fogelin, Robert J.</j.4:name>
+    <j.4:familyName>Fogelin</j.4:familyName>
+    <j.4:givenName>Robert J.</j.4:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>14</j.3:count>
+    <j.4:name>und</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <j.3:facetIndex>inLanguage</j.3:facetIndex>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/Facet"/>
+    <j.3:facetValue rdf:nodeID="A8"/>
+    <j.3:facetValue rdf:nodeID="A9"/>
+    <j.3:facetValue rdf:nodeID="A10"/>
+    <j.3:facetValue rdf:nodeID="A3"/>
+    <j.3:facetValue rdf:nodeID="A11"/>
+    <j.3:facetValue rdf:nodeID="A12"/>
+    <j.3:facetValue rdf:nodeID="A7"/>
+    <j.3:facetValue rdf:nodeID="A13"/>
+    <j.3:facetValue rdf:nodeID="A14"/>
+    <j.3:facetValue rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Place/malden_ma">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Malden, MA</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/New_York_City">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>New York</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/110702484">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Luckhardt, C. Grant, 1943-</j.4:name>
+    <j.4:familyName>Luckhardt</j.4:familyName>
+    <j.4:givenName>C. Grant</j.4:givenName>
+    <j.4:birthDate>1943</j.4:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/55102019">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/55102019"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/e21/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85078115">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Logic, Symbolic and mathematical.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Agent/blackwell_pub">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Blackwell Pub.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1154415960#Topic/wissenschaftstheorie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name>Wissenschaftstheorie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Agent/oxford_university_press">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Oxford University Press</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/137352121">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.4:name>Philadelphia Museum of Art.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>1</j.3:count>
+    <j.4:name>ita</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>5</j.3:count>
+    <j.4:name>wittgenstein, ludwig</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/39391468">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Kenny, Anthony, 1931-</j.4:name>
+    <j.4:familyName>Kenny</j.4:familyName>
+    <j.4:givenName>Anthony</j.4:givenName>
+    <j.4:birthDate>1931</j.4:birthDate>
+    <j.4:name>Kenny, Anthony John Patrick.</j.4:name>
+    <j.4:givenName>Anthony John Patrick</j.4:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1093580">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Relational grammar</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>11</j.3:count>
+    <j.4:name>fre</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/grammaire_comparee_et_generale">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="fr">Grammaire comparée et générale.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/55102019">
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55102019</j.2:oclcnum>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/540790#Agent/routledge_&amp;_kegan_paul"/>
+    <j.4:url rdf:resource="http://oxford.etailer.dpsl.net/Home/html/moreinfo.asp?isbn=0203219066"/>
+    <j.4:name xml:lang="en">Wittgenstein</j.4:name>
+    <j.4:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <owl:sameAs rdf:resource="info:oclcnum/55102019"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/540790#Person/wittgenstein_ludwig_1889_1951"/>
+    <j.4:about rdf:resource="http://dewey.info/class/192/"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</gr:displayPosition>
+    <j.4:description xml:lang="en">Book Cover; Title; Contents; Preface to the First Edition; Preface to the Second Edition; Abbreviations; WITTGENSTEIN'S TRACTATUS; The Atomistic Ontology of the Tractatus; Picturing the World; Propositions; The Logic of Propositions; Generality; The Naive Constructivism of the Tractatus; Necessity; My World, Its Value, and Silence; WITTGENSTEIN'S LATER PHILOSOPHY; The Critique of the Tractatus; Understanding; Sceptical Doubts and a Sceptical Solution to These Doubts; The Private Language Argument; Topics in Philosophical Psychology; Topics in the Philosophy of Mathematics.</j.4:description>
+    <j.4:datePublished>1987</j.4:datePublished>
+    <j.2:placeOfPublication rdf:resource="http://dbpedia.org/resource/London"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/540790"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.4:genre xml:lang="en">Electronic books.</j.4:genre>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/55102019"/>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/109045451"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <j.4:url rdf:resource="http://ezproxy.viu.ca/login?url=http://www.tandfebooks.com/isbn/9780203219065"/>
+    <j.4:url rdf:resource="http://public.eblib.com/EBLPublic/PublicView.do?ptiID=169171"/>
+    <j.4:bookEdition>2nd ed.</j.4:bookEdition>
+    <j.4:description xml:lang="en">Professor Fogelin has provided an authoritative critical evaluation of both the Tractatus Logico-Philosophicus and Philosophical Investigations, making these key texts accessible to the general reader.</j.4:description>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:bookFormat rdf:resource="http://schema.org/EBook"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780203219065"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/36484803">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/36484803"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/36746484">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/36746484"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/45185752#Place/cambridge_mass_usa">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Cambridge, Mass., USA</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/electronic_books">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Electronic books.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/20574701">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Addis, Mark.</j.4:name>
+    <j.4:familyName>Addis</j.4:familyName>
+    <j.4:givenName>Mark</j.4:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85134686">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Theology, Doctrinal.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/relational_grammar">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Relational grammar.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>1</j.3:count>
+    <j.4:name>lit</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1002068">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Logic, Symbolic and mathematical.</j.4:name>
+    <j.4:name xml:lang="en">Logic, Symbolic and mathematical</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Place/malden_mass">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Malden, Mass.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/language_arts_&amp;_disciplines_linguistics_syntax">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">LANGUAGE ARTS &amp; DISCIPLINES--Linguistics--Syntax.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631194378">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631194378"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0631194371"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Acid-free_paper"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <j.4:isbn>9780631194378</j.4:isbn>
+    <j.4:isbn>0631194371</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631202486">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631202486"/>
+    <j.4:sameAs rdf:resource="urn:isbn:063120248X"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:isbn>9780631202486</j.4:isbn>
+    <j.4:isbn>063120248X</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Place/oxford">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Oxford</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/803875260#Topic/aufsatzsammlung">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Aufsatzsammlung.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85043833">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">English literature--History and criticism.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/39706835">
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780876331453"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:about rdf:resource="http://dewey.info/class/741.092/e21/"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/41537030#Place/philadelphia"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/41537030#Person/pettibon_raymond_1957"/>
+    <j.4:genre xml:lang="en">Sources</j.4:genre>
+    <j.4:description xml:lang="en">Letter / John Addington Symonds. -- from Rear window / William Irish ; The library of Babel / Jorge Louis Borges ; Unpacking my library: a talk about book collecting / Walter Benjamin ; Poem / Gaius Valerius Catullus ; from A full and true account of the battle fought last Friday between the ancient and the modern books in St. James's library / Jonathan Swift ; Letter to Thomas Wharton / Thomas Gray ; Letter to Ivan Turgenev / Gustave Flaubert ; A lady's library / Joseph Addison ; from Along came Ruth / Ring Lardner ; from The journal of a tour to the Hebrides with Samuel Johnson / James Boswell ; from His notebooks / Henry James ; from The Renaissance: studies in art and poetry / Walter Pater ; from The film sense / Sergei Eisenstein ; from The life and opinions of Tristram Shandy, gentleman / Laurence Sterne ; from A letter to a junior soph, at Cambridge / Samuel Taylor Coleridge ; from The brown book / Ludwig Wittgenstein ; from The escreveners / Anonymous ; from Really the blues / Milton "Mezz" Mezzrow ; from Mythomystes / Henry Reynolds ; ...Poetically man dwells... / Martin Heidegger ; from His essays / Michel de Montaigne ; Government and rhythm / Osip Mandelstam ; from His notebooks / Henry James ; from The notebooks of Malte Laurids Brigge / Rainer Maria Rilke ; from The painters of modern life / Charles Baudelaire ; Postcard to Samuel Loveman / Hart Crane ;</j.4:description>
+    <j.4:datePublished>1998</j.4:datePublished>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/41537030#Agent/the_museum"/>
+    <j.4:description xml:lang="en">Preface / Anne d'Harnoncourt and Susanne Ghez. -- Introduction / Susanne Ghez and Ann Temkin. -- Raymond Pettibon: a reader.  A note on dedications / Carl Van Vechten ; from Her diary / Alice James ; from The compleat angler / Izaak Walton ; from The garden of Cyrus / Sir Thomas Browne ; from The art spirit / Robert Henri ; from Purgatory explained by the lives and legends of the saints / F.X. Schouppe, S.J. ; from The big kill / Mickey Spillane ; from His notebooks / Henry James ; from The wisdom of Solomon / Anonymous ; The firmament / John Ruskin ; from Héloïse and Abélard / George Moore ; Cloud castles / George Santayana ; from Time regained / Marcel Proust ; from The cloud of unknowing / Anonymous ; from The hero as poet / Thomas Carlyle ; from His trial testimony / Charles Manson ; from His notebooks / William Blake ; from The craft of fiction / Percy Lubbock ; from Books, bindings and a titian / Arthur Symons ; Holy writ / H.L. Mencken ;</j.4:description>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/299182489"/>
+    <j.4:description xml:lang="en">Woofed with dreams / Robert Warshow ; Of love / Francis Bacon ; Letter to Abelard / Héloïse ; from The flame of life / Gabriele D'Annunzio ; from The erotic traveler / Sir Richard Burton ; Sea-wind / Stéphane Mallarmé ; from The anatomy of melancholy / Robert Burton ; from An unknown friend / Ivan Bunin ; from Confessions / Saint Augustine ; from The unnamable / Samuel Beckett ; from Science and health / Mary Baker Eddy ; from The idler / Samuel Johnson ; from Seven pillars of wisdom / T.E. Lawrence ; from Pensées / Blaise Pascal ; from Revelation / Saint John the Divine. -- Perspectives on Raymond Pettibon.  A reply to my critics / Bernard Welt ; Don't throw out the shaman with the bathwater / Hamza Walker ; Raymond Pettibon: return to disorder and disfiguration / Benjamin Buchloh ; Rayball / Peter Schjeldahl ; "What's better science than creating me?" / Ann Temkin.</j.4:description>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/41537030#Person/walker_hamza"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/142969433"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/41537030"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/pau"/>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/39706835"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39706835</j.2:oclcnum>
+    <j.4:genre xml:lang="en">Criticism, interpretation, etc.</j.4:genre>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</gr:displayPosition>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/NC1429"/>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/41537030#Person/pettibon_raymond_1957"/>
+    <j.4:name xml:lang="en">Raymond Pettibon : a reader</j.4:name>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/137352121"/>
+    <owl:sameAs rdf:resource="info:oclcnum/39706835"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780876331200"/>
+    <j.4:genre xml:lang="en">Sources.</j.4:genre>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Topic/theologie_anthologies">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Théologie--Anthologies.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Topic/literature_theory_etc">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Literature--Theory, etc.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>3</j.3:count>
+    <j.4:name>eagleton, terry</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://schema.org/Review"/>
+    <j.4:itemReviewed rdf:resource="http://www.worldcat.org/oclc/57422379"/>
+    <j.4:reviewBody>"In 1933, Ludwig Wittgenstein set out to dictate a collection of his recent writings to a typist in the form of a book. Even as he was dictating he began revising the text extensively, so that the surviving typewritten manuscript contains numerous corrections, additions, deletions, alternative words and phrasings, suggestions for moves within the text, and marginal comments in both handwritten and typed form." "Long awaited by the scholarly community, Wittgenstein's so-called Big Typescript (von Wright Catalog no. TS 213) is presented here for the first time in an en-face German-English scholars' edition, complete with clear indications to help the reader identify the various levels of Wittgenstein's editing." "This text provided a source of material for Wittgenstein's subsequent writings, and therefore serves as a key to understanding much of his later philosophy."--BOOK JACKET.</j.4:reviewBody>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Topic/theologie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Theologie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/e20/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/41537030#Person/pettibon_raymond_1957">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Pettibon, Raymond, 1957-</j.4:name>
+    <j.4:familyName>Pettibon</j.4:familyName>
+    <j.4:givenName>Raymond</j.4:givenName>
+    <j.4:birthDate>1957</j.4:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/taalfilosofie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Taalfilosofie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/911989">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">English literature</j.4:name>
+    <j.4:name xml:lang="en">English literature.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1060777">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Philosophy</j.4:name>
+    <j.4:name xml:lang="en">Philosophy.</j.4:name>
+    <j.4:name>Philosophy.</j.4:name>
+    <j.4:name>Philosophy</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85056260">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Grammar, Comparative and general.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/415.018/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Agent/blackwell">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Blackwell</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Topic/literatuurkritiek">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Literatuurkritiek.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>1</j.3:count>
+    <j.4:name>dan</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Topic/literatuurtheorie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Literatuurtheorie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/230/e20/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>6</j.3:count>
+    <j.4:name>thomas gary</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781429468657">
+    <j.4:sameAs rdf:resource="urn:isbn:9781429468657"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:description>electronic bk.</j.4:description>
+    <j.4:isbn>9781429468657</j.4:isbn>
+    <j.4:sameAs rdf:resource="urn:isbn:1429468653"/>
+    <j.4:isbn>1429468653</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/30780581">
+    <j.4:about rdf:resource="http://dewey.info/class/192/e20/"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85100849"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631193616"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30780581</j.2:oclcnum>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.4:numberOfPages>312</j.4:numberOfPages>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/45185752#Agent/b_blackwell"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <j.4:datePublished>1994</j.4:datePublished>
+    <j.4:description xml:lang="en">Introduction ---- 1. Tractatus logico-philosophicus --- 2. The rejection of logical atomism --- 3. Meaning and understanding --- 4. Intentionality --- 5. Following a rule --- 6. Thinking --- 7. The will --- 8. Private language and private experience --- 9. Aspect and image --- 10. The first person --- 11. The inner and the outer --- 12. Necessity --- 13. Scepticism and certainty --- 14. The nature of philosophy --- 15. Ethics, life and faith.</j.4:description>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/45185752#Place/oxford_uk"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</gr:displayPosition>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <owl:sameAs rdf:resource="info:oclcnum/30780581"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/45185752#Topic/filosofia_contemporanea_alemanha"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/45185752#Place/cambridge_mass_usa"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/45185752#Topic/wissenschaftstheorie"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/45185752"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/45185752#Topic/analytische_philosophie"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/30780581"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1060777"/>
+    <j.4:description xml:lang="en">From the Tractatus Logico-Philosophicus to the later work on ethics and religion, this volume is the only selection of the key works of Wittgenstein -- arguably the emblematic philosopher of the twentieth century. Thematically and chronologically arranged, The Wittgenstein Reader represents the breadth, complexity, and evolution of his thought, from logical atomism to the later work on ethics, life and faith. Taken together, the selections are designed to add up to an overview of Wittgensteinʹs philosophical position, and are ideal as a single text for course use. -- Back cover.</j.4:description>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/39391468"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631193623"/>
+    <j.4:name xml:lang="en">The Wittgenstein reader</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/vaagheid">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Vaagheid.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/803875260#Topic/filosofie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Filosofie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85082153">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Mathematics--Philosophy.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/36484803">
+    <j.0:isLike rdf:resource="http://d-nb.info/948056509"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36484803</j.2:oclcnum>
+    <j.4:name>Ludwig Wittgenstein, ein Reader</j.4:name>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/1154415960#Place/stuttgart"/>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/36484803"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1154415960#Topic/wissenschaftstheorie"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1154415960#Topic/quelle"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9783150094709"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1154415960#Topic/analytische_philosophie"/>
+    <owl:sameAs rdf:resource="info:oclcnum/36484803"/>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1060777"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/gw"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</gr:displayPosition>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1154415960"/>
+    <j.4:name>Wittgenstein, ein Reader</j.4:name>
+    <j.4:datePublished>1996</j.4:datePublished>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/1154415960#Agent/reclam"/>
+    <j.4:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.4:bookEdition>1. Aufl.</j.4:bookEdition>
+    <j.4:numberOfPages>391</j.4:numberOfPages>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/39391468"/>
+    <j.4:name>Ein Reader</j.4:name>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85100849"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/semantik">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Semantik.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1112094">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Semantics (Philosophy)</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85100849">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Philosophy.</j.4:name>
+    <j.4:name>Philosophy.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>3</j.3:count>
+    <j.4:name>f t mikhailov</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Topic/litterature_histoire_et_critique_theorie_etc">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="fr">Littérature--Histoire et critique--Théorie, etc.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1154415960#Topic/analytische_philosophie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name>Analytische Philosophie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/142969433">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.4:name>University of Chicago. Renaissance Society.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631193623">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631193623"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0631193626"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <j.4:isbn>9780631193623</j.4:isbn>
+    <j.4:isbn>0631193626</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85112488">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Relational grammar.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/73874087">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Eagleton, Terry, 1943-</j.4:name>
+    <j.4:familyName>Eagleton</j.4:familyName>
+    <j.4:givenName>Terry</j.4:givenName>
+    <j.4:birthDate>1943</j.4:birthDate>
+    <j.4:name>Eagleton, Terry.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>870</j.3:count>
+    <j.4:name>eng</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/57422379">
+    <j.4:bookEdition>German-English scholar's ed.</j.4:bookEdition>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85082153"/>
+    <j.4:about rdf:resource="http://dewey.info/class/192/e22/"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1112094"/>
+    <j.0:isLike rdf:resource="http://bnb.data.bl.uk/id/resource/GBA466824"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85078115"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9781118346334"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85119877"/>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Agent/blackwell_pub"/>
+    <j.4:datePublished>2005</j.4:datePublished>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/semantik"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/logik"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/mau"/>
+    <j.4:description xml:lang="en">Understanding -- Meaning -- Proposition. Sense of a proposition -- Immediate understanding and the application of a word in time -- The nature of language -- Thought. Thinking -- Grammar -- Intention and depiction -- Logical inference -- Generality -- Expectation. Wish, etc. -- Philosophy -- Phenomenology -- Idealism, etc. 00 Foundations of mathematics -- On cardinal numbers -- Mathematical proof -- Inductive proofs. Periodicity -- The infinite in mathematics. The extensional viewpoint.</j.4:description>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57422379</j.2:oclcnum>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Person/aue_maximilian"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</gr:displayPosition>
+    <j.4:numberOfPages>516</j.4:numberOfPages>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/14486100"/>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/57422379"/>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9781405106993"/>
+    <owl:sameAs rdf:resource="info:oclcnum/57422379"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1002068"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/110702484"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Place/malden_ma"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1012213"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/philosophie"/>
+    <j.4:name xml:lang="en">The Big Typescript, TS. 213</j.4:name>
+    <j.4:reviews rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Person/regan_stephen_1957">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Regan, Stephen, 1957-</j.4:name>
+    <j.4:familyName>Regan</j.4:familyName>
+    <j.4:givenName>Stephen</j.4:givenName>
+    <j.4:birthDate>1957</j.4:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631195849">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631195849"/>
+    <j.4:sameAs rdf:resource="urn:isbn:063119584X"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Acid-free_paper"/>
+    <j.4:description>alk. paper</j.4:description>
+    <j.4:isbn>9780631195849</j.4:isbn>
+    <j.4:isbn>063119584X</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85119877">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Semantics (Philosophy)</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/36746484">
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Person/regan_stephen_1957"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85034149"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Agent/blackwell"/>
+    <j.4:about rdf:resource="http://dewey.info/class/809/e21/"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Topic/litterature_histoire_et_critique_theorie_etc"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85043833"/>
+    <j.4:datePublished>1998</j.4:datePublished>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Place/oxford_uk"/>
+    <j.4:genre xml:lang="en">Criticism, interpretation, etc.</j.4:genre>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</gr:displayPosition>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/73874087"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631202493"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36746484</j.2:oclcnum>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Topic/literatuurkritiek"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Topic/criticism"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/351500878"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/36746484"/>
+    <j.4:numberOfPages>454</j.4:numberOfPages>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Topic/litterature_anglaise_histoire_et_critique"/>
+    <j.4:description xml:lang="en">Defending the free world (1990) -- The right and the good: postmodernism and the liberal state (1994) -- Resources for a journey of hope: Raymond Williams (1989) -- The death of desire: Arthur Schopenhauer (1990) -- My Wittgenstein (1994) -- History and myth in Yeats's 'Easter 1916' (1971) -- Nationalism: irony and commitment (1988) -- Saint Oscar (1989) -- Unionism and utopia: The cure at Troy by Seamus Heaney (1991) -- Heathcliff and the great hunger (1995) -- The ballad of Marxist criticism.</j.4:description>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Topic/literatuurtheorie"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/911989"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Place/malden_mass"/>
+    <j.4:about rdf:resource="http://viaf.org/viaf/73874087"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631202486"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1353577"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/883735"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Topic/critique"/>
+    <j.4:name xml:lang="en">The Eagleton reader</j.4:name>
+    <owl:sameAs rdf:resource="info:oclcnum/36746484"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85077521"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/351500878#Topic/literature_theory_etc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/946126">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Grammar, Comparative and general</j.4:name>
+    <j.4:name xml:lang="en">Grammar, Comparative and general.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/899852950#Topic/philosophy">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Philosophy.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>1</j.3:count>
+    <j.4:name>gle</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/24609378">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Wittgenstein, Ludwig, 1889-1951.</j.4:name>
+    <j.4:familyName>Wittgenstein</j.4:familyName>
+    <j.4:givenName>Ludwig</j.4:givenName>
+    <j.4:birthDate>1889</j.4:birthDate>
+    <j.4:deathDate>1951</j.4:deathDate>
+    <j.4:name>Wittgenstein, Ludwig.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/grammaticale_categorieen">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Grammaticale categorieën.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/41537030#Agent/the_museum">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>The Museum</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/45185752#Topic/filosofia_contemporanea_alemanha">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Filosofia contemporânea--Alemanha.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/132692289">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/132692289"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780876331200">
+    <j.4:sameAs rdf:resource="urn:isbn:9780876331200"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0876331207"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:isbn>9780876331200</j.4:isbn>
+    <j.4:isbn>0876331207</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/NC1429">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>4</j.3:count>
+    <j.4:name>strong tom</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/London">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>London</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1053748140#Topic/grammaire_relationnelle">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="fr">Grammaire relationnelle.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/pau">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>pau</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/57422379">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/57422379"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>2</j.3:count>
+    <j.4:name>por</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <j.3:facetValue rdf:nodeID="A5"/>
+    <j.3:facetValue rdf:nodeID="A21"/>
+    <j.3:facetValue rdf:nodeID="A20"/>
+    <j.3:facetValue rdf:nodeID="A19"/>
+    <j.3:facetValue rdf:nodeID="A0"/>
+    <j.3:facetValue rdf:nodeID="A17"/>
+    <j.3:facetValue rdf:nodeID="A4"/>
+    <j.3:facetValue rdf:nodeID="A16"/>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/Facet"/>
+    <j.3:facetValue rdf:nodeID="A6"/>
+    <j.3:facetValue rdf:nodeID="A22"/>
+    <j.3:facetIndex>creator</j.3:facetIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/B3376">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631194361">
+    <j.4:sameAs rdf:resource="urn:isbn:9780631194361"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0631194363"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Acid-free_paper"/>
+    <j.4:description>alk. paper</j.4:description>
+    <j.4:isbn>9780631194361</j.4:isbn>
+    <j.4:isbn>0631194363</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/45185752#Topic/analytische_philosophie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Analytische Philosophie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/883735">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Criticism</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/gw">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>gw</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/66568116">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Aarts, Bas, 1961-</j.4:name>
+    <j.4:familyName>Aarts</j.4:familyName>
+    <j.4:givenName>Bas</j.4:givenName>
+    <j.4:birthDate>1961</j.4:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/45621749">
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.4:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/45621749"/>
+    <j.4:about rdf:resource="http://dewey.info/class/192/e21/"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <owl:sameAs rdf:resource="info:oclcnum/45621749"/>
+    <j.4:name xml:lang="en">Wittgenstein : a critical reader</j.4:name>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/803875260#Person/wittgenstein_ludwig_1889_1951"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/803875260#Place/malden_ma"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/803875260#Topic/aufsatzsammlung"/>
+    <j.0:isLike rdf:resource="http://bnb.data.bl.uk/id/resource/GBA370886"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/803875260"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/49294848"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631194361"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631194378"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/803875260#Topic/filosofie"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</gr:displayPosition>
+    <j.4:description xml:lang="en">The development of Wittgenstein's philosophy / Hans-Johann Glock -- The so-called picture theory: language and the world in Tractatus logico-philosophicus / Hidé Ishiguro -- The logical system of the Tractatus / Howard Mounce -- Wittgenstein on intentionality / Erich Ammereller -- Meaning and understanding / Bede Rundle -- Following a rule / Robert L. Arrington -- Thinking / Oswald Hanfling -- The will / Stewart Candlish -- Private language and private experience / Severin Schroeder</j.4:description>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/mau"/>
+    <j.4:numberOfPages>381</j.4:numberOfPages>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/803875260#Agent/blackwell_publishers"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45621749</j.2:oclcnum>
+    <j.4:datePublished>2001</j.4:datePublished>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Topic/theologie_dogmatique">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="fr">Théologie dogmatique.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/41537030#Place/philadelphia">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Philadelphia</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/803875260#Person/wittgenstein_ludwig_1889_1951">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Wittgenstein, Ludwig, 1889-1951</j.4:name>
+    <j.4:familyName>Wittgenstein</j.4:familyName>
+    <j.4:givenName>Ludwig</j.4:givenName>
+    <j.4:birthDate>1889</j.4:birthDate>
+    <j.4:deathDate>1951</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/philosophie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Philosophie.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Topic/criticism">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Criticism.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780876331453">
+    <j.4:sameAs rdf:resource="urn:isbn:9780876331453"/>
+    <j.4:sameAs rdf:resource="urn:isbn:0876331452"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:description>trade paper</j.4:description>
+    <j.4:isbn>9780876331453</j.4:isbn>
+    <j.4:isbn>0876331452</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/31661741">
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631195849"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Place/cambridge_mass_usa"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Topic/theologie_anthologies"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Topic/theologie"/>
+    <j.4:about rdf:resource="http://dewey.info/class/230/e20/"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</gr:displayPosition>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/26923"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1149617"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9780631195856"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85134686"/>
+    <j.4:reviews rdf:nodeID="A23"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <owl:sameAs rdf:resource="info:oclcnum/31661741"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Topic/einfuhrung"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/BT77"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Topic/theologie_dogmatique"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Topic/christendom"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/794375047"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31661741</j.2:oclcnum>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Agent/blackwell"/>
+    <j.4:datePublished>1995</j.4:datePublished>
+    <j.4:url rdf:resource="http://www.worldcat.org/title/-/oclc/31661741"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/794375047#Place/oxford_uk"/>
+    <j.4:name xml:lang="en">The Christian theology reader</j.4:name>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.4:numberOfPages>422</j.4:numberOfPages>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/540790#Person/wittgenstein_ludwig_1889_1951">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Wittgenstein, Ludwig, 1889-1951</j.4:name>
+    <j.4:familyName>Wittgenstein</j.4:familyName>
+    <j.4:givenName>Ludwig</j.4:givenName>
+    <j.4:birthDate>1889</j.4:birthDate>
+    <j.4:deathDate>1951</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1154415960#Agent/reclam">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Reclam</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:type rdf:resource="http://schema.org/Review"/>
+    <j.4:itemReviewed rdf:resource="http://www.worldcat.org/oclc/31661741"/>
+    <j.4:reviewBody>"This Reader is designed as a companion to the editor's highly successful Christian Theology: An Introduction. It makes available some 280 seminal texts from the entire Christian tradition from Ignatius of Antioch to the Catechism of the Catholic Church (1994), cross-referenced and indexed for ease of use. All readings prior to 1800 have been specially translated for the purposes of this reader, to ensure consistency of translation and ease of reading in English. Every effort has been made to ensure that the work is as user-friendly as possible, making as few demands as possible of its users. Each chapter includes an introduction outlining the main historical and theological issues, and identifying key issues and thinkers. Each individual reading is prefaced by an introduction, alerting the reader to its importance and context, and followed where necessary by notes on translation and interpretation. The work also includes a full glossary of theological terms and biographical details of theologians cited, as well as suggestions for further reading."--BOOK JACKET.</j.4:reviewBody>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/mau">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>mau</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>3</j.3:count>
+    <j.4:name>cahill kevin m</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/351500878#Agent/blackwell">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>Blackwell</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781441151575">
+    <j.4:sameAs rdf:resource="urn:isbn:9781441151575"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:isbn>9781441151575</j.4:isbn>
+    <j.4:sameAs rdf:resource="urn:isbn:1441151575"/>
+    <j.4:isbn>1441151575</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Topic/einfuhrung">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Einführung.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/794375047#Place/cambridge_mass_usa">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Cambridge, Mass., USA</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/30780581">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/30780581"/>
+    <j.8:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/45185752#Place/oxford_uk">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Oxford, UK</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.3:count>2</j.3:count>
+    <j.4:name>swe</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/45185752#Agent/b_blackwell">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <j.4:name>B. Blackwell</j.4:name>
+  </rdf:Description>
+</rdf:RDF>

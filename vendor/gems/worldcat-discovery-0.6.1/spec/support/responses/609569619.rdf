@@ -1,0 +1,86 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:j.0="http://purl.org/dc/terms/"
+  xmlns:j.1="http://purl.org/library/"
+  xmlns:j.2="http://bibliograph.net/"
+  xmlns:j.3="http://www.w3.org/2007/05/powder-s#"
+  xmlns:j.4="http://schema.org/"
+  xmlns:j.5="http://www.w3.org/2006/gen/ont#"
+  xmlns:j.6="http://rdfs.org/ns/void#" >
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/cau">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.0:identifier>cau</j.0:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/M1630">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/724882061#Topic/rock_music_2001_2010">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Rock music--2001-2010.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/609569619#PublicationEvent/burbank_ca_hollywood_records_p2010">
+    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
+    <j.4:location rdf:resource="http://experiment.worldcat.org/entity/work/data/724882061#Place/burbank_ca"/>
+    <j.4:organizer rdf:resource="http://experiment.worldcat.org/entity/work/data/724882061#Agent/hollywood_records"/>
+    <j.4:startDate>2010</j.4:startDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/782.42166/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/609569619">
+    <j.1:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/cau"/>
+    <j.4:datePublished>2010</j.4:datePublished>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:about rdf:resource="http://dewey.info/class/782.42166/e22/"/>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/609569619"/>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/724882061#Agent/hollywood_records"/>
+    <j.4:performer rdf:resource="http://viaf.org/viaf/157486407"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/724882061"/>
+    <j.4:alternateName xml:lang="en">Grace Potter and the Nocturnals</j.4:alternateName>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/M1630"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/724882061#Topic/rock_music_2001_2010"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/724882061#Event/2001_2010"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/1099204"/>
+    <j.1:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">609569619</j.1:oclcnum>
+    <j.4:description xml:lang="en">The funky young blues-rock act from Vermont marks an artistic breakthrough that moves them further toward fulfilling their immense potential. Recently they contributed a live cover of Jefferson Airplane's White Rabbit to the Almost Alice soundtrack. This self-titled set features the single Tiny Light.</j.4:description>
+    <j.4:publication rdf:resource="http://www.worldcat.org/title/-/oclc/609569619#PublicationEvent/burbank_ca_hollywood_records_p2010"/>
+    <j.4:performer rdf:resource="http://viaf.org/viaf/26851551"/>
+    <j.1:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/724882061#Place/burbank_ca"/>
+    <j.4:name xml:lang="en">Grace Potter & the Nocturnals</j.4:name>
+    <rdf:type rdf:resource="http://schema.org/MusicAlbum"/>
+    <rdf:type rdf:resource="http://bibliograph.net/CD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/609569619">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/609569619"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/724882061#Place/burbank_ca">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Burbank, CA</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/724882061#Agent/hollywood_records">
+    <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
+    <j.4:name>Hollywood Records</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/157486407">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.4:name>Nocturnals (Musical group)</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/724882061#Event/2001_2010">
+    <rdf:type rdf:resource="http://schema.org/Event"/>
+    <j.4:name>2001 - 2010</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1099204">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Rock music.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/26851551">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Potter</j.4:familyName>
+    <j.4:givenName>Grace</j.4:givenName>
+    <j.4:name>Potter, Grace, 1983-</j.4:name>
+    <j.4:birthDate>1983</j.4:birthDate>
+  </rdf:Description>
+</rdf:RDF>

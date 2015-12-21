@@ -15,15 +15,21 @@
 module WorldCat
   module Discovery
     
-    # A generic resource corresponding to the document representing a bibliographic resource. 
-    # This class should not be used by clients, rather WorldCat::Discovery::Bib objects should
-    # be used instead.
-    
-    class GenericResource < Spira::Base
+    class Periodical < Bib
       
-      property :about, :predicate => SCHEMA_ABOUT, :type => 'Bib'
-      has_many :datasets, :predicate => VOID_IN_DATASET, :type => RDF::URI
-      property :date_modified, :predicate => SCHEMA_DATE_MODIFIED, :type => XSD.string
+      # call-seq:
+      #   issn() => string
+      # 
+      # Returns issn from RDF predicate: http://schema.org/issn
+      def issn
+        is_like = Spira.repository.query(:subject => self.work_uri, :predicate => UMBEL_IS_LIKE).first
+        if is_like
+          issn = Spira.repository.query(:subject => is_like.object, :predicate => SCHEMA_ISSN).first
+        else
+          issn = Spira.repository.query(:subject => self.id, :predicate => SCHEMA_ISSN).first
+        end
+        issn.object
+      end
       
     end
   end

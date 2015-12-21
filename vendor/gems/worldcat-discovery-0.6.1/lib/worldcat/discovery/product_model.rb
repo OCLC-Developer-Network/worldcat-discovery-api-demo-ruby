@@ -28,6 +28,7 @@ module WorldCat
       property :name, :predicate => SCHEMA_NAME, :type => XSD.string
       property :isbn, :predicate => SCHEMA_ISBN, :type => XSD.string
       has_many :types, :predicate => RDF.type, :type => RDF::URI
+      has_many :isbns, :predicate => SCHEMA_ISBN, :type => XSD.string 
       
       # call-seq:
       #   id() => RDF::URI

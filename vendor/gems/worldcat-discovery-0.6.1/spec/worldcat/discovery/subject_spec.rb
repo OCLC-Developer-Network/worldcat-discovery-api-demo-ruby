@@ -29,7 +29,7 @@ describe WorldCat::Discovery::Subject do
     end
     
     it "should have the right name" do
-      @subject.name.should == 'Philosophy'
+      @subject.name.should == 'Philosophy.'
     end
     
     it "should have the right id" do

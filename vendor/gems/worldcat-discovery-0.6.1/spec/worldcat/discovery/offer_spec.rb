@@ -36,7 +36,7 @@ describe WorldCat::Discovery::Offer do
     end
 
     it "should contain the right id" do
-      uri = RDF::URI("http://beta.worldcat.org/discovery/offer/oclc/30780581?itemsPerPage=10&oclcNumber=30780581&startIndex=0")
+      uri = RDF::URI("https://beta.worldcat.org/discovery/offer/oclc/30780581?itemsPerPage=10=0")
       @results.id.should == uri
     end
     
@@ -59,7 +59,7 @@ describe WorldCat::Discovery::Offer do
     end
     
     it "should have the correct total results" do
-      @results.total_results.should == 570
+      @results.total_results.should == 579
     end
     
     it "should have the correct start index" do
@@ -95,13 +95,13 @@ describe WorldCat::Discovery::Offer do
 
       it "should belong to the correct collection" do
         @collection.type.should == RDF::URI.new('http://purl.org/dc/terms/Collection')
-        @collection.oclc_symbol.should == 'IAC'
+        @collection.oclc_symbol.should == 'AIZ'
       end
 
       it "should be managed by the correct library" do
-        @library.id.should == 'http://worldcat.org/wcr/organization/resource/813'
+        @library.id.should == 'http://worldcat.org/wcr/organization/resource/72545'
         @library.type.should == RDF::URI.new('http://schema.org/Library')
-        @library.name.should == 'DePaul University Library'
+        @library.name.should == 'ACADEMIA SINICA INST EUROPEAN AM STUDIES'
         @library.collection.should == @collection
       end
       

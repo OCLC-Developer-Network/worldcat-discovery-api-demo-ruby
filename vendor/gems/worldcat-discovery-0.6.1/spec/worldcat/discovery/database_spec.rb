@@ -36,7 +36,7 @@ describe WorldCat::Discovery::Database do
     end
 
     it "should have the right number of databases" do
-      @list.databases.size.should == 4
+      @list.databases.size.should == 6
     end
     
     it "should return a list of Database objects" do
@@ -47,7 +47,9 @@ describe WorldCat::Discovery::Database do
       @list.databases[0].name.should == 'African American Experience'
       @list.databases[1].name.should == 'American Economic Association Journals'
       @list.databases[2].name.should == 'OAIster'
-      @list.databases[3].name.should == 'WorldCat.org'
+      @list.databases[3].name.should == 'Wiley Online Library'
+      @list.databases[4].name.should == 'WorldCat'
+      @list.databases[5].name.should == 'WorldCat.org'
     end
     
     context "when inspecting the first database" do

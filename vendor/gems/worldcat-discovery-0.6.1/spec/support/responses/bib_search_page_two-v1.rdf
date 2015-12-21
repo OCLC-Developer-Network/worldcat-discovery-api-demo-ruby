@@ -1,0 +1,910 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://umbel.org/umbel#"
+    xmlns:j.1="http://purl.org/dc/terms/"
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:j.2="http://purl.org/library/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.3="http://worldcat.org/vocab/discovery/"
+    xmlns:schema="http://schema.org/"
+    xmlns:j.4="http://dbpedia.org/resource/"
+    xmlns:j.5="http://www.w3.org/2006/gen/ont#"
+    xmlns:j.6="http://xmlns.com/foaf/0.1/"
+    xmlns:j.7="http://rdfs.org/ns/void#" > 
+  <rdf:Description rdf:about="http://viaf.org/viaf/65210547">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Marshall, James (James D.)</schema:name>
+    <schema:familyName>Marshall</schema:familyName>
+    <schema:givenName>James</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/5239972">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Taylor, Stephanie, 1954-</schema:name>
+    <schema:familyName>Taylor</schema:familyName>
+    <schema:givenName>Stephanie</schema:givenName>
+    <schema:birthDate>1954</schema:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/121.68/e23/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85105557">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name>Postmodernism.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/analyse_du_discours_methodologie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Analyse du discours--Méthodologie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85112549">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Religion.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/789199060#Agent/continuum_international_pub_group">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Continuum International Pub. Group</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/401.41/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/306.6/e21/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1037916#Agent/bergin_&amp;_garvey">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Bergin &amp; Garvey</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/894932">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Discourse analysis.</schema:name>
+    <schema:name xml:lang="en">Discourse analysis</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/26097098">
+    <owl:sameAs rdf:resource="info:oclcnum/26097098"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780748601943"/>
+    <schema:creator rdf:resource="http://viaf.org/viaf/94708327"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85108432"/>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/836914344"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Person/wittgenstein_ludwig"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Topic/psycholinguistique_philosophie"/>
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/26097098"/>
+    <schema:datePublished>1990</schema:datePublished>
+    <schema:numberOfPages>170</schema:numberOfPages>
+    <schema:copyrightYear>1990</schema:copyrightYear>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Topic/philosophische_psychologie"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780748601639"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Topic/taalfilosofie"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Place/edinburgh"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</gr:displayPosition>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/992193"/>
+    <schema:description xml:lang="en">Introduction ---- Part I. How some words work. 1.Performatives --- 2. Quasi-performatives --- 3. Implicit expressions of attitude --- 4. Concealed metaphors --- 5. Words that replace behavior --- 6. Showing by saying --- 7.Variant models --- 8. Words and their objects ---- Part II. Introduction ---- Reviews and analysis of textual evidence ---- Part III.  what are the consequences? 1. The unmasking of misbegotten questions --- 2. Relieving the urge to reform language ---- Epilogue: defence of these philosophical methods.</schema:description>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Topic/mot_linguistique"/>
+    <schema:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Topic/wort"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85148092"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/1180101"/>
+    <schema:name xml:lang="en">Wittgenstein on words as instruments : lessons in philosophical psychology</schema:name>
+    <schema:inLanguage>en</schema:inLanguage>
+    <schema:about rdf:resource="http://dewey.info/class/121.68/e20/"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85074574"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/stk"/>
+    <schema:description xml:lang="en">Wittgenstein believed that his writing should not save other people the trouble of thinking for themselves. In this book the author attempts to de-mystify Wittgenstein and stimulate the reader's own ideas on the use of words as instruments. He looks particularly at Wittgenstein's use of words and his distrust of philosophical questions such as "what are we reporting about ourselves when we say we believe something?". In clear terms he advises students how to deal with difficulties about psychological words and interprets some of the more perplexing passages in "Investigations" and "Zettel".</schema:description>
+    <schema:about rdf:resource="http://dewey.info/class/150.92/e20/"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Topic/langage_et_langues_philosophie"/>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/836914344#Agent/edinburgh_university_press"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26097098</j.2:oclcnum>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/1081329"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/56664511#Topic/godsdienst">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Godsdienst.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/703137741">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/703137741"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/46984697">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/46984697"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1009110810#Agent/edinburgh_university_press">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Edinburgh University Press</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85108432">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Psycholinguistics--Philosophy.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/konversationsanalyse">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Konversationsanalyse.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/111360078">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Monk, Ray.</schema:name>
+    <schema:familyName>Monk</schema:familyName>
+    <schema:givenName>Ray</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/46683508">
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/46683508"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85045202"/>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/94481732"/>
+    <schema:name xml:lang="en">A reader in the anthropology of religion</schema:name>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/56664511#Topic/antropologia_da_religiao"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/mau"/>
+    <schema:datePublished>2002</schema:datePublished>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/56664511"/>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/56664511#Agent/blackwell_publishers"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780631221128"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/56664511#Topic/religion"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/916150"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/1093763"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/56664511#Topic/godsdienst"/>
+    <schema:about rdf:resource="http://dewey.info/class/306.6/e21/"/>
+    <schema:inLanguage>en</schema:inLanguage>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780631221135"/>
+    <owl:sameAs rdf:resource="info:oclcnum/46683508"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/56664511#Topic/ethnologie_aspect_religieux"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85112549"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46683508</j.2:oclcnum>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</gr:displayPosition>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/56664511#Place/malden_mass"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/classification/BL256"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/49294848">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Glock, Hans Johann.</schema:name>
+    <schema:familyName>Glock</schema:familyName>
+    <schema:givenName>Hans Johann</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1009110810#Place/edinburgh">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>Edinburgh</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781441139146">
+    <schema:sameAs rdf:resource="urn:isbn:9781441139146"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:isbn>9781441139146</schema:isbn>
+    <schema:sameAs rdf:resource="urn:isbn:1441139141"/>
+    <schema:isbn>1441139141</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/54028476">
+    <schema:genre>Electronic books.</schema:genre>
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/54028476"/>
+    <schema:datePublished>2003</schema:datePublished>
+    <schema:creator rdf:resource="http://viaf.org/viaf/24609378"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85074574"/>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/68938630"/>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/434235#Agent/barnes_&amp;_noble_world_digital_library"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/1002068"/>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/434235"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</gr:displayPosition>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:bookFormat rdf:resource="http://schema.org/EBook"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/992193"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54028476</j.2:oclcnum>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85078115"/>
+    <schema:about rdf:resource="http://dewey.info/class/192/e22/"/>
+    <owl:sameAs rdf:resource="info:oclcnum/54028476"/>
+    <schema:name>Tractatus logico-philosophicus</schema:name>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780594102502"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780594106395"/>
+    <j.2:placeOfPublication rdf:resource="http://dbpedia.org/resource/New_York_City"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/nyu"/>
+    <schema:inLanguage>en</schema:inLanguage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780313005985">
+    <schema:sameAs rdf:resource="urn:isbn:9780313005985"/>
+    <schema:sameAs rdf:resource="urn:isbn:0313005982"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:description>electronic bk.</schema:description>
+    <schema:isbn>9780313005985</schema:isbn>
+    <schema:isbn>0313005982</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85045202">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Ethnology--Religious aspects.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/90643391">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Peters, Michael (Michael A.), 1948-</schema:name>
+    <schema:familyName>Peters</schema:familyName>
+    <schema:givenName>Michael</schema:givenName>
+    <schema:birthDate>1948</schema:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Topic/psycholinguistique_philosophie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Psycholinguistique--Philosophie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/849243401">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/849243401"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/discourse_analysis">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Discourse analysis.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Agent/sage">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>SAGE</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/56083152">
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/56083152"/>
+    <schema:numberOfPages>227</schema:numberOfPages>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/1037916#Place/westport_conn"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</gr:displayPosition>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780313005985"/>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1037916"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/902721"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85041014"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <schema:genre>Electronic books.</schema:genre>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56083152</j.2:oclcnum>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/1037916#Agent/bergin_&amp;_garvey"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1037916#Person/wittgenstein_ludwig_1889_1951"/>
+    <schema:inLanguage>en</schema:inLanguage>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/ctu"/>
+    <schema:bookFormat rdf:resource="http://schema.org/EBook"/>
+    <schema:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/1073164"/>
+    <schema:name>Wittgenstein philosophy, postmodernism, pedagogy</schema:name>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/65210547"/>
+    <owl:sameAs rdf:resource="info:oclcnum/56083152"/>
+    <schema:datePublished>1999</schema:datePublished>
+    <schema:creator rdf:resource="http://viaf.org/viaf/90643391"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85105557"/>
+    <schema:about rdf:resource="http://dewey.info/class/192/e22/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/94481732">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Lambek, Michael.</schema:name>
+    <schema:familyName>Lambek</schema:familyName>
+    <schema:givenName>Michael</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1360868133#Place/malden_mass">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>Malden, Mass.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781847061416">
+    <schema:sameAs rdf:resource="urn:isbn:9781847061416"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:description>Cloth</schema:description>
+    <schema:isbn>9781847061416</schema:isbn>
+    <schema:sameAs rdf:resource="urn:isbn:1847061419"/>
+    <schema:isbn>1847061419</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780594106395">
+    <schema:sameAs rdf:resource="urn:isbn:9780594106395"/>
+    <schema:sameAs rdf:resource="urn:isbn:0594106397"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:description>electronic bk. : Mobipocket Reader</schema:description>
+    <schema:isbn>9780594106395</schema:isbn>
+    <schema:isbn>0594106397</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/enk">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>enk</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/56664511#Topic/religion">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Religion.</schema:name>
+    <schema:name xml:lang="en">Religion.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1037916#Place/westport_conn">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>Westport, Conn.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/ctu">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>ctu</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/121.68/e20/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/diskurstheorie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Diskurstheorie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Place/edinburgh">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>Edinburgh</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/New_York_City">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>New York</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Place/thousand_oaks_calif">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>Thousand Oaks Calif.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/193/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Agent/edinburgh_university_press">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Edinburgh University Press</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/bib/search?itemsPerPage=10&amp;q=wittgenstein reader&amp;startNum=10">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/46683508"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/751751653"/>
+    <j.3:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.3:startIndex>
+    <j.3:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.3:itemsPerPage>
+    <j.3:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">779</j.3:totalResults>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/26097098"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/57167986"/>
+    <schema:relatedLink rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://beta.worldcat.org/discovery/bib/search?itemsPerPage=10&amp;q=wittgenstein reader&amp;startNum=20</schema:relatedLink>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/54028476"/>
+    <schema:relatedLink rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://beta.worldcat.org/discovery/bib/search?itemsPerPage=10&amp;q=wittgenstein reader&amp;startNum=0</schema:relatedLink>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/46984697"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/605094956"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/703137741"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/56083152"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/849243401"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85078115">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name>Logic, Symbolic and mathematical.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/605094956">
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1812534209"/>
+    <owl:sameAs rdf:resource="info:oclcnum/605094956"/>
+    <schema:inLanguage>en</schema:inLanguage>
+    <schema:name>Remarks on Frazer's Golden Bough</schema:name>
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/605094956"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</gr:displayPosition>
+    <schema:datePublished>2002</schema:datePublished>
+    <schema:creator rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">605094956</j.2:oclcnum>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/xxu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780761971566">
+    <schema:sameAs rdf:resource="urn:isbn:9780761971566"/>
+    <schema:sameAs rdf:resource="urn:isbn:0761971564"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <schema:isbn>9780761971566</schema:isbn>
+    <schema:isbn>0761971564</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/diskursanalyse">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Diskursanalyse.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/sozialwissenschaften">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Sozialwissenschaften.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631221135">
+    <schema:sameAs rdf:resource="urn:isbn:9780631221135"/>
+    <schema:sameAs rdf:resource="urn:isbn:0631221131"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Acid-free_paper"/>
+    <schema:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <schema:isbn>9780631221135</schema:isbn>
+    <schema:isbn>0631221131</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/54028476">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/54028476"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/94664865">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Wetherell, Margaret, 1954-</schema:name>
+    <schema:familyName>Wetherell</schema:familyName>
+    <schema:givenName>Margaret</schema:givenName>
+    <schema:birthDate>1954</schema:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://schema.org/Review"/>
+    <schema:itemReviewed rdf:resource="http://www.worldcat.org/oclc/46984697"/>
+    <schema:reviewBody>"Discourse Theory and Practice is much more than a collection of key classic articles and papers in the field of discourse analysis. The aim of the book is to introduce students to the major figures in the field, and to some of their writings which, combined with the interspersed editorial commentaries, should allow students to understand the key epistemological and methodological issues of discourse theory and practice."--Jacket.</schema:reviewBody>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Topic/langage_et_langues_philosophie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Langage et langues--Philosophie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/121998070">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Tejedor, Chon.</schema:name>
+    <schema:familyName>Tejedor</schema:familyName>
+    <schema:givenName>Chon</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/stk">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>stk</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85038362">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Discourse analysis.</schema:name>
+    <schema:name xml:lang="en">Discourse analysis--Methodology.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/789199060#Person/wittgenstein_ludwig_1889_1951">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Wittgenstein, Ludwig, 1889-1951.</schema:name>
+    <schema:familyName>Wittgenstein</schema:familyName>
+    <schema:givenName>Ludwig</schema:givenName>
+    <schema:birthDate>1889</schema:birthDate>
+    <schema:deathDate>1951</schema:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1009110810#Topic/literaturtheorie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Literaturtheorie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/nyu">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>nyu</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/789199060#Topic/philosophy">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Philosophy.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/sciences_sociales_methodologie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Sciences sociales--Méthodologie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/605094956">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/605094956"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1002068">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name>Logic, Symbolic and mathematical</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Topic/mot_linguistique">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Mot (Linguistique).</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/xxu">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>xxu</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631194378">
+    <schema:sameAs rdf:resource="urn:isbn:9780631194378"/>
+    <schema:sameAs rdf:resource="urn:isbn:0631194371"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:isbn>9780631194378</schema:isbn>
+    <schema:isbn>0631194371</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Topic/taalfilosofie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Taalfilosofie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780631221128">
+    <schema:sameAs rdf:resource="urn:isbn:9780631221128"/>
+    <schema:sameAs rdf:resource="urn:isbn:0631221123"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Acid-free_paper"/>
+    <schema:description>alk. paper</schema:description>
+    <schema:isbn>9780631221128</schema:isbn>
+    <schema:isbn>0631221123</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/4833431">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Helgeson, James.</schema:name>
+    <schema:familyName>Helgeson</schema:familyName>
+    <schema:givenName>James</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780748601943">
+    <schema:sameAs rdf:resource="urn:isbn:9780748601943"/>
+    <schema:sameAs rdf:resource="urn:isbn:0748601945"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <schema:isbn>9780748601943</schema:isbn>
+    <schema:isbn>0748601945</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85148092">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Word (Linguistics)</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780594102502">
+    <schema:sameAs rdf:resource="urn:isbn:9780594102502"/>
+    <schema:sameAs rdf:resource="urn:isbn:0594102502"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:description>electronic bk. : Adobe Reader</schema:description>
+    <schema:isbn>9780594102502</schema:isbn>
+    <schema:isbn>0594102502</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Topic/wort">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Wort.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/46984697">
+    <owl:sameAs rdf:resource="info:oclcnum/46984697"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46984697</j.2:oclcnum>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:reviews rdf:nodeID="A0"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/sozialwissenschaften"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/analyse_du_discours"/>
+    <schema:numberOfPages>406</schema:numberOfPages>
+    <j.2:placeOfPublication rdf:resource="http://dbpedia.org/resource/London"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/894936"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/analyse_du_discours_methodologie"/>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/165764889"/>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/5239972"/>
+    <schema:name xml:lang="en">Discourse theory and practice : a reader</schema:name>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/865482753"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/1122933"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/diskurstheorie"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</gr:displayPosition>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/sciences_sociales_methodologie"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Place/thousand_oaks_calif"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/diskursanalyse"/>
+    <schema:about rdf:resource="http://dewey.info/class/401.41/e22/"/>
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/46984697"/>
+    <schema:inLanguage>en</schema:inLanguage>
+    <schema:creator rdf:resource="http://viaf.org/viaf/94664865"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85124011"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/discourse_analysis"/>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/152430895"/>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Agent/sage"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/verteltheorie"/>
+    <schema:datePublished>2001</schema:datePublished>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/tekstanalyse"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/894932"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780761971566"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/865482753#Topic/konversationsanalyse"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780761971559"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85038362"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/894936">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Discourse analysis--Methodology.</schema:name>
+    <schema:name xml:lang="en">Discourse analysis--Methodology</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/94708327">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Hunter, J. F. M.</schema:name>
+    <schema:familyName>Hunter</schema:familyName>
+    <schema:givenName>J. F. M.</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/751751653">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/751751653"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/56664511#Place/malden_mass">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>Malden, Mass.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1081329">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Psycholinguistics--Philosophy</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/150.92/e20/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1180101">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Word (Linguistics)</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/a21/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/916150">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Ethnology--Religious aspects</schema:name>
+    <schema:name xml:lang="en">Antropologische aspecten.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780748601639">
+    <schema:sameAs rdf:resource="urn:isbn:9780748601639"/>
+    <schema:sameAs rdf:resource="urn:isbn:0748601635"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:isbn>9780748601639</schema:isbn>
+    <schema:isbn>0748601635</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1037916#Person/wittgenstein_ludwig_1889_1951">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Wittgenstein, Ludwig, 1889-1951</schema:name>
+    <schema:familyName>Wittgenstein</schema:familyName>
+    <schema:givenName>Ludwig</schema:givenName>
+    <schema:birthDate>1889</schema:birthDate>
+    <schema:deathDate>1951</schema:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780748642519">
+    <schema:sameAs rdf:resource="urn:isbn:9780748642519"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <schema:isbn>9780748642519</schema:isbn>
+    <schema:sameAs rdf:resource="urn:isbn:074864251X"/>
+    <schema:isbn>074864251X</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/751751653">
+    <schema:description xml:lang="en">Wittgenstein, von Wright and the myth of progress / Jacques Bouveresse -- Pierre Hadot as a reader of Wittgenstein / Sandra Laugier -- What cannot be said : notes on early French Wittgenstein reception / James Helgeson -- At the margins of sense : the function of paradox in Deleuze and Wittgenstein / Reidar A. Due -- Skinner, Wittgenstein and historical method / Jonathan Havercroft -- Wittgenstein's Philosophical investigations, linguistic meaning and music / Garry L. Hagberg -- The surrealism of the habitual : from poetic language to the prose of life / Alison James -- Wittgenstein in recent French poetics : Henri Meschonic and Jacques Roubaud / Maria Rusanda Muresan.</schema:description>
+    <schema:name xml:lang="en">Wittgenstein, theory, literature</schema:name>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/1009110810#Agent/edinburgh_university_press"/>
+    <schema:genre xml:lang="en">Aufsatzsammlung.</schema:genre>
+    <schema:datePublished>2011</schema:datePublished>
+    <schema:inLanguage>en</schema:inLanguage>
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/751751653"/>
+    <schema:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <schema:copyrightYear>2011</schema:copyrightYear>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/stk"/>
+    <schema:about rdf:resource="http://id.worldcat.org/fast/992193"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</gr:displayPosition>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780748642519"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/1009110810#Place/edinburgh"/>
+    <owl:sameAs rdf:resource="info:oclcnum/751751653"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1009110810#Person/wittgenstein_ludwig"/>
+    <schema:about rdf:resource="http://dewey.info/class/121.68/e23/"/>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1009110810"/>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/4833431"/>
+    <j.0:isLike rdf:resource="http://bnb.data.bl.uk/id/resource/GBB196632"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/subjects/sh85074574"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">751751653</j.2:oclcnum>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1009110810#Topic/literaturtheorie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/verteltheorie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Verteltheorie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1073164">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name>Postmodernism</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85074574">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Language and languages--Philosophy.</schema:name>
+    <schema:name>Language and languages--Philosophy.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Person/wittgenstein_ludwig">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Wittgenstein, Ludwig.</schema:name>
+    <schema:familyName>Wittgenstein</schema:familyName>
+    <schema:givenName>Ludwig</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/836914344#Topic/philosophische_psychologie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Philosophische Psychologie.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1093763">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Religion</schema:name>
+    <schema:name xml:lang="en">Ethnology--Religious aspects.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/434235#Agent/barnes_&amp;_noble_world_digital_library">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Barnes &amp; Noble World Digital Library</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/24609378">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Wittgenstein, Ludwig, 1889-1951.</schema:name>
+    <schema:familyName>Wittgenstein</schema:familyName>
+    <schema:givenName>Ludwig</schema:givenName>
+    <schema:birthDate>1889</schema:birthDate>
+    <schema:deathDate>1951</schema:deathDate>
+    <schema:name>Wittgenstein, Ludwig.</schema:name>
+    <schema:name>Wittgenstein, Ludwig, 1889-1951</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/56083152">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/56083152"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/525161#Agent/granta">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Granta</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/152430895">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <schema:name>Open University.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/992193">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Language and languages--Philosophy</schema:name>
+    <schema:name>Language and languages--Philosophy</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/849243401">
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/1360868133#Place/malden_mass"/>
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/849243401"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9780631194378"/>
+    <schema:datePublished>2001</schema:datePublished>
+    <schema:name>Wittgenstein: a critical reader</schema:name>
+    <schema:contributor rdf:resource="http://viaf.org/viaf/49294848"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">849243401</j.2:oclcnum>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:about rdf:resource="http://dewey.info/class/192/a21/"/>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1360868133"/>
+    <schema:numberOfPages>381</schema:numberOfPages>
+    <owl:sameAs rdf:resource="info:oclcnum/849243401"/>
+    <schema:inLanguage>en</schema:inLanguage>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/xxu"/>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/1360868133#Agent/blackwell_publishers"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</gr:displayPosition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85041014">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name>Education--Philosophy.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/57167986">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/57167986"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/tekstanalyse">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Tekstanalyse.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/London">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <schema:name>London</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/1122933">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Social sciences--Methodology.</schema:name>
+    <schema:name xml:lang="en">Social sciences--Methodology</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/165764889">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Yates, Simeon.</schema:name>
+    <schema:familyName>Yates</schema:familyName>
+    <schema:givenName>Simeon</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/902721">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name>Education--Philosophy</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/B3376">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/865482753#Topic/analyse_du_discours">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Analyse du discours.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/56664511#Agent/blackwell_publishers">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Blackwell Publishers</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/68938630">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Ogden, C. K. (Charles Kay), 1889-1957.</schema:name>
+    <schema:familyName>Ogden</schema:familyName>
+    <schema:givenName>C. K.</schema:givenName>
+    <schema:birthDate>1889</schema:birthDate>
+    <schema:deathDate>1957</schema:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781862077249">
+    <schema:sameAs rdf:resource="urn:isbn:9781862077249"/>
+    <schema:sameAs rdf:resource="urn:isbn:186207724X"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:bookFormat rdf:resource="http://schema.org/Paperback"/>
+    <schema:isbn>9781862077249</schema:isbn>
+    <schema:isbn>186207724X</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/26097098">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/26097098"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/46683508">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <schema:about rdf:resource="http://www.worldcat.org/oclc/46683508"/>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/mau">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>mau</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1360868133#Agent/blackwell_publishers">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <schema:name>Blackwell Publishers</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/703137741">
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/703137741"/>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/789199060"/>
+    <schema:description xml:lang="en">Ludwig Wittgenstein was arguably the most important and influential philosopher of the twentieth century. Covering all the key concepts of his work, Starting with Wittgenstein provides an accessible introduction to the ideas of this hugely significant thinker. Thematically structured, the book leads the reader through a thorough overview of the development of Wittgenstein's thought, resulting in a more comprehensive understanding of the roots of his philosophical concerns. Offering coverage of the full range of Wittgenstein's earlier and later work, the book emphasizes the relationship between.</schema:description>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">703137741</j.2:oclcnum>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <schema:name xml:lang="en">Starting with Wittgenstein</schema:name>
+    <schema:genre xml:lang="en">Electronic books.</schema:genre>
+    <j.2:placeOfPublication rdf:resource="http://dbpedia.org/resource/London"/>
+    <schema:datePublished>2011</schema:datePublished>
+    <owl:sameAs rdf:resource="info:oclcnum/703137741"/>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/789199060#Agent/continuum_international_pub_group"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</gr:displayPosition>
+    <schema:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9781847061416"/>
+    <schema:url rdf:resource="http://lib.myilibrary.com?id=297756"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/789199060#Topic/philosophy"/>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9781441139146"/>
+    <schema:url rdf:resource="http://public.eblib.com/EBLPublic/PublicView.do?ptiID=655522"/>
+    <schema:creator rdf:resource="http://viaf.org/viaf/121998070"/>
+    <schema:inLanguage>en</schema:inLanguage>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+    <schema:bookFormat rdf:resource="http://schema.org/EBook"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/789199060#Person/wittgenstein_ludwig_1889_1951"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:description xml:lang="en">Acknowledgements; INTRODUCTION; PART I: THE EARLIER WITTGENSTEIN; CHAPTER 1: LANGUAGE AND LOGIC; CHAPTER 2: THOUGHTS AND THE SELF; CHAPTER 3: LOGIC AND ETHICS; CONCLUSION TO PART I; PART II: THE LATER WITTGENSTEIN; CHAPTER 4: LANGUAGE AND USE; CHAPTER 5: RULES AND MEANING; CHAPTER 6: SENSATIONS AND PRIVATE LANGUAGES; CONCLUSION TO PART II; Notes; Bibliography; Index; A; C; D; E; F; G; H; I; J; K; L; M; N; O; P; R; S; T; U; V; W;</schema:description>
+    <schema:about rdf:resource="http://dewey.info/class/192/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/BL256">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/525161#Person/wittgenstein_ludwig_1889_1951">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Wittgenstein, Ludwig, 1889-1951</schema:name>
+    <schema:familyName>Wittgenstein</schema:familyName>
+    <schema:givenName>Ludwig</schema:givenName>
+    <schema:birthDate>1889</schema:birthDate>
+    <schema:deathDate>1951</schema:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/57167986">
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <schema:inLanguage>en</schema:inLanguage>
+    <schema:datePublished>2005</schema:datePublished>
+    <schema:about rdf:resource="http://dewey.info/class/193/e22/"/>
+    <schema:url rdf:resource="http://www.worldcat.org/title/-/oclc/57167986"/>
+    <schema:numberOfPages>114</schema:numberOfPages>
+    <schema:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/525161#Agent/granta"/>
+    <schema:description xml:lang="en">Approaching the writing of major intellectuals, artists, and philosophers need no longer be daunting. How to Read is a new sort of introduction - a personal master class in reading - that brings you face to face with the work of some of the most influential and challenging writers in history. In lucid, accessible language, these books explain essential topics such as Wittgenstein's determination to insist on the integrity and the autonomy of nonscientific forms of understanding. Intent upon letting the reader experience the pleasure and intellectual stimulation in reading these classic authors, the How to Read series provides a context and an explanation that will facilitate and enrich your understanding of texts vital to the canon.</schema:description>
+    <j.0:isLike rdf:resource="http://bnb.data.bl.uk/id/resource/GBA486468"/>
+    <schema:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <schema:about rdf:resource="http://dewey.info/class/192/e22/"/>
+    <j.0:isLike rdf:resource="http://d-nb.info/974323071"/>
+    <j.2:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57167986</j.2:oclcnum>
+    <schema:name xml:lang="en">Wittgenstein</schema:name>
+    <schema:workExample rdf:resource="http://worldcat.org/isbn/9781862077249"/>
+    <schema:name xml:lang="en">How to read Wittgenstein</schema:name>
+    <schema:creator rdf:resource="http://viaf.org/viaf/111360078"/>
+    <owl:sameAs rdf:resource="info:oclcnum/57167986"/>
+    <schema:about rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.2:placeOfPublication rdf:resource="http://dbpedia.org/resource/London"/>
+    <schema:about rdf:resource="http://experiment.worldcat.org/entity/work/data/525161#Person/wittgenstein_ludwig_1889_1951"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</gr:displayPosition>
+    <schema:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/525161"/>
+    <schema:genre xml:lang="en">Einführung.</schema:genre>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/enk"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9780761971559">
+    <schema:sameAs rdf:resource="urn:isbn:9780761971559"/>
+    <schema:sameAs rdf:resource="urn:isbn:0761971556"/>
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <schema:isbn>9780761971559</schema:isbn>
+    <schema:isbn>0761971556</schema:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1009110810#Person/wittgenstein_ludwig">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <schema:name>Wittgenstein, Ludwig.</schema:name>
+    <schema:familyName>Wittgenstein</schema:familyName>
+    <schema:givenName>Ludwig</schema:givenName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85124011">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Social sciences--Methodology.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/56664511#Topic/antropologia_da_religiao">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="en">Antropologia da religião.</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/56664511#Topic/ethnologie_aspect_religieux">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <schema:name xml:lang="fr">Ethnologie--Aspect religieux.</schema:name>
+  </rdf:Description>
+</rdf:RDF>

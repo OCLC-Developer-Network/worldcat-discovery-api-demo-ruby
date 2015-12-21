@@ -15,16 +15,19 @@
 module WorldCat
   module Discovery
     
-    # A generic resource corresponding to the document representing a bibliographic resource. 
-    # This class should not be used by clients, rather WorldCat::Discovery::Bib objects should
-    # be used instead.
+    # == Properties mapped from RDF data
+    #
+    # RDF properties are mapped via an ORM style mapping.
+    # 
+    # [name] RDF predicate: http:/schema.org/name; returns: String 
+    # [parts] RDF predicate: http://schema.org/hasPart; returns: Enumerable of WorldCat::Discovery::Bib objects
     
-    class GenericResource < Spira::Base
+    class Series < Spira::Base
       
-      property :about, :predicate => SCHEMA_ABOUT, :type => 'Bib'
-      has_many :datasets, :predicate => VOID_IN_DATASET, :type => RDF::URI
-      property :date_modified, :predicate => SCHEMA_DATE_MODIFIED, :type => XSD.string
-      
+      property :name, :predicate => SCHEMA_NAME, :type => XSD.string
+      property :creator, :predicate => SCHEMA_CREATOR, :type => 'Person'
+      has_many :parts, :predicate => SCHEMA_HAS_PART, :type => 'Bib'
+
     end
   end
 end

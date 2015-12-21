@@ -67,9 +67,10 @@ describe WorldCat::Discovery::Bib do
         @bib.work_uri.should == RDF::URI.new('http://worldcat.org/entity/work/id/45185752')
       end
 
-      it "should have the right number of pages" do
-        @bib.num_pages.should == "312"
-      end
+     #deprecated property
+     #it "should have the right number of pages" do
+     #   @bib.num_pages.should == "312"
+     #end
 
       it "should have the right date published" do
         @bib.date_published.should == "1994"
@@ -79,9 +80,10 @@ describe WorldCat::Discovery::Bib do
         @bib.type.should == RDF::URI.new('http://schema.org/Book')
       end
 
-      it "should have the right OWL same as property" do
-        @bib.same_as.should == RDF::URI.new("info:oclcnum/30780581")
-      end
+      #deprecated property
+      #it "should have the right OWL same as property" do
+      #  @bib.same_as.should == RDF::URI.new("info:oclcnum/30780581")
+      #end
 
       it "should have the right language" do
         @bib.language.should == "en"
@@ -169,9 +171,91 @@ describe WorldCat::Discovery::Bib do
       end
 
       it "should have the right isbns" do
-        @bib.isbns.sort.should == ['9780631193616', '9780631193623']
+        @bib.isbns.sort.should == ["0631193618", "0631193626", "9780631193616", "9780631193623"]
+      end
+      
+      it "should have the right data_sets" do
+        @bib.data_sets.should include(RDF::URI("http://purl.oclc.org/dataset/WorldCat"))
+      end
+
+    end
+      
+    context "from a single resource from the RDF data for 7977212" do
+      before(:all) do
+        url = 'https://beta.worldcat.org/discovery/bib/data/7977212'
+        stub_request(:get, url).to_return(:body => body_content("7977212.rdf"), :status => 200)
+        @bib = WorldCat::Discovery::Bib.find(7977212)
+      end  
+          
+      it "should have the right genres" do
+        @bib.genres.sort.should == ["Poetry"]
+      end
+        
+      it "should return the right copyright_year" do
+        @bib.copyright_year.should == "1939"
+      end
+      
+      it "should have the right date_modified" do
+        @bib.described_by.date_modified.should == "2015-05-28"
+      end
+        
+    end
+    
+    context "from a single resource from the RDF data for 15317067" do
+      before(:all) do
+        url = 'https://beta.worldcat.org/discovery/bib/data/15317067'
+        stub_request(:get, url).to_return(:body => body_content("15317067.rdf"), :status => 200)
+        @bib = WorldCat::Discovery::Bib.find(15317067)
+      end 
+            
+      it "should have the right audience" do
+        @bib.audience.should == "Juvenile"
+      end 
+      
+      it "should have the right illustrators" do
+        @bib.illustrators.size.should == 1
+        illustrator = @bib.illustrators.first
+        illustrator.class.should == WorldCat::Discovery::Person
+        illustrator.name.should == "Bernadette Watts"
+      end
+      
+      it "should return the right book_format" do
+        @bib.book_format.should == RDF::URI("http://bibliograph.net/PrintBook")
+      end     
+    end
+      
+    context "from a single resource from the RDF data for 41266045" do
+      before(:all) do
+        url = 'https://beta.worldcat.org/discovery/bib/data/41266045'
+        stub_request(:get, url).to_return(:body => body_content("41266045.rdf"), :status => 200)
+        @bib = WorldCat::Discovery::Bib.find(41266045)
+      end 
+            
+      it "should have the right awards" do
+       @bib.awards.should include("ALA Notable Children's Book, 2000.")
+       @bib.awards.should include("Whitbread Children's Book of the Year, 1999.")
+      end
+      
+      it "should have the right content_rating" do
+        @bib.content_rating.should == "Middle School."   
       end
     end
+
+    context "from a single resource from the RDF data for 1004282" do
+      before(:all) do
+        url = 'https://beta.worldcat.org/discovery/bib/data/1004282'
+        stub_request(:get, url).to_return(:body => body_content("1004282.rdf"), :status => 200)
+        @bib = WorldCat::Discovery::Bib.find(1004282)
+      end  
+          
+      it "should return the right editors" do
+        @bib.editors.size.should == 1
+        editor = @bib.editors.first
+        editor.class.should == WorldCat::Discovery::Person
+        editor.name.should == "Dunn, Jacob Piatt, 1855-1924."
+      end
+    end
+      
 
     context "from a single resource from the RDF data for The Big Typescript" do
       before(:all) do
@@ -241,12 +325,12 @@ describe WorldCat::Discovery::Bib do
         end
 
         it "should contain the right id" do
-          uri = RDF::URI("http://beta.worldcat.org/discovery/bib/search?dbIds=638&facetFields=creator:10&facetFields=inLanguage:10&itemsPerPage=10&q=wittgenstein reader&sortBy=relevance&startIndex=0")
+          uri = RDF::URI("https://beta.worldcat.org/discovery/bib/search?dbIds=638=creator:10=inLanguage:10=10=wittgenstein reader=relevance=0")
           @results.id.should == uri
         end
 
         it "should have the right number for total results" do
-          @results.total_results.should == 1136
+          @results.total_results.should == 1331
         end
 
         it "should have the right start index" do
@@ -291,13 +375,13 @@ describe WorldCat::Discovery::Bib do
 
           it "should have facets with the correct IDs" do
             ids = @results.facets.map{|facet| facet.id.to_s}
-            ids.should include("_:A1")
-            ids.should include("_:A2")
+            ids.should include("_:A7")
+            ids.should include("_:A19")
           end
 
           it "should have facet values with the correct IDs" do
             value_ids = @results.facets.first.values.map{|value| value.id.to_s}
-            ["_:A9", "_:A7", "_:A14", "_:A3", "_:A11", "_:A12", "_:A8", "_:A10", "_:A13", "_:A15"].each do |node_id|
+            ["_:A3", "_:A6", "_:A5", "_:A11", "_:A12", "_:A9", "_:A10", "_:A13", "_:A8", "_:A1"].each do |node_id|
               value_ids.should include(node_id)
             end
           end      
@@ -322,9 +406,9 @@ describe WorldCat::Discovery::Bib do
       
       context "when paging for the second list of results" do 
         before(:all) do
-          url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&startNum=10&dbIds=638'
+          url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&startIndex=10&dbIds=638'
           stub_request(:get, url).to_return(:body => body_content("bib_search_page_two.rdf"), :status => 200)
-          @results = WorldCat::Discovery::Bib.search(:q => 'wittgenstein reader', :startNum => 10)
+          @results = WorldCat::Discovery::Bib.search(:q => 'wittgenstein reader', :startIndex => 10)
         end
 
         it "should have the right start index" do
