@@ -25,7 +25,13 @@ end
 get '/catalog/:oclc_number' do
   @bib = WorldCat::Discovery::Bib.find(params[:oclc_number])
   @offer_results = WorldCat::Discovery::Offer.find_by_oclc(params[:oclc_number], {"heldBy" => library_symbols})
-  haml :show, :layout => :template
+  case @bib
+  when WorldCat::Discovery::Article then haml :article, :layout => :template
+  when WorldCat::Discovery::Movie then haml :movie, :layout => :template
+  when WorldCat::Discovery::MusicAlbum then haml :music_album, :layout => :template
+  when WorldCat::Discovery::Periodical then haml :periodical, :layout => :template
+  else haml :show, :layout => :template
+  end
 end
 
 get '/explore' do
