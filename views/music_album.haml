@@ -1,0 +1,168 @@
+- @title = @bib.name
+
+%div.span-24{ :style => 'margin-top: 2em;' }
+  %div#bibliographic-resource{ :resource => @bib.id, :typeof => @bib.type }
+  
+    %div#statement-of-responsibility.span-24
+      / Title
+      - if @bib.name and @bib.name.strip != ''
+        %h1#bibliographic-resource-name{ :property => 'schema:name' }= @bib.name
+      - else
+        %h1#bibliographic-resource-name [Unnamed material]
+      
+      / Author
+      - music_by = @bib.music_by
+      - if music_by
+        %div#author{ :property => 'schema:music_by', :resource => music_by.id, :typeof => music_by.type }
+          %h2#author-name{ :property => 'schema:name' }
+            %a{ :href => url("/catalog?creator=#{author_display_name(music_by)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+              = author_display_name(music_by)
+
+    %div.span-13.append-1.first
+      / Alternate Name
+      - if @bib.alternate_name
+        %h3 Alternate Name
+        %p{ :property => 'schema:alternateName' }= @bib.alternate_name
+      
+      / Contributors
+      - contributors = @bib.contributors
+      - if contributors.size > 0
+        %h3 Contributors
+        %ul#contributors
+          - contributors.each do |contributor| 
+            - if contributor.name and contributor.name.strip != ''
+              %li{ :property => 'schema:contributor', :resource => contributor.id, :typeof => contributor.type }
+                %span.contributor-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?creator=#{author_display_name(contributor)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = author_display_name(contributor)
+                    
+      / artists
+      - artists = @bib.by_artists
+      - if artists.size > 0
+        %h3 Artists
+        %ul#artists
+          - artists.each do |artist| 
+            - if artist.name and artist.name.strip != ''
+              %li{ :property => 'schema:byArtist', :resource => artist.id, :typeof => artist.type }
+                %span.artist-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?creator=#{author_display_name(artist)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = author_display_name(artist)
+      
+      / performers
+      - performers = @bib.performers
+      - if performers.size > 0
+        %h3 Performers
+        %ul#performers
+          - performers.each do |performer| 
+            - if performer.name and performer.name.strip != ''
+              %li{ :property => 'schema:performer', :resource => performer.id, :typeof => performer.type }
+                %span.performer-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?creator=#{author_display_name(performer)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = author_display_name(performer)   
+
+      / Parts
+      - parts = @bib.parts
+      - if parts.size > 0
+        %h3 Parts
+        %ul#parts
+          - parts.each do |part| 
+            - if part.name and part.name.strip != ''
+              %li{ :property => 'schema:part', :resource => part.id, :typeof => part.type }
+                %span.part-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?title=#{part.name}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = part.name   
+      / Related
+      - see_alsos = @bib.see_alsos
+      - if see_alsos.size > 0
+        %h3 Related
+        %ul#see_alsos
+          - see_alsos.each do |see_also| 
+            - if see_also.name and see_also.name.strip != ''
+              %li{ :property => 'schema:seeAlso', :resource => see_also.id, :typeof => see_also.type }
+                %span.see_also-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?title=#{see_also.name}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = see_also.name                                                        
+                                        
+
+      / Subjects
+      - subjects = display_subjects(@bib)
+      - if subjects.size > 0
+        %h2 Subjects
+        %ul#subjects
+          - subjects.each do |subject| 
+            %li.subject{ :property => 'schema:about', :resource => subject.id, :typeof => subject.type }
+              %span.subject-name{ :property => 'schema:name' }
+                %a{ :href => url("/catalog?about=#{subject.name}&creator=&name=&kw=&advanced=true&scope=worldcat") }= subject.name
+
+      / Publication Info
+      %h2 Publication Info
+      %p
+        %span.label Format:
+        %span.value= FORMATS[@bib.type.to_s]
+        %br
+    
+        - if @bib.book_edition
+          %span.label Edition:
+          %span.value{ :property => 'schema:bookEdition' }= @bib.book_edition
+          %br
+      
+        - if @bib.language
+          %span.label Language:
+          %span.value= BCP_47_LANGUAGES[@bib.language]
+          %br
+      
+        - if is_published?(@bib)
+          %span.label Published:
+          - @bib.places_of_publication.each do |place| 
+            %span.value{ :property => 'library:placeOfPublication' }= "#{place.name} : "
+          - if @bib.publisher
+            %span.value
+              %span{ :property => 'schema:publisher', :typeof => @bib.publisher.type }
+                %span{ :property => 'schema:name' }= @bib.publisher.name
+          %span.value{ :property => 'schema:datePublished' }= @bib.date_published
+          %br
+
+        - if @bib.num_pages
+          %span.label Physical Details:
+          %span.value
+            %span{ :property => 'schema:numberOfPages' }= @bib.num_pages
+            pages
+          %br
+
+        - if @bib.isbns.size > 0
+          %span.label ISBNs:
+          %span.value{ :property => 'schema:isbn' }= @bib.isbns.join(', ')
+          %br
+
+        %span.label OCLC Number:
+        %span.value{ :property => 'library:oclcnum' }= @bib.oclc_number
+        %br
+
+      - if @bib.descriptions.size > 0
+        %h3 Description
+        - @bib.descriptions.each do |description| 
+          %p{ :property => 'schema:description' }= description
+
+      / Reviews
+      - if @bib.reviews.size > 0
+        %div{ :property => 'schema:reviews' }
+          %h3 Reviews
+          - @bib.reviews.each do |review| 
+            %p{ :property => 'schema:review' }
+              %span{ :property => 'schema:reviewBody' }= review.body
+
+    %div#availability-and-more.span-10.last
+      %div#availability.span-10
+        %h2 Availability
+        - if @offer_results.offers.size < 1
+          %p This item is not available at your library
+        - else
+          - @offer_results.offers.each do |offer| 
+            %p
+              = translate_symbol_to_name(offer.item_offered.collection.oclc_symbol)
+              = "(#{offer.item_offered.collection.oclc_symbol})"
+      
+      %div#more-info.span-10.last
+    
+  
+  
