@@ -41,6 +41,15 @@
               %span.subject-name{ :property => 'schema:name' }
                 %a{ :href => url("/catalog?about=#{subject.name}&creator=&name=&kw=&advanced=true&scope=worldcat") }= subject.name
 
+      / Genres
+      - genres = @bib.genres
+      - if genres.size > 0
+        %h2 Genres
+        %ul#genres
+          - genres.each do |genre| 
+            %li.genre{ :property => 'schema:genre' }
+              %a{ :href => url("/catalog?about=#{genre}&creator=&name=&kw=&advanced=true&scope=worldcat") }= genre
+
       / Publication Info
       %h2 Publication Info
       %p
