@@ -16,7 +16,7 @@ require_relative '../../../spec_helper'
 
 describe WorldCat::Discovery::Periodical do
   
-  context "when loading bibliographic data for a movie" do
+  context "when loading bibliographic data for a periodical" do
     before(:all) do
       wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :services => ['WorldCatDiscoveryAPI'])
       WorldCat::Discovery.configure(wskey, 128807, 128807)
