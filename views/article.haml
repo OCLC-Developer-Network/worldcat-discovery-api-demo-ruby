@@ -72,7 +72,7 @@
               %span.value{ :property => 'schema:pageEnd' }= @bib.page_end
       %p
         %span.label Format:
-        %span.value= FORMATS[@bib.type.to_s]
+        %span.value= format_display_name(@bib)
         %br
     
         - if @bib.book_edition

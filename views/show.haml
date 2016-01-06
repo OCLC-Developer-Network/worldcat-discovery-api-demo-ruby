@@ -54,7 +54,7 @@
       %h2 Publication Info
       %p
         %span.label Format:
-        %span.value= FORMATS[@bib.type.to_s]
+        %span.value= format_display_name(@bib)
         %br
     
         - if @bib.book_edition

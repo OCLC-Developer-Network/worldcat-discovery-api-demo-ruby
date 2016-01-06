@@ -20,6 +20,121 @@ helpers do
     end
   end
   
+  def format_display_name(bib)
+      case
+      when bib.types.include?(RDF::URI("http://schema.org/ScholarlyArticle"))
+        format = "Scholarly Article"
+      when bib.types.include?(RDF::URI("http://schema.org/Article"))
+        format = "Article" 
+      when bib.types.include?(RDF::URI("http://schema.org/MusicAlbum"))
+        format = "Music Album"
+        if bib.types.include?(RDF::URI("http://www.productontology.org/id/Compact_Disc"))
+          format += ", Compact Disc"
+        elsif bib.types.include?(RDF::URI("http://bibliograph.net/CD"))
+          format += ", Compact Disc"
+        elsif bib.types.include?(RDF::URI("http://www.productontology.org/id/LP_record"))
+          format += ", LP Record"
+        end
+        format
+      when bib.types.include?(RDF::URI("http://schema.org/AudioObject"))
+        format = "Sound Recording"
+        if bib.types.include?(RDF::URI("http://www.productontology.org/id/Compact_Disc"))
+          format += ", Compact Disc"
+        elsif bib.types.include?(RDF::URI("http://bibliograph.net/CD"))
+          format += ", Compact Disc"          
+        elsif bib.types.include?(RDF::URI("http://www.productontology.org/id/LP_record"))
+          format += ", LP Record"
+        end
+        format
+      when bib.types.include?(RDF::URI("http://www.productontology.org/id/Video"))
+        format = "Video"
+        if bib.types.include?(RDF::URI("http://www.productontology.org/id/DVD"))
+          format += ", DVD"
+        elsif bib.types.include?(RDF::URI("http://www.productontology.org/id/VHS"))
+          format += ", VHS"
+        elsif bib.types.include?(RDF::URI("http://bibliograph.net/DVD"))
+          format += ", DVD"
+        elsif bib.types.include?(RDF::URI("http://bibliograph.net/BlurayDisc"))
+          format += ", Blu-ray Disk"
+        end
+        format       
+      when bib.types.include?(RDF::URI("http://schema.org/Movie"))
+        format = "Movie"
+        if bib.types.include?(RDF::URI("http://www.productontology.org/id/DVD"))
+          format += ", DVD"
+        elsif bib.types.include?(RDF::URI("http://www.productontology.org/id/VHS"))
+          format += ", VHS"
+        elsif bib.types.include?(RDF::URI("http://bibliograph.net/DVD"))
+          format += ", DVD"
+        elsif bib.types.include?(RDF::URI("http://bibliograph.net/BlurayDisc"))
+          format += ", Blu-ray Disk"
+        end
+        format
+      when bib.types.include?(RDF::URI("http://schema.org/Periodical"))
+        format = "Journal/Serial"
+      when bib.types.include?(RDF::URI("http://purl.org/library/Serial"))
+        format = "Serial"
+      when bib.types.include?(RDF::URI("http://www.productontology.org/id/Audiobook"))
+        format = "Audio Book"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Newspaper"))
+        format = "Newspaper"
+      when bib.types.include?(RDF::URI("http://purl.org/library/ArchiveMaterial"))
+        format = "Archival Material"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Thesis"))
+        format = "Thesis"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Photograph"))
+        format = "Photograph"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Meeting"))
+        format = "Meeting/Conference"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/MusicScore"))
+        format = "Musical Score"
+      when bib.types.include?(RDF::URI("http://purl.org/ontology/mo/Score"))
+        format = "Musical Score"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Toy"))
+        format = "Toy"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Kit"))
+        format = "Kit"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Atlas"))
+        format = "Atlas"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Game"))
+        format = "Game"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Globe"))
+        format = "Globe"
+      when bib.types.include?(RDF::URI("http://schema.org/Map"))
+        format = "Map"
+      when bib.types.include?(RDF::URI("http://schema.org/Book"))
+        if bib.book_format
+          format = bib.book_format
+        else
+          format = "Book"
+        end
+        if bib.types.include?(RDF::URI("http://schema.org/Series"))
+          format += ", Series"
+        end
+        format
+      when bib.types.include?(RDF::URI("http://www.productontology.org/id/Web_document"))
+        format = "Web Page"
+      when bib.types.include?(RDF::URI("http://schema.org/WebSite"))
+        format = "Website"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Image"))
+        format = "Image"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/ComputerFile"))
+        format = "Computer File"
+      when bib.types.include?(RDF::URI("http://www.productontology.org/id/Computer_file"))
+        format = "Computer File"
+      when bib.types.include?(RDF::URI("http://www.productontology.org/id/Sheet_music"))
+        format = "Sheet Music"
+      when bib.types.include?(RDF::URI("http://purl.org/library/VisualMaterial"))
+        format = "Visual Material"
+      when bib.types.include?(RDF::URI("http://bibliograph.net/Microform"))
+        format = "Microform"
+      when bib.types.include?(RDF::URI("http://schema.org/MediaObject"))
+        format = "Media Object"  
+      else
+        format = "Creative Work"
+      end
+  end
+  
   def remove_facet_term_url(facet_query_value)
     query = URI.parse(request.url).query
     params = CGI.parse(query)
