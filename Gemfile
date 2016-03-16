@@ -6,7 +6,7 @@ gem "sinatra-partial", "0.4.0"
 gem "haml", "4.0.5"
 gem "activesupport", "4.1.1"
 gem "rdf-turtle", "1.1.2"
-gem "nokogiri", "1.6.2.1"
+gem "nokogiri", "1.6.2.2"
 gem "oclc-auth", '0.2.0', :path => "vendor/gems/oclc-auth-0.2.0"
 gem "worldcat-discovery", '0.7.0', :path => "vendor/gems/worldcat-discovery-0.7.0"
 
