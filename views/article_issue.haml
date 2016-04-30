@@ -1,0 +1,15 @@
+%p#citation
+  %span{ :property => 'schema:isPartOf', :resource => @bib.issue.id }
+    %span{ :property => 'schema:isPartOf', :resource => @bib.periodical.id }
+      %span.label Periodical Title:
+      %span.value{ :property => 'schema:name' }= @bib.periodical.name
+      %span.label Issue:
+      %span.value{ :property => 'schema:issueNumber' }= @bib.issue.issue_number
+  - if @bib.page_start or @bib.pagination   
+    %span.label Pages:
+    %span.value
+    - if @bib.page_start
+      %span.value{ :property => 'schema:pageStart' }= "#{@bib.page_start} - "
+      %span.value{ :property => 'schema:pageEnd' }= @bib.page_end
+    - else
+      %span.value{ :property => 'schema:pagination' }= @bib.pagination

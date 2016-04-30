@@ -52,24 +52,14 @@
 
       / Publication Info
       %h2 Publication Info
-      - periodical_name = @bib.periodical_name
-      - if periodical_name
-        %p#citation
-          %span{ :property => 'schema:isPartOf', :resource => @bib.is_part_of.id }
-            %span{ :property => 'schema:isPartOf', :resource => @bib.is_part_of.volume }
-              %span{ :property => 'schema:isPartOf', :resource => @bib.is_part_of.volume.periodical.id }
-                %span.label Periodical Title:
-                %span.value{ :property => 'schema:name' }= periodical_name
-                - if @bib.volume_number
-                  %span.label Volume:
-                  %span.value{ :property => 'schema:volumeNumber' }= @bib.volume_number
-                - if @bib.issue_number
-                  %span.label Issue:
-                  %span.value{ :property => 'schema:issueNumber' }= @bib.issue_number
-            %span.label Pages:
-            %span.value
-              %span.value{ :property => 'schema:pageStart' }= "#{@bib.page_start} - "
-              %span.value{ :property => 'schema:pageEnd' }= @bib.page_end
+      - if @bib.issue and @bib.volume
+        = partial :article_issue_volume
+      - elsif @bib.issue
+        = partial :article_issue      
+      - elsif @bib.volume
+        = partial :article_volume
+      - else
+        = partial :article_periodical_only
       %p
         %span.label Format:
         %span.value= format_display_name(@bib)

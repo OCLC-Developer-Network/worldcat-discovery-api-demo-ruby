@@ -6,9 +6,9 @@ PATH
       rest-client (~> 1.6, >= 1.6.7)
 
 PATH
-  remote: vendor/gems/worldcat-discovery-0.7.0
+  remote: vendor/gems/worldcat-discovery-1.0.1
   specs:
-    worldcat-discovery (0.7.0)
+    worldcat-discovery (1.0.1)
       addressable (~> 2.3, >= 2.3.6)
       equivalent-xml (~> 0.4, >= 0.4.2)
       oclc-auth (~> 0.1, >= 0.1.0)
@@ -153,7 +153,7 @@ DEPENDENCIES
   sinatra (= 1.4.1)
   sinatra-partial (= 0.4.0)
   spork (= 0.9.2)
-  worldcat-discovery (= 0.7.0)!
+  worldcat-discovery (= 1.0.1)!
 
 BUNDLED WITH
    1.10.6
