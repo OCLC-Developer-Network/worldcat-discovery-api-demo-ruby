@@ -53,8 +53,8 @@ module WorldCat
       def periodical
         if self.volume 
           volume = self.volume
-          periodical = Spira.repository.query(:subject => volume.object, :predicate => SCHEMA_IS_PART_OF).first
-          periodical
+          periodical = Spira.repository.query(:subject => volume.id, :predicate => SCHEMA_IS_PART_OF).first
+          periodical.object.as(Periodical)
         else
           part_of_stmt = Spira.repository.query(:subject => self.id, :predicate => SCHEMA_IS_PART_OF).first
           part_of_stmt.object.as(Periodical) 

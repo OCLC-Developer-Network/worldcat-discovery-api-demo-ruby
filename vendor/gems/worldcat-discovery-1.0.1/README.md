@@ -13,6 +13,7 @@ process for the [OCLC::Auth](https://github.com/OCLC-Developer-Network/oclc-auth
 ```bash
 $ git clone https://github.com/OCLC-Developer-Network/worldcat-discovery-ruby.git
 $ cd worldcat-discovery-ruby
+$ bundle install
 $ gem build worldcat-discovery.gemspec
 $ gem install worldcat-discovery-<VERSION-NUMBER>.gem
 ```
@@ -83,8 +84,8 @@ bib.author.name     # => "Feyrer, James"
 bib.contributors.map{|contributor| contributor.name} # => ["Sacerdote, Bruce", "Feyrer, James"]
 bib.page_start      # => 125
 bib.page_end        # => 128
-bib.periodical_name # => "American Economic Review"
-bib.volume_number   # => 3
-bib.issue_number    # => 103
+bib.periodical.name # => "American Economic Review"
+bib.volume.volume_number   # => 3
+bib.issue.issue_number    # => 103
 
 ```

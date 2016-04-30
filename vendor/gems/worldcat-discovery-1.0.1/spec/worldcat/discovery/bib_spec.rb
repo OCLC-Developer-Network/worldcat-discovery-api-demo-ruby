@@ -276,6 +276,7 @@ describe WorldCat::Discovery::Bib do
         File.open("#{File.expand_path(File.dirname(__FILE__))}/../../support/text/57422379_reviews.txt").each do |line|
           review_bodies.should include(line.chomp)
         end
+        reviews.first.id.should == RDF::URI("http://www.worldcat.org/title/-/oclc/57422379#Review/-1284714232")
       end
     end
 

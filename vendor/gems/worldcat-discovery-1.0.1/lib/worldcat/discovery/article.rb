@@ -29,32 +29,16 @@ module WorldCat
       property :page_end, :predicate => SCHEMA_PAGE_END, :type => XSD.integer
       property :pagination, :predicate => SCHEMA_PAGINATION, :type => XSD.string
       
-      def is_part_of
-        part_of_stmt = Spira.repository.query(:subject => self.id, :predicate => SCHEMA_IS_PART_OF).first
-
-        if part_of_stmt
-          part_of_type = Spira.repository.query(:subject => part_of_stmt.object, :predicate => RDF.type).first
-          case part_of_type.object
-          when SCHEMA_PUBLICATION_ISSUE then part_of_stmt.object.as(PublicationIssue)
-          when SCHEMA_PUBLICATION_VOLUME then part_of_stmt.object.as(PublicationVolume)
-          when SCHEMA_PERIODICAL then part_of_stmt.object.as(Periodical)
-          else nil
-          end
-        else
-          nil
-        end
-      end
-      
-      def periodical_name
+      def periodical
         # when article only had a volume
         if self.is_part_of.class == WorldCat::Discovery::PublicationVolume
-          self.is_part_of.periodical.name
+          self.is_part_of.periodical
         # when article has issue and volume
         elsif self.is_part_of.class == WorldCat::Discovery::PublicationIssue
-          self.is_part_of.volume.periodical.name
+          self.is_part_of.volume.periodical
         # when the article doesn't have issue or volume
         elsif self.is_part_of.class == WorldCat::Discovery::Periodical
-          self.is_part_of.name  
+          self.is_part_of  
         else
           nil
         end
@@ -74,26 +58,42 @@ module WorldCat
           nil
         end
       end
-      
-      def volume_number
-        #when periodical only has volume
+     
+      def volume
         if self.is_part_of.class == WorldCat::Discovery::PublicationVolume
-          self.is_part_of.volume_number
+          self.is_part_of
         #when periodical has volume and issue
         elsif self.is_part_of.class == WorldCat::Discovery::PublicationIssue
-          self.is_part_of.volume.volume_number
+          self.is_part_of.volume
         else
           nil
         end
       end
       
-      def issue_number
-        if self.is_part_of.issue_number
-          self.is_part_of.issue_number
+      def issue
+        if self.is_part_of.class == WorldCat::Discovery::PublicationIssue
+          self.is_part_of
         else
           nil
         end
       end
+      
+      protected
+      def is_part_of
+      part_of_stmt = Spira.repository.query(:subject => self.id, :predicate => SCHEMA_IS_PART_OF).first
+
+      if part_of_stmt
+        part_of_type = Spira.repository.query(:subject => part_of_stmt.object, :predicate => RDF.type).first
+        case part_of_type.object
+        when SCHEMA_PUBLICATION_ISSUE then part_of_stmt.object.as(PublicationIssue)
+        when SCHEMA_PUBLICATION_VOLUME then part_of_stmt.object.as(PublicationVolume)
+        when SCHEMA_PERIODICAL then part_of_stmt.object.as(Periodical)
+        else nil
+        end
+      else
+        nil
+      end
+    end
       
     end
   end

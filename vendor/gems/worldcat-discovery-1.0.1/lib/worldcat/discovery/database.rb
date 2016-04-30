@@ -30,15 +30,10 @@ module WorldCat
       property :type, :predicate => RDF.type, :type => RDF::URI
       property :database_id, :predicate => DISCOVERY_DB_ID, :type => XSD.integer
       property :description, :predicate => SCHEMA_DESCRIPTION, :type => XSD.string
-      property :open_access, :predicate => DISCOVERY_OPEN, :type => XSD.string
       property :requires_authn, :predicate => DISCOVERY_REQUIRES_AUTHN, :type => XSD.boolean
       
       def requires_authentication
-        if self.requires_authn.nil? 
-          self.open_access == 'yes' ? false : true
-        else
           self.requires_authn
-        end
       end
       
       # call-seq:

@@ -17,7 +17,7 @@ require_relative '../../spec_helper'
 describe WorldCat::Discovery::Configuration do
   context "when constructing the Configuration as a singleton" do
     it "should create raise an error when using the new() constructor" do
-      lambda { config = WorldCat::Discovery::Configuration.new }.should raise_error
+      lambda { config = WorldCat::Discovery::Configuration.new }.should raise_error(NoMethodError)
     end
     
     it "should return the same instance for each time it is called" do

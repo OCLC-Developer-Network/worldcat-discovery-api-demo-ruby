@@ -1,0 +1,47 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:j.0="http://purl.org/library/"
+  xmlns:j.1="http://www.w3.org/2007/05/powder-s#"
+  xmlns:j.2="http://schema.org/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:j.3="http://www.w3.org/2006/gen/ont#"
+  xmlns:j.4="http://rdfs.org/ns/void#" >
+  <rdf:Description rdf:about="http://worldcat.org/issn/0037-6604">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.2:issn>0037-6604</j.2:issn>
+    <rdfs:label>SKY AND TELESCOPE</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/204144725">
+    <j.2:name>Van Gogh's Rediscovered Night Sky What brilliant celestial object did Vincent van Gogh include in his painting White House at Night?</j.2:name>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204144725</j.0:oclcnum>
+    <j.2:datePublished>2001</j.2:datePublished>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.2:pageStart>34</j.2:pageStart>
+    <j.2:isPartOf rdf:resource="http://worldcat.org/issn/0037-6604#101"/>
+    <j.2:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/79276497#Person/doescher_r_l"/>
+    <rdfs:comment>949 $l Article</rdfs:comment>
+    <j.2:inLanguage>en</j.2:inLanguage>
+    <j.2:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/79276497"/>
+    <j.1:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/204144725"/>
+    <j.2:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/79276497#Person/olson_d_w"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/204144725">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.2:about rdf:resource="http://www.worldcat.org/oclc/204144725"/>
+    <j.4:inDataset rdf:resource="http://purl.oclc.org/dataset/blis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0037-6604#101">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.2:volumeNumber>101</j.2:volumeNumber>
+    <j.2:isPartOf rdf:resource="http://worldcat.org/issn/0037-6604"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/79276497#Person/doescher_r_l">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.2:name>Doescher, R. L.</j.2:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/79276497#Person/olson_d_w">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.2:name>Olson, D. W.</j.2:name>
+  </rdf:Description>
+</rdf:RDF>

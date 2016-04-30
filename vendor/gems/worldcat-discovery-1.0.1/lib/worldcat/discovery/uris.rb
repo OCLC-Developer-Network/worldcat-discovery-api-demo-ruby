@@ -66,7 +66,6 @@ module WorldCat
     DISCOVERY_FACET_VALUE    = RDF::URI.new('http://worldcat.org/vocab/discovery/facetValue')
     DISCOVERY_SEARCH_RESULTS = RDF::URI.new('http://worldcat.org/vocab/discovery/SearchResults')
     DISCOVERY_DB_ID          = RDF::URI.new('http://worldcat.org/vocab/discovery/dbId')
-    DISCOVERY_OPEN           = RDF::URI.new('http://worldcat.org/vocab/discovery/openAccess')
     DISCOVERY_REQUIRES_AUTHN = RDF::URI.new('http://worldcat.org/vocab/discovery/requiresAuthentication')
     DISCOVERY_HAS_PART       = RDF::URI.new('http://worldcat.org/vocab/discovery/hasPart')
     DISCOVERY_ERROR_CODE     = RDF::URI.new('http://worldcat.org/vocab/discovery/errorCode')

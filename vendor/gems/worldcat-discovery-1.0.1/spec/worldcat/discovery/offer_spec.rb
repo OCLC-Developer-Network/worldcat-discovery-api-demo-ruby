@@ -87,13 +87,14 @@ describe WorldCat::Discovery::Offer do
       end
       
       it "should have the correct item offered" do
-        @item_offered.subject.should == RDF::Node.new("A19")
+        @item_offered.id.should == RDF::Node.new("A19")
         @item_offered.type.should == RDF::URI.new('http://schema.org/SomeProducts')
         @item_offered.bib.subject.should == RDF::URI.new('http://www.worldcat.org/oclc/30780581')
         @item_offered.bib.name.should == 'The Wittgenstein reader'
       end
 
       it "should belong to the correct collection" do
+        @collection.id.should == RDF::URI.new('http://worldcat.org/wcr/oclc-symbol/resource/AIZ')
         @collection.type.should == RDF::URI.new('http://purl.org/dc/terms/Collection')
         @collection.oclc_symbol.should == 'AIZ'
       end

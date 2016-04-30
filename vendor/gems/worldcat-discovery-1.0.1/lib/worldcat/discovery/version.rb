@@ -14,18 +14,6 @@
 
 module WorldCat
   module Discovery
-    
-    # Should not be used by clients. Corresponding RDF predicates may be removed from the data model.
-    
-    class FacetList < Spira::Base
-      
-      property :type, :predicate => RDF.type, :type => RDF::URI
-      has_many :facets, :predicate => DISCOVERY_FACET, :type => 'Facet'
-      
-      def id
-        self.subject
-      end
-
-    end
+    VERSION = "1.0.1"
   end
 end
