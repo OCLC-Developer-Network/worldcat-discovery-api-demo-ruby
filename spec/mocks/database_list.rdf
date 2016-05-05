@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://purl.org/dc/dcmitype/" xmlns:j.1="http://worldcat.org/vocab/discovery/" xmlns:j.2="http://schema.org/"> 
+    <rdf:Description rdf:about="https://beta.worldcat.org/discovery/database/data/239">
+        <j.1:requiresAuthentication>false</j.1:requiresAuthentication>
+        <j.1:dbId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">239</j.1:dbId>
+        <j.2:name>OAIster</j.2:name>
+        <j.2:description>Union catalog of digital resources</j.2:description>
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://beta.worldcat.org/discovery/database/data/2662">
+        <j.1:requiresAuthentication>false</j.1:requiresAuthentication>
+        <j.1:dbId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2662</j.1:dbId>
+        <j.2:name>American Economic Association Journals</j.2:name>
+        <j.2:description>Economic research journals from the American Economic Association.</j.2:description>
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://beta.worldcat.org/discovery/database/data/283">
+        <j.1:requiresAuthentication>false</j.1:requiresAuthentication>
+        <j.1:dbId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">283</j.1:dbId>
+        <j.2:name>WorldCat</j.2:name>
+        <j.2:description>OCLC catalog of books and other materials in libraries worldwide</j.2:description>
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://beta.worldcat.org/discovery/database/data/2897">
+        <j.1:requiresAuthentication>false</j.1:requiresAuthentication>
+        <j.1:dbId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2897</j.1:dbId>
+        <j.2:name>Wiley Online Library</j.2:name>
+        <j.2:description>Multidisciplinary collection of online resources covering life, health and physical sciences, social science, and the humanities.</j.2:description>
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://beta.worldcat.org/discovery/database/data/638">
+        <j.1:requiresAuthentication>false</j.1:requiresAuthentication>
+        <j.1:dbId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">638</j.1:dbId>
+        <j.2:name>WorldCat.org</j.2:name>
+        <j.2:description>OCLC catalog of books, articles, and other materials in libraries worldwide</j.2:description>
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://beta.worldcat.org/discovery/database/data/1877">
+        <j.1:requiresAuthentication>false</j.1:requiresAuthentication>
+        <j.1:dbId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1877</j.1:dbId>
+        <j.2:name>African American Experience</j.2:name>
+        <j.2:description>The widest depth and breadth of information available of any online database collection on African American history and culture.</j.2:description>
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    </rdf:Description>
+</rdf:RDF>
