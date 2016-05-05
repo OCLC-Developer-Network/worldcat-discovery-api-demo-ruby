@@ -61,7 +61,7 @@ describe "the record page" do
     
     it "should display the subjects" do
       @subjects = @doc.xpath("//ul[@id='subjects']/li/span/a/text()")
-      @subjects.should include("Philosophy")
+      expect(@subjects).to include("Philosophy")
     end
     
     it "should display the format" do
@@ -78,8 +78,8 @@ describe "the record page" do
     
     it "should display the publication places" do
       @publiciationPlaces = @doc.xpath("//span[@property='library:placeOfPublication']/text()")
-      @publiciationPlaces.should include("Cambridge, Mass., USA :")
-      @publiciationPlaces.should include("Oxford, UK :")
+      expect(@publiciationPlaces).to include("Cambridge, Mass., USA :")
+      expect(@publiciationPlaces).to include("Oxford, UK :")
     end
     
     it "should display the publisher" do
@@ -106,7 +106,7 @@ describe "the record page" do
       @descriptions = @doc.xpath("//p[@property='schema:description']/text()")
       expect(@descriptions).to eq(2)
       File.open("#{File.expand_path(File.dirname(__FILE__))}/../../support/text/30780581_descriptions.txt").each do |line|
-        @descriptions.should include(line.chomp)
+        expect(@descriptions).to include(line.chomp)
       end
     end
   end
@@ -122,8 +122,8 @@ describe "the record page" do
     it "should have the right awards" do
       #template has to be altered
      @awards = @doc.xpath("//ul[@id='awards']/li/span/a")
-     @awards.should include("ALA Notable Children's Book, 2000.")
-     @awards.should include("Whitbread Children's Book of the Year, 1999.")
+     expect(@awards).to include("ALA Notable Children's Book, 2000.")
+     expect(@awards).to include("Whitbread Children's Book of the Year, 1999.")
     end
     
     it "should have the right content_rating" do
@@ -143,7 +143,7 @@ describe "the record page" do
     
     it "should display the genres" do
       @genres = @doc.xpath("//ul[@id='genres']/li/span/a/text()")
-      @genres.should include("Poetry")
+      expect(@genres).to include("Poetry")
     end
   end 
   
@@ -160,7 +160,7 @@ describe "the record page" do
       @illustrators = @doc.xpath("//ul[@id='illustrators']/li/a/text()")
       expect(@illustrators.size).to eq(1)
       expect(@illustrators).not_to be_empty
-      @illustrators.should include("Bernadette Watts")
+      expect(@illustrators).to include("Bernadette Watts")
     end
     
     it "should have the right audience" do
@@ -189,7 +189,7 @@ describe "the record page" do
       @editors = @doc.xpath("//ul[@id='editors']/li/a/text()")
       expect(@editors.size).to eq(1)
       expect(@editors).not_to be_empty
-      @editors.should include("Dunn, Jacob Piatt, 1855-1924.")
+      expect(@editors).to include("Dunn, Jacob Piatt, 1855-1924.")
     end
   end 
   

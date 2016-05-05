@@ -35,31 +35,31 @@ describe "the record page" do
 
     it "should display the artists" do
       @artists = @doc.xpath("//ul[@id='artists']/li/span/a/text()")
-      @artists.should include("Rock music")
-      @artists.should include("Folk music")
-      @artists.should include("Folk-rock music")
+      expect(@artists).to include("Rock music")
+      expect(@artists).to include("Folk music")
+      expect(@artists).to include("Folk-rock music")
     end
     
     it "should display the see_alsos" do
       @see_alsos = @doc.xpath("//ul[@id='see_alsos']/li/span/a/text()")
-      @see_alsos.should include("Sorrow's children.")
-      @see_alsos.should include("Lisa.")
-      @see_alsos.should include("Autumn on your mind.")
-      @see_alsos.should include("Waiting for an old friend.")
-      @see_alsos.should include("Maybelline.")
-      @see_alsos.should include("Song for an uncertain lady.")
-      @see_alsos.should include("Child for now.")
-      @see_alsos.should include("Africa.")
-      @see_alsos.should include("One I thought was there.")
-      @see_alsos.should include("Only time will make you see.")
-      @see_alsos.should include("Let tomorrow be.")
+      expect(@see_alsos).to include("Sorrow's children.")
+      expect(@see_alsos).to include("Lisa.")
+      expect(@see_alsos).to include("Autumn on your mind.")
+      expect(@see_alsos).to include("Waiting for an old friend.")
+      expect(@see_alsos).to include("Maybelline.")
+      expect(@see_alsos).to include("Song for an uncertain lady.")
+      expect(@see_alsos).to include("Child for now.")
+      expect(@see_alsos).to include("Africa.")
+      expect(@see_alsos).to include("One I thought was there.")
+      expect(@see_alsos).to include("Only time will make you see.")
+      expect(@see_alsos).to include("Let tomorrow be.")
     end
         
     it "should display the subjects" do
       @subjects = @doc.xpath("//ul[@id='subjects']/li/span/a/text()")
-      @subjects.should include("Rock music")
-      @subjects.should include("Folk music")
-      @subjects.should include("Folk-rock music")
+      expect(@subjects).to include("Rock music")
+      expect(@subjects).to include("Folk music")
+      expect(@subjects).to include("Folk-rock music")
     end
     
     it "should display the format" do
@@ -76,8 +76,8 @@ describe "the record page" do
     
     it "should display the publication places" do
       @publiciationPlaces = @doc.xpath("//span[@property='library:placeOfPublication']/text()")
-      @publiciationPlaces.should include("Merenberg, Germany :")
-      @publiciationPlaces.should include("Kingston, N.Y. :")
+      expect(@publiciationPlaces).to include("Merenberg, Germany :")
+      expect(@publiciationPlaces).to include("Kingston, N.Y. :")
     end
     
     it "should display the publisher" do
@@ -99,7 +99,7 @@ describe "the record page" do
       @descriptions = @doc.xpath("//p[@property='schema:description']/text()")
       expect(@descriptions).to eq(2)
       File.open("#{File.expand_path(File.dirname(__FILE__))}/../../support/text/226390945_descriptions.txt").each do |line|
-        @descriptions.should include(line.chomp)
+        expect(@descriptions).to include(line.chomp)
       end
     end
     
@@ -111,14 +111,14 @@ describe "the record page" do
     
     it "should have the right by_artists" do
       @by_artists = @doc.xpath("//ul[@id='by_artists']/li/span/a/text()")
-      @by_artists.size.should == 7
-      @by_artists.should include("Bruce Samuels")
-      @by_artists.should include("Randy Burns")
-      @by_artists.should include("Bob Sheehan")
-      @by_artists.should include("Matt Kastner")
-      @by_artists.should include("John O'Leary")
-      @by_artists.should include("Bergert Roberts")
-      @by_artists.should include("Andy 'Dog' Merwin")
+      expect(@by_artists.size).to == 7
+      expect(@by_artists).to include("Bruce Samuels")
+      expect(@by_artists).to include("Randy Burns")
+      expect(@by_artists).to include("Bob Sheehan")
+      expect(@by_artists).to include("Matt Kastner")
+      expect(@by_artists).to include("John O'Leary")
+      expect(@by_artists).to include("Bergert Roberts")
+      expect(@by_artists).to include("Andy 'Dog' Merwin")
 
     end
     
@@ -141,18 +141,18 @@ describe "the record page" do
       parts.each {|part| part.class.should == WorldCat::Discovery::Bib}
 
       part_ids = parts.map {|part| part.id}
-      part_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/first_nowell'))
-      part_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_of_the_birds'))
-      part_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/veni_emmanuel'))
-      part_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/what_is_this_lovely_fragrance'))
-      part_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/als_ich_bei_meinen_schafen_wacht'))
+      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/first_nowell'))
+      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_of_the_birds'))
+      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/veni_emmanuel'))
+      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/what_is_this_lovely_fragrance'))
+      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/als_ich_bei_meinen_schafen_wacht'))
 
       part_names = parts.map {|part| part.name}
-      part_names.should include("First Nowell.")
-      part_names.should include("Carol of the birds.")
-      part_names.should include("Veni Emmanuel.")
-      part_names.should include("What is this lovely fragrance?")
-      part_names.should include("Als ich bei meinen Schafen wacht.")
+      expect(part_names).to include("First Nowell.")
+      expect(part_names).to include("Carol of the birds.")
+      expect(part_names).to include("Veni Emmanuel.")
+      expect(part_names).to include("What is this lovely fragrance?")
+      expect(part_names).to include("Als ich bei meinen Schafen wacht.")
     end
     
     it "should have the right see_alsos" do
@@ -160,30 +160,30 @@ describe "the record page" do
       see_alsos.each {|see_also| see_also.class.should == WorldCat::Discovery::Bib}
 
       see_also_ids = see_alsos.map {|see_also| see_also.id}
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musae_sioniae'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/hymn_to_the_virgin'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musique'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/weihnachts_oratorium'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/alleluia'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_anthems'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ave_maria'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/o_magnum_mysterium'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/adeste_fideles'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/svete_tikhii'))
-      see_also_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ceremony_of_carols'))  
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musae_sioniae'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/hymn_to_the_virgin'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musique'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/weihnachts_oratorium'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/alleluia'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_anthems'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ave_maria'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/o_magnum_mysterium'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/adeste_fideles'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/svete_tikhii'))
+      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ceremony_of_carols'))  
 
       see_also_names = see_alsos.map {|see_also| see_also.name}
-      see_also_names.should include("Musae Sioniae,")
-      see_also_names.should include("Hymn to the Virgin.")
-      see_also_names.should include("Musique.")
-      see_also_names.should include("Weihnachts-Oratorium.")
-      see_also_names.should include("Alleluia.")
-      see_also_names.should include("Carol-anthems.")
-      see_also_names.should include("Ave Maria.")
-      see_also_names.should include("O magnum mysterium.")
-      see_also_names.should include("Adeste fideles.")
-      see_also_names.should include("Svete tikhiĭ.")
-      see_also_names.should include("Ceremony of carols.")
+      expect(see_also_names).to include("Musae Sioniae,")
+      expect(see_also_names).to include("Hymn to the Virgin.")
+      expect(see_also_names).to include("Musique.")
+      expect(see_also_names).to include("Weihnachts-Oratorium.")
+      expect(see_also_names).to include("Alleluia.")
+      expect(see_also_names).to include("Carol-anthems.")
+      expect(see_also_names).to include("Ave Maria.")
+      expect(see_also_names).to include("O magnum mysterium.")
+      expect(see_also_names).to include("Adeste fideles.")
+      expect(see_also_names).to include("Svete tikhiĭ.")
+      expect(see_also_names).to include("Ceremony of carols.")
     end             
   end
 
@@ -197,7 +197,7 @@ describe "the record page" do
     
     it "should have the right performers" do
       performers = @bib.performers
-      performers.size.should == 2
+      expect(performers.size).to == 2
       
       grace_potter = performers.reduce(nil) do |p, performer| 
         p = performer if performer.id == RDF::URI('http://viaf.org/viaf/26851551')
@@ -215,6 +215,5 @@ describe "the record page" do
       nocturnals.type.should == 'http://schema.org/Organization'
       nocturnals.name.should == 'Nocturnals (Musical group)'
     end
-  end         
   end
 end

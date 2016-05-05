@@ -34,14 +34,14 @@ describe "the record page" do
     
     it "should display the subjects" do
       @subjects = @doc.xpath("//ul[@id='subjects']/li/span/a/text()")
-      @subjects.should include("Library science")
-      @subjects.should include("Academic libraries")
+      expect(@subjects).to include("Library science")
+      expect(@subjects).to include("Academic libraries")
     end
     
     it "should display the genres" do
       @genres = @doc.xpath("//ul[@id='genres']/li/span/a/text()")
-      @genres.should include("Periodicals")
-      @genres.should include("Electronic journals")
+      expect(@genres).to include("Periodicals")
+      expect(@genres).to include("Electronic journals")
     end
     
     it "should display the format" do
@@ -58,7 +58,7 @@ describe "the record page" do
     
     it "should display the publication places" do
       @publiciationPlaces = @doc.xpath("//span[@property='library:placeOfPublication']/text()")
-      @publiciationPlaces.should include("New York, etc. :")
+      expect(@publiciationPlaces).to include("New York, etc. :")
     end
     
     it "should display the publisher" do

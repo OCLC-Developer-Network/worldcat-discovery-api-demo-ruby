@@ -30,33 +30,33 @@ describe "the record page" do
     
     it "should display the subjects" do
       @subjects = @doc.xpath("//ul[@id='subjects']/li/span/a/text()")  
-      @subjects.should include("Young women")
-      @subjects.should include("Social conditions")
-      @subjects.should include("Courtship")
-      @subjects.should include("Jane Austen")
-      @subjects.should include("(Fictitious character) Fitzwilliam Darcy")
-      @subjects.should include("Man-woman relationships")
-      @subjects.should include("(Fictitious character) Elizabeth Bennet")
-      @subjects.should include("Social classes")
-      @subjects.should include("Women--Social conditions")
-      @subjects.should include("Sisters")
-      @subjects.should include("Manners and customs")
-      @subjects.should include("England")
+      expect(@subjects).to include("Young women")
+      expect(@subjects).to include("Social conditions")
+      expect(@subjects).to include("Courtship")
+      expect(@subjects).to include("Jane Austen")
+      expect(@subjects).to include("(Fictitious character) Fitzwilliam Darcy")
+      expect(@subjects).to include("Man-woman relationships")
+      expect(@subjects).to include("(Fictitious character) Elizabeth Bennet")
+      expect(@subjects).to include("Social classes")
+      expect(@subjects).to include("Women--Social conditions")
+      expect(@subjects).to include("Sisters")
+      expect(@subjects).to include("Manners and customs")
+      expect(@subjects).to include("England")
     end
 
     it "should display the genres" do
       @genres = @doc.xpath("//ul[@id='genres']/li/span/a/text()")  
-      @genres.should include("Melodrama, English")    
-      @genres.should include("Drama")
-      @genres.should include("Melodrama")
-      @genres.should include("Feature films")
-      @genres.should include("Romance films")
-      @genres.should include("Film adaptations")
-      @genres.should include("Fiction films")
-      @genres.should include("Romantic plays")
-      @genres.should include("Video recordings for the hearing impaired")
-      @genres.should include("Romance")
-      @genres.should include("Fiction")
+      expect(@genres).to include("Melodrama, English")    
+      expect(@genres).to include("Drama")
+      expect(@genres).to include("Melodrama")
+      expect(@genres).to include("Feature films")
+      expect(@genres).to include("Romance films")
+      expect(@genres).to include("Film adaptations")
+      expect(@genres).to include("Fiction films")
+      expect(@genres).to include("Romantic plays")
+      expect(@genres).to include("Video recordings for the hearing impaired")
+      expect(@genres).to include("Romance")
+      expect(@genres).to include("Fiction")
     end
 
     it "should display the format" do
@@ -73,7 +73,7 @@ describe "the record page" do
     
     it "should display the publication places" do
       @publiciationPlaces = @doc.xpath("//span[@property='library:placeOfPublication']/text()")
-      @publiciationPlaces.should include("Universal City, CA :")
+      expect(@publiciationPlaces).to include("Universal City, CA :")
     end
     
     it "should display the publisher" do
@@ -95,7 +95,7 @@ describe "the record page" do
       @descriptions = @doc.xpath("//p[@property='schema:description']/text()")
       expect(@descriptions).to eq(2)
       File.open("#{File.expand_path(File.dirname(__FILE__))}/../../support/text/62774704_descriptions.txt").each do |line|
-        @descriptions.should include(line.chomp)
+        expect(@descriptions).to include(line.chomp)
       end
     end
     
@@ -103,30 +103,30 @@ describe "the record page" do
       @actors = @doc.xpath("//ul[@id='actors']/li/span/a/text()")
       expect(@actors.size).to eq(8)
       expect(@actors).not_to be_empty
-      @actors.should include("Tom Hollander, 1967-")
-      @actors.should include("Brenda Blethyn, 1946-")
-      @actors.should include("Matthew Macfadyen, 1974-")
-      @actors.should include("Donald Sutherland, 1935-")
-      @actors.should include("Judi Dench, 1934-")
-      @actors.should include("Keira Knightley, 1985-")
-      @actors.should include("Jena Malone, 1984-")
-      @actors.should include("Rosamund Pike, 1979-")
+      expect(@actors).to include("Tom Hollander, 1967-")
+      expect(@actors).to include("Brenda Blethyn, 1946-")
+      expect(@actors).to include("Matthew Macfadyen, 1974-")
+      expect(@actors).to include("Donald Sutherland, 1935-")
+      expect(@actors).to include("Judi Dench, 1934-")
+      expect(@actors).to include("Keira Knightley, 1985-")
+      expect(@actors).to include("Jena Malone, 1984-")
+      expect(@actors).to include("Rosamund Pike, 1979-")
     end
     
     it "should display the director" do
       @director = @doc.xpath("//ul[@id='director']/li/span/a/text()")
       expect(@director.size).to eq(1)
       expect(@director).not_to be_empty
-      expect(@director).should include("Joe Wright, 1972-")
+      expect(@director).to include("Joe Wright, 1972-")
     end
     
     it "should display the producers" do
       @producers = @doc.xpath("//ul[@id='producers']/li/span/a/text()")
       expect(@producers.size).to eq(3)
       expect(@producers).not_to be_empty
-      @producers.should include("Paul Webster, 1952 September 19-")
-      @producers.should include("Tim Bevan")
-      @producers.should include("Eric Fellner") 
+      expect(@producers).to include("Paul Webster, 1952 September 19-")
+      expect(@producers).to include("Tim Bevan")
+      expect(@producers).to include("Eric Fellner") 
     end
     
   end

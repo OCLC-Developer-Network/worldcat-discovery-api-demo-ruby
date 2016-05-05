@@ -116,7 +116,7 @@ describe "the results page" do
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&itemType:10&dbIds=638'
       url += '&facetQueries=itemType:book'
       stub_request(:get, url).to_return(:body => body_content("bib_search_facet_limit.rdf"), :status => 200)
-      get '/catalog?q=wittgenstein reader&scope=my_library&facetQueries=itemType%3Abook', params={}, rack_env={ 'rack.session' => {:token => @access_tokend} }
+      get '/catalog?q=wittgenstein reader&scope=my_library&facetQueries=itemType%3Abook'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -185,7 +185,7 @@ describe "the results page" do
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&itemType:10&dbIds=638'
       url += '&startIndex=10'
       stub_request(:get, url).to_return(:body => body_content("bib_search_start_index.rdf"), :status => 200)
-      get '/catalog?q=wittgenstein reader&scope=my_library&startIndex=10', params={}, rack_env={ 'rack.session' => {:token => @access_tokend} }
+      get '/catalog?q=wittgenstein reader&scope=my_library&startIndex=10'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -218,7 +218,7 @@ describe "the results page" do
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&itemType:10&dbIds=638'
       url += '&startIndex=420'
       stub_request(:get, url).to_return(:body => body_content("bib_search_last_page.rdf"), :status => 200)
-      get '/catalog?q=wittgenstein reader&scope=my_library&startIndex=410', params={}, rack_env={ 'rack.session' => {:token => @access_tokend} }
+      get '/catalog?q=wittgenstein reader&scope=my_library&startIndex=410'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
