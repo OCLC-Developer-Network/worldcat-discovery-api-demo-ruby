@@ -37,11 +37,12 @@
       %tr
         %td.label Databases
         %td.input
-          %p
+          %p#databases
             - @db_list.databases.each do |database| 
               %label
                 %input{ :type => "checkbox", :name => "databases", :value => database.database_id, :checked => (params[:databases] and active_database_ids.include?(database.database_id.to_s) ? 'checked' : false) }
-                = database.name
+                %span#database-name
+                  = database.name
               %br
       %tr
         %td.label Scope
