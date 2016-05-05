@@ -1,0 +1,261 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:j.0="http://purl.org/dc/terms/"
+  xmlns:j.1="http://purl.org/library/"
+  xmlns:j.2="http://bibliograph.net/"
+  xmlns:j.3="http://www.w3.org/2007/05/powder-s#"
+  xmlns:j.4="http://schema.org/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:j.5="http://www.w3.org/2006/gen/ont#"
+  xmlns:j.6="http://rdfs.org/ns/void#" >
+  <rdf:Description rdf:about="http://viaf.org/viaf/40291310">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Lauridsen</j.4:familyName>
+    <j.4:givenName>Morten</j.4:givenName>
+    <j.4:name>Lauridsen, Morten, 1943-</j.4:name>
+    <j.4:birthDate>1943</j.4:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/38027615">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/38027615"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/61732864">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Praetorius</j.4:familyName>
+    <j.4:givenName>Michael</j.4:givenName>
+    <j.4:name>Praetorius, Michael, 1571-1621.</j.4:name>
+    <j.4:birthDate>1571</j.4:birthDate>
+    <j.4:deathDate>1621</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musique">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Musique.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/71658174"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ceremony_of_carols">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Ceremony of carols.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/2655519"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/38027615">
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musae_sioniae"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/847722"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/858759"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/hymn_to_the_virgin"/>
+    <j.4:datePublished>1997</j.4:datePublished>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/772816333"/>
+    <j.4:hasPart rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/first_nowell"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musique"/>
+    <j.1:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/ohu"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/59269800"/>
+    <j.4:hasPart rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_of_the_birds"/>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#Person/bach_johann_sebastian_1685_1750"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/weihnachts_oratorium"/>
+    <j.4:hasPart rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/veni_emmanuel"/>
+    <j.1:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38027615</j.1:oclcnum>
+    <rdf:type rdf:resource="http://bibliograph.net/CD"/>
+    <j.4:hasPart rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/what_is_this_lovely_fragrance"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/20771331"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/alleluia"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_anthems"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/42029843"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/40291310"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/61732864"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/76505782"/>
+    <j.4:about rdf:resource="http://dewey.info/class/782.28/e22/"/>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/858708"/>
+    <rdf:type rdf:resource="http://schema.org/MusicAlbum"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ave_maria"/>
+    <j.4:about rdf:resource="http://id.loc.gov/authorities/classification/M2065"/>
+    <j.4:description xml:lang="en">O come Emmanuel : plainsong / arranged Alice Parker (William Wilder, percussion) (2:44) -- Alleluia / Randall Thompson (4:52) -- The first Nowell : English carol / arranged Robert Shaw, Alice Parker (1:39) -- The carol of the birds : Spanish carol / arranged Robert Shaw, Alice Parker ; English text by Kurt Schindler and Deems Taylor (Janice Chandler, soprano) (3:59) -- Allon, gay bergères / Guillaume Costeley ; edition Robert Shaw, Alice Parker (Donna Carter, soprano ; Pamela Elrod, mezzo-soprano ; Frank Timmerman, tenor ; William Borland, bass) (1:40) -- A hymn to the Virgin / Benjamin Britten ; poem anon., circa 1300 (Donna Carter, soprano ; Nannette Soles, alto ; Sean Mayer, tenor ; Charles Sprawls, bass) (3:31) -- O magnum mysterium / Morten Lauridsen (6:13) -- Rejoice and sing : from "Christmas oratorio" / J.S. Bach ; edition Robert Shaw ; English version anon., edition Shaw ( :50) -- Ave Maria (Angelus Domini) / Franz Biebl (Nannette Soles, alto ; Sean Mayer, tenor ; Charles Sprawls, bass) (5:21) -- What is this lovely fragrance? : old French carol / arranged Healy Willan ; English version by Ysobel, edition Shaw (3:42) -- Lo, how a rose e'er blooming / Michael Praetorius ; edition Robert Shaw, Alice Parker (1:21) -- Sing lullaby / Herbert Howells ; poem by F.W. Harvey (2:59) -- While by my sheep : German carol / arranged Hugo Jüngst ; English version by Helen A. Dickinson, edition Shaw (Patricia Nealon, Anne-Marie Spalinger, sopranos ; Katherine Murray, Nannette Soles, altos ; David Blalock, Frank Timmerman, tenors ; William Borland, Charles Sprawls, basses) (1:24) -- Break forth, O wondrous heavenly light : from Christmas oratorio / J.S. Bach ; edition Robert Shaw, Alice Parker ; English version by Robert Shaw (1:08) -- Heavenly light / Alexander Kopylov ; arranged Peter J. Wilhousky ; English text by Alice Mattullath (2:56) -- Adeste fideles / arranged Alice Parker (3:51) -- Ceremony of carols. Procession ; Wolcum Yole! ; There is no rose ; That yongë child ; Balulalow ; As dew in Aprille ; This little babe ; Interlude : harp solo ; In freezing winter night ; Spring carol ; Deo gracias ; Recession / Benjamin Britten (Janice Chandler, soprano ; Nannette Soles, mezzo-soprano ; Elisabeth Remy, harp) (22:08).</j.4:description>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/38027615"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/74050889"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/71658174"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/o_magnum_mysterium"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/265433147"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/adeste_fideles"/>
+    <j.4:hasPart rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/als_ich_bei_meinen_schafen_wacht"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/2655519"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/svete_tikhii"/>
+    <j.4:name xml:lang="en">A Robert Shaw Christmas : angels on high.</j.4:name>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/39642484"/>
+    <j.4:contributor rdf:resource="http://viaf.org/viaf/101457133"/>
+    <j.4:alternateName xml:lang="en">Angels on high</j.4:alternateName>
+    <j.4:about rdf:resource="http://id.worldcat.org/fast/859831"/>
+    <rdfs:seeAlso rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ceremony_of_carols"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/859831">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Christmas music.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/hymn_to_the_virgin">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Hymn to the Virgin.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/2655519"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/265433147">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <j.4:name>Robert Shaw Chamber Singers,</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/20771331">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Biebl</j.4:familyName>
+    <j.4:givenName>Franz</j.4:givenName>
+    <j.4:name>Biebl, Franz.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/847722">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Carols.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/veni_emmanuel">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Veni Emmanuel.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/svete_tikhii">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Svete tikhiĭ.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/39642484"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/adeste_fideles">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Adeste fideles.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/76505782"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/71658174">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Costeley</j.4:familyName>
+    <j.4:givenName>Guillaume</j.4:givenName>
+    <j.4:name>Costeley, Guillaume, 1530?-1606.</j.4:name>
+    <j.4:birthDate>1530?</j.4:birthDate>
+    <j.4:deathDate>1606</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/M2065">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/ohu">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.0:identifier>ohu</j.0:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/what_is_this_lovely_fragrance">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>What is this lovely fragrance?</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/als_ich_bei_meinen_schafen_wacht">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Als ich bei meinen Schafen wacht.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/858759">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Choruses, Sacred (Women's voices, 3 parts) with harp.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/39642484">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Kopylov</j.4:familyName>
+    <j.4:givenName>Aleksandr Aleksandrovich</j.4:givenName>
+    <j.4:name>Kopylov, Aleksandr Aleksandrovich, 1854-1911.</j.4:name>
+    <j.4:birthDate>1854</j.4:birthDate>
+    <j.4:deathDate>1911</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/weihnachts_oratorium">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Weihnachts-Oratorium.</j.4:name>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/772816333#Person/bach_johann_sebastian_1685_1750"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/59269800">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Howells</j.4:familyName>
+    <j.4:givenName>Herbert</j.4:givenName>
+    <j.4:name>Howells, Herbert, 1892-1983.</j.4:name>
+    <j.4:birthDate>1892</j.4:birthDate>
+    <j.4:deathDate>1983</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_of_the_birds">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Carol of the birds.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#Person/bach_johann_sebastian_1685_1750">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Bach</j.4:familyName>
+    <j.4:givenName>Johann Sebastian</j.4:givenName>
+    <j.4:name>Bach, Johann Sebastian, 1685-1750.</j.4:name>
+    <j.4:birthDate>1685</j.4:birthDate>
+    <j.4:deathDate>1750</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/74050889">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Thompson</j.4:familyName>
+    <j.4:givenName>Randall</j.4:givenName>
+    <j.4:name>Thompson, Randall, 1899-1984.</j.4:name>
+    <j.4:birthDate>1899</j.4:birthDate>
+    <j.4:deathDate>1984</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/42029843">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Shaw</j.4:familyName>
+    <j.4:givenName>Robert</j.4:givenName>
+    <j.4:name>Shaw, Robert, 1916-1999,</j.4:name>
+    <j.4:birthDate>1916</j.4:birthDate>
+    <j.4:deathDate>1999,</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musae_sioniae">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Musae Sioniae,</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/61732864"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/858708">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name xml:lang="en">Choruses, Sacred (Mixed voices)</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/first_nowell">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>First Nowell.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/2655519">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Britten</j.4:familyName>
+    <j.4:givenName>Benjamin</j.4:givenName>
+    <j.4:name>Britten, Benjamin, 1913-1976.</j.4:name>
+    <j.4:birthDate>1913</j.4:birthDate>
+    <j.4:deathDate>1976</j.4:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_anthems">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Carol-anthems.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/59269800"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/782.28/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ave_maria">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Ave Maria.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/20771331"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/alleluia">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>Alleluia.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/74050889"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/o_magnum_mysterium">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:name>O magnum mysterium.</j.4:name>
+    <j.4:creator rdf:resource="http://viaf.org/viaf/40291310"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/101457133">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Mackenzie</j.4:familyName>
+    <j.4:givenName>Norman</j.4:givenName>
+    <j.4:name>Mackenzie, Norman (Pianist),</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/76505782">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:familyName>Wade</j.4:familyName>
+    <j.4:givenName>John Francis</j.4:givenName>
+    <j.4:name>Wade, John Francis, 1711 or 1712-1786.</j.4:name>
+    <j.4:birthDate>1711 or 1712</j.4:birthDate>
+    <j.4:deathDate>1786</j.4:deathDate>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,14 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:discovery="http://worldcat.org/vocab/discovery/"
+    xmlns:j.0="http://worldcat.org/xmlschemas/response/" > 
+  <rdf:Description rdf:about="http://beta.worldcat.org/discovery/bib/search?dbIds=638&amp;facetFields=inLanguage%3A10&amp;facetFields=itemType%3A10&amp;facetFields=creator%3A10&amp;q=">
+    <j.0:returnsError rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://worldcat.org/xmlschemas/response/ClientRequestError"/>
+    <discovery:errorMessage>Invalid q parameter.  Please provide a value for the q parameter which is at least 3 characters in length.</discovery:errorMessage>
+    <discovery:errorCode rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">400</discovery:errorCode>
+    <discovery:errorType>http</discovery:errorType>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gr="http://purl.org/goodrelations/v1#" xmlns:j.0="http://purl.org/library/" xmlns:j.1="http://worldcat.org/vocab/discovery/" xmlns:j.2="http://bibliograph.net/" xmlns:j.3="http://www.w3.org/2007/05/powder-s#" xmlns:j.4="http://schema.org/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:j.5="http://www.w3.org/2006/gen/ont#" xmlns:j.6="http://rdfs.org/ns/void#"> 
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/89458817#Person/winter_michael">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Michael Winter</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/437865128">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/437865128"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/econline"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Person/srite_mark">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Srite, Mark </j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_processing">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Information Processing</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>1</j.1:count>
+    <j.4:name>dut</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/4630961218">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/4630961218"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/sabinet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/gewone_gebruik">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Gewone gebruik</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://reference.sabinet.co.za/webx/access/electronic_journals/ipjp/ipjp_v11_n2_a6.pdf">
+    <rdfs:comment>SA ePublications Journal Collection</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0018-7267#61">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>61</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0018-7267"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1417920113#Person/streeter_thomas">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Streeter, Thomas</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Thing/emotion_&amp;x25a0_further_education">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>emotion &amp;#x25A0;further education</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Place/toronto_buffalo_london">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.4:name>Toronto; Buffalo; London</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/bib/search?dbIds=638&amp;facetFields=creator:10&amp;facetFields=inLanguage:10&amp;facetFields=itemType:10&amp;itemsPerPage=10&amp;q=wittgenstein reader&amp;sortBy=relevance&amp;startIndex=420">
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/5170870115"/>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
+    <j.1:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.1:itemsPerPage>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/4630961218"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/5559542957"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/364415797"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/4630578892"/>
+    <j.1:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1429</j.1:totalResults>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/5137567413"/>
+    <j.1:facet rdf:nodeID="A1"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/5154789754"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/4630608866"/>
+    <j.1:facet rdf:nodeID="A2"/>
+    <j.1:facet rdf:nodeID="A3"/>
+    <j.1:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">420</j.1:startIndex>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/4630840500"/>
+    <j.1:hasPart rdf:resource="http://www.worldcat.org/title/-/oclc/437865128"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/handelingsemantiese_benadering">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Handelingsemantiese benadering</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/metalexicography">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Metalexicography</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1018-6441#36_2">
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+    <j.4:issueNumber>2</j.4:issueNumber>
+    <j.4:datePublished>2002-06</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1018-6441#36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://reference.sabinet.co.za/webx/access/electronic_journals/lexikos/lexikos_v12_a21.pdf">
+    <rdfs:comment>SA ePublications Journal Collection</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>4</j.1:count>
+    <j.4:name>strong tom</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/usual_texts">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Usual texts</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Person/zahedi_fatemeh_mariam">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Zahedi, Fatemeh "Mariam"</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/cultural_dimensions">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>cultural dimensions</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/negativity_philosophy_in_literature">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name>Negativity (Philosophy) in literature</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867697809#Thing/linguistic_turns">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Linguistic turns</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>1</j.1:count>
+    <j.4:name>dan</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1445-7377">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>1445-7377</j.4:issn>
+    <rdfs:label>Indo-Pacific Journal of Phenomenology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/4630840500">
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4630840500</j.0:oclcnum>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/theory_age_of_information"/>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Person/gonzalez_rafael_a"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_retrieval"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/computer_science"/>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/4630840500"/>
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/867903825"/>
+    <rdf:type rdf:resource="http://bibliograph.net/Chapter"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_processing"/>
+    <j.4:name>Exploring Information Management Problems in the Domain of Critical Incidents</j.4:name>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">428</gr:displayPosition>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_resource"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/data_resource_management_indexing"/>
+    <rdfs:comment>949 $l Chapter</rdfs:comment>
+    <j.4:sameAs rdf:resource="http://dx.doi.org/10.4018/978-1-59904-510-8.ch003"/>
+    <j.4:description>In this chapter, information management problems and some of the computer-based solutions offered to deal with them are presented. The claim is that exploring the information problem as a three-fold issue, composed of heterogeneity, overload, and dynamics, will contribute to an improved understanding of information management problems. On the other hand, it presents a set of computer-based solutions that are available to tackle these problems: information discovery and retrieval, information filtering, information fusion, and information personalization. In addition, this chapter argues that a rich and interesting domain for exploring information management problems is critical incident management, due to its complexity, requirements, and the nature of the information it deals with.</j.4:description>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_storage_and_retrieval_systems"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_filtering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Person/knight_christopher_j">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>KNIGHT, CHRISTOPHER J.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Person/brown_andrew">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Brown, Andrew</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/5137567413">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/5137567413"/>
+    <j.4:dateModified>2015-02-19</j.4:dateModified>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/sabinet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/literature_modern_20th_century_history_and_criticism">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name>Literature, Modern--20th century--History and criticism</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/computer_science">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Computer Science</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/437865128">
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Person/daniels_kevin"/>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Person/brown_andrew"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Thing/role"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Thing/language"/>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Person/humphreys_michael"/>
+    <j.4:pageStart>327</j.4:pageStart>
+    <j.4:description>In this article we examine accounts of emotional experiences in one organization. Drawing upon data from interviews across a range of employees, we analyse aspects of emotion, identity and power. Adopting a constructionist perspective we use a method of discourse analysis to analyse how participants constructed emotions according to tacitly understood rules regarding appropriate emotional displays. These rules were made visible through an examination of the participants' positioning strategies as they described emotional experiences. Our findings suggest that, rather than an institutionally held level of appropriate articulations of emotionality, there was a role-related, socially located rule system linked to separate categories of teachers, managers and administrative employees. The contribution of the article is threefold. First, we use in-depth case data from 44 semi-structured interviews to analyse how teachers and managers/administrators in a UK-based further education (FE) college constructed emotions according to certain rules (informal norms) regarding appropriate kinds of emotional displays. Teachers acknowledged and upgraded labelled emotions, while managers and administrators denied and downgraded accounts of emotional experiences. Second, we discuss the implications of talk about emotion for the (re)production of teachers' and managers/administrators' work identities. Third, we consider how people's talk about emotions was bound-up in relations of power.</j.4:description>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/437865128"/>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Agent/sage_publications"/>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">437865128</j.0:oclcnum>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Thing/emotion_&amp;x25a0_further_education"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Thing/manager"/>
+    <j.4:publication rdf:resource="http://www.worldcat.org/title/-/oclc/#PublicationEvent/sage_publications"/>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Person/coupland_christine"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/138156017"/>
+    <j.4:datePublished>2008-03-01</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0018-7267#61_3"/>
+    <j.4:name>Saying it with feeling: Analysing speakable emotions</j.4:name>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">424</gr:displayPosition>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Thing/discourse"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>7</j.1:count>
+    <j.4:name>afr</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_retrieval">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Information retrieval</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1684-4904#12">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>12</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1684-4904"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/5559542957">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/5559542957"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/jstor_books"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1753-9129">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>1753-9129</j.4:issn>
+    <rdfs:label>Communication, Culture &amp; Critique</rdfs:label>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/1417920113#Agent/hoboken_usa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/text_theory">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Text theory</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867994977#Person/botha_m_elaine">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Botha, M. Elaine</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Thing/role">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>role</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/activity_theory">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>activity theory</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/critical_social_theory">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>critical social theory</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1753-9129#6">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>6</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1753-9129"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/woordeboeknavorsing">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Woordeboeknavorsing</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>6</j.1:count>
+    <j.4:name>wittgenstein, ludwig</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <j.1:facetIndex>inLanguage</j.1:facetIndex>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/Facet"/>
+    <j.1:facetValue rdf:nodeID="A8"/>
+    <j.1:facetValue rdf:nodeID="A9"/>
+    <j.1:facetValue rdf:nodeID="A10"/>
+    <j.1:facetValue rdf:nodeID="A11"/>
+    <j.1:facetValue rdf:nodeID="A5"/>
+    <j.1:facetValue rdf:nodeID="A12"/>
+    <j.1:facetValue rdf:nodeID="A0"/>
+    <j.1:facetValue rdf:nodeID="A13"/>
+    <j.1:facetValue rdf:nodeID="A6"/>
+    <j.1:facetValue rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/4630578892">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/4630578892"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/sabinet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Thing/manager">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>manager</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>1079</j.1:count>
+    <j.4:name>eng</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Agent/sage_publications">
+    <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
+    <j.4:name>Sage Publications</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Person/coupland_christine">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Coupland, Christine</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Thing/discourse">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>discourse</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/teksteorie">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Teksteorie</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1018-6441">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>1018-6441</j.4:issn>
+    <rdfs:label>In die Skriflig</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>3</j.1:count>
+    <j.4:name>cheung leo k c</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/hermeneutics">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>hermeneutics</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_resource">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Information Resource</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Agent/m_e_sharpe_inc">
+    <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
+    <j.4:name>M.E. Sharpe, Inc.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/ongewone_gebruik">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Ongewone gebruik</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Person/daniels_kevin">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Daniels, Kevin</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>6</j.1:count>
+    <j.4:name>kenny, anthony</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/4630840500">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/4630840500"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/infoscibk"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/Facet"/>
+    <j.1:facetIndex>itemType</j.1:facetIndex>
+    <j.1:facetValue rdf:nodeID="A17"/>
+    <j.1:facetValue rdf:nodeID="A18"/>
+    <j.1:facetValue rdf:nodeID="A19"/>
+    <j.1:facetValue rdf:nodeID="A20"/>
+    <j.1:facetValue rdf:nodeID="A21"/>
+    <j.1:facetValue rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0018-229X#45_2">
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+    <j.4:issueNumber>2</j.4:issueNumber>
+    <j.4:datePublished>2000-11</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0018-229X#45"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0038-0199#34">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>34</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0038-0199"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>3</j.1:count>
+    <j.4:name>cahill kevin m</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/semantiek">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Semantiek</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0742-1222">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>0742-1222</j.4:issn>
+    <rdfs:label>Journal of Management Information Systems</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/5559542957">
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/"/>
+    <j.4:url rdf:resource="http://www.jstor.org/stable/10.3138/9781442685710"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/literature_modern_20th_century_history_and_criticism"/>
+    <j.4:description>&lt;p&gt;InOmissions Are Not Accidents, Christopher J. Knight analyzes the widespread apophaticism in texts from the late nineteenth to the late twentieth century.&lt;/p&gt;</j.4:description>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/negativity_philosophy_in_literature"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/silence_in_literature"/>
+    <j.0:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Place/toronto_buffalo_london"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1844814481"/>
+    <rdfs:comment>949 $l Digital Book</rdfs:comment>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/5559542957"/>
+    <j.4:datePublished>2010</j.4:datePublished>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9781442685710"/>
+    <j.4:publication rdf:resource="http://www.worldcat.org/title/-/oclc/#PublicationEvent/toronto_buffalo_londonuniversity_of_toronto_press2010"/>
+    <j.4:bookFormat rdf:resource="http://schema.org/EBook"/>
+    <j.4:name>Omissions are not Accidents Modern Apophaticism from Henry James to Jacques Derrida</j.4:name>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Agent/university_of_toronto_press"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5559542957</j.0:oclcnum>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">426</gr:displayPosition>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Person/knight_christopher_j"/>
+    <j.4:workExample rdf:resource="http://worldcat.org/isbn/9781442640504"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Thing/philosophy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1368168481#Person/ashworth_peter">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Peter Ashworth</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/semantics">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Semantics</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/knowledge_interest">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>knowledge interest</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/89458817#Person/hallett_julia">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Julia Hallett</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>26</j.1:count>
+    <j.4:name>compfile</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>5</j.1:count>
+    <j.4:name>thomas gary</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867697809#Thing/literary_theory">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Literary theory</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/4630578892">
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867697809#Thing/historical_theory"/>
+    <j.4:name>The linguistic turn, literary theory and historical theory</j.4:name>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/4630578892"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867697809#Thing/history"/>
+    <j.4:datePublished>2000-11</j.4:datePublished>
+    <j.4:description>This essay deals with the relationship between literary theory on the one hand and historical tehory (or philosophy of history) on the other. Since the publication of White's seminal Metahistory in 1973 an orientation on literary theory was recommended to historical theorists. And it is true that this conception of the nature and the tasks of historical theory has given us a wholly new kind of history of historical writing. This has been a great gain we should never allow to be given up again. The orientation on literary theory has, however, not deepened our insights in the relationship between the historical text and the past itself. A careful analysis of what the so-called linguistic turn should mean for historical theory can explain why it is as easy as dangerous to overstate the significance of literary theory for historical theory. The implication is that we should address again the old semantic and epistemological questions with regard to the nature of historical writing.</j.4:description>
+    <j.4:pageStart>271</j.4:pageStart>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867697809#Thing/historiography"/>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4630578892</j.0:oclcnum>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867697809#Thing/linguistic_turns"/>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/867697809#Person/ankersmit_f_r"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/867697809"/>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0018-229X#45_2"/>
+    <j.4:url rdf:resource="http://reference.sabinet.co.za/webx/access/electronic_journals/hist/hist_v45_n2_a2.pdf"/>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">430</gr:displayPosition>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867697809#Thing/literary_theory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/unusual_texts">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Unusual texts</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/grounded_theory">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>grounded theory</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/5137567413">
+    <j.4:datePublished>2011-10</j.4:datePublished>
+    <j.4:name>Five Master Classes in Qualitative Analysis, Frederick J. Wertz, Kathy Charmaz, Linda M. Mcmullen, Ruthellen Josselson, Rosemarie Anderson, and Emalinda McSpadden : book review</j.4:name>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:url rdf:resource="http://reference.sabinet.co.za/webx/access/electronic_journals/ipjp/ipjp_v11_n2_a6.pdf"/>
+    <j.4:pageStart>1</j.4:pageStart>
+    <j.4:productID>5137567413</j.4:productID>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1368168481"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">422</gr:displayPosition>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1445-7377#11_2"/>
+    <j.0:oclcnum>5137567413</j.0:oclcnum>
+    <j.4:description>This is a courageous book, and its success is due precisely to the openness and audacity of its authors. Surely the six writers had remarkable trust in each other, and especially in Dr Wertz, who seems to have initiated and chaired the enterprise. In the face of the real possibility of hostility, five authoritative methodologists have taken the same set of qualitative material and analysed it in their own way. Most significantly, they have each provided a detailed account of their workings in conducting their analysis. They have laid all of this bare to the other authors as well as to Emily McSpadden, the originator of the data. Perhaps even more courageously, Emily has allowed her harrowing experience to be the focus of attention of the five expert psychologists and of the readers. Emily has also written her own commentary on the five analyses, and the authors of these analyses have provided their reactions (which are remarkably lacking in defensiveness).</j.4:description>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/1368168481#Person/ashworth_peter"/>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/5137567413"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>26</j.1:count>
+    <j.4:name>archv</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1018-6441#36">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>36</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1018-6441"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/dictionary_research">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Dictionary research</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/myths">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>myths</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/#PublicationEvent/sage_publications">
+    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
+    <j.4:organizer rdf:resource="http://experiment.worldcat.org/entity/work/data/138156017#Agent/sage_publications"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>1086</j.1:count>
+    <j.4:name>artchap</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867697809#Thing/historical_theory">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Historical theory</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>15</j.1:count>
+    <j.4:name>und</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867697809#Person/ankersmit_f_r">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Ankersmit, F.R.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/4630961218">
+    <j.4:description>Of light and limits : Philosophy matters The deepest religious or faith commitments of a scholar enter into her theoretical work through the mediation of a (scientific) world view with its embedded philosophical assumptions about the subject matter. These philosophical assumptions are about the fundamental structure (order) of the world and imply assumptions about the nature of this order or structure. They are often embedded in theoretical notions that purport not to require any further grounding. As such they are thoroughly "religious". Metaphorical language and models often mediate these religious convictions. Christian scholarship implies critically weighing and assessing such assumptions and exposing their ideological or mythical nature. The pivotal issue at the centre of the historical "turns" in philosophy of science appears to be diverse articulations of this locus of order. It is this perennial search for the elusive universal that surfaces in each of the "turns" in either philosophy or science which "turns" up with monotonous regularity in subject-related literature. All these "turns" seem to be bound in their point of departure to an epistemological position which could best still be described as that of modernity, i.e., anchored in the Enlightenment ideal of the subject-object divide and the belief that objective rational knowledge can be acquired, yet attempting to approach this rational objective knowledge via the medium of the knowing subject. This perennial search for the elusive universal reaches a dead-end in post-modernism. If Christian philosophy wants to shed light on this issue so central to the heart of theorizing, it needs to develop a dynamic understanding of the notion of law, order, limits and boundaries and the way such an understanding could inform the discussions concerning scientific realism and the end(s) of philosophy. It is clear that convincing answers to these questions need to steera course between "flabby" (Wayne Booth, 1986) pluralism which assumes that mere knowledge of a plurality of perspectives automatically assures immunity against the darkness, and "wild" (Bernstein, 1987) pluralism which rejects any possibility of communication between different positions and therefore gives up on the call to professing Christ even before we have started. I propose that the development of critical philosophical skills coupled with a responsible analysis of the theoretical infrastructure of theories requires solid philosophical grounding of both teachers and students and requires the recognition of philosophy's legitimate place in the curriculum. Why? Because philosophical systems and frameworks embody humankind's vision of what constitutes order and meaning in human life and reality, and because these systems reflect the deepest answers to the human predicament ... answers that need to be developed within the parameters set by two Biblical images, the image of light and God's covenantal law.Filosofiese verligting - In U Lig Die diepste religieuse geloosfoortuigings van 'n akademikus word via die bemiddeling van 'n (wetenskaplike/teoretiese) w&amp;#234;reldbeskouing wat gefundeer is in filosofiese vooronderstellings oor die faset van die werklikheid wat ondersoek word, binnegedra. Sodanige vooronderstellings herberg ook meestal die teoretiese paradigma se onderliggende beskouing oor die orde of struktuur van die werklikheid onder bespreking asook vooronderstellings wat nie deur die teoretiese paradigma of denker verder bevraagteken word nie. Juis die laasgenoemde trek verraai die diep religieuse karakter van dié tipe vooronderstellings. Metaforiese taal en modelle is dikwels die draers van dergelike teoretiese en fundamenteel religieuse vooronderstellings. Christelike wetenskapsbeoefening impliseer die kritiese onthulling van hierdie vooronderstelings en die ontmaskering van ideologiese elemente daarin. In die markante wendinge in die ide&amp;#235;geskiedenis speel wisselende opvattinge oor die aard van die onderliggende orde in die werklikheid 'n deurslaggewende rol. Dit vorm deel van die nimmereindigende soeke na die ontwykende universalia wat met bykans vervelige re&amp;#235;lmaat in die ide&amp;#235;geskiedenis opduik. 'n Nadere ondersoek na die aard van die wendinge in die geskiedenis van die denke laat blyk al spoedig dat die soeke gemotiveer en gedra word deur die diepliggende modernistiese Verligtingsdenke met sy dialektiese spanning tussen subjek en objek en die diepgesetelde geloof dat die rasionele vermo&amp;#235; van die subjek die bron van objektiwiteit is - 'n geloof wat uitmond in die subjektiwisme van die post-modernisme. Christelike filosofie wat lig wil werp op hierdie impasse en die probleem van orde s&amp;#243; sentraal in hierdie diskussie, sal dinamiese verantwoording moet doen oor hoe 'n Bybels verantwoorde visie op orde, struktuur en grense van die werklikheid ver-lig-ting kan bied. In hierdie diskussie behoort die Bybelse metafore van God se verbond met sy skepping en die liggewende rol van sy Woord-openbaring sowel in Skriftuur as in die natuur sentraal te staan.</j.4:description>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">425</gr:displayPosition>
+    <j.4:datePublished>2002-06</j.4:datePublished>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4630961218</j.0:oclcnum>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:name>Of light and limits : philosophy matters : research article</j.4:name>
+    <j.4:pageStart>207</j.4:pageStart>
+    <j.4:url rdf:resource="http://search.sabinet.co.za/WebZ/Authorize?sessionid=0&amp;bad=http%3A%2F%2Fwww.sabinet.co.za%2Findex.php%3Fpage%3Dbad-sa-epubs&amp;portal=ejournal&amp;next=/WebZ/images/ejour/skrif/skrif_v36_n2_a4.pdf"/>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1018-6441#36_2"/>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/4630961218"/>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/867994977#Person/botha_m_elaine"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/867994977"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/metaleksikografie">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Metaleksikografie</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781442685710">
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:isbn>9781442685710</j.4:isbn>
+    <j.4:isbn>1442685719</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_storage_and_retrieval_systems">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Information Storage and Retrieval Systems</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/5170870115">
+    <j.4:datePublished>2013-12</j.4:datePublished>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5170870115</j.0:oclcnum>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1417920113"/>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/5170870115"/>
+    <j.4:pageEnd>501</j.4:pageEnd>
+    <j.4:name>Policy, Politics, and Discourse</j.4:name>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">429</gr:displayPosition>
+    <j.4:alternateName>Policy, Politics, and Discourse</j.4:alternateName>
+    <rdfs:comment>949 $l Article</rdfs:comment>
+    <j.4:pageStart>488</j.4:pageStart>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/1417920113#Person/streeter_thomas"/>
+    <j.4:sameAs rdf:resource="http://dx.doi.org/10.1111/cccr.12028"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.4:description>&lt;i&gt;This overview of discursive approaches to media policy studies explores the theoretical background and implications of the approach, locating the accompanying articles in relation to broader traditions. Situating discourse approaches in terms of the general interpretive turn in social science and a reaction against Laswellian policy “science,” the essay sketches the evolution of discursive approaches to policy from an emphasis on demystification to one of social construction. It concludes by arguing that discursive approaches help reveal points of instability in the current global media policy discourse, and thus suggests some avenues for potential change&lt;/i&gt;.</j.4:description>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1753-9129#6_4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>5</j.1:count>
+    <j.4:name>hudson w donald</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/4630608866">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/4630608866"/>
+    <j.4:dateModified>2015-02-16</j.4:dateModified>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/sabinet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781442640504">
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.4:isbn>9781442640504</j.4:isbn>
+    <j.4:isbn>1442640502</j.4:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Topic/silence_in_literature">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.4:name>Silence in literature</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0018-229X">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>0018-229X</j.4:issn>
+    <rdfs:label>Historia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/#PublicationEvent/m_e_sharpe_inc">
+    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
+    <j.4:organizer rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Agent/m_e_sharpe_inc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Thing/language">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>language</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0018-7267">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>0018-7267</j.4:issn>
+    <rdfs:label>Human Relations</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>3</j.1:count>
+    <j.4:name>duvenage pieter</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>30</j.1:count>
+    <j.4:name>fre</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>4</j.1:count>
+    <j.4:name>floridi luciano</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/89458817#Agent/oxford_uk">
+    <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
+    <j.4:name>Oxford, UK</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867697809#Thing/history">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>History</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0038-0199">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>0038-0199</j.4:issn>
+    <rdfs:label>Sociologia Ruralis</rdfs:label>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/89458817#Agent/oxford_uk"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0742-1222#23_1">
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+    <j.4:issueNumber>1</j.4:issueNumber>
+    <j.4:datePublished>2006-06-01</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0742-1222#23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>2</j.1:count>
+    <j.4:name>video</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>2</j.1:count>
+    <j.4:name>por</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/data_resource_management_indexing">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Data Resource Management: Indexing</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/theory_age_of_information">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Theory: Age of Information</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/5154789754">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/5154789754"/>
+    <j.4:dateModified>2015-11-09</j.4:dateModified>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/wiley_onlib"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1445-7377#11">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>11</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1445-7377"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <j.1:facetValue rdf:nodeID="A25"/>
+    <j.1:facetValue rdf:nodeID="A15"/>
+    <j.1:facetValue rdf:nodeID="A23"/>
+    <j.1:facetValue rdf:nodeID="A7"/>
+    <j.1:facetValue rdf:nodeID="A4"/>
+    <j.1:facetValue rdf:nodeID="A27"/>
+    <j.1:facetValue rdf:nodeID="A16"/>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/Facet"/>
+    <j.1:facetValue rdf:nodeID="A24"/>
+    <j.1:facetValue rdf:nodeID="A26"/>
+    <j.1:facetIndex>creator</j.1:facetIndex>
+    <j.1:facetValue rdf:nodeID="A28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/138156017#Person/humphreys_michael">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Humphreys, Michael</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/364415797">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/364415797"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/econline"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/4630608866">
+    <j.0:oclcnum>4630608866</j.0:oclcnum>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/metaleksikografie"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/usual_texts"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/actional_semantic_approach"/>
+    <j.4:url rdf:resource="http://reference.sabinet.co.za/webx/access/electronic_journals/lexikos/lexikos_v12_a21.pdf"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/867748769"/>
+    <j.4:productID>4630608866</j.4:productID>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/semantics"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/dictionary_research"/>
+    <j.4:name>The systematic development of Wiegand's metalexicography as demonstrated in Kleine Schriften : review article</j.4:name>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1684-4904#12"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/semantiek"/>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/4630608866"/>
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/handelingsemantiese_benadering"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/unusual_texts"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/text_theory"/>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Person/smit_maria"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/metalexicography"/>
+    <j.4:pageStart>290</j.4:pageStart>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">427</gr:displayPosition>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/teksteorie"/>
+    <j.4:datePublished>2002</j.4:datePublished>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/gewone_gebruik"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/woordeboeknavorsing"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/867748769#Thing/ongewone_gebruik"/>
+    <j.4:description>Die sistematiese ontwikkeling van Wiegand se metaleksikografie soos geïllustreer in Kleine Schriften Hierdie resensieartikel handel oor die inhoud van die publikasie Kleine Schriften , 'n seleksie van artikels geskryf deur Herbert Ernst Wiegand, en versamel deur Matthias Kammerer en Werner Wolski. Dit poog om die onderwerpe waarmee Wiegand homself deur die jare besig gehou het, aan te toon, en sy geleidelike ontwikkeling oor 'n verloop van dertig jaar. Wiegand het oor baie onderwerpe geskryf, maar in hierdie artikel word veral twee aspekte bespreek. Eerstens word Wiegand se uiteensetting van 'n "handelingsemantiese benadering" tot leksikografie verduidelik. Hy bestudeer die werk van baie skrywers, soms deur van hulle sienings te gebruik, en soms deur hulle te weerlê. Tweedens word Wiegand se opbou van 'n gedetailleerde teksteorie vir leksikografiese tekste bespreek. Wiegand is een van die belangrikste teoretiese leksikograwe van ons tyd, en sy voorstelle vir metaleksikografiese terminologie en onderskeidings vorm 'n noodsaaklike deel van hedendaagse leksikografiese praktyke en beplanning regoor die wêreld.</j.4:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Thing/actional_semantic_approach">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Actional-semantic approach</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>8</j.1:count>
+    <j.4:name>spa</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867748769#Person/smit_maria">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Maria Smit</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/semiology">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>semiology</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0018-7267#61_3">
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+    <j.4:issueNumber>3</j.4:issueNumber>
+    <j.4:datePublished>2008-03-01</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0018-7267#61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>4</j.1:count>
+    <j.4:name>candlish stewart</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/masculine_upward_divergence">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>masculine upward divergence</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1445-7377#11_2">
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+    <j.4:issueNumber>2</j.4:issueNumber>
+    <j.4:datePublished>2011-10</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1445-7377#11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0018-229X#45">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>45</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0018-229X"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1753-9129#6_4">
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+    <j.4:issueNumber>4</j.4:issueNumber>
+    <j.4:datePublished>2013-12</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/1753-9129#6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>4</j.1:count>
+    <j.4:name>audiobook</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>3</j.1:count>
+    <j.4:name>swe</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Thing/philosophy">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Philosophy</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Thing/information_filtering">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Information Filtering</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867903825#Person/gonzalez_rafael_a">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Gonzalez, Rafael A.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/5170870115">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.4:about rdf:resource="http://www.worldcat.org/oclc/5170870115"/>
+    <j.6:inDataset rdf:resource="http://purl.oclc.org/dataset/wiley_onlib"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/89458817#Person/cox_graham">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Graham Cox</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1417920113#Agent/hoboken_usa">
+    <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
+    <j.4:name>Hoboken, USA</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/867697809#Thing/historiography">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>Historiography</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/1684-4904">
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+    <j.4:issn>1684-4904</j.4:issn>
+    <rdfs:label>Lexikos</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/#PublicationEvent/toronto_buffalo_londonuniversity_of_toronto_press2010">
+    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
+    <j.4:location rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Place/toronto_buffalo_london"/>
+    <j.4:organizer rdf:resource="http://experiment.worldcat.org/entity/work/data/1844814481#Agent/university_of_toronto_press"/>
+    <j.4:startDate>2010</j.4:startDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Person/van_pelt_william_v">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.4:name>Van Pelt, William V.</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1844814481#Agent/university_of_toronto_press">
+    <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
+    <j.4:name>University of Toronto Press</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/364415797">
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/semiology"/>
+    <j.4:inLanguage>en</j.4:inLanguage>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">364415797</j.0:oclcnum>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/critical_social_theory"/>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0742-1222#23_1"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/cultural_dimensions"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/73011713"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">421</gr:displayPosition>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/364415797"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/knowledge_interest"/>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Person/zahedi_fatemeh_mariam"/>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Person/srite_mark"/>
+    <j.4:publication rdf:resource="http://www.worldcat.org/title/-/oclc/#PublicationEvent/m_e_sharpe_inc"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/activity_theory"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/hermeneutics"/>
+    <j.4:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Agent/m_e_sharpe_inc"/>
+    <j.4:name>Web Documents' Cultural Masculinity and Femininity</j.4:name>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/grounded_theory"/>
+    <j.4:pageStart>87</j.4:pageStart>
+    <j.4:description>As online information dissemination and e-commerce transactions become globally popular, understanding the cultural aspects of Web site documents will gain critical importance. Hidden cultural dimensions could facilitate or inhibit the usability and communication effectiveness of Web sites. However, few studies have investigated the existence of cultural dimensions in Web sites. This study identifies cultural signifiers of Web documents as they relate to the masculinity-femininity dimension. We adopt an interpretive approach for investigating, identifying, and categorizing masculinity-femininity signifiers. Comparing and contrasting Web sites aimed predominantly at either men or women, we use grounded theory for constant comparison and categorization of data. The interpretive analysis is carried out within a framework of hermeneutics. Drawing from the literature of signs (semiology), we identify the signifiers and myths for the masculinity and femininity of Web documents, and report on the possible presence of masculine and feminine androgyny. Following the dictum of grounded theory, we present support for our results from theories and findings in diverse fields of study. We then report on the contributions of our research in three ways. First, the knowledge of cultural signifiers raises managers' and researchers' awareness of cultural contents of Web documents, and may lead to improvement in the clarity and communication effectiveness of Web documents. Second, our work brings forth contrasts and contradictions inherent in masculine and feminine modes of Web document development, raising questions about cultural messages within Web documents that could distort communication and promote cultural values not shared by members of the targeted community. Third, we introduce the concept of androgyny as playing a possible role in reducing such distortions.</j.4:description>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/feminine_lateral_convergence"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/myths"/>
+    <j.4:about rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Thing/masculine_upward_divergence"/>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.4:datePublished>2006-06-01</j.4:datePublished>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/73011713#Person/van_pelt_william_v"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/5154789754">
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0038-0199#34_2-3"/>
+    <rdfs:comment>949 $l Article</rdfs:comment>
+    <j.4:pageStart>190</j.4:pageStart>
+    <j.0:oclcnum>5154789754</j.0:oclcnum>
+    <j.4:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/89458817#Person/cox_graham"/>
+    <j.4:datePublished>1994-08</j.4:datePublished>
+    <j.4:name>Hunting the wild red deer: The social organization and ritual of a ‘rural’ institution</j.4:name>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/89458817#Person/hallett_julia"/>
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.4:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/89458817#Person/winter_michael"/>
+    <j.3:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/5154789754"/>
+    <gr:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">423</gr:displayPosition>
+    <j.4:sameAs rdf:resource="http://dx.doi.org/10.1111/j.1467-9523.1994.tb00808.x"/>
+    <j.4:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/89458817"/>
+    <j.4:productID>5154789754</j.4:productID>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.4:pageEnd>205</j.4:pageEnd>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/73011713#Thing/feminine_lateral_convergence">
+    <rdf:type rdf:resource="http://schema.org/Thing"/>
+    <j.4:name>feminine lateral convergence</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>287</j.1:count>
+    <j.4:name>book</j.4:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0742-1222#23">
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+    <j.4:volumeNumber>23</j.4:volumeNumber>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0742-1222"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0038-0199#34_2-3">
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+    <j.4:issueNumber>2-3</j.4:issueNumber>
+    <j.4:datePublished>1994-08</j.4:datePublished>
+    <j.4:isPartOf rdf:resource="http://worldcat.org/issn/0038-0199#34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/FacetItem"/>
+    <j.1:count>13</j.1:count>
+    <j.4:name>ger</j.4:name>
+  </rdf:Description>
+</rdf:RDF>

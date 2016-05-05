@@ -1,0 +1,147 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:j.0="http://umbel.org/umbel#"
+  xmlns:j.1="http://purl.org/dc/terms/"
+  xmlns:j.2="http://purl.org/library/"
+  xmlns:j.3="http://bibliograph.net/"
+  xmlns:j.4="http://www.w3.org/2007/05/powder-s#"
+  xmlns:j.5="http://schema.org/"
+  xmlns:j.6="http://www.w3.org/2006/gen/ont#"
+  xmlns:j.7="http://rdfs.org/ns/void#" >
+  <rdf:Description rdf:about="http://viaf.org/viaf/2571919">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.5:familyName>Aue</j.5:familyName>
+    <j.5:givenName>Maximilian</j.5:givenName>
+    <j.5:name>Maximilian Aue</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/24609378">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.5:familyName>Wittgenstein</j.5:familyName>
+    <j.5:givenName>Ludwig</j.5:givenName>
+    <j.5:name>Ludwig Wittgenstein</j.5:name>
+    <j.5:birthDate>1889</j.5:birthDate>
+    <j.5:deathDate>1951</j.5:deathDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781405106993">
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.5:isbn>9781405106993</j.5:isbn>
+    <j.5:isbn>1405106999</j.5:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/entity/work/id/14486100">
+    <j.5:name>Big Typescript, TS. 213.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/logik">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name xml:lang="en">Logik</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/57422379#PublicationEvent/malden_ma_blackwell_pub_2005">
+    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
+    <j.5:location rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Place/malden_ma"/>
+    <j.5:organizer rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Agent/blackwell_pub"/>
+    <j.5:startDate>2005</j.5:startDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/semantik">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name xml:lang="en">Semantik</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/philosophie">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name xml:lang="en">Philosophie</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/logic_symbolic_and_mathematical">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name xml:lang="en">Logic, Symbolic and mathematical</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/mathematics_philosophy">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name xml:lang="en">Mathematics--Philosophy</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/mau">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.1:identifier>mau</j.1:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Place/malden_ma">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <j.5:name>Malden, MA</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/57422379">
+    <j.5:bookEdition>German-English scholar's ed.</j.5:bookEdition>
+    <j.5:about rdf:resource="http://id.loc.gov/authorities/classification/B3376"/>
+    <j.2:oclcnum>57422379</j.2:oclcnum>
+    <j.5:about rdf:resource="http://dewey.info/class/192/e22/"/>
+    <j.5:url rdf:resource="http://catdir.loc.gov/catdir/toc/ecip055/2004030873.html"/>
+    <j.5:bookFormat rdf:resource="http://bibliograph.net/PrintBook"/>
+    <j.0:isLike rdf:resource="http://bnb.data.bl.uk/id/resource/GBA466824"/>
+    <j.5:workExample rdf:resource="http://worldcat.org/isbn/9781118346334"/>
+    <j.5:publisher rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Agent/blackwell_pub"/>
+    <j.5:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/logic_symbolic_and_mathematical"/>
+    <j.5:datePublished>2005</j.5:datePublished>
+    <j.5:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/semantik"/>
+    <j.5:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/logik"/>
+    <j.2:placeOfPublication rdf:resource="http://id.loc.gov/vocabulary/countries/mau"/>
+    <j.5:description xml:lang="en">Understanding -- Meaning -- Proposition. Sense of a proposition -- Immediate understanding and the application of a word in time -- The nature of language -- Thought. Thinking -- Grammar -- Intention and depiction -- Logical inference -- Generality -- Expectation. Wish, etc. -- Philosophy -- Phenomenology -- Idealism, etc. 00 Foundations of mathematics -- On cardinal numbers -- Mathematical proof -- Inductive proofs. Periodicity -- The infinite in mathematics. The extensional viewpoint.</j.5:description>
+    <j.5:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/mathematics_philosophy"/>
+    <j.5:reviews rdf:resource="http://www.worldcat.org/title/-/oclc/57422379#Review/-1284714232"/>
+    <j.4:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/57422379"/>
+    <j.5:contributor rdf:resource="http://viaf.org/viaf/2571919"/>
+    <j.5:publication rdf:resource="http://www.worldcat.org/title/-/oclc/57422379#PublicationEvent/malden_ma_blackwell_pub_2005"/>
+    <j.5:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/14486100"/>
+    <j.5:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/semantics_philosophy"/>
+    <j.5:inLanguage>en</j.5:inLanguage>
+    <j.5:workExample rdf:resource="http://worldcat.org/isbn/9781405106993"/>
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.5:creator rdf:resource="http://viaf.org/viaf/24609378"/>
+    <j.5:contributor rdf:resource="http://viaf.org/viaf/110702484"/>
+    <j.2:placeOfPublication rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Place/malden_ma"/>
+    <rdf:type rdf:resource="http://schema.org/Book"/>
+    <j.3:translationOfWork rdf:resource="http://www.worldcat.org/title/-/oclc/57422379#CreativeWork/unidentifiedOriginalWork"/>
+    <j.5:about rdf:resource="http://experiment.worldcat.org/entity/work/data/14486100#Topic/philosophie"/>
+    <j.5:name xml:lang="en">The Big Typescript, TS. 213</j.5:name>
+    <j.5:productID>57422379</j.5:productID>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://viaf.org/viaf/110702484">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <j.5:familyName>Luckhardt</j.5:familyName>
+    <j.5:givenName>C. Grant</j.5:givenName>
+    <j.5:name>C. Grant Luckhardt</j.5:name>
+    <j.5:birthDate>1943</j.5:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/57422379">
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <j.5:about rdf:resource="http://www.worldcat.org/oclc/57422379"/>
+    <j.5:dateModified>2015-02-18</j.5:dateModified>
+    <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Topic/semantics_philosophy">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name xml:lang="en">Semantics (Philosophy)</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/57422379#Review/-1284714232">
+    <rdf:type rdf:resource="http://schema.org/Review"/>
+    <j.5:itemReviewed rdf:resource="http://www.worldcat.org/oclc/57422379"/>
+    <j.5:reviewBody>"In 1933, Ludwig Wittgenstein set out to dictate a collection of his recent writings to a typist in the form of a book. Even as he was dictating he began revising the text extensively, so that the surviving typewritten manuscript contains numerous corrections, additions, deletions, alternative words and phrasings, suggestions for moves within the text, and marginal comments in both handwritten and typed form." "Long awaited by the scholarly community, Wittgenstein's so-called Big Typescript (von Wright Catalog no. TS 213) is presented here for the first time in an en-face German-English scholars' edition, complete with clear indications to help the reader identify the various levels of Wittgenstein's editing." "This text provided a source of material for Wittgenstein's subsequent writings, and therefore serves as a key to understanding much of his later philosophy."--Jacket.</j.5:reviewBody>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dewey.info/class/192/e22/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/isbn/9781118346334">
+    <rdf:type rdf:resource="http://schema.org/ProductModel"/>
+    <j.5:isbn>9781118346334</j.5:isbn>
+    <j.5:isbn>1118346335</j.5:isbn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/14486100#Agent/blackwell_pub">
+    <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
+    <j.5:name>Blackwell Pub.</j.5:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/B3376">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/57422379#CreativeWork/unidentifiedOriginalWork">
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+    <j.5:name>Big Typescript, TS. 213.</j.5:name>
+    <j.5:inLanguage>de</j.5:inLanguage>
+  </rdf:Description>
+</rdf:RDF>
+
+
