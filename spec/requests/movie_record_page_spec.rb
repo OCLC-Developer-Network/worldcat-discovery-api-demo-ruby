@@ -19,7 +19,7 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/62774704").
         to_return(:status => 200, :body => mock_file_contents("62774704.rdf"))
-      get '/record/883876185'
+      get '/catalog/883876185'
       @doc = Nokogiri::HTML(last_response.body)
     end     
     

@@ -34,7 +34,7 @@
                 %input{ :type => "radio", :name => "scope", :value => "worldcat", :checked => worldcat_checked }
                 All of WorldCat
               - unless params['advanced'] and params['advanced'] == 'true'
-                %span{ :style => 'margin-left: 10em;' } 
+                %span#advanced-search{ :style => 'margin-left: 10em;' } 
                   %a{ :href => advanced_page_url } Advanced Search
             
               

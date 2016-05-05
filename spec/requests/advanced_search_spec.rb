@@ -16,7 +16,9 @@ require 'spec_helper'
 
 describe "the home page" do
   before do
-    get '/advanced_search'
+    stub_request(:get, "https://beta.worldcat.org/discovery/database/list").
+      to_return(:status => 200, :body => mock_file_contents("database_list.rdf"))
+    get '/advanced'
     @doc = Nokogiri::HTML(last_response.body)
   end
   

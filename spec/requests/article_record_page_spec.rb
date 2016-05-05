@@ -14,7 +14,7 @@
 
 require 'spec_helper'
 
-describe "the record page" do
+describe "the article record page" do
   context "when displaying an article with an issue and volume (5131938809)" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/5131938809").

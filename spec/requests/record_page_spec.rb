@@ -19,17 +19,18 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/30780581").
         to_return(:status => 200, :body => mock_file_contents("30780581.rdf"))
-      get '/record/30780581'
+      get '/catalog/30780581'
       @doc = Nokogiri::HTML(last_response.body)
+      puts @doc
     end
         
     it "should display the library name" do
-      xpath = "//div[@id='header']/h1[text()='OCLC Sandbox Library']"
+      xpath = "//h1[text()='OCLC Sandbox Library']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should display the search form" do
-      @form_element = @doc.xpath("//form[@id='record-form']")
+      @form_element = @doc.xpath("//form[@id='search-form']")
       expect(@form_element).not_to be_empty
     end
 
@@ -39,7 +40,7 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/30780581").
         to_return(:status => 200, :body => mock_file_contents("30780581.rdf"))
-      get '/record/30780581'
+      get '/catalog/30780581'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -115,7 +116,7 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/41266045").
         to_return(:status => 200, :body => mock_file_contents("41266045.rdf"))
-      get '/record/41266045'
+      get '/catalog/41266045'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -137,7 +138,7 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/7977212").
         to_return(:status => 200, :body => mock_file_contents("7977212.rdf"))
-      get '/record/7977212'
+      get '/catalog/7977212'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -151,7 +152,7 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/15317067").
         to_return(:status => 200, :body => mock_file_contents("15317067.rdf"))
-      get '/record/15317067'
+      get '/catalog/15317067'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -180,7 +181,7 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/1004282").
         to_return(:status => 200, :body => mock_file_contents("1004282.rdf"))
-      get '/record/1004282'
+      get '/catalog/1004282'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -197,7 +198,7 @@ describe "the record page" do
     before(:all) do
       stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/57422379").
         to_return(:status => 200, :body => mock_file_contents("57422379.rdf"))
-      get '/record/57422379'
+      get '/catalog/57422379'
       @doc = Nokogiri::HTML(last_response.body)
     end
     

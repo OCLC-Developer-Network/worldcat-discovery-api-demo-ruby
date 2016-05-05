@@ -26,26 +26,33 @@ describe "the home page" do
   end
   
   it "should display the search form" do
-    @form_element = @doc.xpath("//form[@id='record-form']")
+    @form_element = @doc.xpath("//form[@id='search-form']")
     expect(@form_element).not_to be_empty
   end
   
   it "should have a form that submits the correct action" do
-    submit_location = @form_element.attr('action')
-    uri = URI.parse(submit_location)
+    submit_location = @doc.xpath("//form[@id='search-form']/@action")
+    uri = URI.parse(submit_location.first.value)
     expect(uri.path).to eq('/catalog')
   end
   
   it "should have scope radio buttons" do
-    scope_values = @form_element.xpath("//input[@name='scope']/@value")
+    scope_values = @doc.xpath("//input[@name='scope']/@value")
     expect(scope_values).not_to be_empty
+    scope_values = scope_values.map {|scope_value| scope_value.value}
     expect(scope_values).to include("my_library")
     expect(scope_values).to include("worldcat")  
   end  
   
   it "should display the advanced search form link" do
-    xpath = "//a[@id='advanced_search']"
+    xpath = "//span[@id='advanced-search']/a[text()='Advanced Search']"
     expect(@doc.xpath(xpath).size).to eq(1)
+  end
+  
+  it "should display the right link to the advanced search form" do
+    advanced_search_link = @doc.xpath("//span[@id='advanced-search']/a/@href")
+    uri = URI.parse(advanced_search_link.first.value)
+    expect(uri.path).to eq('/advanced')
   end
   
 end
