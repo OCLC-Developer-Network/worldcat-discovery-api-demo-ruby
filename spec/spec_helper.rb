@@ -91,12 +91,13 @@ WorldCat::Discovery.configure(wskey, authenticating_institution_id, context_inst
 
 LIBRARIES = config[settings.environment.to_s]['libraries']
 
-BCP_47_LANGUAGES = YAML::load(File.read("#{app_home}/config/languages.yml"))
-MARC_LANGUAGES = YAML::load(File.read("#{app_home}/config/marc_languages.yml"))
-FORMATS = YAML::load(File.read("#{app_home}/config/formats.yml"))
+BCP_47_LANGUAGES = YAML::load(File.read("#{File.expand_path(File.dirname(__FILE__))}/../config/languages.yml"))
+MARC_LANGUAGES = YAML::load(File.read("#{File.expand_path(File.dirname(__FILE__))}/../config/marc_languages.yml"))
+FORMATS = YAML::load(File.read("#{File.expand_path(File.dirname(__FILE__))}/../config/formats.yml"))
 
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
+  config.filter_run :focus
   config.include Rack::Test::Methods
   config.expect_with(:rspec)
 end
