@@ -27,8 +27,8 @@ get "/catalog" do
 end
 
 get '/catalog/:oclc_number' do
-  @bib = WorldCat::Discovery::Bib.find(params[:oclc_number])
   @offer_results = WorldCat::Discovery::Offer.find_by_oclc(params[:oclc_number], {"heldBy" => library_symbols})
+  @bib = @offer_results.bib
   case @bib
   when WorldCat::Discovery::Article then haml :article, :layout => :template
   when WorldCat::Discovery::Movie then haml :movie, :layout => :template

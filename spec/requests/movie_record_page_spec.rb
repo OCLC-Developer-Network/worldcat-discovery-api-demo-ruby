@@ -14,12 +14,16 @@
 
 require 'spec_helper'
 
-describe "the record page" do  
+describe "the record page" do
+  before(:all) do
+    url = 'https://authn.sd00.worldcat.org/oauth2/accessToken?authenticatingInstitutionId=128807&contextInstitutionId=128807&grant_type=client_credentials&scope=WorldCatDiscoveryAPI'
+    stub_request(:post, url).to_return(:body => mock_file_contents("token.json"), :status => 200)
+  end 
   context "when displaying a movie (62774704)" do
     before(:all) do
-      stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/62774704").
-        to_return(:status => 200, :body => mock_file_contents("62774704.rdf"))
-      get '/catalog/883876185'
+      stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/62774704?heldBy=OCPSB").
+        to_return(:status => 200, :body => mock_file_contents("offer_set_62774704.rdf"))  
+      get '/catalog/62774704'
       @doc = Nokogiri::HTML(last_response.body)
     end     
     
@@ -29,7 +33,10 @@ describe "the record page" do
     end
     
     it "should display the subjects" do
-      @subjects = @doc.xpath("//ul[@id='subjects']/li/span/a/text()")  
+      @subjects = @doc.xpath("//ul[@id='subjects']/li/span/a/text()") 
+      
+      expect(@subjects.count).to eq(12)
+      @subjects = @subjects.map {|subject_value| subject_value.to_s} 
       expect(@subjects).to include("Young women")
       expect(@subjects).to include("Social conditions")
       expect(@subjects).to include("Courtship")
@@ -45,7 +52,10 @@ describe "the record page" do
     end
 
     it "should display the genres" do
-      @genres = @doc.xpath("//ul[@id='genres']/li/span/a/text()")  
+      @genres = @doc.xpath("//ul[@id='genres']/li/a/text()")  
+      
+      expect(@genres.count).to eq(11)
+      @genres = @genres.map {|genres_value| genres_value.to_s} 
       expect(@genres).to include("Melodrama, English")    
       expect(@genres).to include("Drama")
       expect(@genres).to include("Melodrama")
@@ -60,19 +70,19 @@ describe "the record page" do
     end
 
     it "should display the format" do
-      #this is busted
       xpath = "//span[@id='format'][text()='Movie, DVD']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should display the language" do
-      #this is busted
       xpath = "//span[@id='language'][text()='English']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should display the publication places" do
       @publiciationPlaces = @doc.xpath("//span[@property='library:placeOfPublication']/text()")
+      expect(@publiciationPlaces.count).to eq(2)
+      @publiciationPlaces = @publiciationPlaces.map {|publiciationPlace| publiciationPlace.to_s}
       expect(@publiciationPlaces).to include("Universal City, CA :")
     end
     
@@ -93,8 +103,9 @@ describe "the record page" do
     
     it "should display the descriptions" do
       @descriptions = @doc.xpath("//p[@property='schema:description']/text()")
-      expect(@descriptions).to eq(2)
-      File.open("#{File.expand_path(File.dirname(__FILE__))}/../../support/text/62774704_descriptions.txt").each do |line|
+      expect(@descriptions.count).to eq(2)
+      @descriptions = @descriptions.map {|description| description.to_s}
+      File.open("#{File.expand_path(File.dirname(__FILE__))}/../text/62774704_descriptions.txt").each do |line|
         expect(@descriptions).to include(line.chomp)
       end
     end
@@ -102,7 +113,7 @@ describe "the record page" do
     it "should display the actors" do
       @actors = @doc.xpath("//ul[@id='actors']/li/span/a/text()")
       expect(@actors.size).to eq(8)
-      expect(@actors).not_to be_empty
+      @actors = @actors.map {|actor| actor.to_s.gsub("\n", '').squeeze(' ').strip}
       expect(@actors).to include("Tom Hollander, 1967-")
       expect(@actors).to include("Brenda Blethyn, 1946-")
       expect(@actors).to include("Matthew Macfadyen, 1974-")
@@ -114,16 +125,16 @@ describe "the record page" do
     end
     
     it "should display the director" do
-      @director = @doc.xpath("//ul[@id='director']/li/span/a/text()")
-      expect(@director.size).to eq(1)
-      expect(@director).not_to be_empty
-      expect(@director).to include("Joe Wright, 1972-")
+      @directors = @doc.xpath("//p/span[@id='director']/span/a/text()")
+      expect(@directors.size).to eq(1)
+      @directors = @directors.map {|director| director.to_s.gsub("\n", '').squeeze(' ').strip}
+      expect(@directors).to include("Joe Wright, 1972-")
     end
     
     it "should display the producers" do
       @producers = @doc.xpath("//ul[@id='producers']/li/span/a/text()")
       expect(@producers.size).to eq(3)
-      expect(@producers).not_to be_empty
+      @producers = @producers.map {|producer| producer.to_s.gsub("\n", '').squeeze(' ').strip}
       expect(@producers).to include("Paul Webster, 1952 September 19-")
       expect(@producers).to include("Tim Bevan")
       expect(@producers).to include("Eric Fellner") 
