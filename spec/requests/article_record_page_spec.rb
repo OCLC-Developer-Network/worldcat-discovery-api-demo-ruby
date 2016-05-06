@@ -15,29 +15,33 @@
 require 'spec_helper'
 
 describe "the article record page" do
+  before(:all) do
+    url = 'https://authn.sd00.worldcat.org/oauth2/accessToken?authenticatingInstitutionId=128807&contextInstitutionId=128807&grant_type=client_credentials&scope=WorldCatDiscoveryAPI'
+    stub_request(:post, url).to_return(:body => mock_file_contents("token.json"), :status => 200)
+  end
   context "when displaying an article with an issue and volume (5131938809)" do
     before(:all) do
-      stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/5131938809").
-        to_return(:status => 200, :body => mock_file_contents("5131938809.rdf"))
-      get '/record/883876185'
+      stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/5131938809?heldBy=OCPSB").
+        to_return(:status => 200, :body => mock_file_contents("offer_set_5131938809.rdf"))
+      get '/record/5131938809'
       @doc = Nokogiri::HTML(last_response.body)
     end    
   end
   
   context "when displaying an article with no issue (204144725)" do
     before(:all) do
-      stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/204144725").
-        to_return(:status => 200, :body => mock_file_contents("204144725.rdf"))
-      get '/record/883876185'
+      stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/204144725?heldBy=OCPSB").
+        to_return(:status => 200, :body => mock_file_contents("offer_set_204144725.rdf"))
+      get '/record/204144725'
       @doc = Nokogiri::HTML(last_response.body)
     end    
   end
   
   context "when displaying an article with no issue or volume  (777986070)" do
     before(:all) do
-      stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/777986070").
-        to_return(:status => 200, :body => mock_file_contents("777986070.rdf"))
-      get '/record/883876185'
+      stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/777986070?heldBy=OCPSB").
+        to_return(:status => 200, :body => mock_file_contents("offer_set_777986070.rdf"))
+      get '/record/777986070'
       @doc = Nokogiri::HTML(last_response.body)
     end     
   end
