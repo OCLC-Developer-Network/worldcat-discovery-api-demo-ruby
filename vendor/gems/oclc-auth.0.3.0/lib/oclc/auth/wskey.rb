@@ -176,7 +176,7 @@ module OCLC
       end
     
       def signature( base_string )
-        digest = OpenSSL::Digest::Digest.new( 'sha256' )
+        digest = OpenSSL::Digest.new( 'sha256' )
         hmac = OpenSSL::HMAC.digest( digest, @secret, base_string  )
         Base64.encode64( hmac ).chomp.gsub( /\n/, '' )
       end

@@ -69,7 +69,7 @@ module OCLC
             if token_data['message']
               raise OCLC::Auth::Exception, token_data['message']
             elsif token_data['error']['errorMessage']
-              raise OCLC::Auth::Exception, token_data['message']
+              raise OCLC::Auth::Exception, token_data['error']['errorMessage']
             else
               raise OCLC::Auth::Exception, @response_body
             end  
