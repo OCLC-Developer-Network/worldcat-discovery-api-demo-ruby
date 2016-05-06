@@ -64,12 +64,12 @@
       %h2 Publication Info
       %p
         %span.label Format:
-        %span.value= format_display_name(@bib)
+        %span#format.value= format_display_name(@bib)
         %br
       
         - if @bib.language
           %span.label Language:
-          %span.value= BCP_47_LANGUAGES[@bib.language]
+          %span#language.value= BCP_47_LANGUAGES[@bib.language]
           %br
       
         - if is_published?(@bib)
