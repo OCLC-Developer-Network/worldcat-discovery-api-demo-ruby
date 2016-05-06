@@ -22,12 +22,6 @@
     <rdf:type rdf:resource="http://schema.org/Article"/>
     <j.2:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/1354473038#Person/sacerdote_bruce"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/offer/oclc/5131938809?itemsPerPage=10&amp;startIndex=0">
-    <j.1:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.1:startIndex>
-    <j.1:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.1:itemsPerPage>
-    <j.1:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.1:totalResults>
-    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1354473038#Person/sacerdote_bruce">
     <j.2:name>Sacerdote, Bruce</j.2:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
@@ -55,5 +49,11 @@
   <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1354473038#Person/feyrer_james">
     <j.2:name>Feyrer, James</j.2:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/offer/oclc/5131938809?heldBy=OCPSB&amp;itemsPerPage=10&amp;startIndex=0">
+    <j.1:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.1:startIndex>
+    <j.1:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.1:itemsPerPage>
+    <j.1:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.1:totalResults>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
   </rdf:Description>
 </rdf:RDF>

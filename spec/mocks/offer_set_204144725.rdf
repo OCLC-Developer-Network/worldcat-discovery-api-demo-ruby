@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://purl.org/library/" xmlns:j.1="http://worldcat.org/vocab/discovery/" xmlns:j.2="http://www.w3.org/2007/05/powder-s#" xmlns:j.3="http://schema.org/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:j.4="http://www.w3.org/2006/gen/ont#" xmlns:j.5="http://rdfs.org/ns/void#"> 
+  <rdf:Description rdf:about="http://worldcat.org/issn/0037-6604">
+    <rdfs:label>SKY AND TELESCOPE</rdfs:label>
+    <j.3:issn>0037-6604</j.3:issn>
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/204144725">
+    <j.3:name>Van Gogh's Rediscovered Night Sky What brilliant celestial object did Vincent van Gogh include in his painting White House at Night?</j.3:name>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204144725</j.0:oclcnum>
+    <j.3:datePublished>2001</j.3:datePublished>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.3:pageStart>34</j.3:pageStart>
+    <j.3:isPartOf rdf:resource="http://worldcat.org/issn/0037-6604#101"/>
+    <j.3:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/79276497#Person/doescher_r_l"/>
+    <rdfs:comment>949 $l Article</rdfs:comment>
+    <j.3:inLanguage>en</j.3:inLanguage>
+    <j.3:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/79276497"/>
+    <j.2:describedby rdf:resource="http://www.worldcat.org/title/-/oclc/204144725"/>
+    <j.3:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/79276497#Person/olson_d_w"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/204144725">
+    <j.5:inDataset rdf:resource="http://purl.oclc.org/dataset/blis"/>
+    <j.3:about rdf:resource="http://www.worldcat.org/oclc/204144725"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/offer/oclc/204144725?heldBy=OCPSB&amp;itemsPerPage=10&amp;startIndex=0">
+    <j.1:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.1:startIndex>
+    <j.1:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.1:itemsPerPage>
+    <j.1:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.1:totalResults>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0037-6604#101">
+    <j.3:isPartOf rdf:resource="http://worldcat.org/issn/0037-6604"/>
+    <j.3:volumeNumber>101</j.3:volumeNumber>
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/79276497#Person/doescher_r_l">
+    <j.3:name>Doescher, R. L.</j.3:name>
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/79276497#Person/olson_d_w">
+    <j.3:name>Olson, D. W.</j.3:name>
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+</rdf:RDF>

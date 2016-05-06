@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://umbel.org/umbel#" xmlns:j.1="http://purl.org/library/" xmlns:j.2="http://purl.org/oclc/ontology/wcir/" xmlns:j.3="http://bibliograph.net/" xmlns:j.4="http://www.w3.org/2007/05/powder-s#" xmlns:j.5="http://schema.org/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:j.6="http://www.w3.org/2006/gen/ont#" xmlns:j.7="http://rdfs.org/ns/void#" xmlns:j.8="http://purl.org/dc/terms/" xmlns:j.9="http://purl.org/goodrelations/v1#" xmlns:j.10="http://worldcat.org/vocab/discovery/"> 
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/87067">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>3M INFO SERV</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/MMI"/>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Place/new_york_etc">
+    <j.5:name>New York, etc.</j.5:name>
+    <rdf:type rdf:resource="http://schema.org/Place"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/EEA">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>EEA</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/1417"/>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/2243594#PublicationEvent/new_york_etc_elsevier_inc_etc">
+    <j.5:organizer rdf:resource="http://experiment.worldcat.org/entity/work/data/54524951#Agent/elsevier_inc_etc"/>
+    <j.5:location rdf:resource="http://experiment.worldcat.org/entity/work/data/54524951#Place/new_york_etc"/>
+    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/A9Z">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>A9Z</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/39203"/>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/794997">
+    <j.5:name xml:lang="en">Academic libraries</j.5:name>
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Topic/library_science">
     <j.5:name xml:lang="en">Library science</j.5:name>
     <rdfs:seeAlso rdf:resource="http://id.loc.gov/authorities/subjects/sh2008106964"/>
     <rdf:type rdf:resource="http://schema.org/Intangible"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/UWK"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A1"/>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#CreativeWork/libraries_&amp;_computing_centers">
+    <j.5:name>Libraries &amp; computing centers.</j.5:name>
+    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/Z671">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.worldcat.org/oclc/2243594">
     <j.5:publication rdf:resource="http://www.worldcat.org/title/-/oclc/2243594#PublicationEvent/new_york_etc_elsevier_inc_etc"/>
@@ -54,15 +53,9 @@
     <j.5:about rdf:resource="http://experiment.worldcat.org/entity/work/data/54524951#Topic/libraries"/>
     <j.5:about rdf:resource="http://id.loc.gov/authorities/classification/Z671"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/LFK">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>LFK</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/72547"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/1417">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ADRIAN COL</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/EEA"/>
+  <rdf:Description rdf:about="http://id.worldcat.org/fast/997916">
+    <j.5:name xml:lang="en">Library science</j.5:name>
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://worldcat.org/issn/0099-1333">
     <j.0:isLike rdf:resource="http://worldcat.org/entity/work/id/54524951"/>
@@ -70,184 +63,17 @@
     <j.5:name xml:lang="en">Journal of academic librarianship.</j.5:name>
     <rdf:type rdf:resource="http://schema.org/Periodical"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/VJA">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>VJA</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/1839"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/offer/oclc/2243594?itemsPerPage=10&amp;startIndex=0">
-    <j.10:hasPart rdf:nodeID="A2"/>
-    <j.10:hasPart rdf:nodeID="A3"/>
-    <j.10:hasPart rdf:nodeID="A4"/>
-    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
-    <j.10:hasPart rdf:nodeID="A5"/>
-    <j.10:hasPart rdf:nodeID="A6"/>
+  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/offer/oclc/2243594?heldBy=OCPSB&amp;itemsPerPage=10&amp;startIndex=0">
     <j.10:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.10:startIndex>
-    <j.10:hasPart rdf:nodeID="A1"/>
-    <j.10:hasPart rdf:nodeID="A7"/>
-    <j.10:hasPart rdf:nodeID="A8"/>
-    <j.10:hasPart rdf:nodeID="A9"/>
-    <j.10:hasPart rdf:nodeID="A10"/>
+    <j.10:hasPart rdf:nodeID="A0"/>
     <j.10:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.10:itemsPerPage>
-    <j.10:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1951</j.10:totalResults>
+    <j.10:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</j.10:totalResults>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/CLZ"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A5"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Topic/libraries">
-    <j.5:name xml:lang="en">Libraries</j.5:name>
-    <rdf:type rdf:resource="http://schema.org/Intangible"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/87820">
+  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/128807">
     <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ACADIA UNIV LIBR</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/AUW"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/591">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ADVENTIST UNIV OF HEALTH SCIS</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/FCH"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A12"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/87820"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</j.9:displayPosition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://dewey.info/class/020.5/">
-    <rdf:type rdf:resource="http://schema.org/Intangible"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/EEA"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A8"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/2243594#PublicationEvent/new_york_etc_elsevier_inc_etc">
-    <j.5:organizer rdf:resource="http://experiment.worldcat.org/entity/work/data/54524951#Agent/elsevier_inc_etc"/>
-    <j.5:location rdf:resource="http://experiment.worldcat.org/entity/work/data/54524951#Place/new_york_etc"/>
-    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://id.worldcat.org/fast/794997">
-    <j.5:name xml:lang="en">Academic libraries</j.5:name>
-    <rdf:type rdf:resource="http://schema.org/Intangible"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/TXC">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>TXC</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/2797"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A14"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/1839"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</j.9:displayPosition>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/AUW"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A3"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/MMI"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A6"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/UWK">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>UWK</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/66425"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/66425">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ABERYSTWYTH UNIV</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/UWK"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A0"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/66425"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</j.9:displayPosition>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/A9Z"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A4"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Topic/academic_libraries">
-    <j.5:name xml:lang="en">Academic libraries</j.5:name>
-    <rdfs:seeAlso rdf:resource="http://id.loc.gov/authorities/subjects/sh2009113404"/>
-    <rdf:type rdf:resource="http://schema.org/Intangible"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A17"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/72547"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</j.9:displayPosition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/2797">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ABILENE CHRISTIAN UNIV, BROWN LIBR</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/TXC"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Place/new_york_etc">
-    <j.5:name>New York, etc.</j.5:name>
-    <rdf:type rdf:resource="http://schema.org/Place"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/AUW">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>AUW</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/87820"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/453">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ADAMS STATE UNIV</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/CLZ"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/1839">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ADELPHI UNIV</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/VJA"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/LFK"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/FCH">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>FCH</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/591"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A18"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/591"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.9:displayPosition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://id.loc.gov/authorities/classification/Z671">
-    <rdf:type rdf:resource="http://schema.org/Intangible"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://id.worldcat.org/fast/997916">
-    <j.5:name xml:lang="en">Library science</j.5:name>
-    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+    <j.5:name>OCLC COOP PLATFORM SANDBOX INST</j.5:name>
+    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/OCPSB"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/2243594">
     <j.7:inDataset rdf:resource="http://purl.oclc.org/dataset/WorldCat"/>
@@ -256,12 +82,22 @@
     <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
     <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/nyu">
+    <j.8:identifier>nyu</j.8:identifier>
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
+    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/OCPSB"/>
+    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
+    <j.5:offers rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
     <rdf:type rdf:resource="http://schema.org/Offer"/>
     <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A15"/>
+    <j.5:itemOffered rdf:nodeID="A1"/>
     <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/87067"/>
+    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/128807"/>
     <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</j.9:displayPosition>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.worldcat.org/oclc/45835833">
@@ -270,93 +106,32 @@
     <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
     <j.5:isSimilarTo rdf:resource="http://www.worldcat.org/oclc/2243594"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A11"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/453"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</j.9:displayPosition>
+  <rdf:Description rdf:about="http://worldcat.org/entity/work/id/54524951">
+    <j.0:isLike rdf:resource="http://worldcat.org/issn/0099-1333"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A19"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/2797"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</j.9:displayPosition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Topic/information_science">
-    <j.5:name xml:lang="en">Information Science</j.5:name>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Topic/libraries">
+    <j.5:name xml:lang="en">Libraries</j.5:name>
     <rdf:type rdf:resource="http://schema.org/Intangible"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#CreativeWork/libraries_&amp;_computing_centers">
-    <j.5:name>Libraries &amp; computing centers.</j.5:name>
-    <rdf:type rdf:resource="http://schema.org/CreativeWork"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/TXC"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A10"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A13"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/1417"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</j.9:displayPosition>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/CLZ">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>CLZ</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/453"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/72547">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ACADEMIA SINICA, LIFE SCI LIBR</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/LFK"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/VJA"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A7"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/countries/nyu">
-    <j.8:identifier>nyu</j.8:identifier>
-    <rdf:type rdf:resource="http://schema.org/Place"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/MMI">
-    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
-    <j.1:oclcSymbol>MMI</j.1:oclcSymbol>
-    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/87067"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/wcr/organization/resource/39203">
-    <rdf:type rdf:resource="http://schema.org/Library"/>
-    <j.5:name>ACHVA COL</j.5:name>
-    <j.1:manages rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/A9Z"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:type rdf:resource="http://schema.org/Offer"/>
-    <j.5:businessFunction rdf:resource="http://purl.org/goodrelations/v1#LeaseOut"/>
-    <j.5:itemOffered rdf:nodeID="A16"/>
-    <j.5:price>0</j.5:price>
-    <j.5:seller rdf:resource="http://worldcat.org/wcr/organization/resource/39203"/>
-    <j.9:displayPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</j.9:displayPosition>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Topic/academic_libraries">
+    <j.5:name xml:lang="en">Academic libraries</j.5:name>
+    <rdfs:seeAlso rdf:resource="http://id.loc.gov/authorities/subjects/sh2009113404"/>
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Agent/elsevier_inc_etc">
     <j.5:name>[Elsevier Inc., etc.</j.5:name>
     <rdf:type rdf:resource="http://bibliograph.net/Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://worldcat.org/entity/work/id/54524951">
-    <j.0:isLike rdf:resource="http://worldcat.org/issn/0099-1333"/>
+  <rdf:Description rdf:about="http://worldcat.org/wcr/oclc-symbol/resource/OCPSB">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Collection"/>
+    <j.1:oclcSymbol>OCPSB</j.1:oclcSymbol>
+    <j.2:managedBy rdf:resource="http://worldcat.org/wcr/organization/resource/128807"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <rdf:type rdf:resource="http://schema.org/SomeProducts"/>
-    <j.5:isPartOf rdf:resource="http://worldcat.org/wcr/oclc-symbol/resource/FCH"/>
-    <j.5:model rdf:resource="http://www.worldcat.org/oclc/2243594"/>
-    <j.5:offers rdf:nodeID="A9"/>
+  <rdf:Description rdf:about="http://dewey.info/class/020.5/">
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/54524951#Topic/information_science">
+    <j.5:name xml:lang="en">Information Science</j.5:name>
+    <rdf:type rdf:resource="http://schema.org/Intangible"/>
   </rdf:Description>
 </rdf:RDF>
