@@ -23,7 +23,6 @@ module WorldCat
       
       property :type, :predicate => RDF.type, :type => RDF::URI
       property :collection, :predicate => SCHEMA_IS_PART_OF, :type => 'Collection'
-      property :bib, :predicate => SCHEMA_MODEL, :type => 'Bib'
       
       # call-seq:
       #   id() => RDF::URI
@@ -31,6 +30,27 @@ module WorldCat
       # Will return the RDF::URI object that serves as the RDF subject of the current ProductModel
       def id
         self.subject
+      end
+      
+      # call-seq:
+      #   bib() => WorldCat::Discovery::Bib
+      # 
+      # Will return a subclass of Bib
+      def bib
+        generic_resource = Spira.repository.query(:predicate => RDF.type, :object => GENERIC_RESOURCE).first
+        bib = generic_resource.subject.as(GenericResource).about
+        case
+        when bib.types.include?(RDF::URI(SCHEMA_ARTICLE))
+          bib.subject.as(Article)  
+        when bib.types.include?(RDF::URI(SCHEMA_MUSIC_ALBUM))
+          bib.subject.as(MusicAlbum)
+        when bib.types.include?(RDF::URI(SCHEMA_MOVIE))
+          bib.subject.as(Movie)
+        when bib.types.include?(RDF::URI(SCHEMA_PERIODICAL))
+          bib.subject.as(Periodical)  
+        else
+          bib
+        end
       end
       
     end

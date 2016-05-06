@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:discovery="http://worldcat.org/vocab/discovery/" xmlns:j.0="http://worldcat.org/xmlschemas/response/"> 
+  <rdf:Description rdf:about="http://beta.worldcat.org/discovery/bib/search?q=economy&amp;dbIds=635">
+    <j.0:returnsError rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://worldcat.org/xmlschemas/response/ClientRequestError"/>
+    <discovery:errorMessage>Your query included one or more databases for which you do not have access rights. [635]</discovery:errorMessage>
+    <discovery:errorCode rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">403</discovery:errorCode>
+    <discovery:errorType>http</discovery:errorType>
+  </rdf:Description>
+</rdf:RDF>

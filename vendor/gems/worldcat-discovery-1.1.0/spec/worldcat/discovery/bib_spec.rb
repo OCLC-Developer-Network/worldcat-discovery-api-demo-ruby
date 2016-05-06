@@ -456,7 +456,7 @@ describe WorldCat::Discovery::Bib do
       end
     end
     
-    context "if sending an empty q parameter" do
+    context "if sending an unknown OCLC Number" do
       before(:all) do
         url = 'https://beta.worldcat.org/discovery/bib/data/999999999999999'
         stub_request(:get, url).to_return(:body => body_content("error_response_not_found.rdf"), :status => 404)
@@ -483,5 +483,61 @@ describe WorldCat::Discovery::Bib do
         @results.error_type.should == 'http'
       end
     end
+    
+    context "if sending a query for a database that don't have access to" do
+      before(:all) do
+        url = 'https://beta.worldcat.org/discovery/bib/search?q=economy&dbIds=635'
+        stub_request(:get, url).to_return(:body => body_content("error_response_database_forbidden.rdf"), :status => 403)
+        @results = WorldCat::Discovery::Bib.search(:q => 'economy', :dbIds => '635')
+      end
+      
+      it "should return a client request error" do
+        @results.class.should == WorldCat::Discovery::ClientRequestError
+      end
+
+      it "should contain the right id" do
+        @results.subject.should == RDF::Node.new("A0")
+      end
+
+      it "should have an error message" do
+        @results.error_message.should == 'Your query included one or more databases for which you do not have access rights. [635]'
+      end
+      
+      it "should have an error code" do
+        @results.error_code.should == 403
+      end
+      
+      it "should have an error type" do
+        @results.error_type.should == 'http'
+      end
+    end
+    
+    context "if sending a request that causes a server error" do
+      before(:all) do
+        url = 'https://beta.worldcat.org/discovery/bib/data/41266045'
+        stub_request(:get, url).to_return(:body => body_content("error_response_server_issue.rdf"), :status => 500)
+        @results = WorldCat::Discovery::Bib.find(41266045)
+      end
+      
+      it "should return a client request error" do
+        @results.class.should == WorldCat::Discovery::ClientRequestError
+      end
+
+      it "should contain the right id" do
+        @results.subject.should == RDF::Node.new("A0")
+      end
+
+      it "should have an error message" do
+        @results.error_message.should == 'Internal server error.'
+      end
+      
+      it "should have an error code" do
+        @results.error_code.should == 500
+      end
+      
+      it "should have an error type" do
+        @results.error_type.should == 'http'
+      end
+    end    
   end
 end

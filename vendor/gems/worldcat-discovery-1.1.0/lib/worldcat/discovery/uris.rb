@@ -72,6 +72,7 @@ module WorldCat
     DISCOVERY_ERROR_MESSAGE  = RDF::URI.new('http://worldcat.org/vocab/discovery/errorMessage')
     DISCOVERY_ERROR_TYPE     = RDF::URI.new('http://worldcat.org/vocab/discovery/errorType')
     CLIENT_REQUEST_ERROR     = RDF::URI.new('http://worldcat.org/xmlschemas/response/ClientRequestError')
+    SERVER_REQUEST_ERROR     = RDF::URI.new('http://worldcat.org/xmlschemas/response/InternalServerError')
     GOOD_RELATIONS_POSITION  = RDF::URI.new('http://purl.org/goodrelations/v1#displayPosition')
     DCMITYPE_DATASET         = RDF::URI.new('http://purl.org/dc/dcmitype/Dataset')
     SCHEMA_MOVIE             = RDF::URI.new('http://schema.org/Movie')

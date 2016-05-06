@@ -70,6 +70,13 @@ describe WorldCat::Discovery::Offer do
       @results.items_per_page.should == 10
     end
     
+    it "should have the correct bib" do
+      @bib = @results.bib
+      @bib.id.should == RDF::URI.new('http://www.worldcat.org/oclc/30780581')
+      @bib.name.should == 'The Wittgenstein reader'
+      @bib.class.should == WorldCat::Discovery::Bib
+    end
+    
     context "when looking at the first offer" do
       before(:all) do
         @offer = @results.offers.first
@@ -105,8 +112,70 @@ describe WorldCat::Discovery::Offer do
         @library.name.should == 'ACADEMIA SINICA INST EUROPEAN AM STUDIES'
         @library.collection.should == @collection
       end
-      
-      
+    end
+  end
+  
+  context "when retrieving holdings as offers for a bib that is an Article" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/offer/oclc/5131938809'
+      stub_request(:get, url).to_return(:body => body_content("offer_set_5131938809.rdf"), :status => 200)
+      @results = WorldCat::Discovery::Offer.find_by_oclc(5131938809)
+    end
+    
+    it "should have not offers" do
+      @results.offers.count.should == 0
+    end
+    
+    it "should have the correct bib" do
+      @bib = @results.bib
+      @bib.id.should == RDF::URI.new('http://www.worldcat.org/oclc/5131938809')
+      @bib.name.should == 'How Much Would US Style Fiscal Integration Buffer European Unemployment and Income Shocks? (A Comparative Empirical Analysis)'
+      @bib.class.should == WorldCat::Discovery::Article
+    end
+  end
+
+  context "when retrieving holdings as offers for a bib that is a Movie" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/offer/oclc/62774704'
+      stub_request(:get, url).to_return(:body => body_content("offer_set_62774704.rdf"), :status => 200)
+      @results = WorldCat::Discovery::Offer.find_by_oclc(62774704)
+    end
+    
+    it "should have the correct bib" do
+      @bib = @results.bib
+      @bib.id.should == RDF::URI.new('http://www.worldcat.org/oclc/62774704')
+      @bib.name.should == 'Pride & prejudice'
+      @bib.class.should == WorldCat::Discovery::Movie
+    end
+  end
+  
+  context "when retrieving holdings as offers for a bib that is a MusicAlbum" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/offer/oclc/226390945'
+      stub_request(:get, url).to_return(:body => body_content("offer_set_226390945.rdf"), :status => 200)
+      @results = WorldCat::Discovery::Offer.find_by_oclc(226390945)
+    end
+    
+    it "should have the correct bib" do
+      @bib = @results.bib
+      @bib.id.should == RDF::URI.new('http://www.worldcat.org/oclc/226390945')
+      @bib.name.should == 'Song for an uncertain lady'
+      @bib.class.should == WorldCat::Discovery::MusicAlbum
+    end
+  end  
+
+  context "when retrieving holdings as offers for a bib that is a Periodical" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/offer/oclc/2243594'
+      stub_request(:get, url).to_return(:body => body_content("offer_set_2243594.rdf"), :status => 200)
+      @results = WorldCat::Discovery::Offer.find_by_oclc(2243594)
+    end
+    
+    it "should have the correct bib" do
+      @bib = @results.bib
+      @bib.id.should == RDF::URI.new('http://www.worldcat.org/oclc/2243594')
+      @bib.name.should == 'Journal of academic librarianship.'
+      @bib.class.should == WorldCat::Discovery::Periodical
     end
   end
   

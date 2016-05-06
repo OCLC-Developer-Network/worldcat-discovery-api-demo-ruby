@@ -86,4 +86,32 @@ describe WorldCat::Discovery::Database do
     end
   end
   
+  context "if sending a request that causes a server error" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/database/list'
+      stub_request(:get, url).to_return(:body => body_content("error_response_server_issue.rdf"), :status => 500)
+      @list = WorldCat::Discovery::Database.list
+    end
+  
+    it "should return a client request error" do
+      @list.class.should == WorldCat::Discovery::ClientRequestError
+    end
+
+    it "should contain the right id" do
+      @list.subject.should == RDF::Node.new("A0")
+    end
+
+    it "should have an error message" do
+      @list.error_message.should == 'Internal server error.'
+    end
+  
+    it "should have an error code" do
+      @list.error_code.should == 500
+    end
+  
+    it "should have an error type" do
+      @list.error_type.should == 'http'
+    end
+  end
+  
 end

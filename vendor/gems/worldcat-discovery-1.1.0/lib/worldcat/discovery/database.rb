@@ -43,17 +43,28 @@ module WorldCat
       #
       # [oclc_number] the WorldCat OCLC number for a bibliographic resource
       def self.list
-        list = WorldCat::Discovery::DatabaseList.new
-        
         url = "#{Database.production_url}/list"
         response, result = WorldCat::Discovery.get_data(url)
 
-        Spira.repository = RDF::Repository.new.from_rdfxml(response)
-        Spira.repository.query(:predicate => RDF.type, :object => DCMITYPE_DATASET).each do |database|
-          list << database.subject.as(WorldCat::Discovery::Database)
+        if result.class == Net::HTTPOK
+          list = WorldCat::Discovery::DatabaseList.new
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          Spira.repository.query(:predicate => RDF.type, :object => DCMITYPE_DATASET).each do |database|
+            list << database.subject.as(WorldCat::Discovery::Database)
+          end
+          list
+        else
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          if Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          else
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => SERVER_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          end
+          client_request_error.response_body = response
+          client_request_error.response_code = response.code
+          client_request_error.result = result
+          client_request_error
         end
-        
-        list
       end
       
       def self.production_url

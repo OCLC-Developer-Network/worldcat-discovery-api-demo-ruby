@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://purl.org/library/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:j.1="http://worldcat.org/vocab/discovery/" xmlns:j.2="http://schema.org/" xmlns:j.3="http://www.w3.org/2006/gen/ont#" xmlns:j.4="http://xmlns.com/foaf/0.1/" xmlns:j.5="http://rdfs.org/ns/void#"> 
+  <rdf:Description rdf:about="http://worldcat.org/issn/0002-8282#103_3">
+    <j.2:isPartOf rdf:resource="http://worldcat.org/issn/0002-8282#103"/>
+    <j.2:datePublished>2013-05-01</j.2:datePublished>
+    <j.2:issueNumber>3</j.2:issueNumber>
+    <rdf:type rdf:resource="http://schema.org/PublicationIssue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/oclc/5131938809">
+    <j.2:creator rdf:resource="http://experiment.worldcat.org/entity/work/data/1354473038#Person/feyrer_james"/>
+    <j.2:pageEnd>128</j.2:pageEnd>
+    <j.0:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5131938809</j.0:oclcnum>
+    <j.2:pageStart>125</j.2:pageStart>
+    <owl:sameAs rdf:resource="info:oclcnum/5131938809"/>
+    <j.2:exampleOfWork rdf:resource="http://worldcat.org/entity/work/id/1354473038"/>
+    <j.2:sameAs rdf:resource="http://dx.doi.org/10.1257/aer.103.3.125"/>
+    <j.2:isPartOf rdf:resource="http://worldcat.org/issn/0002-8282#103_3"/>
+    <j.2:name>How Much Would US Style Fiscal Integration Buffer European Unemployment and Income Shocks? (A Comparative Empirical Analysis)</j.2:name>
+    <j.2:url rdf:resource="http://www.worldcat.org/title/-/oclc/5131938809"/>
+    <j.2:description>Abstract We examine the degree to which federal fiscal integration smoothes income and unemployment shocks across US States. We find that roughly 25 cents of every dollar of income shock at the state level is offset by federal fiscal policy. This stabilization comes entirely through the Federal tax system, not through spending stabilizers, automatic or otherwise. If we apply a comparable amount of cross country stabilization to European Union countries (as exists across US States), Greece and Spain would be receiving additional transfers of 2.5 percent of GDP.</j.2:description>
+    <j.2:datePublished>2013-05-01</j.2:datePublished>
+    <j.2:inLanguage>en</j.2:inLanguage>
+    <rdf:type rdf:resource="http://schema.org/Article"/>
+    <j.2:contributor rdf:resource="http://experiment.worldcat.org/entity/work/data/1354473038#Person/sacerdote_bruce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://beta.worldcat.org/discovery/offer/oclc/5131938809?itemsPerPage=10&amp;startIndex=0">
+    <j.1:startIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.1:startIndex>
+    <j.1:itemsPerPage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</j.1:itemsPerPage>
+    <j.1:totalResults rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</j.1:totalResults>
+    <rdf:type rdf:resource="http://worldcat.org/vocab/discovery/SearchResults"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1354473038#Person/sacerdote_bruce">
+    <j.2:name>Sacerdote, Bruce</j.2:name>
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/entity/work/data/1354473038#Agent/american_economic_association">
+    <j.2:name>American Economic Association</j.2:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.worldcat.org/title/-/oclc/5131938809">
+    <j.5:inDataset rdf:resource="http://purl.oclc.org/dataset/aea_journals"/>
+    <j.2:about rdf:resource="http://www.worldcat.org/oclc/5131938809"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#ContentTypeGenericResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0002-8282">
+    <j.2:publisher rdf:resource="http://worldcat.org/entity/work/data/1354473038#Agent/american_economic_association"/>
+    <j.2:name>American Economic Review</j.2:name>
+    <rdf:type rdf:resource="http://schema.org/Periodical"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/issn/0002-8282#103">
+    <j.2:isPartOf rdf:resource="http://worldcat.org/issn/0002-8282"/>
+    <j.2:volumeNumber>103</j.2:volumeNumber>
+    <rdf:type rdf:resource="http://schema.org/PublicationVolume"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://experiment.worldcat.org/entity/work/data/1354473038#Person/feyrer_james">
+    <j.2:name>Feyrer, James</j.2:name>
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+</rdf:RDF>

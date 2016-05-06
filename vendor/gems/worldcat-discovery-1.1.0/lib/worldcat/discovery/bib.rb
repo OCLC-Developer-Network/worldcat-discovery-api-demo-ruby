@@ -179,7 +179,13 @@ module WorldCat
           search_results
         else
           Spira.repository = RDF::Repository.new.from_rdfxml(response)
-          client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          
+          if Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          else
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => SERVER_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          end
+          
           client_request_error.response_body = response
           client_request_error.response_code = response.code
           client_request_error.result = result
@@ -212,7 +218,11 @@ module WorldCat
           
         else
           Spira.repository = RDF::Repository.new.from_rdfxml(response)
-          client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          if Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          else
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => SERVER_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          end
           client_request_error.response_body = response
           client_request_error.response_code = response.code
           client_request_error.result = result

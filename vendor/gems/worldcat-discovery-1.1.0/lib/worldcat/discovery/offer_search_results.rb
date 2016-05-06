@@ -36,6 +36,26 @@ module WorldCat
         sorted_offers
       end
       
+      # call-seq:
+      #   bib() => WorldCat::Discovery::Bib
+      # 
+      # Will return a subclass of Bib
+      def bib
+        generic_resource = Spira.repository.query(:predicate => RDF.type, :object => GENERIC_RESOURCE).first
+        bib = generic_resource.subject.as(GenericResource).about
+        case
+        when bib.types.include?(RDF::URI(SCHEMA_ARTICLE))
+          bib.subject.as(Article)  
+        when bib.types.include?(RDF::URI(SCHEMA_MUSIC_ALBUM))
+          bib.subject.as(MusicAlbum)
+        when bib.types.include?(RDF::URI(SCHEMA_MOVIE))
+          bib.subject.as(Movie)
+        when bib.types.include?(RDF::URI(SCHEMA_PERIODICAL))
+          bib.subject.as(Periodical)  
+        else
+          bib
+        end
+      end
     end
   end
 end
