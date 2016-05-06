@@ -1,14 +1,14 @@
 PATH
-  remote: vendor/gems/oclc-auth-0.2.0
+  remote: vendor/gems/oclc-auth-0.3.0
   specs:
-    oclc-auth (0.2.0)
+    oclc-auth (0.3.0)
       json (~> 1.8, >= 1.8.1)
       rest-client (~> 1.6, >= 1.6.7)
 
 PATH
-  remote: vendor/gems/worldcat-discovery-1.0.1
+  remote: vendor/gems/worldcat-discovery-1.1.0
   specs:
-    worldcat-discovery (1.0.1)
+    worldcat-discovery (1.1.0)
       addressable (~> 2.3, >= 2.3.6)
       equivalent-xml (~> 0.4, >= 0.4.2)
       oclc-auth (~> 0.1, >= 0.1.0)
@@ -134,14 +134,14 @@ DEPENDENCIES
   activesupport (= 4.1.1)
   haml
   nokogiri
-  oclc-auth (= 0.2.0)!
+  oclc-auth (= 0.3.0)!
   rack-test
   rdf-turtle (= 1.1.2)
   rspec
   sinatra
   sinatra-partial
   webmock
-  worldcat-discovery (= 1.0.1)!
+  worldcat-discovery (= 1.1.0)!
 
 BUNDLED WITH
    1.10.6
