@@ -31,6 +31,31 @@
                   %a{ :href => url("/catalog?creator=#{author_display_name(contributor)}&name=&kw=&about=&advanced=true&scope=worldcat") }
                     = author_display_name(contributor)
 
+      / Editors
+      - editors = @bib.editors
+      - if editors.size > 0
+        %h3 Editors
+        %ul#editors
+          - editors.each do |editor| 
+            - if editor.name and editor.name.strip != ''
+              %li{ :property => 'schema:editor', :resource => editor.id, :typeof => editor.type }
+                %span.editor-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?creator=#{author_display_name(editor)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = author_display_name(editor)
+      
+      / Illustrators
+      - illustrators = @bib.illustrators
+      - if illustrators.size > 0
+        %h3 Illustrators
+        %ul#illustrators
+          - illustrators.each do |illustrator| 
+            - if illustrator.name and illustrator.name.strip != ''
+              %li{ :property => 'schema:illustrator', :resource => illustrator.id, :typeof => illustrator.type }
+                %span.illustrator-name{ :property => 'schema:name' }
+                  %a{ :href => url("/catalog?creator=#{author_display_name(illustrator)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+                    = author_display_name(illustrator)
+                    
+
       / Subjects
       - subjects = display_subjects(@bib)
       - if subjects.size > 0
@@ -54,17 +79,17 @@
       %h2 Publication Info
       %p
         %span.label Format:
-        %span.value= format_display_name(@bib)
+        %span#format.value= format_display_name(@bib)
         %br
     
         - if @bib.book_edition
           %span.label Edition:
-          %span.value{ :property => 'schema:bookEdition' }= @bib.book_edition
+          %span#edition.value{ :property => 'schema:bookEdition' }= @bib.book_edition
           %br
       
         - if @bib.language
           %span.label Language:
-          %span.value= BCP_47_LANGUAGES[@bib.language]
+          %span#language.value= BCP_47_LANGUAGES[@bib.language]
           %br
       
         - if is_published?(@bib)
@@ -98,6 +123,22 @@
         %h3 Description
         - @bib.descriptions.each do |description| 
           %p{ :property => 'schema:description' }= description
+
+      - if @bib.awards.size > 0
+        %h3 Awards
+        %ul#awards
+          - @bib.awards.each do |award| 
+            %li{ :property => 'schema:award' }= award
+      
+      - if @bib.content_rating
+        %p#content-rating
+          %span.label Content Rating: 
+          %span.value{ :property => 'schema:contentRating'}= @bib.content_rating
+
+      - if @bib.audience
+        %p#audience
+          %span.label Audinece: 
+          %span.value{ :property => 'schema:audience'}= @bib.audience           
 
       / Reviews
       - if @bib.reviews.size > 0

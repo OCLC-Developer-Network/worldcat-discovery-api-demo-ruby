@@ -34,7 +34,7 @@ get '/catalog/:oclc_number' do
   when WorldCat::Discovery::Movie then haml :movie, :layout => :template
   when WorldCat::Discovery::MusicAlbum then haml :music_album, :layout => :template
   when WorldCat::Discovery::Periodical then haml :periodical, :layout => :template
-  when WorldCat::Discovery::Error then haml :error, :layout => :template
+  when WorldCat::Discovery::ClientRequestError then haml :error, :layout => :template
   else haml :show, :layout => :template
   end
 end
