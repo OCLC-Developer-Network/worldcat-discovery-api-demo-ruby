@@ -141,8 +141,12 @@ module WorldCat
       # audience() => string
       def audience
         audience_stmt = Spira.repository.query(:subject => self.id, :predicate => SCHEMA_AUDIENCE).first
-        audience = Spira.repository.query(:subject => audience_stmt.object, :predicate => SCHEMA_AUDIENCE_TYPE).first
-        audience.object.to_s
+        if audience_stmt
+          audience = Spira.repository.query(:subject => audience_stmt.object, :predicate => SCHEMA_AUDIENCE_TYPE).first
+          audience.object.to_s
+        else
+          nil
+        end
       end
       
       # call-seq:

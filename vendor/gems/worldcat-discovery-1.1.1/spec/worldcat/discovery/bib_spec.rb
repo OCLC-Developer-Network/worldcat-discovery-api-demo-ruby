@@ -198,6 +198,10 @@ describe WorldCat::Discovery::Bib do
       it "should have the right date_modified" do
         @bib.described_by.date_modified.should == "2015-05-28"
       end
+      
+      it "should have the right audience" do
+        @bib.audience.should be_nil
+      end
         
     end
     
