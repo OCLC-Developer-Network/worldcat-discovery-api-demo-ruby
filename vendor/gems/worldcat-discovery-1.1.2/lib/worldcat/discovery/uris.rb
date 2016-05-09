@@ -80,6 +80,7 @@ module WorldCat
     SCHEMA_DIRECTOR          = RDF::URI.new('http://schema.org/director')
     SCHEMA_PRODUCER          = RDF::URI.new('http://schema.org/producer')
     SCHEMA_MUSICBY           = RDF::URI.new('http://schema.org/musicBy')
+    SCHEMA_COMPOSER          = RDF::URI.new('http://schema.org/composer')
     SCHEMA_PRODUCTIONCOMPANY = RDF::URI.new('http://schema.org/productionCompany')
     SCHEMA_MUSIC_ALBUM       = RDF::URI.new('http://schema.org/MusicAlbum')
     SCHEMA_BY_ARTIST         = RDF::URI.new('http://schema.org/byArtist')

@@ -64,9 +64,9 @@ describe WorldCat::Discovery::MusicAlbum do
         @bib.language.should == "en"
       end
       
-      it "should have the right music_by" do
-        @bib.music_by.class.should == WorldCat::Discovery::Person
-        @bib.music_by.name.should == "Burns, Randy."
+      it "should have the right composer" do
+        @bib.composer.class.should == WorldCat::Discovery::Person
+        @bib.composer.name.should == "Randy Burns"        
       end
 
       it "should have the right publisher" do
@@ -94,7 +94,7 @@ describe WorldCat::Discovery::MusicAlbum do
         @bib.by_artists.size.should == 7
         by_artist = @bib.by_artists.first
         by_artist.class.should == WorldCat::Discovery::Person
-        by_artist.name.should == "Samuels, Bruce."
+        by_artist.name.should == "Bruce Samuels"
       end
 
       it "should have the right subjects" do
@@ -102,20 +102,23 @@ describe WorldCat::Discovery::MusicAlbum do
         subjects.each {|subject| subject.class.should == WorldCat::Discovery::Subject}
 
         subject_ids = subjects.map {|subject| subject.id}
-        subject_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/1155934167#Topic/folk_music_1961_1970'))
-        subject_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/1155934167#Topic/rock_music_1961_1970'))
+
+        subject_ids.should include(RDF::URI('http://id.worldcat.org/fast/930303'))
+        subject_ids.should include(RDF::URI('http://id.loc.gov/authorities/subjects/sh87003327'))
         subject_ids.should include(RDF::URI('http://id.worldcat.org/fast/1099204'))
         subject_ids.should include(RDF::URI('http://id.worldcat.org/fast/929383'))
         subject_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/1155934167#Event/1961_1970'))
+        subject_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/1155934167#Topic/folk_music_1961_1970'))
         subject_ids.should include(RDF::URI('http://experiment.worldcat.org/entity/work/data/1155934167#Topic/folk_rock_music_1961_1970'))
 
         subject_names = subjects.map {|subject| subject.name}
-        subject_names.should include("Folk music--1961-1970.")
-        subject_names.should include("Rock music--1961-1970.")
-        subject_names.should include("Rock music.")
-        subject_names.should include("Folk music.")
-        subject_names.should include("1961 - 1970")
-        subject_names.should include("Folk-rock music--1961-1970.")
+        subject_names.should include("Folk music--1961-1970")
+        subject_names.should include("Rock music")
+        subject_names.should include("Folk music")
+        subject_names.should include("Rock music--1961-1970")
+        subject_names.should include("1961-1970")
+        subject_names.should include("Folk-rock music--1961-1970")
+        subject_names.should include("Folk-rock music")
       end
 
       it "should have the right places of publication" do

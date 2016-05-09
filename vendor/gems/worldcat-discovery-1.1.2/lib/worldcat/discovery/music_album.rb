@@ -29,6 +29,7 @@ module WorldCat
     class MusicAlbum < Bib
       
       property :music_by, :predicate => SCHEMA_MUSICBY, :type => 'Person'
+      property :composer, :predicate => SCHEMA_COMPOSER, :type => 'Person'
       has_many :by_artists, :predicate => SCHEMA_BY_ARTIST, :type => 'Person'
       has_many :performers, :predicate => SCHEMA_PERFORMER, :type => 'Person'
       has_many :publishers, :predicate => SCHEMA_PUBLISHER, :type => 'Organization'
