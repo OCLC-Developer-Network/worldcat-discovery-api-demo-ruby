@@ -15,11 +15,15 @@
 require 'spec_helper'
 
 describe "the record page" do
+  before(:all) do
+    url = 'https://authn.sd00.worldcat.org/oauth2/accessToken?authenticatingInstitutionId=128807&contextInstitutionId=128807&grant_type=client_credentials&scope=WorldCatDiscoveryAPI'
+    stub_request(:post, url).to_return(:body => mock_file_contents("token.json"), :status => 200)
+  end
   context "when displaying a music album (226390945)" do
     before(:all) do
-      stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/226390945").
-        to_return(:status => 200, :body => mock_file_contents("226390945.rdf"))
-      get '/catalog/883876185'
+      stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/226390945?heldBy=OCPSB").
+        to_return(:status => 200, :body => mock_file_contents("offer_set_226390945.rdf"))
+      get '/catalog/226390945'
       @doc = Nokogiri::HTML(last_response.body)
     end     
     
@@ -33,15 +37,10 @@ describe "the record page" do
       expect(@doc.xpath(xpath)).not_to be_empty
     end
 
-    it "should display the artists" do
-      @artists = @doc.xpath("//ul[@id='artists']/li/span/a/text()")
-      expect(@artists).to include("Rock music")
-      expect(@artists).to include("Folk music")
-      expect(@artists).to include("Folk-rock music")
-    end
-    
     it "should display the see_alsos" do
       @see_alsos = @doc.xpath("//ul[@id='see_alsos']/li/span/a/text()")
+      expect(@see_alsos.count).to eq(11)
+      @see_alsos = @see_alsos.map {|see_also| see_also.to_s.gsub("\n", '').squeeze(' ').strip} 
       expect(@see_alsos).to include("Sorrow's children.")
       expect(@see_alsos).to include("Lisa.")
       expect(@see_alsos).to include("Autumn on your mind.")
@@ -57,25 +56,27 @@ describe "the record page" do
         
     it "should display the subjects" do
       @subjects = @doc.xpath("//ul[@id='subjects']/li/span/a/text()")
+      expect(@subjects.count).to eq(3)
+      @subjects = @subjects.map {|subject_value| subject_value.to_s} 
       expect(@subjects).to include("Rock music")
       expect(@subjects).to include("Folk music")
       expect(@subjects).to include("Folk-rock music")
     end
     
     it "should display the format" do
-      #this is busted
       xpath = "//span[@id='format'][text()='Music Album, Compact Disc']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should display the language" do
-      #this is busted
       xpath = "//span[@id='language'][text()='English']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should display the publication places" do
       @publiciationPlaces = @doc.xpath("//span[@property='library:placeOfPublication']/text()")
+      expect(@publiciationPlaces.count).to eq(3)
+      @publiciationPlaces = @publiciationPlaces.map {|publiciationPlace| publiciationPlace.to_s}
       expect(@publiciationPlaces).to include("Merenberg, Germany :")
       expect(@publiciationPlaces).to include("Kingston, N.Y. :")
     end
@@ -97,21 +98,22 @@ describe "the record page" do
     
     it "should display the descriptions" do
       @descriptions = @doc.xpath("//p[@property='schema:description']/text()")
-      expect(@descriptions).to eq(2)
-      File.open("#{File.expand_path(File.dirname(__FILE__))}/../../support/text/226390945_descriptions.txt").each do |line|
+      expect(@descriptions.size).to eq(1)
+      @descriptions = @descriptions.map {|description| description.to_s}
+      File.open("#{File.expand_path(File.dirname(__FILE__))}/../text/226390945_descriptions.txt").each do |line|
         expect(@descriptions).to include(line.chomp)
       end
     end
     
     it "should have the right music_by" do
-      #this is wrong in the template
-      xpath = "//h2[@id='author-name']/a[text()='Burns, Randy.']"
-      expect(@doc.xpath(xpath)).not_to be_empty
+      author_name = @doc.xpath("//h2[@id='author-name']/a/text()")
+      expect(author_name.to_s.gsub("\n", '').squeeze(' ').strip).to be == "Randy Burns"
     end
     
     it "should have the right by_artists" do
-      @by_artists = @doc.xpath("//ul[@id='by_artists']/li/span/a/text()")
-      expect(@by_artists.size).to == 7
+      @by_artists = @doc.xpath("//ul[@id='artists']/li/span/a/text()")
+      expect(@by_artists.size).to eq(7)
+      @by_artists = @by_artists.map {|by_artist| by_artist.to_s.gsub("\n", '').squeeze(' ').strip}
       expect(@by_artists).to include("Bruce Samuels")
       expect(@by_artists).to include("Randy Burns")
       expect(@by_artists).to include("Bob Sheehan")
@@ -126,94 +128,64 @@ describe "the record page" do
   
   context "when displaying a music album (38027615)" do
     before(:all) do
-      stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/38027615").
-        to_return(:status => 200, :body => mock_file_contents("38027615.rdf"))
-      get '/catalog/883876185'
+      stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/38027615?heldBy=OCPSB").
+        to_return(:status => 200, :body => mock_file_contents("offer_set_38027615.rdf"))
+      get '/catalog/38027615'
       @doc = Nokogiri::HTML(last_response.body)
     end
 
     it "should have the right alternate name" do
-      @bib.alternate_name.should == "Angels on high"
+      xpath = "//p[@property='schema:alternateName'][text()='Angels on high']"
+      expect(@doc.xpath(xpath)).not_to be_empty
     end
 
     it "should have the right parts" do
-      parts = @bib.parts
-      parts.each {|part| part.class.should == WorldCat::Discovery::Bib}
+      @parts = @doc.xpath("//ul[@id='parts']/li/span/a/text()")
+      expect(@parts.size).to eq(5)
+      @parts = @parts.map {|part| part.to_s.gsub("\n", '').squeeze(' ').strip}
 
-      part_ids = parts.map {|part| part.id}
-      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/first_nowell'))
-      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_of_the_birds'))
-      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/veni_emmanuel'))
-      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/what_is_this_lovely_fragrance'))
-      expect(part_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/als_ich_bei_meinen_schafen_wacht'))
-
-      part_names = parts.map {|part| part.name}
-      expect(part_names).to include("First Nowell.")
-      expect(part_names).to include("Carol of the birds.")
-      expect(part_names).to include("Veni Emmanuel.")
-      expect(part_names).to include("What is this lovely fragrance?")
-      expect(part_names).to include("Als ich bei meinen Schafen wacht.")
+      expect(@parts).to include("First Nowell.")
+      expect(@parts).to include("Carol of the birds.")
+      expect(@parts).to include("Veni Emmanuel.")
+      expect(@parts).to include("What is this lovely fragrance?")
+      expect(@parts).to include("Als ich bei meinen Schafen wacht.")
     end
     
     it "should have the right see_alsos" do
-      see_alsos = @bib.see_alsos
-      see_alsos.each {|see_also| see_also.class.should == WorldCat::Discovery::Bib}
-
-      see_also_ids = see_alsos.map {|see_also| see_also.id}
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musae_sioniae'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/hymn_to_the_virgin'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/musique'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/weihnachts_oratorium'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/alleluia'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/carol_anthems'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ave_maria'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/o_magnum_mysterium'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/adeste_fideles'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/svete_tikhii'))
-      expect(see_also_ids).to include(RDF::URI('http://experiment.worldcat.org/entity/work/data/772816333#CreativeWork/ceremony_of_carols'))  
-
-      see_also_names = see_alsos.map {|see_also| see_also.name}
-      expect(see_also_names).to include("Musae Sioniae,")
-      expect(see_also_names).to include("Hymn to the Virgin.")
-      expect(see_also_names).to include("Musique.")
-      expect(see_also_names).to include("Weihnachts-Oratorium.")
-      expect(see_also_names).to include("Alleluia.")
-      expect(see_also_names).to include("Carol-anthems.")
-      expect(see_also_names).to include("Ave Maria.")
-      expect(see_also_names).to include("O magnum mysterium.")
-      expect(see_also_names).to include("Adeste fideles.")
-      expect(see_also_names).to include("Svete tikhiĭ.")
-      expect(see_also_names).to include("Ceremony of carols.")
+      @see_alsos = @doc.xpath("//ul[@id='see_alsos']/li/span/a/text()")
+      expect(@see_alsos.size).to eq(11)
+      @see_alsos = @see_alsos.map {|see_also| see_also.to_s.gsub("\n", '').squeeze(' ').strip}
+      
+      expect(@see_alsos).to include("Musae Sioniae,")
+      expect(@see_alsos).to include("Hymn to the Virgin.")
+      expect(@see_alsos).to include("Musique.")
+      expect(@see_alsos).to include("Weihnachts-Oratorium.")
+      expect(@see_alsos).to include("Alleluia.")
+      expect(@see_alsos).to include("Carol-anthems.")
+      expect(@see_alsos).to include("Ave Maria.")
+      expect(@see_alsos).to include("O magnum mysterium.")
+      expect(@see_alsos).to include("Adeste fideles.")
+      expect(@see_alsos).to include("Svete tikhiĭ.")
+      expect(@see_alsos).to include("Ceremony of carols.")
     end             
   end
 
   context "when displaying a music album (609569619)" do
     before(:all) do
-      stub_request(:get, "https://beta.worldcat.org/discovery/bib/data/609569619").
-        to_return(:status => 200, :body => mock_file_contents("609569619.rdf"))
-      get '/catalog/883876185'
+      stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/609569619?heldBy=OCPSB").
+        to_return(:status => 200, :body => mock_file_contents("offer_set_609569619.rdf"))
+      get '/catalog/609569619'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
     it "should have the right performers" do
-      performers = @bib.performers
-      expect(performers.size).to == 2
+      @performers = @doc.xpath("//ul[@id='performers']/li/span/a/text()")
+      expect(@performers.size).to eq(2)
       
-      grace_potter = performers.reduce(nil) do |p, performer| 
-        p = performer if performer.id == RDF::URI('http://viaf.org/viaf/26851551')
-        p
-      end
-      grace_potter.class.should == WorldCat::Discovery::Person
-      grace_potter.type.should == 'http://schema.org/Person'
-      grace_potter.name.should == 'Potter, Grace, 1983-'
-
-      nocturnals = performers.reduce(nil) do |p, performer|
-        p = performer if performer.id == RDF::URI('http://viaf.org/viaf/157486407')
-        p
-      end
-      nocturnals.class.should == WorldCat::Discovery::Organization
-      nocturnals.type.should == 'http://schema.org/Organization'
-      nocturnals.name.should == 'Nocturnals (Musical group)'
+      @performers = @performers.map {|performer| performer.to_s.gsub("\n", '').squeeze(' ').strip}
+      expect(@performers).to include("Grace Potter, 1983-")
+      expect(@performers).to include("Nocturnals (Musical group)")
+      'Potter, Grace, 1983-'
     end
   end
 end

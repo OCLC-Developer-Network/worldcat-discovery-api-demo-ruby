@@ -11,12 +11,12 @@
         %h1#bibliographic-resource-name [Unnamed material]
       
       / Author
-      - music_by = @bib.music_by
-      - if music_by
-        %div#author{ :property => 'schema:music_by', :resource => music_by.id, :typeof => music_by.type }
+      - composer = @bib.composer
+      - if composer
+        %div#author{ :property => 'schema:composer', :resource => composer.id, :typeof => composer.type }
           %h2#author-name{ :property => 'schema:name' }
-            %a{ :href => url("/catalog?creator=#{author_display_name(music_by)}&name=&kw=&about=&advanced=true&scope=worldcat") }
-              = author_display_name(music_by)
+            %a{ :href => url("/catalog?creator=#{author_display_name(composer)}&name=&kw=&about=&advanced=true&scope=worldcat") }
+              = author_display_name(composer)
 
     %div.span-13.append-1.first
       / Alternate Name
@@ -107,7 +107,7 @@
       %h2 Publication Info
       %p
         %span.label Format:
-        %span.value= format_display_name(@bib)
+        %span#format.value= format_display_name(@bib)
         %br
     
         - if @bib.book_edition
@@ -117,7 +117,7 @@
       
         - if @bib.language
           %span.label Language:
-          %span.value= BCP_47_LANGUAGES[@bib.language]
+          %span#language.value= BCP_47_LANGUAGES[@bib.language]
           %br
       
         - if is_published?(@bib)
