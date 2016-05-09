@@ -9,7 +9,9 @@
     %span.label Pages:
     %span.value
     - if @bib.page_start
-      %span.value{ :property => 'schema:pageStart' }= "#{@bib.page_start} - "
-      %span.value{ :property => 'schema:pageEnd' }= @bib.page_end
+      %span.value{ :property => 'schema:pageStart' }= @bib.page_start
+      - if @bib.page_end
+        - 
+        %span.value{ :property => 'schema:pageEnd' }= @bib.page_end
     - else
-      %span.value{ :property => 'schema:pagination' }= @bib.pagination
+      %span.value{ :property => 'schema:pagination' }= @bib.paginationn
