@@ -15,27 +15,31 @@
 require 'spec_helper'
 
 describe "the results page" do
+  before(:all) do
+    url = 'https://authn.sd00.worldcat.org/oauth2/accessToken?authenticatingInstitutionId=128807&contextInstitutionId=128807&grant_type=client_credentials&scope=WorldCatDiscoveryAPI'
+    stub_request(:post, url).to_return(:body => mock_file_contents("token.json"), :status => 200)
+  end
   context "when displaying search results with facets" do
     before(:all) do
-      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&facetFields=itemType:10&dbIds=638'
-      stub_request(:get, url).to_return(:body => body_content("bib_search.rdf"), :status => 200)
-      get '/catalog?q=wittgenstein%2Breader&scope=my_library'
+      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
+      stub_request(:get, url).to_return(:body => mock_file_contents("bib_search.rdf"), :status => 200)
+      get '/catalog?q=wittgenstein%2Breader'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
     it "should display the search form" do
-      @form_element = @doc.xpath("//form[@id='record-form']")
+      @form_element = @doc.xpath("//form[@id='search-form']")
       expect(@form_element).not_to be_empty
     end
     
     it "should have a form that submits the correct action" do
-      submit_location = @form_element.attr('action')
-      uri = URI.parse(submit_location)
+      submit_location = @doc.xpath("//form[@id='search-form']/@action")
+      uri = URI.parse(submit_location.first.value)
       expect(uri.path).to eq('/catalog')
     end
     
     it "should have a form with the previous query in the input box" do
-      search_input = @form_element.xpath("../p/input[@value='wittgenstein+reader']")
+      search_input = @doc.xpath("//input[@name='q'][@value='wittgenstein+reader']")
       expect(search_input).not_to be_empty
     end
     
@@ -45,7 +49,7 @@ describe "the results page" do
     end
     
     it "should display your search query" do
-      xpath = "//div[@id='your-search']/p/span/span[@class='value not-removable'][text()='wittgenstein+reader']"
+      xpath = "//p[@class='active-items']/span/span[@class='value not-removable'][text()='wittgenstein+reader']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
@@ -55,84 +59,89 @@ describe "the results page" do
     end
     
     it "should display the title for a result" do
-      result_title = @results.xpath("../h3/a/text()").first
-      expect(result_title).to eq("The Wittgenstein reader")
+      result_title = @doc.xpath("//div[@id='search-results']/ol/li/h3/a/text()").first
+      expect(result_title.to_s).to eq("The Wittgenstein reader")
     end
     
     it "should display the date for a result" do
-      result_date = @results.xpath("../h3/span/text()").first
-      expect(result_date).to eq("1994")
+      result_date = @doc.xpath("//div[@id='search-results']/ol/li/h3/span/text()").first
+      expect(result_date.to_s).to eq("1994")
     end
     
     it "should display the author for a result" do
-      result_author = @results.xpath("../p[@class='author']/text()").first
-      expect(result_author).to eq("Ludwig Wittgenstein, 1889-1951 ")
+      result_author = @doc.xpath("//div[@id='search-results']/ol/li/p[@class='author']/text()").first
+      expect(result_author.to_s.gsub("\n", '').squeeze(' ').strip).to eq("Ludwig Wittgenstein, 1889-1951")
     end
     
     it "should display the format for a results" do
-      result_format = @results.xpath("../p[@class='format']/span[@class='value']/text()").first
-      expect(result_format).to eq("Creative Work")
+      result_format = @doc.xpath("//div[@id='search-results']/ol/li/p[@class='format']/span[@class='value']/text()").first
+      expect(result_format.to_s).to eq("Creative Work")
     end
     
-    it "should display the facets" do
+    it "should display the facets names" do
       @facets = @doc.xpath("//div[@id='facets']/h3/text()")
       expect(@facets.count).to eq(3)
+      @facets = @facets.map {|facet| facet.to_s.gsub("\n", '').squeeze(' ').strip}
       expect(@facets).to include("Format")
       expect(@facets).to include("Author/Creator")
       expect(@facets).to include("Language")
-      
-      @facet_values = @doc.xpath("//ul[@id='facets-items']/first()/li/a")
+    end
+    
+    it "should display the facet values" do
+      @facet_values = @doc.xpath("//ul[@class='facet-items'][1]/li/a/text()")
+      @facet_values = @facet_values.map {|facet_value| facet_value.to_s.gsub("\n", '').squeeze(' ').strip}
       expect(@facet_values.count).to eq(2)
       expect(@facet_values).to include("Article/Chapter")
-      expect(@facets).to include("Book")
-      
-      @facet_values_count = @doc.xpath("//ul[@id='facets-items']/first()/li/span")
+      expect(@facet_values).to include("Book")
+    end
+    
+    it "should display the facet value counts" do  
+      @facet_values_count = @doc.xpath("//ul[@class='facet-items'][1]/li/span/text()")
       expect(@facet_values_count.count).to eq(2)
-      expect(@facet_values_count).to include(" (420)")
-      expect(@facets).to include("(2)")
+      @facet_values_count = @facet_values_count.map {|facet_value_count| facet_value_count.to_s.gsub("\n", '').squeeze(' ').strip}
+      expect(@facet_values_count).to include("(420)")
+      expect(@facet_values_count).to include("(3)")
     end
     
     it "should display the result paging text" do
       paging_text = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='numbering span-6']/text()")
-      expect(paging_text).to eq("1 - 10 of 422")
+      expect(paging_text.to_s.gsub("\n", '').squeeze(' ').strip).to eq("1 - 10 of 423")
     end
     
     it "should display an inactive previous page link" do
-      previous_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='previous span-6 first'/span[@class='inactive-link']")
-      expect(previous_link.not_to be_empty)
-      expect(previous_link.xpath('../text()')).to eq("&laquo; Previous")
+      previous_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div/span[@class='inactive-link']/text()")
+      expect(previous_link.to_s).to include("Previous")
     end
     
     it "should display an active next page link" do
-      next_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='next span-6 last'/a")
-      expect(next_link.not_to be_empty)
-      expect(next_link.xpath('../text()')).to eq("Next &raquo;")
+      next_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='next span-6 last']/a/text()")
+      expect(next_link.to_s).to include("Next")
     end
     
   end
   
   context "when displaying search results with results filtered by facet" do
     before(:all) do
-      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&itemType:10&dbIds=638'
+      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
       url += '&facetQueries=itemType:book'
-      stub_request(:get, url).to_return(:body => body_content("bib_search_facet_limit.rdf"), :status => 200)
-      get '/catalog?q=wittgenstein reader&scope=my_library&facetQueries=itemType%3Abook'
+      stub_request(:get, url).to_return(:body => mock_file_contents("bib_search_facet_limit.rdf"), :status => 200)
+      get '/catalog?q=wittgenstein%2Breader&facetQueries=itemType%3Abook'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
     it "should display the search form" do
-      @form_element = @doc.xpath("//form[@id='record-form']")
+      @form_element = @doc.xpath("//form[@id='search-form']")
       expect(@form_element).not_to be_empty
     end
     
     it "should have a form that submits the correct action" do
-      submit_location = @form_element.attr('action')
-      uri = URI.parse(submit_location)
+      submit_location = @doc.xpath("//form[@id='search-form']/@action")
+      uri = URI.parse(submit_location.first.value)
       expect(uri.path).to eq('/catalog')
     end
     
     it "should have a form with the previous query in the input box" do
-      search_input = @form_element.xpath("../p/input[@value='wittgenstein+reader']")
+      search_input = @doc.xpath("//input[@name='q'][@value='wittgenstein+reader']")
       expect(search_input).not_to be_empty
     end
     
@@ -142,50 +151,56 @@ describe "the results page" do
     end
     
     it "should display your search query" do
-      xpath = "//div[@id='your-search']/p/span/span[@class='value not-removable'][text()='wittgenstein+reader']"
+      xpath = "//p[@class='active-items']/span/span[@class='value not-removable'][text()='wittgenstein+reader']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should display your search limit" do
-      #need to change template to test this
-      xpath = "//div[@id='your-search']/p/span[@id='format-limit']/span[text()='Book']"
+      xpath = "//p[@class='active-items']/span[@class='active-search-item']/span[@class='value'][text()='Book']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should make your search limit removable" do
-      xpath = "//div[@id='your-search']/p/span/a[@class='remove-item'][text()='Remove']"
+      xpath = "//p[@class='active-items']/span[@class='active-search-item']/a[@class='remove-item'][text()='Remove facet']"
       expect(@doc.xpath(xpath)).not_to be_empty
     end
     
     it "should display the results" do
        @results = @doc.xpath("//div[@id='search-results']/ol/li")
-       expect(@results.count).to eq(2)
+       expect(@results.count).to eq(3)
     end
     
     it "should display the facets" do
       @facets = @doc.xpath("//div[@id='facets']/h3/text()")
       expect(@facets.count).to eq(3)
+      @facets = @facets.map {|facet| facet.to_s.gsub("\n", '').squeeze(' ').strip}
       expect(@facets).to include("Format")
       expect(@facets).to include("Author/Creator")
       expect(@facets).to include("Language")
       
-      @facet_values = @doc.xpath("//ul[@id='facets-items'][1]/li/a")
-      expect(@facet_values.count).to eq(1)
-      expect(@facets).to include("Book")
+      @facet_values = @doc.xpath("//ul[@class='facet-items'][1]/li/a/text()")
+      @facet_values = @facet_values.map {|facet_value| facet_value.to_s.gsub("\n", '').squeeze(' ').strip}
+      expect(@facet_values.count).to eq(3)
+      expect(@facet_values).to include("Mcguinness, Brian")
+      expect(@facet_values).to include("Tejedor, Chon")
+      expect(@facet_values).to include("Wittgenstein, Ludwig")
       
-      @facet_values_count = @doc.xpath("//ul[@id='facets-items'][1]/li/span")
-      expect(@facet_values_count.count).to eq(1)
-      expect(@facets).to include("(2)")
+      @facet_values_count = @doc.xpath("//ul[@class='facet-items'][1]/li/span/text()")
+      expect(@facet_values_count.count).to eq(3)
+      @facet_values_count = @facet_values_count.map {|facet_value_count| facet_value_count.to_s.gsub("\n", '').squeeze(' ').strip}
+      expect(@facet_values_count).to include("(1)")
+      expect(@facet_values_count).to include("(1)")
+      expect(@facet_values_count).to include("(1)")
     end    
     
   end
   
   context "when displaying search results neither first or last page" do
     before(:all) do
-      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&itemType:10&dbIds=638'
+      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
       url += '&startIndex=10'
-      stub_request(:get, url).to_return(:body => body_content("bib_search_start_index.rdf"), :status => 200)
-      get '/catalog?q=wittgenstein reader&scope=my_library&startIndex=10'
+      stub_request(:get, url).to_return(:body => mock_file_contents("bib_search_start_index.rdf"), :status => 200)
+      get '/catalog?q=wittgenstein%2Breader&startIndex=10'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
@@ -196,52 +211,48 @@ describe "the results page" do
     
     it "should display the result paging text" do
       paging_text = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='numbering span-6']/text()")
-      expect(paging_text).to eq("11 - 20 of 422")
+      expect(paging_text.to_s.gsub("\n", '').squeeze(' ').strip).to eq("11 - 20 of 423")
     end
     
     it "should display an active previous page link" do
-      previous_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='previous span-6 first'/a")
-      expect(previous_link).not_to be_empty
-      expect(previous_link.xpath('../text()')).to eq("&laquo; Previous")
+      previous_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='previous span-6 first']/a/text()")
+      expect(previous_link.to_s).to include("Previous")
     end
     
     it "should display an active next page link" do
-      next_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='next span-6 last'/a")
-      expect(next_link).not_to be_empty
-      expect(next_link.xpath('../text()')).to eq("Next &raquo;")
+      next_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='next span-6 last']/a/text()")
+      expect(next_link.to_s).to include("Next")
     end
     
   end
   
   context "when displaying search results last page" do
     before(:all) do
-      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein+reader&facetFields=creator:10&facetFields=inLanguage:10&itemType:10&dbIds=638'
+      url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
       url += '&startIndex=420'
-      stub_request(:get, url).to_return(:body => body_content("bib_search_last_page.rdf"), :status => 200)
-      get '/catalog?q=wittgenstein reader&scope=my_library&startIndex=410'
+      stub_request(:get, url).to_return(:body => mock_file_contents("bib_search_last_page.rdf"), :status => 200)
+      get '/catalog?q=wittgenstein%2Breader&startIndex=420'
       @doc = Nokogiri::HTML(last_response.body)
     end
     
     it "should display the results" do
       @results = @doc.xpath("//div[@id='search-results']/ol/li")
-      expect(@results.count).to eq(2)
+      expect(@results.count).to eq(3)
     end
     
     it "should display the result paging text" do
       paging_text = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='numbering span-6']/text()")
-      expect(paging_text).to eq("421 - 422 of 422")
+      expect(paging_text.to_s.gsub("\n", '').squeeze(' ').strip).to eq("421 - 423 of 423")
     end
     
     it "should display an active previous page link" do
-      previous_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='previous span-6 first'/a")
-      expect(previous_link).not_to be_empty
-      expect(previous_link.xpath('../text()')).to eq("&laquo; Previous")
+      previous_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='previous span-6 first']/a/text()")
+      expect(previous_link.to_s).to include("Previous")
     end
     
     it "should display an inactive next page link" do
-      next_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='next span-6 last'/span[@class='inactive-link']")
-      expect(next_link).not_to be_empty
-      expect(next_link.xpath('../text()')).to eq("Next &raquo;")
+      next_link = @doc.xpath("//div[@id='search-results']/div[@class='search-page-navigation span-18 last']/div[@class='next span-6 last']/span[@class='inactive-link']")
+      expect(next_link.to_s).to include("Next")
     end
   end
   
