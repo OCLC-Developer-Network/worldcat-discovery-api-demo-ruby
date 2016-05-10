@@ -121,6 +121,61 @@ describe OCLC::Auth::WSKey do
     end
   end
   
+  context "when testing the explicit authorization pattern with specific auth_server" do
+    before(:all) do
+      @wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :redirect_uri => 'http://localhost:4567/catch_auth_code', :services => ['WMS_Availability', 'WMS_NCIP'], :auth_server_url => 'http://myserver.org/oauth')
+    end
+
+    it "should construct a key with the right fields" do
+      @wskey.key.should == 'api-key'
+      @wskey.secret.should == 'api-key-secret'
+      @wskey.redirect_uri.should == 'http://localhost:4567/catch_auth_code'
+      @wskey.services.should == ['WMS_Availability', 'WMS_NCIP']
+      @wskey.auth_server_url == 'http://myserver.org/oauth'
+    end
+
+    context "when obtaining an authorization code" do
+      it "should produce the correct login URL" do
+        expected_url = 'http://myserver.org/oauth/authorizeCode?client_id=api-key&authenticatingInstitutionId=128807&contextInstitutionId=91475&' + 
+            'redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fcatch_auth_code&response_type=code&scope=WMS_Availability+WMS_NCIP'
+        expected_uri = URI.parse(expected_url)
+
+        actual_url = @wskey.login_url(128807, 91475)
+        actual_uri = URI.parse(actual_url)
+
+        actual_uri.hostname.should == expected_uri.hostname
+        actual_uri.path.should == expected_uri.path
+        expected_params = CGI.parse(expected_uri.query)
+        actual_params = CGI.parse(actual_uri.query)
+        expected_params.should == actual_params
+      end
+
+      it "should throw an exception if the services are empty" do
+        wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :redirect_uri => 'http://localhost:4567/catch_auth_code', :services => [])
+        lambda { wskey.login_url(128807, 91475) }.should raise_error(OCLC::Auth::Exception)
+      end
+
+      it "should throw an exception if the services are absent" do
+        wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :redirect_uri => 'http://localhost:4567/catch_auth_code')
+        lambda { wskey.login_url(128807, 91475) }.should raise_error(OCLC::Auth::Exception)
+      end
+    end
+
+    context "when redeeming an authorization code for an access token" do
+      it "should return an object with the class OCLC::Auth::AccessToken" do
+        url = 'http://myserver.org/oauth/accessToken?' + 
+            'authenticatingInstitutionId=128807&contextInstitutionId=91475&grant_type=authorization_code&scope=WMS_Availability+WMS_NCIP&' +
+            'redirect_uri=http%3A%2F%2Flocalhost%3A4567%2Fcatch_auth_code&code=the_code'
+        stub_request(:post, url).to_return(
+            :body => File.new("#{File.expand_path(File.dirname(__FILE__))}/../../support/responses/token.json"),
+            :status => 200)
+      
+        token = @wskey.auth_code_token('the_code', 128807, 91475)
+        token.class.should == OCLC::Auth::AccessToken
+      end
+      
+    end
+  end  
   
   context "when testing the client credentials grant pattern" do
     before(:all) do
@@ -155,19 +210,39 @@ describe OCLC::Auth::WSKey do
       lambda { wskey.client_credentials_token(128807, 91475) }.should raise_error(OCLC::Auth::Exception)
     end
   end
+  context "when testing the client credentials grant pattern with specific auth server" do
+    before(:all) do
+      @wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :services => ['WMS_Availability', 'WMS_NCIP'], :auth_server_url => 'http://myserver.org/oauth')
+    end
+
+    it "should construct a key with the right fields" do
+      @wskey.key.should == 'api-key'
+      @wskey.secret.should == 'api-key-secret'
+      @wskey.redirect_uri.should == nil
+      @wskey.services.should == ['WMS_Availability', 'WMS_NCIP']
+      @wskey.auth_server_url == 'http://myserver.org/oauth'
+    end
+    
+    it "should return an object with the class OCLC::Auth::AccessToken" do
+      url = 'http://myserver.org/oauth/accessToken?' + 
+          'authenticatingInstitutionId=128807&contextInstitutionId=91475&grant_type=client_credentials&scope=WMS_Availability%20WMS_NCIP'
+      stub_request(:post, url).to_return(
+          :body => File.new("#{File.expand_path(File.dirname(__FILE__))}/../../support/responses/token.json"),
+          :status => 200)
+  
+      token = @wskey.client_credentials_token(128807, 91475)
+      token.class.should == OCLC::Auth::AccessToken
+    end
+    
+    it "should throw an exception if the services are empty" do
+      wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret', :services => [])
+      lambda { wskey.client_credentials_token(128807, 91475) }.should raise_error(OCLC::Auth::Exception)
+    end
+
+    it "should throw an exception if the services are absent" do
+      wskey = OCLC::Auth::WSKey.new('api-key', 'api-key-secret')
+      lambda { wskey.client_credentials_token(128807, 91475) }.should raise_error(OCLC::Auth::Exception)
+    end
+  end  
+  
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

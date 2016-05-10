@@ -1,7 +1,7 @@
 PATH
-  remote: vendor/gems/oclc-auth-0.3.0
+  remote: vendor/gems/oclc-auth-0.4.0
   specs:
-    oclc-auth (0.3.0)
+    oclc-auth (0.4.0)
       json (~> 1.8, >= 1.8.1)
       rest-client (~> 1.6, >= 1.6.7)
 
@@ -134,7 +134,7 @@ DEPENDENCIES
   activesupport (= 4.1.1)
   haml
   nokogiri
-  oclc-auth (= 0.3.0)!
+  oclc-auth (= 0.4.0)!
   rack-test
   rdf-turtle (= 1.1.2)
   rspec
