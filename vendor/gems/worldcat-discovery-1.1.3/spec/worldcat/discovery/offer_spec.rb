@@ -179,4 +179,88 @@ describe WorldCat::Discovery::Offer do
     end
   end
   
+  context "if sending an invalid Access Token" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/offer/oclc/30780581'
+      stub_request(:get, url).to_return(:body => body_content("error_response_bad_access_token.rdf"), :status => 401)
+      @results = WorldCat::Discovery::Offer.find_by_oclc(30780581)
+    end
+    
+    it "should return a client request error" do
+      @results.class.should == WorldCat::Discovery::ClientRequestError
+    end
+
+    it "should contain the right id" do
+      @results.subject.should == RDF::Node.new("A0")
+    end
+
+    it "should have an error message" do
+      @results.error_message.should == 'The given access token is not authorized to view this resource.  Please check your Authorization header and try again.'
+    end
+    
+    it "should have an error code" do
+      @results.error_code.should == 401
+    end
+    
+    it "should have an error type" do
+      @results.error_type.should == 'http'
+    end
+  end
+  
+  context "if sending an Access Token for the wrong service" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/offer/oclc/30780581'
+      stub_request(:get, url).to_return(:body => body_content("error_response_access_token_wrong_service.rdf"), :status => 401)
+      @results = WorldCat::Discovery::Offer.find_by_oclc(30780581)
+    end
+    
+    it "should return a client request error" do
+      @results.class.should == WorldCat::Discovery::ClientRequestError
+    end
+
+    it "should contain the right id" do
+      @results.subject.should == RDF::Node.new("A0")
+    end
+
+    it "should have an error message" do
+      @results.error_message.should == 'Access to this resource is denied.  Please check your Authorization header and try again.'
+    end
+    
+    it "should have an error code" do
+      @results.error_code.should == 403
+    end
+    
+    it "should have an error type" do
+      @results.error_type.should == 'http'
+    end
+  end  
+  
+  context "if sending an unknown OCLC Number" do
+    before(:all) do
+      url = 'https://beta.worldcat.org/discovery/offer/oclc/999999999999999'
+      stub_request(:get, url).to_return(:body => body_content("error_response_not_found.rdf"), :status => 404)
+      @results = WorldCat::Discovery::Offer.find_by_oclc(999999999999999)
+    end
+    
+    it "should return a client request error" do
+      @results.class.should == WorldCat::Discovery::ClientRequestError
+    end
+
+    it "should contain the right id" do
+      @results.subject.should == RDF::Node.new("A0")
+    end
+
+    it "should have an error message" do
+      @results.error_message.should == 'The requested record could not be found.'
+    end
+    
+    it "should have an error code" do
+      @results.error_code.should == 404
+    end
+    
+    it "should have an error type" do
+      @results.error_type.should == 'http'
+    end
+  end
+  
 end

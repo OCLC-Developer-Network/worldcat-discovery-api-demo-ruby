@@ -35,12 +35,25 @@ module WorldCat
         uri.query_values = params
         response, result = WorldCat::Discovery.get_data(uri.to_s)
         
+        if result.class == Net::HTTPOK
         # Load the data into an in-memory RDF repository, get the GenericResource and its Bib
-        Spira.repository = RDF::Repository.new.from_rdfxml(response)
-        search_results = Spira.repository.query(:predicate => RDF.type, :object => DISCOVERY_SEARCH_RESULTS).first.subject.as(OfferSearchResults)
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          search_results = Spira.repository.query(:predicate => RDF.type, :object => DISCOVERY_SEARCH_RESULTS).first.subject.as(OfferSearchResults)
         
-        # WorldCat::Discovery::SearchResults.new
-        search_results
+          # WorldCat::Discovery::SearchResults.new
+          search_results
+        else
+          Spira.repository = RDF::Repository.new.from_rdfxml(response)
+          if Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => CLIENT_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          else
+            client_request_error = Spira.repository.query(:predicate => RDF.type, :object => SERVER_REQUEST_ERROR).first.subject.as(ClientRequestError)
+          end
+          client_request_error.response_body = response
+          client_request_error.response_code = response.code
+          client_request_error.result = result
+          client_request_error
+        end
       end
       
       protected
