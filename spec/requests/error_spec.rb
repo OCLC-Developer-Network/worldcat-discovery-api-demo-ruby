@@ -22,10 +22,15 @@ describe "the error page" do
       stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/30780581?heldBy=OCPSB").
         to_return(:status => 200, :body => mock_file_contents("offer_set_30780581.rdf"))
       get '/catalog/30780581'
+      @doc = Nokogiri::HTML(last_response.body)
+      @status = last_response.status
     end
     
     it "should raise an error when calling the find() method on the Bib class" do
-      expect(last_response).to raise_error(OCLC::Auth::Exception, 'WSKey "test" is invalid')
+      expect(@status).to eq(500)
+      error_codes = @doc.xpath("//td[@class='code']/div/text()")
+      error_codes = error_codes.map {|error_code| error_code.to_s}
+      expect(error_codes).to include('#&lt;OCLC::Auth::Exception: WSKey "test" is invalid&gt;')
     end
   end
   
@@ -36,10 +41,15 @@ describe "the error page" do
       stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/30780581?heldBy=OCPSB").
         to_return(:status => 200, :body => mock_file_contents("offer_set_30780581.rdf"))
       get '/catalog/30780581'
+      @doc = Nokogiri::HTML(last_response.body)
+      @status = last_response.status
     end
     
     it "should raise an error when calling the find() method on the Bib class" do
-      expect(last_response).to raise_error(OCLC::Auth::Exception, 'Invalid scope(s): WorldCatDiscoveryAPI (WorldCat Discovery API) [Not on key]')
+      expect(@status).to eq(500)
+      error_codes = @doc.xpath("//td[@class='code']/div/text()")
+      error_codes = error_codes.map {|error_code| error_code.to_s}
+      expect(error_codes).to include('#&lt;OCLC::Auth::Exception: Invalid scope(s): WorldCatDiscoveryAPI (WorldCat Discovery API) [Not on key]&gt;')
     end
   end
   
@@ -50,10 +60,15 @@ describe "the error page" do
       stub_request(:get, "https://beta.worldcat.org/discovery/offer/oclc/30780581?heldBy=OCPSB").
         to_return(:status => 200, :body => mock_file_contents("offer_set_30780581.rdf"))
       get '/catalog/30780581'
+      @doc = Nokogiri::HTML(last_response.body)
+      @status = last_response.status
     end
     
     it "should raise an error when calling the find() method on the Bib class" do
-      expect(last_response).to raise_error(OCLC::Auth::Exception, "clientId {testKey} doesn't have access to contextIntitutionId {128807}")
+      expect(@status).to eq(500)
+      error_codes = @doc.xpath("//td[@class='code']/div/text()")
+      error_codes = error_codes.map {|error_code| error_code.to_s}
+      expect(error_codes).to include("#&lt;OCLC::Auth::Exception: clientId {testKey} doesn't have access to contextIntitutionId {128807}&gt;")
     end
       
   end

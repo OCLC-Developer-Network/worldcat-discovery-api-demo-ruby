@@ -19,8 +19,11 @@ describe "the results page" do
     url = 'https://authn.sd00.worldcat.org/oauth2/accessToken?authenticatingInstitutionId=128807&contextInstitutionId=128807&grant_type=client_credentials&scope=WorldCatDiscoveryAPI'
     stub_request(:post, url).to_return(:body => mock_file_contents("token.json"), :status => 200)
   end
+  # All the requests mocked here aren't mocked with the urls that are actually used because webmock doesn't work correctly due to the repeating facetFields parameter
+  # the mock files DO contain the appropriate response for if the RIGHT urls were sent into the system
   context "when displaying search results with facets" do
     before(:all) do
+      #url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&facetFields=inLanguage:10&facetFields=itemType:10&dbIds=638'
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
       stub_request(:get, url).to_return(:body => mock_file_contents("bib_search.rdf"), :status => 200)
       get '/catalog?q=wittgenstein%2Breader'
@@ -122,6 +125,7 @@ describe "the results page" do
   
   context "when displaying search results with results filtered by facet" do
     before(:all) do
+      #url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&facetFields=inLanguage:10&facetFields=itemType:10&dbIds=638'
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
       url += '&facetQueries=itemType:book'
       stub_request(:get, url).to_return(:body => mock_file_contents("bib_search_facet_limit.rdf"), :status => 200)
@@ -197,6 +201,7 @@ describe "the results page" do
   
   context "when displaying search results neither first or last page" do
     before(:all) do
+      #url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&facetFields=inLanguage:10&facetFields=itemType:10&dbIds=638'
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
       url += '&startIndex=10'
       stub_request(:get, url).to_return(:body => mock_file_contents("bib_search_start_index.rdf"), :status => 200)
@@ -228,6 +233,7 @@ describe "the results page" do
   
   context "when displaying search results last page" do
     before(:all) do
+      #url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&facetFields=inLanguage:10&facetFields=itemType:10&dbIds=638'
       url = 'https://beta.worldcat.org/discovery/bib/search?q=wittgenstein%2Breader&heldBy=OCPSB&facetFields=creator:10&dbIds=638'
       url += '&startIndex=420'
       stub_request(:get, url).to_return(:body => mock_file_contents("bib_search_last_page.rdf"), :status => 200)
