@@ -1,3 +1,12 @@
 %h2 Something Went Wrong!
 
-%p We're sorry but we have encountered an error. Please be sure that your query is not blank.
+%p We're sorry but we have encountered an error. 
+%p
+  - if @bib
+    %span#error-heading #{format_error_message(@bib)}
+  - elsif @db_list
+    %span#error-heading #{format_error_message(@db_list)}
+  - elsif @results
+    %span#error-heading #{format_error_message(@results)}
+  - else
+    %span#error-heading #{format_error_message(@offer_results)}

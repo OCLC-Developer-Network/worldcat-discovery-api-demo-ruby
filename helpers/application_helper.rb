@@ -444,4 +444,16 @@ helpers do
   def h(text)
     Rack::Utils.escape_html(text)
   end
+  
+  def format_error_message(error)
+    if error.response_code == 401
+      error_message = "Sorry, there was an authentication error"
+    elsif error.response_code == 403
+      error_message = "Sorry, there was an authorization error"
+    elsif error.response_code == 404
+      error_message = "Sorry, but the requested record was not found."
+    else
+      error_message = "Please be sure that your query is not blank."
+    end
+  end
 end

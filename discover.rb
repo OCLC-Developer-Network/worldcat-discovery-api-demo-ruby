@@ -28,13 +28,19 @@ end
 
 get '/catalog/:oclc_number' do
   @offer_results = WorldCat::Discovery::Offer.find_by_oclc(params[:oclc_number], {"heldBy" => library_symbols})
-  @bib = @offer_results.bib
+  if @offer_results.class == WorldCat::Discovery::OfferSearchResults
+    @bib = @offer_results.bib
+  else
+    @bib = nil
+  end
+
   case @bib
+  when nil then haml :error, :layout => :template
+  when WorldCat::Discovery::ClientError then haml :error, :layout => :template
   when WorldCat::Discovery::Article then haml :article, :layout => :template
   when WorldCat::Discovery::Movie then haml :movie, :layout => :template
   when WorldCat::Discovery::MusicAlbum then haml :music_album, :layout => :template
   when WorldCat::Discovery::Periodical then haml :periodical, :layout => :template
-  when WorldCat::Discovery::ClientRequestError then haml :error, :layout => :template
   else haml :show, :layout => :template
   end
 end
