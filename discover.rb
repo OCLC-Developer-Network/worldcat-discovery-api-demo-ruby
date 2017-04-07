@@ -36,7 +36,8 @@ get '/catalog/:oclc_number' do
 
   case @bib
   when nil then haml :error, :layout => :template
-  when WorldCat::Discovery::ClientError then haml :error, :layout => :template
+  when OCLC::Auth::Exception then haml :error, :layout => :template
+  when WorldCat::Discovery::ClientRequestError then haml :error, :layout => :template
   when WorldCat::Discovery::Article then haml :article, :layout => :template
   when WorldCat::Discovery::Movie then haml :movie, :layout => :template
   when WorldCat::Discovery::MusicAlbum then haml :music_album, :layout => :template
